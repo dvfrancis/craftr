@@ -1,8 +1,8 @@
 ---
 name: User Story
-about: This is the default user story template
+about: Default user story template
 title: 'User Story:'
-labels: enhancement
+labels: documentation
 assignees: dvfrancis
 
 ---
