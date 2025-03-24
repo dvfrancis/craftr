@@ -4,7 +4,13 @@
 
 ## Overview
 
-TBC
+Craftr is a (fictional) digital crafting event, held annually online over three days every April; this year it runs from 21-23 April 2025.
+
+Digital crafting combines the latest tech with an individual's creativity to create unique craft projects. It encompasses paper and card crafts, such as scrapbooking, graphic designs for t-shirts and drinking vessels, fabric crafts, including embroidery, 3D modelling, and adhesive crafts such as stickers, signs, and decals.
+
+These crafts commonly use a cutting machine, such as a Cricut or Silhouette, or even a laser cutter, like a Glowforge, to create precise designs that can be used with, or applied to, a variety of materials.
+
+The purpose of this site is to promote Craftr and its special crafting sessions, and allow interested crafters to create accounts so they can register for specific training sessions, that are scheduled for the event.
 
 ### Site Preview
 
