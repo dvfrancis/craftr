@@ -18,8 +18,8 @@ The purpose of this site is to promote Craftr and its special crafting sessions,
 
 ### Site Link
 
-[live site]: https://dvfrancis.github.io/hi-lo-card-game
-The [live site] is hosted by Github Pages.
+[live site]: https://TBC
+The [live site] is hosted by Heroku.
 
 ## Index
 
@@ -67,112 +67,110 @@ The [live site] is hosted by Github Pages.
 
 #### Key Business Goals
 
-- To attract players to the game and provide a fun experience.
-- The value provided to the website owner is from increasing visitor numbers to the website.
-- The call to action on the website's home page will be “Play”.
+- To attract crafters of all levels to participate, learn something new, and share their positive experiences with others.
+- The owner of the website sees value from the increased numbers visting the website, positive word-of-mouth, and more sign-ups to their mailing list.
+- The home page will feature prompt visitors to look at the site as a while, while encouraging people to visit the diary page where all of the sessions are listed, in an attempt to get people to sign up to one or more of the training sessions.
 
 #### Key User Goals
 
-- Users of all ages visit the website as a way to relax and enjoy playing an easy to understand, and exciting, game.
+- The potential to learn a new craft, or something new about a craft with which they are familiar.
+- Enjoy a positive and useful experience without having to spend any money.
+- Link up with like-minded people through social media, to share their throughts on the event.
 
 #### User Experience
 
 - Target audience:
-    - Any age.
-    - Could be a student, employed, or retired.
-    - A casual or firm interest in puzzles.
-    - Possibly casual or serious gamer.
-    - Those looking for ways to relax and have fun.
+    - Anyone who is 13 or older and enjoys using technology to be creative. 
+    - Teenager, student, employed, or retired.
+    - Has an interest in arts and crafts.
+    - Those with an interest in possibly taking a hobby and turning it into a source of income.
+    - Someone looking for a productive but relaxing way to spend their free time.
  
 #### User Expectations
 
 - The website:
-    - functions as expected; for example, buttons are easy to identify, and behave like buttons.
-    - is accessible and responsive.
-    - is easy to navigate.
-    - has an appropriate and appealing visual design that reinforces the purpose of the site.
+    - is intuitive, accessible, responsive, and easy to navigate.
+    - has a design that visitors will immediately understand, and be able to use; for example, HTML elements bahave in the way most people would expect.
+    - contains useful information that will prompt a visitor to sign up for training sessions
+    - is designed to appeal to those who like crafting, to help them feel comfortable and welcome.
+    - allows a user to register their details so that they can bookmark particualr training sessions in which they are interested.
 
 #### User Stories
 
 ##### First time visitor goals
     
-- “What is this website about?”
-- “How do you play the game?”
-- “What are the rules of the game?”
-- "What can I win?"
+- "What is this website promoting?”
+- "When does the online event happen?"
+- “What training is being given?”
+- “How do I sign up?”
         
 ##### Returning visitor goals
     
-- “Will I be able to beat my score from the last time I played?”
+- “What training sessions am I interested in attending?”
+- "When is my training session due to start?"
+- "Where can I keep track of interesting training sessions?"
     
 ##### Frequent visitor goals
     
-- “I would like to play the game on my mobile device, while travelling”
+- “Who are the instructors running the training sessions?”
+- "Who manages this website?"
+- "How do I contact the organisers of this event?"
 
 #### User Personas
 
 The website is designed to appeal to all demographics, but the following personas are meant to represent a range of potential users:
 
-- User 1: Male, student, age 18-21.
-- User 2: Female, works part-time, mother of young children, age 25-30.
-- User 3: Male, works full-time, professional qualification, age 35-55.
-- User 4: Female, retired, grandmother, age 60-80.
+- User 1: Female aged 20-50, enthusiast who wants to develop her crafting skills, loves creating things, unsure where to start.
+- User 2: Female aged 18-35, looking for a way to relax, enjoys new hobbies, limited knowledge about the subject.
+- User 3: Female aged 25-45, looking for free training, enjoys connecting with others, but hasn't been able to find many beginner-friendly workshops.
 
 ##### User 1
 
-“As a student, I want something I can play during my journey to university, so that I’m not bored”
+“I really enjoy crafting but I'm not sure how to improve my abilities.”
 
 ###### Acceptance Criteria
 
-- The website is responsive and displays correctly on a mobile device.
-- All messages are clearly displayed and easy to read on smaller screens.
+- It is easy to share information from the website via social media.
+- Training sessions should be suitable for all abilities (beginner through to advanced).
+- It is easy to navigate the site to find training sessions and inspiration.
     
 ###### Tasks
 
-- Style a responsive website using Bootstrap and / or media queries.
-- Display any system messages in a larger format.
+- Links to share to social media are prominent, as well as being easy to find and use.
+- Training sessions can be filtered and sorted by difficulty level.
+- Menus make it easy to find information on the website.
     
 ##### User 2
 
-“As a mother of two, I want an easy, quick game to play while looking after my children.”
+“I came across this website by accident, it looks really interesting. Where do I start?”
 
 ###### Acceptance Criteria
 
-- The website is quick to load.
-- The game can be abandoned, if necessary.
+- A variety of crafts are featured on the home page.
+- Information on the site can be filtered based on interests.
+- The website design does not deter first-time users.
     
 ###### Tasks
 
-- Ensure the website has excellent load performance on Google Lighthouse.
-- Add ability to navigate away from the game at any point. 
+- Design a vially appealing home page that mentions the different crafts featured on the website.
+- Add a filter function to sort content by interest.
+- Create simple, effective navigation that is welcoming to first-time users.
 
 ##### User 3
 
-“As a project manager, I want a game that I can play to take my mind off my stressful job”
+“I'm seeking accessible training courses that I can register for and attend with confidence.”
 
 ###### Acceptance Criteria
 
-- Gameplay is streamlined and easy to understand.
-- The game offers an easy distraction to daily life.
+- Users find it simple and easy to register on the website.
+- Training sessions are clearly explained, with instructor details, and lists of materials required.
+- Users can leave ratings for each training session.
     
 ###### Tasks
 
-- Add an FAQ page that explains the game and its rules.
-
-##### User 4
-
-“As a retired schoolteacher, I want a fun game that I can enjoy but also possibly use to teach my grand-children about numbers”
-
-###### Acceptance Criteria
-
-- The game has a visually interesting design.
-- Cards and scores are displayed clearly and are easy to understand.
-    
-###### Tasks
-
-- Implement a design that is bright and colourful.
-- Display scores clearly on all screen sizes.
-- Ensure cards are easy to see and understand.
+- Add the ability for users to create their own account.
+- Ensure all training sessions are detailed, have intructor profiles, and comprehensive equipment / material lists.
+- Implement a ratings system for all training sessions offered.
 
 ### Scope
 
