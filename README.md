@@ -8,9 +8,9 @@ Craftr is a (fictional) digital crafting event, held annually online over three 
 
 Digital crafting combines the latest tech with an individual's creativity to create unique craft projects. It encompasses paper and card crafts, such as scrapbooking, graphic designs for t-shirts and drinking vessels, fabric crafts, including embroidery, 3D modelling, and adhesive crafts such as stickers, signs, and decals.
 
-These crafts commonly use a cutting machine, such as a Cricut or Silhouette, or even a laser cutter, like a Glowforge, to create precise designs that can be used with, or applied to, a variety of materials.
+These crafts commonly use a cutting machine, such as a Cricut or Silhouette (or even a laser cutter, like a Glowforge) to create precise designs that can be used with, or applied to, a variety of materials.
 
-The purpose of this site is to promote Craftr and its special crafting sessions, and allow interested crafters to create accounts so they can register for specific training sessions, that are scheduled for the event.
+The purpose of this site is to promote the Craftr event, allow instructors to create and manage individual classes running on different days, and let interested crafters create accounts to register for chosen classes.
 
 ### Site Preview
 
@@ -67,15 +67,17 @@ The [live site] is hosted by Heroku.
 
 #### Key Business Goals
 
-- To attract crafters of all levels to participate, learn something new, and share their positive experiences with others.
-- The owner of the website sees value from the increased numbers visting the website, positive word-of-mouth, and more sign-ups to their mailing list.
-- The home page will feature prompt visitors to look at the site as a while, while encouraging people to visit the diary page where all of the sessions are listed, in an attempt to get people to sign up to one or more of the training sessions.
+- Attract crafters of all levels to participate, learn something new, and share their positive experiences with others.
+- Give instructors the tools they need to create and manage classes across the event.
+- The organisers of the event will see value from increased numbers of people visiting the website, the positive word-of-mouth generated, and more sign-ups to their mailing list.
+- The home page will encourage visitors to look at the site as a whole, while encouraging people to sign up for one or more of the training sessions shown on the diary page.
 
 #### Key User Goals
 
 - The potential to learn a new craft, or something new about a craft with which they are familiar.
 - Enjoy a positive and useful experience without having to spend any money.
 - Link up with like-minded people through social media, to share their throughts on the event.
+- Allow easy creation and management of training sessions, across the course of the event.
 
 #### User Experience
 
@@ -90,10 +92,11 @@ The [live site] is hosted by Heroku.
 
 - The website:
     - is intuitive, accessible, responsive, and easy to navigate.
-    - has a design that visitors will immediately understand, and be able to use; for example, HTML elements bahave in the way most people would expect.
+    - has a design that visitors will immediately understand, and be able to use; for example, HTML elements behave in the way most people would expect.
     - contains useful information that will prompt a visitor to sign up for training sessions
-    - is designed to appeal to those who like crafting, to help them feel comfortable and welcome.
-    - allows a user to register their details so that they can bookmark particualr training sessions in which they are interested.
+    - is designed to appeal to those who like crafting, and help them feel comfortable and welcome.
+    - allows a user to register their details so that they can bookmark or register for interesting classes.
+    - lets instructors create and manage event classes.
 
 #### User Stories
 
@@ -122,7 +125,8 @@ The website is designed to appeal to all demographics, but the following persona
 
 - User 1: Female aged 20-50, enthusiast who wants to develop her crafting skills, loves creating things, unsure where to start.
 - User 2: Female aged 18-35, looking for a way to relax, enjoys new hobbies, limited knowledge about the subject.
-- User 3: Female aged 25-45, looking for free training, enjoys connecting with others, but hasn't been able to find many beginner-friendly workshops.
+- User 3: Female aged 25-45, looking for free training, enjoys connecting with others, hasn't been able to find many beginner-friendly workshops.
+- User 4: Male aged 35-50, experienced crafting instructor, loves sharing his techniques and knowledge with others, sometimes finds it difficult to maintain participant engagement when faced with a virtual setup.
 
 ##### User 1
 
@@ -171,6 +175,25 @@ The website is designed to appeal to all demographics, but the following persona
 - Add the ability for users to create their own account.
 - Ensure all training sessions are detailed, have intructor profiles, and comprehensive equipment / material lists.
 - Implement a ratings system for all training sessions offered.
+
+##### User 4
+
+“I have 10 years experience as a craft instructor, how can I maintain particicpants' interest during a virtual event?”
+
+###### Acceptance Criteria
+
+- Classes are engaging, inclusive and cater to a wide variety of experience.
+- Instructor credentials can easily be found on the website.
+- Tools and materials lists are provided for every session.
+- Students are able to provide feedback to help improve future workshops.
+- Instructors are able to tailor their classes based on attendees' preferences.
+    
+###### Tasks
+
+- Create a dedicated instructor profile page for every instructor.
+- Classes are listed on the diary page with associated difficulty level, objectives, and required tools / materials.
+- Implement a feedback system for students to leave comments and ratings on each class.
+- Provide instructors with access to session registration data, to help them tailor workshops to participants' preferences. 
 
 ### Scope
 
