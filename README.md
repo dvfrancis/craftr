@@ -70,14 +70,14 @@ The [live site] is hosted by Heroku.
 - Attract crafters of all levels to participate, learn something new, and share their positive experiences with others.
 - Give instructors the tools they need to create and manage classes across the event.
 - The organisers of the event will see value from increased numbers of people visiting the website, the positive word-of-mouth generated, and more sign-ups to their mailing list.
-- The home page will encourage visitors to look at the site as a whole, while encouraging people to sign up for one or more of the training sessions shown on the diary page.
+- The home page will encourage visitors to look at the site as a whole, while encouraging people to sign up for one or more of the classes shown on the diary page.
 
 #### Key User Goals
 
 - The potential to learn a new craft, or something new about a craft with which they are familiar.
 - Enjoy a positive and useful experience without having to spend any money.
 - Link up with like-minded people through social media, to share their throughts on the event.
-- Allow easy creation and management of training sessions, across the course of the event.
+- Allow easy creation and management of classes, across the course of the event.
 
 #### User Experience
 
@@ -93,7 +93,7 @@ The [live site] is hosted by Heroku.
 - The website:
     - is intuitive, accessible, responsive, and easy to navigate.
     - has a design that visitors will immediately understand, and be able to use; for example, HTML elements behave in the way most people would expect.
-    - contains useful information that will prompt a visitor to sign up for training sessions
+    - contains useful information that will prompt a visitor to sign up for classes.
     - is designed to appeal to those who like crafting, and help them feel comfortable and welcome.
     - allows a user to register their details so that they can bookmark or register for interesting classes.
     - lets instructors create and manage event classes.
@@ -109,13 +109,13 @@ The [live site] is hosted by Heroku.
         
 ##### Returning visitor goals
     
-- “What training sessions am I interested in attending?”
+- “What classes am I interested in attending?”
 - "When is my training session due to start?"
-- "Where can I keep track of interesting training sessions?"
+- "Where can I keep track of interesting classes?"
     
 ##### Frequent visitor goals
     
-- “Who are the instructors running the training sessions?”
+- “Who are the instructors running the classes?”
 - "Who manages this website?"
 - "How do I contact the organisers of this event?"
 
@@ -134,13 +134,13 @@ The website is designed to appeal to all demographics, but the following persona
 ###### Acceptance Criteria
 
 - It is easy to share information from the website via social media.
-- Training sessions should be suitable for all abilities (beginner through to advanced).
-- It is easy to navigate the site to find training sessions and inspiration.
+- Classes should be suitable for all abilities (beginner through to advanced).
+- It is easy to navigate the site to find classes and inspiration.
     
 ###### Tasks
 
 - Links to share to social media are prominent, as well as being easy to find and use.
-- Training sessions can be filtered and sorted by difficulty level.
+- Classes can be filtered and sorted by difficulty level.
 - Menus make it easy to find information on the website.
     
 ##### User 2
@@ -166,14 +166,14 @@ The website is designed to appeal to all demographics, but the following persona
 ###### Acceptance Criteria
 
 - Users find it simple and easy to register on the website.
-- Training sessions are clearly explained, with instructor details, and lists of materials required.
+- Classes are clearly explained, with instructor details, and lists of materials required.
 - Users can leave ratings for each training session.
     
 ###### Tasks
 
 - Add the ability for users to create their own account.
-- Ensure all training sessions are detailed, have intructor profiles, and comprehensive equipment / material lists.
-- Implement a ratings system for all training sessions offered.
+- Ensure all classes are detailed, have intructor profiles, and comprehensive equipment / material lists.
+- Implement a ratings system for all classes offered.
 
 ### Scope
 
