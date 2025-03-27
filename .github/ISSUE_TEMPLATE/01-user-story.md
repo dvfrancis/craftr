@@ -1,7 +1,7 @@
 ---
 name: User Story
 about: Default user story template
-title: 'User Story:'
+title: 'USER STORY:'
 labels: enhancement
 assignees: dvfrancis
 
