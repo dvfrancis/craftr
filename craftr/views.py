@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponseNotFound
+from django.http import Http404
 
 
 def test_404(request):
-    return HttpResponseNotFound()
+    raise Http404()
