@@ -1,1 +1,2 @@
-web: gunicorn craftr.wsgi
+web: gunicorn craftr\craftr\wsgi.py
+
