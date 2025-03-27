@@ -21,7 +21,8 @@ from diary import views as diary_page
 from faq import views as faq_page
 from contact import views as contact_page
 from login import views as login_page
-from . import views
+
+handler404 = 'craftr.views.custom_404'
 
 urlpatterns = [
     path('', home_page.home, name='home'),
@@ -30,5 +31,4 @@ urlpatterns = [
     path('contact/', contact_page.contact, name='contact'),
     path('login/', login_page.login, name='login'),
     path('admin/', admin.site.urls),
-    path('test/', views.test_404, name='test'),
 ]

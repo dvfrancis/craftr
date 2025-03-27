@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import Http404
 
 
-def test_404(request):
-    raise Http404()
+def custom_404(request, exception=None):
+    return render(request, '404.html', status=404)
