@@ -155,9 +155,9 @@ The website is designed to appeal to all demographics, but the following persona
     
 ###### Tasks
 
-- Design a vially appealing home page that mentions the different crafts featured on the website.
+- Design a visually appealing home page that mentions the different crafts featured on the website.
 - Add a filter function to sort content by interest.
-- Create simple, effective navigation that is welcoming to first-time users.
+- Create a clean, simple design that is easy to use and welcoming to first-time users.
 
 ##### User 3
 
@@ -167,13 +167,11 @@ The website is designed to appeal to all demographics, but the following persona
 
 - Users find it simple and easy to register on the website.
 - Classes are clearly explained, with instructor details, and lists of materials required.
-- Users can leave ratings for each training session.
     
 ###### Tasks
 
 - Add the ability for users to create their own account.
 - Ensure all classes are detailed, have intructor profiles, and comprehensive equipment / material lists.
-- Implement a ratings system for all classes offered.
 
 ### Scope
 
