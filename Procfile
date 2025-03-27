@@ -1,1 +1,1 @@
-web: gunicorn craftr.wsgi:app
+web: gunicorn craftr.wsgi
