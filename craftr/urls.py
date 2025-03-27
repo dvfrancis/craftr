@@ -16,19 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home import views as home_page
-from diary import views as diary_page
-from faq import views as faq_page
-from contact import views as contact_page
-from login import views as login_page
+from craftr import views as home
+from diary import views as diary
+from faq import views as faq
+from contact import views as contact
+from login import views as login
 
 handler404 = 'craftr.views.custom_404'
 
 urlpatterns = [
-    path('', home_page.home, name='home'),
-    path('diary/', diary_page.diary, name='diary'),
-    path('faq/', faq_page.faq, name='faq'),
-    path('contact/', contact_page.contact, name='contact'),
-    path('login/', login_page.login, name='login'),
+    path('', home.home_page, name='home'),
+    path('diary/', diary.diary_page, name='diary'),
+    path('faq/', faq.faq_page, name='faq'),
+    path('contact/', contact.contact_page, name='contact'),
+    path('login/', login.login_page, name='login'),
     path('admin/', admin.site.urls),
 ]
