@@ -37,7 +37,6 @@ class EventClass(models.Model):
 
 
 class Enrolment(models.Model):
-    # Updated class name to Enrolment
     enrolment_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(
         User,
