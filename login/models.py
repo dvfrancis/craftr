@@ -6,9 +6,9 @@ from django.contrib import admin
 from django import forms
 
 EXPERIENCE_CHOICES = (
-    ('B', 'Beginner'),
-    ('I', 'Intermediate'),
-    ('A', 'Advanced'),)
+    ('Beginner', 'Beginner'),
+    ('Intermediate', 'Intermediate'),
+    ('Advanced', 'Advanced'),)
 
 # Create your models here.
 
@@ -23,8 +23,8 @@ class UserProfile(models.Model):
     location = models.CharField(max_length=100)
     experience = models.CharField(
         choices=EXPERIENCE_CHOICES,
-        default='B',
-        max_length=1)
+        default='Beginner',
+        max_length=12)
     photograph = models.ImageField(
         upload_to='profile_pictures/',
         blank=True,

@@ -1,15 +1,13 @@
 <a href="{% url 'home' %}">Go Home</a>
 <a href="{% url 'diary' %}">Go to Diary</a>
+<a href="{% url 'details' %}">Go to Class Details</a>
 <a href="{% url 'faq' %}">Go to FAQ</a>
 <a href="{% url 'contact' %}">Go to Contact</a>
 <a href="{% url 'login' %}">Go to Login</a>
+<a href="{% url 'register' %}">Go to Account Registration</a>
+<a href="{% url 'account' %}">Go to User Account</a>
 
 <br>
 <br>
 
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ user_form.as_p }}
-    {{ profile_form.as_p }}
-    <button type="submit">Save</button>
-</form>
+LOGIN PAGE

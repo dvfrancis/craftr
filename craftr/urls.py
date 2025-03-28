@@ -21,14 +21,20 @@ from diary import views as diary
 from faq import views as faq
 from contact import views as contact
 from login import views as login
+from account import views as account
+from details import views as details
+from register import views as registration
 
 handler404 = 'craftr.views.custom_404'
 
 urlpatterns = [
     path('', home.home_page, name='home'),
     path('diary/', diary.diary_page, name='diary'),
+    path('details/', details.details_page, name='details'),
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
     path('login/', login.login_page, name='login'),
+    path('register/', registration.registration_page, name='register'),
+    path('account/', account.account_page, name='account'),
     path('admin/', admin.site.urls),
 ]
