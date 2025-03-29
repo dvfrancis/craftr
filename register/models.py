@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.contrib import admin
 from django.core.exceptions import ValidationError
 
 # Define the choices for experience levels
@@ -43,14 +42,6 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s profile"
-
-
-@admin.register(UserProfile)
-class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'location', 'experience', 'photograph')
-    list_filter = ('user', 'location', 'experience')
-    search_fields = ('user__username', 'location', 'experience')
-    ordering = ('user__username', 'location', 'experience')
 
 
 @receiver(post_save, sender=User)

@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib import admin
 from django.core.exceptions import ValidationError
 
 
@@ -26,11 +25,3 @@ class EventDay(models.Model):
     def __str__(self):
         return (
             f"{self.class_date}")
-
-
-@admin.register(EventDay)
-class EventDayAdmin(admin.ModelAdmin):
-    list_display = ('class_date', 'event_title')
-    list_filter = ('class_date', 'event_title')
-    search_fields = ('class_date', 'event_title')
-    ordering = ['class_date']

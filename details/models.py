@@ -2,7 +2,6 @@ from django.db import models
 from diary.models import EventDay
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from django.contrib import admin
 
 # Define the choices for difficulty levels
 BEGINNER = 'Beginner'
@@ -53,18 +52,6 @@ class EventClass(models.Model):
         )
 
 
-@admin.register(EventClass)
-class EventClassAdmin(admin.ModelAdmin):
-    list_display = (
-        'event_day', 'class_title', 'start_time', 'end_time',
-        'class_description', 'difficulty'
-    )
-    list_filter = ('difficulty', 'event_day')
-    search_fields = ('class_title', 'class_description')
-    ordering = ('event_day', 'class_title', 'start_time', 'end_time',
-                'difficulty')
-
-
 class Enrolment(models.Model):
     user = models.ForeignKey(
         User,
@@ -91,11 +78,3 @@ class Enrolment(models.Model):
             f"{self.user.username} is enrolled in "
             f"{self.enrolled_class.class_title}"
         )
-
-
-@admin.register(Enrolment)
-class EnrolmentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'enrolled_class')
-    list_filter = ('enrolled_class')
-    search_fields = ('user', 'enrolled_class')
-    ordering = ('user', 'enrolled_class')
