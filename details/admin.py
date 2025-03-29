@@ -17,6 +17,6 @@ class EventClassAdmin(admin.ModelAdmin):
 @admin.register(Enrolment)
 class EnrolmentAdmin(admin.ModelAdmin):
     list_display = ('user', 'enrolled_class')
-    list_filter = ('enrolled_class')
+    list_filter = ['enrolled_class']
     search_fields = ('user', 'enrolled_class')
     ordering = ['user', 'enrolled_class']
