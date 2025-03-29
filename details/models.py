@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
 from diary.models import EventDay
+from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.contrib import admin
 
@@ -37,20 +37,11 @@ class EventClass(models.Model):
         constraints = [
             models.UniqueConstraint(
                 fields=['class_title'],
-                name='unique_class_title_case_insensitive',
-                condition=models.Q(event_title__iexact=models.F('class_title'))
+                name='unique_class_title_case_insensitive'
             )
         ]
 
     def clean(self):
-        # Require all fields to be completed
-        if (
-            not self.event_day or not self.start_time or not self.end_time or
-            not self.class_title or
-            not self.class_description or not self.difficulty
-        ):
-            raise ValidationError("All fields must be completed")
-
         # End time must be later than start time
         if self.end_time <= self.start_time:
             raise ValidationError("End time must be later than start time.")
@@ -68,11 +59,8 @@ class EventClassAdmin(admin.ModelAdmin):
         'event_day', 'class_title', 'start_time', 'end_time',
         'class_description', 'difficulty'
     )
-    list_filter = ('difficulty', 'class_date')
-    search_fields = (
-        'event_day', 'class_title', 'start_time', 'end_time',
-        'class_description', 'difficulty'
-    )
+    list_filter = ('difficulty', 'event_day')
+    search_fields = ('class_title', 'class_description')
     ordering = ('event_day', 'class_title', 'start_time', 'end_time',
                 'difficulty')
 
@@ -97,13 +85,6 @@ class Enrolment(models.Model):
                 name='unique_user_enrolment'
             )
         ]
-
-    def clean(self):
-        # Require all fields to be completed
-        if (
-            not self.user or not self.enrolled_class
-        ):
-            raise ValidationError("All fields must be completed")
 
     def __str__(self):
         return (
