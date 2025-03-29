@@ -32,4 +32,4 @@ class EventDayAdmin(admin.ModelAdmin):
     list_display = ('event_date', 'event_title')
     list_filter = ('event_date', 'event_title')
     search_fields = ('event_date', 'event_title')
-    ordering = ('event_date', 'event_title')
+    ordering = ['event_date']
