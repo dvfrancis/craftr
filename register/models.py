@@ -3,18 +3,21 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib import admin
-from django import forms
+from django.core.exceptions import ValidationError
 
-EXPERIENCE_CHOICES = (
-    ('Beginner', 'Beginner'),
-    ('Intermediate', 'Intermediate'),
-    ('Advanced', 'Advanced'),)
+# Define the choices for experience levels
+BEGINNER = 'Beginner'
+INTERMEDIATE = 'Intermediate'
+ADVANCED = 'Advanced'
 
-# Create your models here.
+EXPERIENCE_CHOICES = [
+    (BEGINNER, 'Beginner'),
+    (INTERMEDIATE, 'Intermediate'),
+    (ADVANCED, 'Advanced'),
+]
 
 
 class UserProfile(models.Model):
-    user_profile_id = models.AutoField(primary_key=True)
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
@@ -23,13 +26,20 @@ class UserProfile(models.Model):
     location = models.CharField(max_length=100)
     experience = models.CharField(
         choices=EXPERIENCE_CHOICES,
-        default='Beginner',
+        default=BEGINNER,
         max_length=12)
     photograph = models.ImageField(
         upload_to='profile_pictures/',
         blank=True,
         null=True
     )
+
+    def clean(self):
+        # Require fields to be completed
+        if (not self.location or not self.experience):
+            raise ValidationError(
+                "Please complete user, location, and experience fields"
+            )
 
     def __str__(self):
         return f"{self.user.username}'s profile"
@@ -38,33 +48,14 @@ class UserProfile(models.Model):
 @admin.register(UserProfile)
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'location', 'experience', 'photograph')
+    list_filter = ('user', 'location', 'experience')
+    search_fields = ('user__username', 'location', 'experience')
+    ordering = ('user__username', 'location', 'experience')
 
 
 @receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
+def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    try:
-        profile = UserProfile.objects.get(user=instance)
-        profile.save()
-    except UserProfile.DoesNotExist:
-        pass  # Handle cases where the UserProfile doesn't exist
-
-
-class UserForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = [
-            'username', 'password',
-            'first_name', 'last_name', 'email'
-        ]
-
-
-class ProfileForm(forms.ModelForm):
-    class Meta:
-        model = UserProfile
-        fields = ['location', 'experience', 'photograph']
+    else:
+        instance.profile.save()
