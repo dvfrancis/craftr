@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 
 class EventDay(models.Model):
+    id = models.AutoField(primary_key=True)
     class_date = models.DateField()
     event_title = models.CharField(max_length=100, unique=True)
 
