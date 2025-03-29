@@ -35,7 +35,7 @@ class EventClass(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=['class_title'],
+                fields=['event_day', 'start_time'],
                 name='unique_class_title_case_insensitive'
             )
         ]
@@ -46,9 +46,23 @@ class EventClass(models.Model):
             raise ValidationError("End time must be later than start time.")
 
     def __str__(self):
+        # Formats the date as "dd-mm-yyyy"
+        class_date = self.event_day.class_date.strftime('%d %B %Y')
+        # Formats as "12:00pm"
+        class_start = (
+            f"{self.start_time.hour % 12 or 12}:"
+            f"{self.start_time.minute:02d} "
+            f"{'AM' if self.start_time.hour < 12 else 'PM'}"
+        )
+        class_end = (
+            f"{self.end_time.hour % 12 or 12}:"
+            f"{self.end_time.minute:02d} "
+            f"{'AM' if self.end_time.hour < 12 else 'PM'}"
+        )
+
         return (
-            f"{self.class_title} ({self.start_time} - {self.end_time} on "
-            f"{self.event_day}"
+            f"{self.class_title} (from {class_start} to {class_end} "
+            f"on {class_date})"
         )
 
 
