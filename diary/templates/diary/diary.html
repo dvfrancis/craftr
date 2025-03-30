@@ -20,11 +20,9 @@
             <ul>
                 {% for class in day.event_day.all %}
                 <li>
-                    <strong>Title:</strong> {{ class.class_title }}<br>
-                    <strong>Description:</strong> {{ class.class_description }}<br>
-                    <strong>Start Time:</strong> {{ class.start_time }}<br>
-                    <strong>End Time:</strong> {{ class.end_time }}<br>
-                    <strong>Difficulty:</strong> {{ class.difficulty }}
+                    <strong>Title:</strong> {{ class.class_title }}
+                    <strong>Start Time:</strong> {{ class.start_time }}
+                    <strong>End Time:</strong> {{ class.end_time }}
                 </li>
                 {% endfor %}
             </ul>

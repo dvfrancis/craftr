@@ -34,7 +34,7 @@ urlpatterns = [
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
     path('login/', login.login_page, name='login'),
-    path('register/', registration.registration_page, name='register'),
+    path('register/', registration.register_user, name='register'),
     path('account/', account.account_page, name='account'),
     path('admin/', admin.site.urls),
 ]
