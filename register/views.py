@@ -11,15 +11,15 @@ def register_user(request):
         if user_form.is_valid() and profile_form.is_valid():
             # Save the user
             user = user_form.save()
-            # Create the associated profile
-            profile = profile_form.save(commit=False)
-            profile.user = user
+            profile = user.profile  # Access the profile created by the signal
+            profile.location = profile_form.cleaned_data['location']
+            profile.experience = profile_form.cleaned_data['experience']
+            profile.photograph = profile_form.cleaned_data['photograph']
             profile.save()
 
             # Log in the user
             login(request, user)
-            # Replace "home" with your desired redirect
-            return redirect("account/account.html")
+            return redirect("account")
     else:
         user_form = UserRegistrationForm()
         profile_form = UserProfileForm()
