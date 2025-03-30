@@ -16,7 +16,7 @@
                     <strong>Title:</strong> {{ class.class_title }}</br>
                     <strong>Start Time:</strong> {{ class.start_time }}</br>
                     <strong>End Time:</strong> {{ class.end_time }}</br>
-                    <form method="POST" action="{% url 'enrol' class.id %}">
+                    <form method="POST" action="{% url 'details' class.id %}">
                         {% csrf_token %}
                         <button type="submit">Enrol</button>
                     </form>

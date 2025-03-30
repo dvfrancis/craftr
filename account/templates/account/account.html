@@ -23,5 +23,11 @@
         {% csrf_token %}
         <button type="submit">Logout</button>
     </form>
+    <!-- Delete Account Button -->
+    <form method="POST" action="{% url 'delete_account' %}">
+    {% csrf_token %}
+    <button type="submit" style="background-color: red; color: white;" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete Account</button>
+</form>
+
 </body>
 </html>

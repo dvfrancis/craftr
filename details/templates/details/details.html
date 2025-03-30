@@ -1,1 +1,49 @@
-DETAILS PAGE
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Details</title>
+</head>
+<body>
+    <h1>Class Details</h1>
+
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td><strong>Day</strong></td>
+            <td>{{ event_class.event_day.class_date }}</td>
+        </tr>
+        <tr>
+            <td><strong>Start</strong></td>
+            <td>{{ event_class.start_time }}</td>
+        </tr>
+        <tr>
+            <td><strong>End</strong></td>
+            <td>{{ event_class.end_time }}</td>
+        </tr>
+        <tr>
+            <td><strong>Class</strong></td>
+            <td>{{ event_class.class_title }}</td>
+        </tr>
+        <tr>
+            <td><strong>Description</strong></td>
+            <td>{{ event_class.class_description }}</td>
+        </tr>
+        <tr>
+            <td><strong>Difficulty</strong></td>
+            <td>{{ event_class.difficulty }}</td>
+        </tr>
+    </table>
+    <form method="POST" action="{% url 'details' event_class.id %}">
+    {% csrf_token %}
+    {% if is_enrolled %}
+    <button type="submit" name="action" value="remove">Cancel Enrolment</button>
+    {% else %}
+    <button type="submit" name="action" value="enrol">Enrol</button>
+    {% endif %}
+    </form>
+    <br>
+</body>
+</html>

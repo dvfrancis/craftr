@@ -25,12 +25,14 @@ from django.contrib.auth.views import LoginView
 from account import views as account
 from home import views as home
 
+
 handler404 = 'craftr.views.custom_404'
 
 urlpatterns = [
     path('', home.home_page, name='home'),
     path('diary/', diary.diary_details, name='diary'),
-    path('details/<int:class_id>/', details.enrol_in_class, name='details'),
+    path('details/<int:class_id>/', details.enrol, name='details'),
+    path("remove_enrolment/<int:class_id>/", details.remove_enrolment, name="remove_enrolment"),
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
     path(
@@ -41,5 +43,6 @@ urlpatterns = [
     path('register/', registration.register_user, name='register'),
     path('account/', account.user_details, name='account'),
     path('account/', include('account.urls')),
+    path("delete_account/", account.delete_account, name="delete_account"),
     path('admin/', admin.site.urls),
 ]
