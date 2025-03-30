@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Craftr Diary</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Go Home</a>
+    <a href="{% url 'diary' %}">Go to Diary</a>
+    <a href="{% url 'details' %}">Go to Class Details</a>
+    <a href="{% url 'faq' %}">Go to FAQ</a>
+    <a href="{% url 'contact' %}">Go to Contact</a>
+    <a href="{% url 'login' %}">Go to Login</a>
+    <a href="{% url 'register' %}">Go to User Registration</a>
+    <a href="{% url 'account' %}">Go to User Account</a>
+    <h1>Craftr Diary</h1>
+    <ul>
+        {% for day in days %}
+        <li>
+            <strong>Date:</strong> {{ day.class_date }}
+            <ul>
+                {% for class in day.event_day.all %}
+                <li>
+                    <strong>Title:</strong> {{ class.class_title }}<br>
+                    <strong>Description:</strong> {{ class.class_description }}<br>
+                    <strong>Start Time:</strong> {{ class.start_time }}<br>
+                    <strong>End Time:</strong> {{ class.end_time }}<br>
+                    <strong>Difficulty:</strong> {{ class.difficulty }}
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

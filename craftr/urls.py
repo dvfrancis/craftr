@@ -18,18 +18,18 @@ from django.contrib import admin
 from django.urls import path
 from craftr import views as home
 from diary import views as diary
+from details import views as details
 from faq import views as faq
 from contact import views as contact
 from login import views as login
 from account import views as account
-from details import views as details
 from register import views as registration
 
 handler404 = 'craftr.views.custom_404'
 
 urlpatterns = [
     path('', home.home_page, name='home'),
-    path('diary/', diary.diary_page, name='diary'),
+    path('diary/', diary.diary_list, name='diary'),
     path('details/', details.details_page, name='details'),
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
