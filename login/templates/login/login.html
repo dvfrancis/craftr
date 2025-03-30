@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Registration</title>
+    <title>Login</title>
 </head>
 <body>
     <a href="{% url 'home' %}">Go Home</a>
@@ -12,13 +12,14 @@
     <a href="{% url 'login' %}">Go to Login</a>
     <a href="{% url 'register' %}">Go to User Registration</a>
     <a href="{% url 'account' %}">Go to User Account</a>
-    <h1>Register an Account</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <h1>Login</h1>
+    <form method="POST">
         {% csrf_token %}
-        {{ user_form.as_p }}
-        {{ profile_form.as_p }}
-        <button type="submit">Register</button>
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+        <a href="{% url 'register' %}"><button type="submit">Register</button></a>
         <input type="reset" value="Clear">
     </form>
+    
 </body>
 </html>

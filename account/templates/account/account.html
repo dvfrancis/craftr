@@ -1,13 +1,36 @@
-<a href="{% url 'home' %}">Go Home</a>
-<a href="{% url 'diary' %}">Go to Diary</a>
-<a href="{% url 'details' %}">Go to Class Details</a>
-<a href="{% url 'faq' %}">Go to FAQ</a>
-<a href="{% url 'contact' %}">Go to Contact</a>
-<a href="{% url 'login' %}">Go to Login</a>
-<a href="{% url 'register' %}">Go to User Registration</a>
-<a href="{% url 'account' %}">Go to User Account</a>
-
-<br>
-<br>
-
-USER ACCOUNT
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Go Home</a>
+    <a href="{% url 'diary' %}">Go to Diary</a>
+    <a href="{% url 'details' %}">Go to Class Details</a>
+    <a href="{% url 'faq' %}">Go to FAQ</a>
+    <a href="{% url 'contact' %}">Go to Contact</a>
+    <a href="{% url 'login' %}">Go to Login</a>
+    <a href="{% url 'register' %}">Go to User Registration</a>
+    <a href="{% url 'account' %}">Go to User Account</a>
+<body>
+    <h1>Welcome, {{ user.username }}!</h1>
+    {% if user.profile.photograph %}
+    <p><img src="{{ user.profile.photograph.url }}" alt="Profile Photograph"></p>
+    {% else %}
+    <p>No additional profile information is available.</p>
+    {% endif %}
+    <p><strong>First Name:</strong> {{ user.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    {% if user.profile %}
+    <p><strong>Location:</strong> {{ user.profile.location }}</p>
+    <p><strong>Experience:</strong> {{ user.profile.experience }}</p>
+    {% else %}
+    <p>No additional profile information is available.</p>
+    {% endif %}
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

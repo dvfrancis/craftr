@@ -15,15 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from craftr import views as home
 from diary import views as diary
 from details import views as details
 from faq import views as faq
 from contact import views as contact
-from login import views as login
-from account import views as account
 from register import views as registration
+from django.contrib.auth.views import LoginView
+from account import views as account
 
 handler404 = 'craftr.views.custom_404'
 
@@ -33,8 +33,13 @@ urlpatterns = [
     path('details/', details.details_page, name='details'),
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
-    path('login/', login.login_page, name='login'),
+    path(
+        "login/",
+        LoginView.as_view(template_name="login/login.html"),
+        name="login",
+    ),
     path('register/', registration.register_user, name='register'),
-    path('account/', account.account_page, name='account'),
+    path('account/', account.user_details, name='account'),
+    path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
 ]
