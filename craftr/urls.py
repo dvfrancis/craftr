@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from craftr import views as home
 from diary import views as diary
 from details import views as details
 from faq import views as faq
@@ -24,6 +23,7 @@ from contact import views as contact
 from register import views as registration
 from django.contrib.auth.views import LoginView
 from account import views as account
+from home import views as home
 
 handler404 = 'craftr.views.custom_404'
 
