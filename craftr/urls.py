@@ -30,7 +30,7 @@ handler404 = 'craftr.views.custom_404'
 urlpatterns = [
     path('', home.home_page, name='home'),
     path('diary/', diary.diary_details, name='diary'),
-    path('details/', details.details_page, name='details'),
+    path('details/<int:class_id>/', details.enrol_in_class, name='details'),
     path('faq/', faq.faq_page, name='faq'),
     path('contact/', contact.contact_page, name='contact'),
     path(

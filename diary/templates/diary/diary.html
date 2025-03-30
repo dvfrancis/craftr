@@ -4,15 +4,18 @@
     <title>Craftr Diary</title>
 </head>
 <body>
-    <a href="{% url 'home' %}">Go Home</a>
-    <a href="{% url 'diary' %}">Go to Diary</a>
-    <a href="{% url 'details' %}">Go to Class Details</a>
-    <a href="{% url 'faq' %}">Go to FAQ</a>
-    <a href="{% url 'contact' %}">Go to Contact</a>
-    <a href="{% url 'login' %}">Go to Login</a>
-    <a href="{% url 'register' %}">Go to User Registration</a>
-    <a href="{% url 'account' %}">Go to User Account</a>
+    <nav>
+        <a href="{% url 'home' %}">Go Home</a>
+        <a href="{% url 'diary' %}">Go to Diary</a>
+        <a href="{% url 'faq' %}">Go to FAQ</a>
+        <a href="{% url 'contact' %}">Go to Contact</a>
+        <a href="{% url 'login' %}">Go to Login</a>
+        <a href="{% url 'register' %}">Go to User Registration</a>
+        <a href="{% url 'account' %}">Go to User Account</a>
+    </nav>
+
     <h1>Craftr Diary</h1>
+
     <ul>
         {% for day in days %}
         <li>
@@ -20,9 +23,14 @@
             <ul>
                 {% for class in day.event_day.all %}
                 <li>
-                    <strong>Title:</strong> {{ class.class_title }}
-                    <strong>Start Time:</strong> {{ class.start_time }}
-                    <strong>End Time:</strong> {{ class.end_time }}
+                    <strong>Title:</strong> {{ class.class_title }}</br>
+                    <strong>Start Time:</strong> {{ class.start_time }}</br>
+                    <strong>End Time:</strong> {{ class.end_time }}</br>
+                    <form method="POST" action="{% url 'enrol' class.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Enrol</button>
+                    </form>
+                    <a href="{% url 'details' class.id %}"><button type="button">Details</button></a>
                 </li>
                 {% endfor %}
             </ul>

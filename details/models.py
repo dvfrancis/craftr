@@ -89,6 +89,6 @@ class Enrolment(models.Model):
 
     def __str__(self):
         return (
-            f"{self.user.username} is enrolled in "
+            f"{self.user.username} is enrolled on "
             f"{self.enrolled_class.class_title}"
         )
