@@ -31,7 +31,11 @@ def delete_account(request):
         # Delete the user account
         user.delete()
 
-        messages.success(request, "Your account and enrolments have been successfully deleted.")
+        messages.success(
+            request,
+            "Your account and enrolments have been successfully deleted."
+        )
         return redirect("home")  # Redirect to the home page after deletion
 
-    return redirect("account")  # Redirect back to account page for GET requests
+    return redirect("account")  
+    # Redirect back to account page for GET requests

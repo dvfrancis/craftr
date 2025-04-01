@@ -10,16 +10,6 @@ def diary_page(request):
     return render(request, "diary/diary.html", {"days": days})
 
 
-# def class_details(request, class_id):
-#     # Retrieve the specific class using the class_id
-#     event_class = get_object_or_404(EventClass, id=class_id)
-#     return render(
-#         request,
-#         "details/details.html",
-#         {"event_class": event_class}
-#     )
-
-
 @login_required
 def enrol(request, class_id):
     # Retrieve the specific class using the class_id

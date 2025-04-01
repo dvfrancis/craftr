@@ -39,7 +39,7 @@
     <form method="POST" action="{% url 'details' event_class.id %}">
     {% csrf_token %}
     {% if is_enrolled %}
-    <button type="submit" name="action" value="remove">Cancel Enrolment</button>
+    <button type="submit" name="action" value="remove">Withdraw</button>
     {% else %}
     <button type="submit" name="action" value="enrol">Enrol</button>
     {% endif %}
