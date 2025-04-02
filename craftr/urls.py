@@ -42,6 +42,7 @@ urlpatterns = [
     ),
     path('register/', registration.register_user, name='register'),
     path('account/', account.user_details, name='account'),
+    path('update_profile/', registration.update_profile, name="update_profile"),
     path('account/', include('account.urls')),
     path("delete_account/", account.delete_account, name="delete_account"),
     path('admin/', admin.site.urls),

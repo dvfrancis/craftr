@@ -8,10 +8,11 @@ from details.models import Enrolment
 
 @login_required
 def user_details(request):
+    user_enrolments = Enrolment.objects.filter(user=request.user).select_related("enrolled_class")
     return render(
         request,
         "account/account.html",
-        {"user": request.user}
+        {"user": request.user, "enrolments": user_enrolments}
     )
 
 

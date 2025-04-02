@@ -45,13 +45,7 @@ def enrol(request, class_id):
 @login_required
 def remove_enrolment(request, class_id):
     event_class = get_object_or_404(EventClass, id=class_id)
-
     if request.method == "POST":
-        enrolment = Enrolment.objects.filter(user=request.user, enrolled_class=event_class).first()
-        if enrolment:
-            enrolment.delete()
-            messages.success(request, "Your enrolment has been removed!")
-        else:
-            messages.warning(request, "You are no longer enrolled for this class")
-
-    return redirect("details", class_id=class_id)
+        Enrolment.objects.filter(user=request.user, enrolled_class=event_class).delete()
+        messages.success(request, "Your enrolment has been removed!")
+    return redirect("account")  # Redirect to account page instead of details

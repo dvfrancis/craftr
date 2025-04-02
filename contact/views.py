@@ -17,8 +17,10 @@ def contact_page(request):
                     f"Email: {form.cleaned_data['email']}\n"
                     f"Message: {form.cleaned_data['message']}"
                 ),
-                from_email=form.cleaned_data['email'],
+                from_email=os.getenv('EMAIL_USER'),
                 recipient_list=[os.getenv('EMAIL_USER')],
+                reply_to=form.cleaned_data['email'],
+
             )
             return redirect('home')  # Redirect after submission
     else:
