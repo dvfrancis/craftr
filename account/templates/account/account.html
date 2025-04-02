@@ -41,9 +41,15 @@
     <a href="{% url 'update_profile' %}">
     <button type="button">Edit Profile</button>
     </a>
-    <form method="POST" action="{% url 'delete_account' %}">
-    {% csrf_token %}
-    <button type="submit" style="background-color: red; color: white;" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete Account</button>
+
+    {% if user.is_superuser %}
+        <!-- Nothing is displayed, instead of the 'Delete Account' button --> 
+    {% else %}
+        <form method="POST" action="{% url 'delete_account' %}"></form>
+        {% csrf_token %}
+        <button type="submit" style="background-color: red; color: white;"
+        onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete Account</button>
+    {% endif %}
 </form>
 
 </body>
