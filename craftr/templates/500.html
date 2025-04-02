@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Server Error</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
+
     <h1>Ouch! Server Error (500)</h1>
     <p>The server encountered a problem.</p>
-</body>
-</html>
+
+{% endblock %}

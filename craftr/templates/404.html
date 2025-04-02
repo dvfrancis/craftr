@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Page Not Found</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
+
     <h1>Oops! Page Not Found (404)</h1>
     <p>We couldn't find the page you were looking for.</p>
-</body>
-</html>
+
+{% endblock %}

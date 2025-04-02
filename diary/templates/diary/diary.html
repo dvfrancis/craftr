@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Craftr Diary</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
+
     <h1>Craftr Diary</h1>
 
     <ul>
@@ -23,5 +29,5 @@
         </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+
+{% endblock %}

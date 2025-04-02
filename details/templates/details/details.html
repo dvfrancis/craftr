@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Class Details</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
+
     <h1>Class Details</h1>
 
     <table>
@@ -45,5 +51,5 @@
     {% endif %}
     </form>
     <br>
-</body>
-</html>
+
+{% endblock %}

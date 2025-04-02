@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Login</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
+
     <h1>Login</h1>
     <form method="POST">
         {% csrf_token %}
@@ -12,5 +18,5 @@
         <input type="reset" value="Clear">
     </form>
     <a href="{% url 'register' %}"><button type="button">Register</button></a>
-</body>
-</html>
+
+{% endblock %}

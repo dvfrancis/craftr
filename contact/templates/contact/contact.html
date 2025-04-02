@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+
     <title>Contact Us</title>
-</head>
-<body>
+
+{% endblock %}
+
+{% block content %}
     <h1>Contact Us</h1>
     <form method="POST">
         {% csrf_token %}
@@ -11,5 +16,5 @@
         <button type="submit">Send</button>
         <input type="reset" value="Clear">
     </form>
-</body>
-</html>
+
+{% endblock %}
