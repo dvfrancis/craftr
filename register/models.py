@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.exceptions import ValidationError
@@ -27,8 +28,9 @@ class UserProfile(models.Model):
         choices=EXPERIENCE_CHOICES,
         default=BEGINNER,
         max_length=12)
-    photograph = models.ImageField(
-        upload_to='profile_pictures/',
+    photograph = CloudinaryField(
+        'image',
+        default='placeholder',
         blank=True,
         null=True
     )
@@ -41,7 +43,7 @@ class UserProfile(models.Model):
             )
 
     def __str__(self):
-        return f"{self.user.username}'s profile"
+        return f"{self.user.username}'s profile" if self.user else "Profile without user"
 
 
 @receiver(post_save, sender=User)

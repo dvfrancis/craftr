@@ -4,15 +4,29 @@ from django.shortcuts import redirect
 from django.contrib.auth import logout
 from django.contrib import messages
 from details.models import Enrolment
+from django.conf import settings
 
 
 @login_required
 def user_details(request):
-    user_enrolments = Enrolment.objects.filter(user=request.user).select_related("enrolled_class")
+    cloud_name = settings.CLOUDINARY_STORAGE['CLOUD_NAME']
+    default_profile_url = (
+        (
+            f"https://res.cloudinary.com/{cloud_name}/image/upload/"
+            f"placeholder"
+        )
+    )
+    user_enrolments = Enrolment.objects.filter(
+        user=request.user
+    ).select_related("enrolled_class")
     return render(
         request,
         "account/account.html",
-        {"user": request.user, "enrolments": user_enrolments}
+        {
+            "user": request.user,
+            "enrolments": user_enrolments,
+            "default_profile_url": default_profile_url,
+        }
     )
 
 
@@ -38,5 +52,5 @@ def delete_account(request):
         )
         return redirect("home")  # Redirect to the home page after deletion
 
-    return redirect("account")  
+    return redirect("account")
     # Redirect back to account page for GET requests

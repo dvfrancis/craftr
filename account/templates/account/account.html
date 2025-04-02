@@ -14,10 +14,11 @@
     <p><strong>First Name:</strong> {{ user.first_name }}</p>
     <p><strong>Last Name:</strong> {{ user.last_name }}</p>
     <p><strong>Email:</strong> {{ user.email }}</p>
-    {% if user.profile %}
-        {% if user.profile.photograph %}
-            <p><img src="{{ user.profile.photograph.url }}" alt="Profile Photograph"></p>
-        {% endif %}
+
+    {% if user.profile and user.profile.photograph %}
+        <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
+        alt="Profile photo"
+        style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
         <p><strong>Location:</strong> {{ user.profile.location }}</p>
         <p><strong>Experience:</strong> {{ user.profile.experience }}</p>
     {% else %}
@@ -48,14 +49,14 @@
     <button type="button">Edit Profile</button>
     </a>
 
-    {% if user.is_superuser %}
-        <!-- Nothing is displayed, instead of the 'Delete Account' button --> 
-    {% else %}
-        <form method="POST" action="{% url 'delete_account' %}">
-            {% csrf_token %}
-            <button type="submit" style="background-color: red; color: white;"
-            onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete Account</button>
-        </form>
+    {% if not user.is_superuser %}
+    <form method="POST" action="{% url 'delete_account' %}">
+        {% csrf_token %}
+        <button type="submit" style="background-color: red; color: white;"
+                onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+            Delete Account
+        </button>
+    </form>
     {% endif %}
 
 </main>
