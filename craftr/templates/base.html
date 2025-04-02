@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Meta tags common to all templates -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dominic Francis">
+
+    <!-- Custom favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="TBC">
+
+    (% block head %)
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header>
+        <div>
+            <div>
+                <h1 class="TBC"><a href="TBC" rel="bookmark">Craftr</a></h1>
+            </div>
+        </div>
+        <div>
+            <nav>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'diary' %}">Diary</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'faq' %}">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'account' %}">Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+
+    <main>
+
+
+    </main>
+
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Social media links -->
+        <div>
+            <div>
+                <a href="TBC" target="_blank" rel="noopener noreferrer"
+                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 1</span></a>
+                <a href="TBC" target="_blank" rel="noopener noreferrer"
+                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 2</span></a>
+                <a href="TBC" target="_blank" rel="noopener noreferrer"
+                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 3</span></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Legal and copyright information -->
+            <div class="col text-center">
+                <p> &#169; 2025, <a href="TBC" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit LinkedIn">Dominic Francis</a>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
