@@ -11,17 +11,21 @@ def register_user(request):
         profile_form = UserProfileForm(request.POST, request.FILES)
 
         if user_form.is_valid() and profile_form.is_valid():
-            # Save the user
             user = user_form.save()
-            profile = user.profile  # Access the profile created by the signal
-            profile.location = profile_form.cleaned_data['location']
-            profile.experience = profile_form.cleaned_data['experience']
-            profile.photograph = profile_form.cleaned_data['photograph']
+            profile = user.profile
+            profile.location = profile_form.cleaned_data["location"]
+            profile.experience = profile_form.cleaned_data["experience"]
+            profile.photograph = profile_form.cleaned_data["photograph"]
             profile.save()
 
-            # Log in the user
+            # Log in user
             login(request, user)
+
+            # Show success message
+            messages.success(request, "User created successfully!")
+
             return redirect("account")
+
     else:
         user_form = UserRegistrationForm()
         profile_form = UserProfileForm()
