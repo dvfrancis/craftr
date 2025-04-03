@@ -45,7 +45,7 @@ def update_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, "Profile updated successfully")
+            messages.success(request, "Profile updated")
             return redirect("account")  # Redirect to the account page
 
     else:

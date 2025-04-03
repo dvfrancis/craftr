@@ -32,6 +32,10 @@ def user_details(request):
 
 def custom_logout(request):
     logout(request)
+    messages.success(
+            request,
+            "You have been logged out successfully"
+        )
     return redirect('login')
 
 
@@ -48,7 +52,7 @@ def delete_account(request):
 
         messages.success(
             request,
-            "Your account and enrolments have been successfully deleted."
+            "Your account (and any enrolments) have been deleted"
         )
         return redirect("home")  # Redirect to the home page after deletion
 

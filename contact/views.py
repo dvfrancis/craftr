@@ -23,7 +23,7 @@ def contact_page(request):
                 reply_to=[form.cleaned_data["email"]],
             )
             email.send()
-            messages.success(request, "Contact form submitted successfully!")
+            messages.success(request, "Your message has been sent")
             return redirect('home')  # Redirect after submission
     else:
         form = ContactForm()
