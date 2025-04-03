@@ -22,6 +22,7 @@ def register_user(request):
             profile.experience = profile_form.cleaned_data["experience"]
             profile.photograph = profile_form.cleaned_data["photograph"]
             profile.save()
+            messages.success(request, "User registered successfully")
 
             # Log in user after successful registration
             login(request, user)
@@ -44,7 +45,7 @@ def update_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, "Profile updated successfully!")
+            messages.success(request, "Profile updated successfully")
             return redirect("account")  # Redirect to the account page
 
     else:
