@@ -6,6 +6,11 @@ from django.contrib import messages
 
 
 def register_user(request):
+    next_url = request.POST.get("next") or request.GET.get("next") or "/"  # Capture 'next' URL
+
+    user_form = UserRegistrationForm()
+    profile_form = UserProfileForm()
+
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
         profile_form = UserProfileForm(request.POST, request.FILES)
@@ -18,23 +23,13 @@ def register_user(request):
             profile.photograph = profile_form.cleaned_data["photograph"]
             profile.save()
 
-            # Log in user
+            # Log in user after successful registration
             login(request, user)
 
-            # Show success message
-            messages.success(request, "User created successfully!")
+            # Redirect to the original page (class details) or homepage if missing
+            return redirect(next_url)
 
-            return redirect("account")
-
-    else:
-        user_form = UserRegistrationForm()
-        profile_form = UserProfileForm()
-
-    return render(
-        request,
-        "register/register.html",
-        {"user_form": user_form, "profile_form": profile_form}
-    )
+    return render(request, "register/register.html", {"user_form": user_form, "profile_form": profile_form, "next": next_url})
 
 
 @login_required

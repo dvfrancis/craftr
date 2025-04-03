@@ -13,9 +13,14 @@
     <h1>Class Details</h1>
 
     <table>
+
         <tr>
-            <th>Field</th>
-            <th>Value</th>
+            <td><strong>Class</strong></td>
+            <td>{{ event_class.class_title }}</td>
+        </tr>
+        <tr>
+            <td><strong>Description</strong></td>
+            <td>{{ event_class.class_description }}</td>
         </tr>
         <tr>
             <td><strong>Day</strong></td>
@@ -30,26 +35,27 @@
             <td>{{ event_class.end_time|time:"g:i a" }}</td>
         </tr>
         <tr>
-            <td><strong>Class</strong></td>
-            <td>{{ event_class.class_title }}</td>
-        </tr>
-        <tr>
-            <td><strong>Description</strong></td>
-            <td>{{ event_class.class_description }}</td>
-        </tr>
-        <tr>
             <td><strong>Difficulty</strong></td>
             <td>{{ event_class.difficulty }}</td>
         </tr>
     </table>
-    <form method="POST" action="{% url 'details' event_class.id %}">
-    {% csrf_token %}
-    {% if is_enrolled %}
-    <button type="submit" name="action" value="remove">Withdraw</button>
+    {% if request.user.is_authenticated %}
+        <form method="POST" action="{% url 'details' event_class.id %}">
+        {% csrf_token %}
+        {% if is_enrolled %}
+        <button type="submit" name="action" value="remove">Withdraw</button>
+        {% else %}
+        <button type="submit" name="action" value="enrol">Enrol</button>
+        {% endif %}
+        </form>
     {% else %}
-    <button type="submit" name="action" value="enrol">Enrol</button>
+        <a href="{% url 'login' %}?next={{ request.path }}">
+        <button type="button">Login</button>
+        </a>
+        <a href="{% url 'register' %}?next={{ request.path }}">
+        <button type="button">Register</button>
+        </a>
     {% endif %}
-    </form>
     <br>
 
 {% endblock %}

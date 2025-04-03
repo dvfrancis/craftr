@@ -10,24 +10,27 @@ def diary_page(request):
     return render(request, "diary/diary.html", {"days": days})
 
 
-@login_required
 def enrol(request, class_id):
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
 
     # Check if the user is enrolled in this class
-    is_enrolled = Enrolment.objects.filter(user=request.user, enrolled_class=event_class).exists()
+
+    if request.user.is_authenticated:
+        is_enrolled = Enrolment.objects.filter(user=request.user, enrolled_class=event_class).exists()
+    else:
+        is_enrolled = False  # Default for non-logged-in users
 
     if request.method == "POST":
         action = request.POST.get("action")
         if action == "enrol" and not is_enrolled:
             Enrolment.objects.create(user=request.user, enrolled_class=event_class)
-            messages.success(request, "You have successfully enrolled in this class!")
+            messages.success(request, "You have successfully enrolled for this class")
         elif action == "remove" and is_enrolled:
             Enrolment.objects.filter(user=request.user, enrolled_class=event_class).delete()
-            messages.success(request, "Your enrolment has been removed!")
+            messages.success(request, "Your enrolment has been withdrawn")
         else:
-            messages.warning(request, "Invalid action or no changes made.")
+            messages.warning(request, "Error - unable to process your request")
 
         # Redirect back to the same page
         return redirect("details", class_id=class_id)
