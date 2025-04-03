@@ -6,7 +6,7 @@ from django.contrib import messages
 
 
 def register_user(request):
-    next_url = request.POST.get("next") or request.GET.get("next") or "/"  # Capture 'next' URL
+    next_url = request.POST.get("next") or request.GET.get("next") or "account"  # Capture 'next' URL
 
     user_form = UserRegistrationForm()
     profile_form = UserProfileForm()
@@ -27,7 +27,7 @@ def register_user(request):
             # Log in user after successful registration
             login(request, user)
 
-            # Redirect to the original page (class details) or homepage if missing
+            # Redirect to the original page (class details) or account page, if missing
             return redirect(next_url)
 
     return render(request, "register/register.html", {"user_form": user_form, "profile_form": profile_form, "next": next_url})
