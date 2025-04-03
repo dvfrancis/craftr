@@ -28,14 +28,11 @@
     {% if enrolments %}
         <ul>
             {% for enrolment in enrolments %}
-                <li>
-                    <strong>{{ enrolment.enrolled_class.class_title }}</strong>
-                    ({{ enrolment.enrolled_class.event_day.class_date }})
+                    {{ enrolment.enrolled_class.event_day.class_date }} at {{ enrolment.enrolled_class.start_time }} - <strong>{{ enrolment.enrolled_class.class_title }}</strong>
                     <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
                         {% csrf_token %}
                         <button type="submit">Withdraw</button>
                     </form>
-                </li>
             {% endfor %}
         </ul>
     {% else %}
