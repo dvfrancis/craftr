@@ -8,7 +8,7 @@ Craftr is a (fictional) digital crafting event, held annually online over three 
 
 Digital crafting combines the latest tech with an individual's creativity to create unique craft projects. It encompasses paper and card crafts, such as scrapbooking, graphic designs for t-shirts and drinking vessels, fabric crafts, including embroidery, 3D modelling, and adhesive crafts such as stickers, signs, and decals.
 
-These crafts commonly use a cutting machine, such as a Cricut or Silhouette (or even a laser cutter, like a Glowforge) to create precise designs that can be used with, or applied to, a variety of materials.
+These crafts commonly use a cutting machine, such as a [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/) (or even a laser cutter, like a [Glowforge](https://glowforge.com/)) to create precise designs that can be used with, or applied to, a variety of materials.
 
 The purpose of this site is to promote the Craftr event, and let interested crafters create accounts and register for chosen classes.
 
@@ -18,7 +18,7 @@ The purpose of this site is to promote the Craftr event, and let interested craf
 
 ### Site Link
 
-[live site]: https://TBC
+[live site]: https://craftr-bfd2923e1ca4.herokuapp.com/
 The [live site] is hosted by Heroku.
 
 ## Index
@@ -67,25 +67,23 @@ The [live site] is hosted by Heroku.
 
 #### Key Business Goals
 
-- Attract crafters of all levels to participate, learn something new, and share their positive experiences with others.
-- Give instructors the tools they need to create and manage classes across the event.
+- Attract crafters of all levels to participate, learn something new, and share their positive experiences of the event.
 - The organisers of the event will see value from increased numbers of people visiting the website, the positive word-of-mouth generated, and more sign-ups to their mailing list.
-- The home page will encourage visitors to look at the site as a whole, while encouraging people to sign up for one or more of the classes shown on the diary page.
+- The home page will engage visitors' interests, while encouraging them to sign up for one or more of the classes being run across the event.
 
 #### Key User Goals
 
 - The potential to learn a new craft, or something new about a craft with which they are familiar.
 - Enjoy a positive and useful experience without having to spend any money.
-- Link up with like-minded people through social media, to share their throughts on the event.
-- Allow easy creation and management of classes, across the course of the event.
+- Link up with like-minded people through social media, to share their thoughts on the event.
 
 #### User Experience
 
 - Target audience:
-    - Anyone who is 13 or older and enjoys using technology to be creative. 
+    - Anyone 13 or older who enjoys using technology and being creative. 
     - Teenager, student, employed, or retired.
     - Has an interest in arts and crafts.
-    - Those with an interest in possibly taking a hobby and turning it into a source of income.
+    - Those with an interest in the potential of taking a hobby and turning it into a source of income.
     - Someone looking for a productive but relaxing way to spend their free time.
  
 #### User Expectations
@@ -96,28 +94,27 @@ The [live site] is hosted by Heroku.
     - contains useful information that will prompt a visitor to sign up for classes.
     - is designed to appeal to those who like crafting, and help them feel comfortable and welcome.
     - allows a user to register their details so that they can bookmark or register for interesting classes.
-    - lets instructors create and manage event classes.
 
 #### User Stories
 
 ##### First time visitor goals
     
 - "What is this website promoting?”
-- "When does the online event happen?"
 - “What training is being given?”
+- "When does the online event happen?"
 - “How do I sign up?”
         
 ##### Returning visitor goals
     
-- “What classes am I interested in attending?”
-- "When is my training session due to start?"
-- "Where can I keep track of interesting classes?"
+- “What other classes am I interested in attending?”
+- "When is my class due to start?"
+- "Where can I keep track of the classes I've signed up for?"
     
 ##### Frequent visitor goals
     
-- “Who are the instructors running the classes?”
-- "Who manages this website?"
-- "How do I contact the organisers of this event?"
+- “Who running my class?”
+- "How do I cancel my class enrolment?"
+- "How can I contact the organisers of this event?"
 
 #### User Personas
 
@@ -133,15 +130,15 @@ The website is designed to appeal to all demographics, but the following persona
 
 ###### Acceptance Criteria
 
-- It is easy to share information from the website via social media.
 - Classes should be suitable for all abilities (beginner through to advanced).
 - It is easy to navigate the site to find classes and inspiration.
+- It should be possible to keep updated about future site updates.
     
 ###### Tasks
 
-- Links to share to social media are prominent, as well as being easy to find and use.
-- Classes can be filtered and sorted by difficulty level.
+- Classes state the minimum skill level required to participate effectively.
 - Menus make it easy to find information on the website.
+- Enable visitors to add their details to the event email list.
     
 ##### User 2
 
@@ -150,13 +147,13 @@ The website is designed to appeal to all demographics, but the following persona
 ###### Acceptance Criteria
 
 - A variety of crafts are featured on the home page.
-- Information on the site can be filtered based on interests.
+- Information on the site is easily accessible.
 - The website design does not deter first-time users.
     
 ###### Tasks
 
 - Design a visually appealing home page that mentions the different crafts featured on the website.
-- Add a filter function to sort content by interest.
+- Class details are simple to find, directly from the diary page.
 - Create a clean, simple design that is easy to use and welcoming to first-time users.
 
 ##### User 3
@@ -166,12 +163,14 @@ The website is designed to appeal to all demographics, but the following persona
 ###### Acceptance Criteria
 
 - Users find it simple and easy to register on the website.
-- Classes are clearly explained, with instructor details, and lists of materials required.
+- Classes are clearly explained, and include instructors' details.
+- It is easy to share information from the website via social media.
     
 ###### Tasks
 
 - Add the ability for users to create their own account.
-- Ensure all classes are detailed, have intructor profiles, and comprehensive equipment / material lists.
+- Ensure all classes have detailed descriptions and information about the class intructor.
+- Links to share to social media are prominent, as well as being easy to find and use.
 
 ### Scope
 
