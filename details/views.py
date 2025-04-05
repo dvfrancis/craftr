@@ -13,18 +13,21 @@ def diary_page(request):
 
 def enrol(request, class_id):
     cloud_name = settings.CLOUDINARY_STORAGE['CLOUD_NAME']
+
     default_class_image = (
         (
             f"https://res.cloudinary.com/{cloud_name}/image/upload/"
             f"default_class_image"
         )
     )
+
     default_instructor_image = (
         (
             f"https://res.cloudinary.com/{cloud_name}/image/upload/"
-            f"placeholder"
+            f"default_instructor_image"
         )
     )
+
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
 
