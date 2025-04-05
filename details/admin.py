@@ -6,12 +6,14 @@ from .models import EventClass, Enrolment
 class EventClassAdmin(admin.ModelAdmin):
     list_display = (
         'event_day', 'class_title', 'start_time', 'end_time',
-        'class_description', 'difficulty'
+        'difficulty', 'instructor',
     )
-    list_filter = ('difficulty', 'event_day')
-    search_fields = ('class_title', 'class_description')
+    list_filter = ('event_day', 'start_time', 'end_time',
+                   'difficulty', 'instructor')
+    search_fields = ('event_day', 'class_title', 'start_time', 'end_time',
+                     'class_description', 'difficulty', 'instructor', 'instructor_bio')
     ordering = ('event_day', 'class_title', 'start_time', 'end_time',
-                'difficulty')
+                'difficulty', 'instructor')
 
 
 @admin.register(Enrolment)

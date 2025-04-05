@@ -1,5 +1,6 @@
 from django.db import models
 from diary.models import EventDay
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -28,8 +29,21 @@ class EventClass(models.Model):
     difficulty = models.CharField(
         max_length=12,
         choices=DIFFICULTY_CHOICES,
-        default=BEGINNER
+        default=BEGINNER)
+    class_image = CloudinaryField(
+        'image',
+        default='default_class_image',
+        blank=True,
+        null=True
     )
+    instructor = models.CharField(max_length=100)
+    instructor_photo = CloudinaryField(
+        'image',
+        default='default_instructor_image',
+        blank=True,
+        null=True
+    )
+    instructor_bio = models.TextField()
 
     # Enforce unique class titles regardless of case
     class Meta:
