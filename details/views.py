@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Enrolment, EventClass
 from .models import EventDay
+from django.conf import settings
 
 
 def diary_page(request):
@@ -11,6 +12,19 @@ def diary_page(request):
 
 
 def enrol(request, class_id):
+    cloud_name = settings.CLOUDINARY_STORAGE['CLOUD_NAME']
+    default_class_image = (
+        (
+            f"https://res.cloudinary.com/{cloud_name}/image/upload/"
+            f"default_class_image"
+        )
+    )
+    default_instructor_image = (
+        (
+            f"https://res.cloudinary.com/{cloud_name}/image/upload/"
+            f"placeholder"
+        )
+    )
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
 
@@ -41,6 +55,8 @@ def enrol(request, class_id):
         {
             "event_class": event_class,
             "is_enrolled": is_enrolled,  # Pass enrolment status to the template
+            "default_class_image": default_class_image,
+            "default_instructor_image": default_instructor_image,
         },
     )
 
