@@ -32,14 +32,12 @@ class EventClass(models.Model):
         default=BEGINNER)
     class_image = CloudinaryField(
         'image',
-        default='default_class_image',
         blank=True,
         null=True
     )
     instructor = models.CharField(max_length=100)
-    instructor_photo = CloudinaryField(
+    instructor_image = CloudinaryField(
         'image',
-        default='default_instructor_image',
         blank=True,
         null=True
     )
