@@ -7,21 +7,6 @@
 {% endblock %} {% block content %}
 
 <h1>Class Details</h1>
-
-<img
-  src="{{ event_class.class_image.url|default:default_class_image }}"
-  alt="Profile photo"
-  style="width: 150px; height: 150px; object-fit: cover;"
-/>
-
-<img
-  src="{{ event_class.instructor_image.url|default:default_instructor_image }}"
-  alt="Profile photo"
-  style="width: 150px; height: 150px; object-fit: cover;"
-/>
-
-
-<br />
 <table>
   <tr>
     <td><strong>Class</strong></td>
