@@ -2,10 +2,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Enrolment, EventClass
+from django.conf import settings
 
 
 def enrol(request, class_id):
-
+    cloud_name = settings.CLOUDINARY_STORAGE["CLOUD_NAME"]
+    placeholder = ((f"https://res.cloudinary.com/{cloud_name}/image/upload/placeholder"))
 
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
@@ -37,7 +39,7 @@ def enrol(request, class_id):
         {
             "event_class": event_class,
             "is_enrolled": is_enrolled,  # Pass enrolment status to the template
-
+            "placeholder": placeholder,
         },
     )
 
