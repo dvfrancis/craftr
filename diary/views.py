@@ -4,9 +4,11 @@ from details.models import EventClass
 
 
 def diary_details(request):
-    # Fetch all EventDay objects with related EventClass objects
-    days = EventDay.objects.prefetch_related("event_day").all()
-    classes = EventClass.objects.all()  # Fetch all EventClass objects
+    # Fetch EventDay objects sorted by date
+    days = EventDay.objects.order_by("class_date")
+
+    # Fetch EventClass objects, ensuring sorting by event day first, then start time
+    classes = EventClass.objects.select_related("event_day").order_by("event_day__class_date", "start_time")
 
     return render(
         request,

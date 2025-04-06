@@ -1,17 +1,12 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block head %}
-
     <title>Craftr Diary</title>
-
     <link rel="stylesheet" href="{% static 'diary/styles.css' %}" />
-
 {% endblock %}
 
 {% block content %}
-
     <h1>Craftr Diary</h1>
 
     <ul>
@@ -19,7 +14,7 @@
         <li>
             <strong>Date:</strong> {{ day.class_date|date:"d F Y" }}
             <ul>
-                {% for class in day.event_day.all %}
+                {% for class in day.event_day.all|dictsort:"start_time" %}
                 <li>
                     <strong>Title:</strong> {{ class.class_title }}</br>
                     <strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</br>
@@ -31,5 +26,4 @@
         </li>
         {% endfor %}
     </ul>
-
 {% endblock %}
