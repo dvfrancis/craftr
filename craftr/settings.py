@@ -176,14 +176,14 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join('account/static'),
-    os.path.join('contact/static'),
-    os.path.join('details/static'),
-    os.path.join('diary/static'),
-    os.path.join('faq/static'),
-    os.path.join('home/static'),
-    os.path.join('login/static'),
-    os.path.join('register/static'),
+    os.path.join(BASE_DIR, 'account/static'),
+    os.path.join(BASE_DIR, 'contact/static'),
+    os.path.join(BASE_DIR, 'details/static'),
+    os.path.join(BASE_DIR, 'diary/static'),
+    os.path.join(BASE_DIR, 'faq/static'),
+    os.path.join(BASE_DIR, 'home/static'),
+    os.path.join(BASE_DIR, 'login/static'),
+    os.path.join(BASE_DIR, 'register/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")

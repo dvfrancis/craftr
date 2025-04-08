@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -14,7 +16,10 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Custom favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="TBC">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'craftr/favicon.ico' %}">
+
+    <!--Page CSS file-->
+    <link rel="stylesheet" href="{% static 'craftr/styles.css' %}">
 
     {% block head %}
 
@@ -25,32 +30,38 @@
 <body>
 
     <!-- Header and navigation -->
-    <header>
-        <div>
-            <div>
+    <header class="container-fluid mb-5 fixed-top">
+        <div class="row teal">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                 <h1 class="TBC"><a href="{% url 'home' %}" rel="bookmark">Craftr</a></h1>
             </div>
         </div>
-        <div>
-            <nav>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'diary' %}">Diary</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'faq' %}">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'contact' %}">Contact</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'account' %}">Account</a>
-                        </li>
-                    </ul>
+        <div class="row">
+            <nav class="col-12 col-sm-12 col-md-12 col-lg-12 navbar navbar-expand-lg bg-body-tertiary pb-3">
+                <div class="mx-auto">
+                    <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarHome" aria-controls="navbarHome" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon pt-4 pb-4"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarHome">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" aria-label="Home Page Link" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" aria-label="Diary Page Link" href="{% url 'diary' %}">Diary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" aria-label="Contact Page Link" href="{% url 'contact' %}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" aria-label="Account Page Link" href="{% url 'account' %}">Account</a>
+                            </li>
+                        </ul>
                 </div>
             </nav>
         </div>
@@ -87,12 +98,12 @@
         <!-- Social media links -->
         <div>
             <div>
-                <a href="TBC" target="_blank" rel="noopener noreferrer"
-                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 1</span></a>
-                <a href="TBC" target="_blank" rel="noopener noreferrer"
-                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 2</span></a>
-                <a href="TBC" target="_blank" rel="noopener noreferrer"
-                    class="TBC" aria-label="TBC"><span class="TBC">Social Media 3</span></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                    class="fa fa-facebook ms-2" aria-label="Visit Facebook"><span class="socials">Facebook</span></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="fa fa-instagram me-2" aria-label="Visit Instagram"><span class="socials">Instagram</span></a>
+                <a href="https://bsky.app/" target="_blank" rel="noopener noreferrer"
+                    class="fa fa-bluesky ms-2" aria-label="Visit Bluesky"><span class="TBC">Bluesky</span></a>
             </div>
         </div>
 
