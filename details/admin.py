@@ -8,10 +8,13 @@ class EventClassAdmin(admin.ModelAdmin):
         'event_day', 'class_title', 'start_time', 'end_time',
         'difficulty', 'instructor',
     )
-    list_filter = ('event_day', 'start_time', 'end_time',
-                   'difficulty', 'instructor')
-    search_fields = ('event_day', 'class_title', 'start_time', 'end_time',
-                     'class_description', 'difficulty', 'instructor', 'instructor_bio')
+    list_filter = (
+        'event_day', 'start_time', 'end_time',
+        'difficulty', 'instructor',
+    )
+    search_fields = (
+        'event_day', 'class_title', 'start_time', 'end_time',
+        'class_description', 'difficulty', 'instructor', 'instructor_bio')
     ordering = ('event_day', 'class_title', 'start_time', 'end_time',
                 'difficulty', 'instructor')
 

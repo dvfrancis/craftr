@@ -31,14 +31,14 @@
 <h2>Your Enrolments</h2>
 {% if enrolments %}
 <ul>
-    {% for enrolment in enrolments %} {{
-    enrolment.enrolled_class.event_day.class_date }} at {{
-    enrolment.enrolled_class.start_time }} -
-    <strong>{{ enrolment.enrolled_class.class_title }}</strong>
-    <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
-        {% csrf_token %}
-        <button type="submit">Withdraw</button>
-    </form>
+    {% for enrolment in enrolments %}
+        {{ enrolment.enrolled_class.event_day.class_date }} at
+        {{ enrolment.enrolled_class.start_time }} -
+        <strong>{{ enrolment.enrolled_class.class_title }}</strong>
+        <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
+            {% csrf_token %}
+            <button type="submit">Withdraw</button>
+        </form>
     {% endfor %}
 </ul>
 {% else %}

@@ -136,8 +136,9 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #fff;
-  font-family: "Pontano Sans", sans-serif;
+  font-family: "Junge", cursive;
   font-weight: 400;
+  font-style: normal;
 }
 
 /* Make footer stick at the bottom of browser (see https://materializecss.com/footer.html) */
@@ -163,7 +164,8 @@ main {
 
 /* Class and Instructor image*/
 
-.class-image, .instructor-image {
+.class-image,
+.instructor-image {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -172,7 +174,10 @@ main {
 
 h1,
 h2 {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -187,12 +192,12 @@ ul li {
 
 /* Style links in text */
 
-p > a {
+p>a {
   text-decoration: underline;
   background-color: transparent;
 }
 
-p > a:hover {
+p>a:hover {
   color: #cf9d00;
   text-decoration: none;
 }
@@ -384,7 +389,7 @@ li.nav-item a {
 }
 
 /* Round the corners of all carousel captions */
-.carousel-caption > p {
+.carousel-caption>p {
   color: #fff;
   border-radius: 20px;
 }
@@ -430,7 +435,7 @@ li.nav-item a {
 /* Copyright information */
 
 .footer {
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }

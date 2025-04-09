@@ -7,7 +7,9 @@ from django.conf import settings
 
 def enrol(request, class_id):
     cloud_name = settings.CLOUDINARY_STORAGE["CLOUD_NAME"]
-    placeholder = ((f"https://res.cloudinary.com/{cloud_name}/image/upload/placeholder"))
+    placeholder = (
+        f"https://res.cloudinary.com/{cloud_name}/image/upload/placeholder"
+    )
 
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
@@ -15,17 +17,25 @@ def enrol(request, class_id):
     # Check if the user is enrolled in this class
 
     if request.user.is_authenticated:
-        is_enrolled = Enrolment.objects.filter(user=request.user, enrolled_class=event_class).exists()
+        is_enrolled = Enrolment.objects.filter(
+            user=request.user, enrolled_class=event_class
+        ).exists()
     else:
         is_enrolled = False  # Default for non-logged-in users
 
     if request.method == "POST":
         action = request.POST.get("action")
         if action == "enrol" and not is_enrolled:
-            Enrolment.objects.create(user=request.user, enrolled_class=event_class)
-            messages.success(request, "You have successfully enrolled for this class")
+            Enrolment.objects.create(
+                user=request.user, enrolled_class=event_class
+            )
+            messages.success(
+                request, "You have successfully enrolled for this class"
+            )
         elif action == "remove" and is_enrolled:
-            Enrolment.objects.filter(user=request.user, enrolled_class=event_class).delete()
+            Enrolment.objects.filter(
+                user=request.user, enrolled_class=event_class
+            ).delete()
             messages.success(request, "Your enrolment has been withdrawn")
         else:
             messages.warning(request, "Error - unable to process your request")
@@ -38,7 +48,8 @@ def enrol(request, class_id):
         "details/details.html",
         {
             "event_class": event_class,
-            "is_enrolled": is_enrolled,  # Pass enrolment status to the template
+            "is_enrolled": is_enrolled,  
+            # Pass enrolment status to the template
             "placeholder": placeholder,
         },
     )
@@ -48,6 +59,8 @@ def enrol(request, class_id):
 def remove_enrolment(request, class_id):
     event_class = get_object_or_404(EventClass, id=class_id)
     if request.method == "POST":
-        Enrolment.objects.filter(user=request.user, enrolled_class=event_class).delete()
+        Enrolment.objects.filter(
+            user=request.user, enrolled_class=event_class
+        ).delete()
         messages.success(request, "Your enrolment has been withdrawn")
     return redirect("account")  # Redirect to account page instead of details

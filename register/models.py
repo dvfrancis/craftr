@@ -43,7 +43,11 @@ class UserProfile(models.Model):
             )
 
     def __str__(self):
-        return f"{self.user.username}'s profile" if self.user else "Profile without user"
+        return (
+            f"{self.user.username}'s profile"
+            if self.user
+            else "Profile without user"
+        )
 
 
 @receiver(post_save, sender=User)
