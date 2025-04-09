@@ -477,20 +477,20 @@ Wireframe diagrams of my initial ideas:
 <details>
 <summary>Click to view the chosen colour scheme</summary>
 
-![Website colour scheme](assets/images/website-colours.webp)
+![Website colour scheme](assets/images/website-colour-scheme.png)
 
 </details>
 
-- Website colours were chosen from the Sarah Renae Clarke Colour Catalogue (Volume 2) - card 406.
-- Text colours on the website are a mix of white (#FFF) and black (#000).
+- Website colours taken from the Sarah Renae Clarke Colour Catalogue (Volume 2), card 390.
+- Text colours are split between black (#000) and white (#FFF).
 
 #### Typography
 
 Google Fonts was used to source all fonts:
   
-- [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- [Lora](https://fonts.google.com/specimen/Lora)
-- [Hind Madurai](https://fonts.google.com/specimen/Hind+Madurai)
+- [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- [Josefin Slab](https://fonts.google.com/specimen/Josefin+Slab)
+- [Junge](hhttps://fonts.google.com/specimen/Junge)
 
 #### Media
 
