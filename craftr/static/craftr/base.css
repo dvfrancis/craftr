@@ -1,4 +1,4 @@
-/* CSS Reset http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */
+/* CSS Reset from http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */
 html,
 body,
 div,
@@ -246,10 +246,10 @@ a.nav-link:visited {
 
 /* Hover over navbar menu item colour */
 a.nav-link:hover {
-  background-color: #cf9d00;
+  background-color: #7db657;
   color: #fff;
-  border-radius: 10px;
-  border: 2px solid #fff;
+  border-radius: 5px;
+  /* border: 2px solid #fff; */
 }
 
 /* Clicked navbar menu item colour */
@@ -404,8 +404,20 @@ li.nav-item a {
 
 /* Copyright information */
 
+.footer {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .smallprint {
-  font-size: 0.8em;
   text-decoration: none;
 }
 
@@ -416,63 +428,40 @@ li.nav-item a {
 
 /* Social media icons */
 .fa-brands {
-  padding: 5px;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 /* Facebook icon */
-.fa-square-facebook {
-  background: #fff;
-  color: rgb(0, 118, 150);
-}
-
 .fa-square-facebook:hover {
-  background-color: #0165e1;
+  color: #0165e1;
   border: none;
-  color: #fff;
-}
-
-.fa-square-facebook:active {
-  background-color: #17a9fd;
-  color: #fff;
 }
 
 /* Instagram icon*/
-.fa-square-instagram {
-  background: #fff;
-  color: #007696;
-}
 
 .fa-square-instagram:hover {
-  background-color: #c13584;
+  color: #ff68ed;
   border: none;
-  color: #fff;
-}
-
-.fa--squareinstagram:active {
-  background-color: #e1306c;
-  color: #fff;
 }
 
 /* Bluesky icon */
-.fa-bluesky {
-  background: #fff;
-  color: rgb(0, 118, 150);
-}
 
 .fa-bluesky:hover {
-  background-color: #0165e1;
+  color: #0084ff;
   border: none;
-  color: #fff;
 }
 
-.fa-bluesky:active {
-  background-color: #17a9fd;
-  color: #fff;
+/* GitHub icon */
+
+.fa-github:hover {
+  color: #01040a;
+  border: none;
 }
 
 /* MEDIA QUERIES */

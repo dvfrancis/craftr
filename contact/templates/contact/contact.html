@@ -12,6 +12,7 @@
 
 {% block content %}
     <h1>Contact Us</h1>
+    <br>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
