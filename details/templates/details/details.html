@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block head %}
 
@@ -6,13 +8,19 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-{% endblock %} {% block content %}
+<meta name="description" content="TBC" />
+
+<meta name="keywords" content="TBC" />
+
+{% endblock %}
+
+{% block content %}
 
 <h1>Class Details</h1>
 <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-  alt="Class Image" style="width: 250px; height: 250px; object-fit: cover;" />
+  alt="Class Image" class="class-image"/>
 <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-  alt="Instructor Image" style="width: 250px; height: 250px; object-fit: cover;" />
+  alt="Instructor Image" class="instructor-image"/>
 <table>
   <tr>
     <td><strong>Class</strong></td>

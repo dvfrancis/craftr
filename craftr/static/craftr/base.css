@@ -145,6 +145,31 @@ main {
   flex: 1 0 auto;
 }
 
+/* User photos */
+
+.user-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* User account 'Delete' button */
+
+.delete-account {
+  background-color: red;
+  color: white
+}
+
+/* Class and Instructor image*/
+
+.class-image, .instructor-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 h1,
 h2 {
   font-family: "Marcellus", sans-serif;

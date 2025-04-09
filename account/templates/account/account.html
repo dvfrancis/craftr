@@ -1,57 +1,65 @@
-{% extends 'base.html' %} {% load static %} {% block head %}
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-{% endblock %} {% block content %}
+<meta name="description" content="TBC" />
 
-<main>
-    <h1>Welcome, {{ user.first_name }}!</h1>
-    <br />
-    <p><strong>First Name:</strong> {{ user.first_name }}</p>
-    <p><strong>Last Name:</strong> {{ user.last_name }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
+<meta name="keywords" content="TBC" />
 
-    {% if user.profile and user.profile.photograph %}
-    <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
-        alt="Profile photo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%" />
-    <p><strong>Location:</strong> {{ user.profile.location }}</p>
-    <p><strong>Experience:</strong> {{ user.profile.experience }}</p>
-    {% else %}
-    <p>No additional profile information is available.</p>
-    {% endif %}
-    <h2>Your Enrolments</h2>
-    {% if enrolments %}
-    <ul>
-        {% for enrolment in enrolments %} {{
+{% endblock %}
+
+{% block content %}
+
+<h1>Welcome, {{ user.first_name }}!</h1>
+<br />
+<p><strong>First Name:</strong> {{ user.first_name }}</p>
+<p><strong>Last Name:</strong> {{ user.last_name }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+
+{% if user.profile and user.profile.photograph %}
+<img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
+    alt="Profile photo" class="user-photo" />
+<p><strong>Location:</strong> {{ user.profile.location }}</p>
+<p><strong>Experience:</strong> {{ user.profile.experience }}</p>
+{% else %}
+<p>No additional profile information is available.</p>
+{% endif %}
+<h2>Your Enrolments</h2>
+{% if enrolments %}
+<ul>
+    {% for enrolment in enrolments %} {{
     enrolment.enrolled_class.event_day.class_date }} at {{
     enrolment.enrolled_class.start_time }} -
-        <strong>{{ enrolment.enrolled_class.class_title }}</strong>
-        <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
-            {% csrf_token %}
-            <button type="submit">Withdraw</button>
-        </form>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>You are not enrolled in any classes yet.</p>
-    {% endif %}
-    <form method="POST" action="{% url 'logout' %}">
+    <strong>{{ enrolment.enrolled_class.class_title }}</strong>
+    <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
         {% csrf_token %}
-        <button type="submit">Logout</button>
+        <button type="submit">Withdraw</button>
     </form>
-    <a href="{% url 'update_profile' %}">
-        <button type="button">Edit Profile</button>
-    </a>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You are not enrolled in any classes yet.</p>
+{% endif %}
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+<a href="{% url 'update_profile' %}">
+    <button type="button">Edit Profile</button>
+</a>
 
-    {% if not user.is_superuser %}
-    <form method="POST" action="{% url 'delete_account' %}">
-        {% csrf_token %}
-        <button type="submit" style="background-color: red; color: white"
-            onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
-            Delete Account
-        </button>
-    </form>
-    {% endif %}
-</main>
+{% if not user.is_superuser %}
+<form method="POST" action="{% url 'delete_account' %}">
+    {% csrf_token %}
+    <button type="submit" class="delete-account"
+        onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+        Delete Account
+    </button>
+</form>
+{% endif %}
 
 {% endblock %}
