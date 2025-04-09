@@ -4,23 +4,23 @@
 
 {% block head %}
 
-    <title>Update Profile</title>
+<title>Update Profile</title>
 
-    <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-    
+<link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
 {% endblock %}
 
 {% block content %}
 
-    <h1>Update Your Profile</h1>
-    <br>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ user_form.as_p }}
-        {{ profile_form.as_p }}
-        <button type="submit">Save Changes</button>
-        <input type="reset" value="Clear">
-    </form>
-    <a href="{% url 'account' %}"><button type="button">Cancel</button></a>
+<h1>Update Your Profile</h1>
+<br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button type="submit">Save Changes</button>
+    <input type="reset" value="Clear">
+</form>
+<a href="{% url 'account' %}"><button type="button">Cancel</button></a>
 
 {% endblock %}

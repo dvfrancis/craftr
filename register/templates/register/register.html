@@ -4,22 +4,22 @@
 
 {% block head %}
 
-    <title>Register</title>
+<title>Register</title>
 
-    <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-    
+<link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
 {% endblock %}
 
 {% block content %}
 
-    <h1>Register an Account</h1>
-    <form method="POST" enctype="multipart/form-data">
+<h1>Register an Account</h1>
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="hidden" name="next" value="{{ request.GET.next }}">
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
     <button type="submit">Register</button>
     <input type="reset" value="Clear">
-    </form>
+</form>
 
 {% endblock %}

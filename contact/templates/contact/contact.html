@@ -4,20 +4,20 @@
 
 {% block head %}
 
-    <title>Contact Us</title>
+<title>Contact Us</title>
 
-    <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-    
+<link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
 {% endblock %}
 
 {% block content %}
-    <h1>Contact Us</h1>
-    <br>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Send</button>
-        <input type="reset" value="Clear">
-    </form>
+<h1>Contact Us</h1>
+<br>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+    <input type="reset" value="Clear">
+</form>
 
 {% endblock %}

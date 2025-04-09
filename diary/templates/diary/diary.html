@@ -3,30 +3,30 @@
 
 {% block head %}
 
-    <title>Craftr Diary</title>
-    
-    <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-    
+<title>Craftr Diary</title>
+
+<link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
 {% endblock %}
 
 {% block content %}
-    <h1>Craftr Diary</h1>
+<h1>Craftr Diary</h1>
 
-    <ul>
-        {% for day in days %}
-        <li>
-            <strong>Date:</strong> {{ day.class_date|date:"d F Y" }}
-            <ul>
-                {% for class in day.event_day.all|dictsort:"start_time" %}
-                <li>
-                    <strong>Title:</strong> {{ class.class_title }}</br>
-                    <strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</br>
-                    <strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</br>
-                    <a href="{% url 'details' class.id %}"><button type="button">Details</button></a>
-                </li>
-                {% endfor %}
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for day in days %}
+    <li>
+        <strong>Date:</strong> {{ day.class_date|date:"d F Y" }}
+        <ul>
+            {% for class in day.event_day.all|dictsort:"start_time" %}
+            <li>
+                <strong>Title:</strong> {{ class.class_title }}</br>
+                <strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</br>
+                <strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</br>
+                <a href="{% url 'details' class.id %}"><button type="button">Details</button></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

@@ -4,22 +4,22 @@
 
 {% block head %}
 
-    <title>Login</title>
+<title>Login</title>
 
-    <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-    
+<link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
 {% endblock %}
 
 {% block content %}
 
-    <h1>Login</h1>
-    <br>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-        <input type="reset" value="Clear">
-    </form>
-    <a href="{% url 'register' %}"><button type="button">Register</button></a>
+<h1>Login</h1>
+<br>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+    <input type="reset" value="Clear">
+</form>
+<a href="{% url 'register' %}"><button type="button">Register</button></a>
 
 {% endblock %}
