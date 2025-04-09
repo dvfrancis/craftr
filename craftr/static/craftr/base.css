@@ -421,6 +421,11 @@ li.nav-item a {
   text-decoration: none;
 }
 
+.smallprint:hover {
+  text-decoration: none;
+  color: #7db657
+}
+
 /* Hide icon text */
 .socials {
   display: none;
