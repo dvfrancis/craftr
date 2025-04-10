@@ -1,4 +1,6 @@
-/* CSS Reset from http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */
+/* CSS Reset */
+/* Taken from http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */
+
 html,
 body,
 div,
@@ -130,6 +132,8 @@ table {
   border-spacing: 0;
 }
 
+/* Project-specific styles */
+
 /* General */
 body {
   display: flex;
@@ -155,13 +159,6 @@ main {
   border-radius: 50%;
 }
 
-/* User account 'Delete' button */
-
-.delete-account {
-  background-color: red;
-  color: white
-}
-
 /* Class and Instructor image*/
 
 .class-image,
@@ -170,6 +167,13 @@ main {
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+/* User account 'Delete' button */
+
+.delete-account {
+  background-color: red;
+  color: white
 }
 
 h1,
@@ -181,18 +185,11 @@ h2 {
   text-align: center;
 }
 
+/* a {
+} */
+
 a {
   text-decoration: none;
-  color: #fff;
-}
-
-p.site-title
-  {
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
 }
 
 ul li {
@@ -200,120 +197,74 @@ ul li {
   text-align: center;
 }
 
-/* Style links in text */
+/* Placeholder form text */
 
-p>a {
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-p>a:hover {
-  color: #cf9d00;
-  text-decoration: none;
-}
-
-/* Align placeholder text on forms */
 ::placeholder {
   text-align: center;
 }
 
-/* Round corners of images on custom pages */
-.custom-img {
-  border-radius: 20px;
+/* Utility colour classes */
+
+.apple-green {
+  background-color: #7db657;
 }
 
-/* Utility classes */
-.purple {
+.mint {
+  background-color: #0091ac;
+}
+
+.royal-purple {
   background-color: #753da2;
 }
 
-.raspberry {
-  background-color: #a30041;
+.crimson {
+  background-color: #b40001;
 }
 
-.emerald {
-  background-color: #016c62;
+.orange {
+  background-color: #ff8500;
 }
 
-/* Customised Bootstrap buttons */
-.btn-info,
-.btn-primary {
-  --bs-btn-bg: #007696;
-  --bs-btn-color: #fff;
-  --bs-btn-border-color: #fff;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #cf9d00;
-  --bs-btn-hover-border-color: #fff;
-  --bs-btn-focus-shadow-rgb: 11, 172, 204;
-  --bs-btn-active-color: #007696;
-  --bs-btn-active-bg: #fff;
-  --bs-btn-active-border-color: #cf9d00;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #016c62;
-  --bs-btn-disabled-border-color: #016c62;
-  border-width: 2px;
-  border-radius: 10px;
+.gold {
+  background-color: #ffc500;
 }
 
-/* Customised Bootstrap carousel controls*/
+/* Header */
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  background-color: #cf9d00;
-  border: solid white 1px;
-  border-radius: 5px;
-}
-
-/* HEADER */
-
-/* Default navbar menu item style*/
-a.nav-link {
-  margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 10px;
-  border: 2px solid transparent;
+/* Navigation item */
+li.nav-entry a {
   color: #fff;
 }
 
-/* Visited navbar menu item colour*/
-a.nav-link:visited {
-  margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 10px;
+/* Navigation item style*/
+a.nav-details {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 0.5rem;
   color: #fff;
 }
 
-/* Hover over navbar menu item colour */
-a.nav-link:hover {
-  background-color: #7db657;
-  color: #fff;
-  border-radius: 5px;
-  /* border: 2px solid #fff; */
+/* Navigation item - hover */
+a.nav-details:hover {
+  background-color: #ffc500;
+  color: #b40001;
+  border-radius: 15px;
 }
 
-/* Clicked navbar menu item colour */
-a.nav-link:active {
-  background-color: #fff;
-  color: #007696;
-  border-radius: 10px;
-  border: 2px solid #cf9d00;
+/* Navigation item - selected */
+.selected {
+  background-color: #ffc500;
+  color: #b40001 !important;
+  border-radius: 15px;
 }
 
-/* Currently active page indicator colour */
-a.selected {
-  background-color: #007696;
-  color: #fff;
-  border-radius: 10px;
-  border: 2px solid #fff;
-}
-
-/* Navbar background colour */
+/* Navigation background */
 .bg-body-tertiary {
-  background-color: #753da2 !important;
+  height: 100px;
+  background-color: #b40001 !important;
 }
 
-/* Hamburger menu colours*/
+/* Hamburger menu */
 /* Info taken from https://www.youtube.com/watch?v=45QSuJaHEss */
 .navbar-toggler {
   --bs-navbar-toggler-border-color: #fff;
@@ -321,133 +272,13 @@ a.selected {
   color: #fff;
 }
 
-/* Target the header title */
-header h1 {
-  text-align: center;
-}
-
-/* Set colour for navbar list items */
-li.nav-item a {
-  color: #fff;
-}
-
-/* HOME (INDEX) PAGE */
-
-/* Page sections */
-.intro-card {
-  background-color: #a30041;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.podcast-card {
-  background-color: #016c62;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.live-card {
-  background-color: #a30041;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.merch-card {
-  background-color: #016c62;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.list-card {
-  background-color: #a30041;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.send {
-  width: 100px;
-}
-
-/* ABOUT PAGE */
-
-/* Page sections*/
-.podcast-info-card,
-.judith-info-card,
-.jenny-info-card {
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.judith-info-card {
-  background-color: #a30041;
-}
-
-.podcast-info-card,
-.jenny-info-card {
-  background-color: rgb(1, 108, 98);
-}
-
-/* Round the corners of all carousels */
-.carousel-inner {
-  border-radius: 20px;
-}
-
-/* Round the corners of all carousel captions */
-.carousel-caption>p {
-  color: #fff;
-  border-radius: 20px;
-}
-
-/* MESSAGE BOARD PAGE */
-
-/* Page sections */
-.mb-card {
-  background-color: #a30041;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-/* CONTACT PAGE */
-
-/* Page sections */
-.contact-card {
-  background-color: #016c62;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-  width: 85%;
-}
-
-.contact-form {
-  width: 95%;
-  margin: 0 auto;
-}
-
-/* 404 PAGE */
-
-/* Page sections */
-.error-card {
-  background-color: #a30041;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-}
-
-/* FOOTER */
-
-/* Copyright information */
+/* Footer */
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100px;
 }
 
 .social-container {
@@ -458,16 +289,19 @@ li.nav-item a {
 }
 
 .smallprint {
+  font-size:larger;
+  color: #FFF;
   text-decoration: none;
 }
 
 .smallprint:hover {
   text-decoration: none;
-  color: #7db657
+  color: #753da2;
+
 }
 
-/* Hide icon text */
-.socials {
+/* Hide social media text */
+.social-media {
   display: none;
 }
 
@@ -480,6 +314,9 @@ li.nav-item a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-decoration: none;
+  color: #fff;
+
 }
 
 /* Facebook icon */
@@ -509,54 +346,79 @@ li.nav-item a {
   border: none;
 }
 
-/* MEDIA QUERIES */
+/* index.html */
+
+/* classes.html */
+
+/* faq.html */
+
+/* contact.html */
+
+/* Page sections */
+.contact-card {
+  background-color: #016c62;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  color: #fff;
+  width: 85%;
+}
+
+.contact-form {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* register.html */
+
+/* login.html */
+
+/* account.html */
+
+/* update_profile.html */
+
+/* 404.html */
+
+/* 500.html */
+
+/* Media Queries */
 /* Info used from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
 
-/* For Bootstrap breakpoint extra small (none) */
+/* Bootstrap extra small (none) */
 @media (max-width: 575px) {
   body {
     padding-top: 185px;
   }
-
-  /* Resized Bootstrap carousel controls*/
-
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    border-radius: 2px;
-    width: 15px;
-    height: 15px;
-  }
 }
 
-/* For Bootstrap breakpoint small (sm) */
+/* Bootstrap small (sm) */
 @media (min-width: 576px) and (max-width: 767px) {
   body {
     padding-top: 190px;
   }
 }
 
-/* For Bootstrap breakpoint medium (md) */
+/* Bootstrap medium (md) */
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     padding-top: 190px;
   }
 }
 
-/* For Bootstrap breakpoint large (lg) */
+/* Bootstrap large (lg) */
 @media (min-width: 992px) and (max-width: 1199px) {
   body {
     padding-top: 180px;
   }
 }
 
-/* For Bootstrap breakpoint extra large (xl) */
+/* Bootstrap extra large (xl) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   body {
     padding-top: 180px;
   }
 }
 
-/* For Bootstrap breakpoint extra extra large (xxl) */
+/* Bootstrap extra extra large (xxl) */
 @media (min-width: 1400px) {
   body {
     padding-top: 190px;

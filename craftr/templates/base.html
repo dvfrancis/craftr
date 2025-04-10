@@ -40,11 +40,6 @@
 
     <!-- Header and navigation -->
     <header class="container-fluid mb-5 fixed-top">
-        <div class="row purple">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
-                <p class="site-title fs-2 fw-bold"><a href="{% url 'home' %}" rel="bookmark">CRAFTR</a></p>
-            </div>
-        </div>
         <div class="row">
             <nav class="col-12 col-sm-12 col-md-12 col-lg-12 navbar navbar-expand-lg bg-body-tertiary pb-3 pt-3">
                 <div class="mx-auto">
@@ -55,21 +50,23 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarHome">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" aria-label="Home Page Link" href="{% url 'home' %}">HOME</a>
+                            <li class="nav-entry">
+                                <a class="nav-details fs-5" aria-label="Home Page Link"
+                                    href="{% url 'home' %}">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" aria-label="Diary Page Link" href="{% url 'diary' %}">DIARY</a>
+                            <li class="nav-entry">
+                                <a class="nav-details fs-5" aria-label="Diary Page Link"
+                                    href="{% url 'diary' %}">DIARY</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
+                            <li class="nav-entry">
+                                <a class="nav-details fs-5" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" aria-label="Contact Page Link"
+                            <li class="nav-entry">
+                                <a class="nav-details fs-5" aria-label="Contact Page Link"
                                     href="{% url 'contact' %}">CONTACT</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" aria-label="Account Page Link"
+                            <li class="nav-entry">
+                                <a class="nav-details fs-5" aria-label="Account Page Link"
                                     href="{% url 'account' %}">ACCOUNT</a>
                             </li>
                         </ul>
@@ -107,31 +104,33 @@
     </main>
 
     <!-- Footer -->
-    <footer class="container-fluid purple mt-5">
+    <footer class="container-fluid orange mt-5">
 
         <div class="row footer">
 
             <!-- Legal and copyright information -->
             <div class="col text-center social-container">
-                <p><a href="https://www.dominicfrancis.co.uk" target="_blank" rel="noopener noreferrer"
-                        aria-label="Dominic Francis's website" class="smallprint">&#169; 2025 | Dominic Francis | All
-                        Rights Reserved</a>
-                </p>
+                <a href="https://www.dominicfrancis.co.uk" target="_blank" rel="noopener noreferrer"
+                    aria-label="Dominic Francis's website" class="smallprint">&#169; 2025 | Dominic Francis | All
+                    Rights Reserved</a>
             </div>
-
+            <!-- Site title -->
+            <div class="col text-center social-container">
+                <a href="http://127.0.0.1:8000/" aria-label="Craftr Home Page" class="smallprint">Craftr</a>
+            </div>
             <!-- Social media links -->
             <div class="col text-center social-container mt-3 mb-2">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                     class="fa-brands fa-square-facebook" aria-label="Share on Facebook"><span
-                        class="socials">Facebook</span></a>
+                        class="social-media">Facebook</span></a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
                     class="fa-brands fa-square-instagram ms-2" aria-label="Share on Instagram"><span
-                        class="socials">Instagram</span></a>
+                        class="social-media">Instagram</span></a>
                 <a href="https://bsky.app" target="_blank" rel="noopener noreferrer" class="fa-brands fa-bluesky ms-2"
-                    aria-label="Share on Bluesky"><span class="socials">Bluesky</span></a>
+                    aria-label="Share on Bluesky"><span class="social-media">Bluesky</span></a>
                 <a href="https://github.com/dvfrancis/craftr" target="_blank" rel="noopener noreferrer"
-                    class="fa-brands fa-github ms-2" aria-label="Visit the project repository on GitHub"><span
-                        class="socials">GitHub</span></a>
+                    class="fa-brands fa-github ms-2" aria-label="Visit project repository on GitHub"><span
+                        class="social-media">GitHub</span></a>
             </div>
         </div>
 
