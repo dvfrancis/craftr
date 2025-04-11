@@ -367,10 +367,62 @@ a.nav-details:hover {
 
 .class-image,
 .instructor-image {
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.diary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.diary-day {
+  width: 100%;
+  background-color: #ffc500;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.diary-classes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+.diary-class {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.class-details {
+  text-align: center;
+}
+
+.class-action-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0091ac;
+  color: white;
+  text-decoration: none;
 }
 
 /* F A Q */

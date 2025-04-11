@@ -16,24 +16,28 @@
 
 {% block content %}
 
-<h1>Craftr Diary</h1>
+<h1 class="mt-5 mb-3">Diary</h1>
 
-<ul>
+<div class="diary-container">
     {% for day in days %}
-    <li>
-        <strong>Date:</strong> {{ day.class_date|date:"d F Y" }}
-        <ul>
+    <div class="diary-day">
+        <h2 class="mb-3">{{ day.class_date|date:"d F Y" }}</h2>
+        <div class="diary-classes">
             {% for class in day.event_day.all|dictsort:"start_time" %}
-            <li>
-                <strong>Title:</strong> {{ class.class_title }}</br>
-                <strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</br>
-                <strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</br>
-                <a href="{% url 'details' class.id %}"><button type="button">Details</button></a>
-            </li>
+            <div class="diary-class">
+                <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="class-image">
+                <div class="class-details diary-container">
+                    <p class="site-heading">{{ class.class_title }}</p>
+                    <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
+                    <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
+                    <a href="{% url 'details' class.id %}" class="class-action-btn details-btn mt-3">Details</a>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
-    </li>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</div>
+
 
 {% endblock %}
