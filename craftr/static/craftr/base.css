@@ -1,4 +1,5 @@
-/* CSS Reset */
+/* C S S  R E S E T */
+
 /* Taken from http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */
 
 html,
@@ -91,6 +92,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -132,10 +134,9 @@ table {
   border-spacing: 0;
 }
 
-/* Project-specific styles */
+/* P R O J E C T  S T Y L E S */
 
-/* General */
-
+/* G E N E R A L */
 
 body {
   display: flex;
@@ -147,40 +148,11 @@ body {
   font-style: normal;
 }
 
-main {
-  margin-top: 200px;
-}
-
-/* Make footer stick at the bottom of browser (see https://materializecss.com/footer.html) */
+/* Make footer stick to bottom of page (see https://materializecss.com/footer.html) */
 
 main {
+  margin-top: 100px;
   flex: 1 0 auto;
-}
-
-/* User photos */
-
-.user-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Class and Instructor image*/
-
-.class-image,
-.instructor-image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* User account 'Delete' button */
-
-.delete-account {
-  background-color: red;
-  color: white
 }
 
 h1,
@@ -204,9 +176,6 @@ p {
   text-align: center;
 }
 
-/* a {
-} */
-
 a {
   text-decoration: none;
 }
@@ -222,7 +191,9 @@ ul li {
   text-align: center;
 }
 
-/* Utility colour classes */
+/* U T I L I T Y */
+
+/* Colours */
 
 .apple-green {
   background-color: #7db657;
@@ -248,14 +219,39 @@ ul li {
   background-color: #ffc500;
 }
 
-/* Header */
+/* Alignment */
+
+.centre-align-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centre-align-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* H E A D E R */
+
+/* Navigation background */
+
+.bg-body-tertiary {
+  height: 100px;
+  background-color: #b40001 !important;
+}
 
 /* Navigation item */
+
 li.nav-entry a {
   color: #fff;
 }
 
 /* Navigation item style*/
+
 a.nav-details {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -264,6 +260,7 @@ a.nav-details {
 }
 
 /* Navigation item - hover */
+
 a.nav-details:hover {
   background-color: #ffc500;
   color: #b40001;
@@ -271,27 +268,23 @@ a.nav-details:hover {
 }
 
 /* Navigation item - selected */
-.selected {
+/* .selected {
   background-color: #ffc500;
   color: #b40001 !important;
   border-radius: 15px;
-}
-
-/* Navigation background */
-.bg-body-tertiary {
-  height: 100px;
-  background-color: #b40001 !important;
-}
+} */
 
 /* Hamburger menu */
-/* Info taken from https://www.youtube.com/watch?v=45QSuJaHEss */
+
+/* Info from https://www.youtube.com/watch?v=45QSuJaHEss */
+
 .navbar-toggler {
   --bs-navbar-toggler-border-color: #fff;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   color: #fff;
 }
 
-/* Footer */
+/* F O O T E R */
 
 .footer {
   display: flex;
@@ -325,6 +318,7 @@ a.nav-details:hover {
 }
 
 /* Social media icons */
+
 .fa-brands {
   font-size: 40px;
   width: 50px;
@@ -335,10 +329,10 @@ a.nav-details:hover {
   text-align: center;
   text-decoration: none;
   color: #fff;
-
 }
 
 /* Facebook icon */
+
 .fa-square-facebook:hover {
   color: #0165e1;
   border: none;
@@ -365,18 +359,28 @@ a.nav-details:hover {
   border: none;
 }
 
-/* index.html */
+/* H O M E */
 
-/* classes.html */
+/* C L A S S E S */
 
-/* faq.html */
+/* Class and Instructor images*/
 
-/* contact.html */
+.class-image,
+.instructor-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* F A Q */
+
+/* C O N T A C T */
 
 .contact-form {
   width: 75%;
   height: auto;
-  margin: 0 auto;
+  margin: 100px auto;
   border: 1px solid #ccc;
   background-color: #ffc500;
   border-radius: 15px;
@@ -420,14 +424,6 @@ a.nav-details:hover {
   box-shadow: 0 0 5px #0091ac;
 }
 
-.form-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin-top: 20px;
-}
-
 .submit-btn,
 .reset-btn {
   margin: 10px 10px;
@@ -448,19 +444,107 @@ a.nav-details:hover {
   color: white;
 }
 
-/* register.html */
+/* R E G I S T E R */
 
-/* login.html */
+/* L O G I N */
 
-/* account.html */
+/* A C C O U N T */
 
-/* update_profile.html */
+/* User images */
 
-/* 404.html */
+.user-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-/* 500.html */
+/* Enrolment item grid */
 
-/* Media Queries */
+.enrolments {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin:auto;
+  max-width: 900px;
+}
+
+.enrolments > * {
+  margin: auto;
+}
+
+.enrolment-item {
+  background-color: #ffc500;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 250px;
+  width: 250px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.site-heading {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Account buttons */
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #0091ac;
+  color: white;
+}
+
+.edit-profile-btn {
+  background-color: #7db657;
+  color: white;
+}
+
+.delete-account-btn {
+  background-color: #b40001;
+  color: white;
+}
+
+.withdraw-btn {
+  background-color: #753da2;
+  color: white;
+}
+
+/* U P D A T E  P R O F I L E */
+
+/* 4 0 4  E R R O R */
+
+/* 5 0 0  E R R O R */
+
+/* M E D I A  Q U E R I E S */
+
 /* Info used from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
 
 /* Bootstrap extra small (none) */
