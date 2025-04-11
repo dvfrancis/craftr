@@ -484,7 +484,7 @@ a.nav-details:hover {
   text-align: center;
   max-width: 250px;
   width: 250px;
-  min-height: 150px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -499,7 +499,7 @@ a.nav-details:hover {
 
 .button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -534,6 +534,11 @@ a.nav-details:hover {
 
 .withdraw-btn {
   background-color: #753da2;
+  color: white;
+}
+
+.details-btn {
+  background-color: #ff8500;
   color: white;
 }
 
