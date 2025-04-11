@@ -16,13 +16,31 @@
 
 {% block content %}
 
-<h1>Contact Us</h1>
-<br>
-<form method="POST">
+<form method="POST" class="contact-form">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send</button>
-    <input type="reset" value="Clear">
+    <h1>Contact Form</h1>
+    <div class="form-group">
+        <p>First Name</p>
+        <div class="form-item">
+            {{ form.first_name }}
+        </div>
+        <p>Last Name</p>
+        <div class="form-item">
+            {{ form.last_name }}
+        </div>
+        <p>Email</p>
+        <div class="form-item">
+            {{ form.email }}
+        </div>
+        <p>Message</p>
+        <div class="form-item">
+            {{ form.message }}
+        </div>
+        <div id="form-btns">
+            <button type="submit" class="submit-btn">Send</button>
+            <input type="reset" value="Clear" class="reset-btn">
+        </div>
+    </div>
 </form>
 
 {% endblock %}

@@ -135,6 +135,8 @@ table {
 /* Project-specific styles */
 
 /* General */
+
+
 body {
   display: flex;
   min-height: 100vh;
@@ -145,7 +147,12 @@ body {
   font-style: normal;
 }
 
+main {
+  margin-top: 100px;
+}
+
 /* Make footer stick at the bottom of browser (see https://materializecss.com/footer.html) */
+
 main {
   flex: 1 0 auto;
 }
@@ -178,8 +185,20 @@ main {
 
 h1,
 h2 {
+  padding: 1rem 0;
   font-family: "Libre Franklin", sans-serif;
   font-optical-sizing: auto;
+  font-size: xx-large;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+}
+
+p {
+  padding: 0.5rem 0;
+  font-family: "Junge", sans-serif;
+  font-optical-sizing: auto;
+  font-size: large;
   font-weight: 400;
   font-style: normal;
   text-align: center;
@@ -289,7 +308,7 @@ a.nav-details:hover {
 }
 
 .smallprint {
-  font-size:larger;
+  font-size: larger;
   color: #FFF;
   text-decoration: none;
 }
@@ -354,18 +373,79 @@ a.nav-details:hover {
 
 /* contact.html */
 
-/* Page sections */
-.contact-card {
-  background-color: #016c62;
-  border: solid 1px #fff;
-  border-radius: 20px;
-  color: #fff;
-  width: 85%;
+.contact-form {
+  width: 75%;
+  height: auto;
+  margin: 150px auto;
+  border: 1px solid #ccc;
+  background-color: #ffc500;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.contact-form {
-  width: 95%;
-  margin: 0 auto;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-item {
+  width: 80%;
+  margin: 1rem 0;
+}
+
+.form-item input,
+.form-item textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #0091ac;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+  height: 50px;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+  border-color: #0091ac;
+  outline: none;
+  box-shadow: 0 0 5px #0091ac;
+}
+
+.form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.submit-btn,
+.reset-btn {
+  margin: 10px 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.submit-btn {
+  background-color: #753da2;
+  color: white;
+}
+
+.reset-btn {
+  background-color: #7db657;
+  color: white;
 }
 
 /* register.html */
@@ -386,41 +466,41 @@ a.nav-details:hover {
 /* Bootstrap extra small (none) */
 @media (max-width: 575px) {
   body {
-    padding-top: 185px;
+    /* padding-top: 185px; */
   }
 }
 
 /* Bootstrap small (sm) */
 @media (min-width: 576px) and (max-width: 767px) {
   body {
-    padding-top: 190px;
+    /* padding-top: 190px; */
   }
 }
 
 /* Bootstrap medium (md) */
 @media (min-width: 768px) and (max-width: 991px) {
   body {
-    padding-top: 190px;
+    /* padding-top: 190px; */
   }
 }
 
 /* Bootstrap large (lg) */
 @media (min-width: 992px) and (max-width: 1199px) {
   body {
-    padding-top: 180px;
+    /* padding-top: 180px; */
   }
 }
 
 /* Bootstrap extra large (xl) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   body {
-    padding-top: 180px;
+    /* padding-top: 180px; */
   }
 }
 
 /* Bootstrap extra extra large (xxl) */
 @media (min-width: 1400px) {
   body {
-    padding-top: 190px;
+    /* padding-top: 190px; */
   }
 }
