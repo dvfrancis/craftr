@@ -148,7 +148,7 @@ body {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 /* Make footer stick at the bottom of browser (see https://materializecss.com/footer.html) */
@@ -376,7 +376,7 @@ a.nav-details:hover {
 .contact-form {
   width: 75%;
   height: auto;
-  margin: 150px auto;
+  margin: 0 auto;
   border: 1px solid #ccc;
   background-color: #ffc500;
   border-radius: 15px;
