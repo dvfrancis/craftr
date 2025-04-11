@@ -146,6 +146,7 @@ body {
   font-family: "Junge", cursive;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 /* Make footer stick to bottom of page (see https://materializecss.com/footer.html) */

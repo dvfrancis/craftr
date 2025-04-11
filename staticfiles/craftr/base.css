@@ -146,6 +146,7 @@ body {
   font-family: "Junge", cursive;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 /* Make footer stick to bottom of page (see https://materializecss.com/footer.html) */
@@ -359,6 +360,20 @@ a.nav-details:hover {
 }
 
 /* H O M E */
+
+.cta-button {
+  background: #ff9800;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.craft-list {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* C L A S S E S */
 
