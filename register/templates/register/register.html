@@ -16,14 +16,53 @@
 
 {% block content %}
 
-<h1>Register an Account</h1>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="hidden" name="next" value="{{ request.GET.next }}">
-    {{ user_form.as_p }}
-    {{ profile_form.as_p }}
-    <button type="submit">Register</button>
-    <input type="reset" value="Clear">
-</form>
+<h1 class="mt-5 mb-3">Register an Account</h1>
+
+<div class="register-form-container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            {{ user_form.username }}
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            {{ user_form.email }}
+        </div>
+
+        <div class="form-group">
+            <label for="password1">Password</label>
+            {{ user_form.password1 }}
+        </div>
+
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            {{ user_form.password2 }}
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            {{ profile_form.location }}
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience Level</label>
+            {{ profile_form.experience }}
+        </div>
+
+        <div class="form-group">
+            <label for="profile_picture">Profile Picture</label>
+            {{ profile_form.photograph }}
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="register-action-btn mint">Register</button>
+            <input type="reset" value="Clear" class="register-action-btn apple-green">
+        </div>
+    </form>
+</div>
 
 {% endblock %}

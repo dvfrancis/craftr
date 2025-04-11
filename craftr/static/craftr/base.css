@@ -197,26 +197,32 @@ ul li {
 
 .apple-green {
   background-color: #7db657;
+  color: #FFF;
 }
 
 .mint {
   background-color: #0091ac;
+  color: #FFF;
 }
 
 .royal-purple {
   background-color: #753da2;
+  color: #FFF;
 }
 
 .crimson {
   background-color: #b40001;
+  color: #FFF;
 }
 
 .orange {
   background-color: #ff8500;
+  color: #FFF;
 }
 
 .gold {
   background-color: #ffc500;
+  color: #FFF;
 }
 
 /* Alignment */
@@ -266,13 +272,6 @@ a.nav-details:hover {
   color: #b40001;
   border-radius: 15px;
 }
-
-/* Navigation item - selected */
-/* .selected {
-  background-color: #ffc500;
-  color: #b40001 !important;
-  border-radius: 15px;
-} */
 
 /* Hamburger menu */
 
@@ -425,6 +424,57 @@ a.nav-details:hover {
   text-decoration: none;
 }
 
+/* C L A S S  D E T A I L S */
+
+.class-details-container {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffc500;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+
+.class-info {
+  flex: 2;
+  text-align: center;
+}
+
+.instructor-info {
+  flex: 1;
+  text-align: center;
+}
+
+.image-group img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.site-heading {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.details-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* F A Q */
 
 /* C O N T A C T */
@@ -451,31 +501,6 @@ a.nav-details:hover {
   width: 100%;
 }
 
-.form-item {
-  width: 80%;
-  margin: 1rem 0;
-}
-
-.form-item input,
-.form-item textarea {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #0091ac;
-  border-radius: 5px;
-  box-sizing: border-box;
-  resize: vertical;
-  height: 50px;
-}
-
-.form-item input:focus,
-.form-item textarea:focus {
-  border-color: #0091ac;
-  outline: none;
-  box-shadow: 0 0 5px #0091ac;
-}
-
 .submit-btn,
 .reset-btn {
   margin: 10px 10px;
@@ -498,7 +523,89 @@ a.nav-details:hover {
 
 /* R E G I S T E R */
 
+.register-form-container {
+  width: 75%;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #ffc500;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.register-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* L O G I N */
+
+.login-form-container {
+  width: 75%;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #ffc500;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
 
 /* A C C O U N T */
 
@@ -520,11 +627,11 @@ a.nav-details:hover {
   align-items: center;
   gap: 10px;
   padding: 20px;
-  margin:auto;
+  margin: auto;
   max-width: 900px;
 }
 
-.enrolments > * {
+.enrolments>* {
   margin: auto;
 }
 
@@ -558,7 +665,7 @@ a.nav-details:hover {
   margin-top: 20px;
 }
 
-.action-btn {
+.account-action-btn {
   width: 200px;
   padding: 10px;
   font-size: 1rem;
@@ -596,9 +703,130 @@ a.nav-details:hover {
 
 /* U P D A T E  P R O F I L E */
 
+.profile-form-container {
+  width: 75%;
+  height: auto;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  background-color: #ffc500;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.profile-form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* 4 0 4  E R R O R */
 
+.error-container {
+  width: 75%;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #ffc500;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.error-image {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.error-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.error-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* 5 0 0  E R R O R */
+
+.error-container {
+  width: 75%;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #ffc500;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.error-image {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.error-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.server-action-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
 
 /* M E D I A  Q U E R I E S */
 

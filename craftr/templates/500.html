@@ -3,16 +3,23 @@
 {% load static %}
 
 {% block head %}
-
-<title>Server Error</title>
-
+<title>Whoops! We Broke Something...</title>
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
-
 {% endblock %}
 
 {% block content %}
+<div class="error-container">
+    <h1 class="error-title">🚨 Well, This is Awkward... 🚨</h1>
+    <p class="error-message">Our server had ONE job... and it failed spectacularly.</p>
 
-<h1>Ouch! Server Error (500)</h1>
-<p>The server encountered a problem.</p>
+    <img src="{% static 'craftr/images/server-crash.png' %}" alt="Server Crash" class="error-image" />
 
+    <p class="error-message">It was probably working too hard and decided to take an unscheduled coffee break. ☕</p>
+    <p class="error-message">Or maybe it just doesn’t like Mondays... We don’t blame it.</p>
+
+    <div class="error-actions">
+        <a href="{% url 'home' %}" class="server-action-btn apple-green">Go Home</a>
+        <button onclick="location.reload()" class="server-action-btn mint">Try Again</button>
+    </div>
+</div>
 {% endblock %}
