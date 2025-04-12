@@ -34,6 +34,15 @@ def register_user(request):
             # Redirect to the original page (class details) 
             # or account page, if missing
             return redirect(next_url)
+        else:
+            # Show validation errors when passwords don't match or are missing
+            if user_form.errors:
+                messages.error(
+                    request,
+                    (
+                        "Your passwords do not match, or are missing. "
+                        "Please enter them again."
+                    ))
 
     return render(
         request,

@@ -18,6 +18,8 @@
 
 <h1 class="mt-5 mb-3">Account Details</h1>
 {% if user.profile and user.profile.photograph %}
+<p class="site-heading">Username</p>
+<p>{{ user.username }}</p>
 <div class="centre-align-column">
     <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
         alt="Profile photo" class="user-image mt-3 mb-5" />
