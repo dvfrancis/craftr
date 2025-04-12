@@ -61,7 +61,7 @@ class EventClass(models.Model):
 
     def __str__(self):
         # Formats the date as "dd-mm-yyyy"
-        class_date = self.event_day.class_date.strftime('%d %B %Y')
+        class_date = self.event_day.day_date.strftime('%d %B %Y')
         # Formats as "12:00pm"
         class_start = (
             f"{self.start_time.hour % 12 or 12}:"

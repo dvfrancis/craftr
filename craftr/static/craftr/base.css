@@ -156,13 +156,22 @@ main {
   flex: 1 0 auto;
 }
 
-h1,
-h2 {
+h1 {
   padding: 1rem 0;
   font-family: "Libre Franklin", sans-serif;
   font-optical-sizing: auto;
   font-size: xx-large;
   font-weight: 800;
+  font-style: normal;
+  text-align: center;
+}
+
+h2 {
+  padding: 1rem 0;
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-size: x-large;
+  font-weight: bolder;
   font-style: normal;
   text-align: center;
 }

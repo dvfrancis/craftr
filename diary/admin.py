@@ -4,7 +4,7 @@ from .models import EventDay
 
 @admin.register(EventDay)
 class EventDayAdmin(admin.ModelAdmin):
-    list_display = ('class_date', 'event_title')
-    list_filter = ('class_date', 'event_title')
-    search_fields = ('class_date', 'event_title')
-    ordering = ['class_date']
+    list_display = ('day_date', 'day_title')
+    list_filter = ('day_date', 'day_title')
+    search_fields = ('day_date', 'day_title')
+    ordering = ['day_date']

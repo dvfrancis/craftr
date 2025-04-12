@@ -19,7 +19,7 @@ def user_details(request):
     user_enrolments = Enrolment.objects.filter(
         user=request.user
     ).select_related("enrolled_class").order_by(
-        "enrolled_class__event_day__class_date",
+        "enrolled_class__event_day__day_date",
         "enrolled_class__start_time"
     )
     return render(
