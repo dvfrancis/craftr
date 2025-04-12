@@ -478,6 +478,28 @@ a.nav-details:hover {
 
 /* F A Q */
 
+#faq-info {
+  /* margin-top: 50px; */
+}
+
+.accordion {
+  /* font-family: 'Hind Madurai', serif; */
+  font-size: 1.25em;
+  /* margin-top: 75px; */
+  --bs-accordion-border-color: #FAC600 !important;
+}
+
+.accordion-item {
+  border: 1px solid #FAC600 !important;
+}
+
+.accordion-button {
+  /* font-family: 'Hind Madurai', serif; */
+  font-size: 0.75em !important;
+  background-color: #FAC600 !important;
+  color: #000 !important;
+}
+
 /* C O N T A C T */
 
 .contact-form {
