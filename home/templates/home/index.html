@@ -8,14 +8,90 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Welcome to Craftr 2025, the ultimate digital crafting event. Explore Cricut, Silhouette, 3D printing, laser cutting, embroidery, and more!">
+<meta name="description"
+    content="Welcome to Craftr 2025, the ultimate digital crafting event. Explore Cricut, Silhouette, 3D printing, laser cutting, embroidery, and more!">
 
-<meta name="keywords" content="Craftr, Digital Crafting, Cricut, Silhouette, 3D Printing, Laser Cutting, Embroidery, Crafting Classes, Online Workshops, Crafting Community">
+<meta name="keywords"
+    content="Craftr, Digital Crafting, Cricut, Silhouette, 3D Printing, Laser Cutting, Embroidery, Crafting Classes, Online Workshops, Crafting Community">
 
 {% endblock %}
 
 {% block content %}
 
-<h1>Welcome to Craftr!</h1>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="mb-5">Discover the Art of Digital Crafting</h1>
+        <img src="{% get_media_prefix %}images/craftr-logo.webp" alt="Craftr Logo" class="hero-img mb-5">
+        <p class="mb-5">Join Craftr 2025 - a global crafting experience where creativity meets technology</p>
+        <p class="mb-5">Discover the future of digital crafting with expert-led workshops, live demonstrations, and a
+            thriving creative community.</p>
+        <p class="mb-5">Whether you're a beginner or an experienced maker, there's something for everyone...let's get
+            crafting! </p>
+        <a href="{% url 'diary' %}" class="cta-btn secondary mt-3 me-4">Explore Classes</a>
+        <a href="{% url 'register' %}" class="cta-btn">Register</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <h2 class="mt-5 mb-4">Welcome to Craftr</h2>
+        <p class="mb-2">🦸‍♀️ Join expert-led crafting workshops where experienced instructors will lead you through
+            hands-on sessions,<br>
+            helping you master everything from vinyl cutting to laser engraving to embroidery digitisation. 🦸‍♀️</p>
+        <p class="mb-2">🏛 Experience live demonstrations showcasing cutting-edge techniques, tools, and digital
+            crafting
+            innovations -<br> watch skilled creators bring designs to life in real time. 🏛</p>
+        <p class="mb-4">🌍 Become part of a global crafting community where makers, hobbyists, and professionals connect
+            to
+            share ideas,
+            confront challenges, and inspire one another.<br>Whether you're a beginner or an expert, there's a place for
+            you at Craftr! 🌍</p>
+    </div>
+</section>
+
+<!-- Featured Workshops -->
+<section id="workshops">
+    <h2 class="mb-4">Featured Workshops</h2>
+    <div class="workshop-grid mt-5 mb-4">
+        <div class="workshop-card">
+            <a href="{% url 'details' 4 %}">
+                <img src="/assets/images/class-02.webp" class="workshop-img" alt="Cricut Machine basics">
+                <h3>Introduction to Cricut - Cutting Machine Basics</h3>
+            </a>
+        </div>
+        <div class="workshop-card">
+            <a href="{% url 'details' 5 %}">
+                <img src="/assets/images/class-03.webp" class="workshop-img" alt="Wood & Glass Decals">
+                <h3>3D Modelling for Fabric Designs</h3>
+            </a>
+        </div>
+        <div class="workshop-card">
+            <a href="{% url 'details' 17 %}">
+                <img src="/assets/images/class-15.webp" class="workshop-img" alt="DIY Leathercraft">
+                <h3>DIY Leathercraft with Digital Cutting Techniques</h3>
+            </a>
+        </div>
+        <div class="workshop-card">
+            <a href="{% url 'details' 22 %}">
+                <img src="/assets/images/class-20.webp" class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                <h3>Laser-Engraved Wood & Acrylic Jewellery</h3>
+            </a>
+        </div>
+        <div class="workshop-card">
+            <a href="{% url 'details' 8 %}">
+                <img src="/assets/images/class-06.webp" class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                <h3>Custom Sticker & Decal Design</h3>
+            </a>
+        </div>
+        <div class="workshop-card">
+            <a href="{% url 'details' 11 %}">
+                <img src="/assets/images/class-09.webp" class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                <h3>3D Printing Basics for DIY Crafting</h3>
+            </a>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

@@ -191,7 +191,7 @@ p {
   font-family: "Hind Madurai", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: large;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -383,6 +383,64 @@ a.nav-details:hover {
 }
 
 /* H O M E */
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background-color: #ffc500;
+  color: #000;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  width: 500px;
+}
+
+.cta-btn {
+  background: #753da2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondary {
+  background: #0091ac;
+}
+
+/* Workshops */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  width: 250px;
+  max-width: 350px;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.workshop-card {
+  background: white;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.workshop-img {
+  width: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 /* C L A S S E S */
 
