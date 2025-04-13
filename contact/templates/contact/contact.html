@@ -8,44 +8,49 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Get in touch with the Craftr team! Contact us for digital crafting enquiries, class support, and event information.">
+<meta name="description"
+    content="Get in touch with the Craftr team! Contact us for digital crafting enquiries, class support, and event information.">
 
-<meta name="keywords" content="Contact Craftr, Event Enquiries, Crafting Support, Digital Crafting Help, Customer Support">
+<meta name="keywords"
+    content="Contact Craftr, Event Enquiries, Crafting Support, Digital Crafting Help, Customer Support">
 
 {% endblock %}
 
 {% block content %}
 
-<h1 class="mt-5">Get In Touch</h1>
-<div class="container-fluid mb-5">
-    <div class="row justify-content-center">
-        <div class="col-10 col-lg-10 mt-2">
-            <h2>Need help? We're here for you!</h2>
-            <p>Have a question about Craftr or need technical support?<br><br>Reach out to our friendly team and we'll get back
-                to you as soon as possible. We love hearing from our fellow crafters!</p>
+<main>
+    <h1 class="mt-5">Get In Touch</h1>
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-10 mt-2">
+                <h2>Need help? We're here for you!</h2>
+                <p>Have a question about Craftr or need technical support?<br><br>Reach out to our friendly team and
+                    we'll get back
+                    to you as soon as possible. We love hearing from our fellow crafters!</p>
+            </div>
         </div>
     </div>
-</div>
-<form method="POST" class="contact-form">
-    {% csrf_token %}
-    <div class="form-group">
-        <label for="first_name" class="mt-3 mb-3">First name</label>
+    <form method="POST" class="contact-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first_name" class="mt-3 mb-3">First name</label>
             {{ form.first_name }}
         </div>
         <label for="last_name" class="mt-2 mb-3">Last name</label>
-            {{ form.last_name }}
+        {{ form.last_name }}
         </div>
         <label for="email" class="mt-3 mb-3">Email</label>
-            {{ form.email }}
+        {{ form.email }}
         </div>
         <label for="message" class="mt-3 mb-3">Message</label>
-            {{ form.message }}
+        {{ form.message }}
         </div>
         <div id="centre-align-row">
             <button type="submit" class="submit-btn mt-5">Send</button>
             <input type="reset" value="Clear" class="reset-btn mt-5">
         </div>
-    </div>
-</form>
+        </div>
+    </form>
+</main>
 
 {% endblock %}

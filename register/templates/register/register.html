@@ -8,69 +8,74 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Sign up for Craftr 2025! Create your account, enrol in crafting workshops, and explore digital crafting techniques.">
+<meta name="description"
+    content="Sign up for Craftr 2025! Create your account, enrol in crafting workshops, and explore digital crafting techniques.">
 
-<meta name="keywords" content="Register, Craftr Account, Sign Up, Digital Crafting Workshops, Cricut, Silhouette, 3D Printing, Laser Cutting, Embroidery, Online Crafting Classes">
+<meta name="keywords"
+    content="Register, Craftr Account, Sign Up, Digital Crafting Workshops, Cricut, Silhouette, 3D Printing, Laser Cutting, Embroidery, Online Crafting Classes">
 
 {% endblock %}
 
 {% block content %}
 
-<h1 class="mt-5 mb-3">Register an Account</h1>
-<div class="container-fluid mb-5">
-    <div class="row justify-content-center">
-        <div class="col-10 col-lg-10">
-            <h2>Join the Craftr community</h2>
-            <p>Sign up and unlock access to digital crafting workshops, expert-led sessions, and interactive tutorials.
-                Start your creative journey now!</p>
+<main>
+    <h1 class="mt-5 mb-3">Register an Account</h1>
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-10">
+                <h2>Join the Craftr community</h2>
+                <p>Sign up and unlock access to digital crafting workshops, expert-led sessions, and interactive
+                    tutorials.
+                    Start your creative journey now!</p>
+            </div>
         </div>
     </div>
-</div>
-<div class="register-form-container mt-1">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ request.GET.next }}">
-        <div class="form-group">
-            <label for="username">Username</label>
-            {{ user_form.username }}
-        </div>
-        <div class="form-group">
-            <label for="first_name">First Name</label>
-            {{ user_form.first_name }}
-        </div>
-        <div class="form-group">
-            <label for="last_name">Last Name</label>
-            {{ user_form.last_name }}
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            {{ user_form.email }}
-        </div>
-        <div class="form-group">
-            <label for="password1">Password</label>
-            {{ user_form.password1 }}
-        </div>
-        <div class="form-group">
-            <label for="password2">Confirm Password</label>
-            {{ user_form.password2 }}
-        </div>
-        <div class="form-group">
-            <label for="location">Location</label>
-            {{ profile_form.location }}
-        </div>
-        <div class="form-group">
-            <label for="experience">Experience Level</label>
-            {{ profile_form.experience }}
-        </div>
-        <div class="form-group">
-            <label for="profile_picture">Profile Picture</label>
-            {{ profile_form.photograph }}
-        </div>
-        <div class="button-group">
-            <button type="submit" class="register-action-btn mint">Register</button>
-            <input type="reset" value="Clear" class="register-action-btn apple-green">
-        </div>
-    </form>
-</div>
+    <div class="register-form-container mt-1">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ user_form.username }}
+            </div>
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                {{ user_form.first_name }}
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                {{ user_form.last_name }}
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                {{ user_form.email }}
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                {{ user_form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                {{ user_form.password2 }}
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                {{ profile_form.location }}
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience Level</label>
+                {{ profile_form.experience }}
+            </div>
+            <div class="form-group">
+                <label for="profile_picture">Profile Picture</label>
+                {{ profile_form.photograph }}
+            </div>
+            <div class="button-group">
+                <button type="submit" class="register-action-btn mint">Register</button>
+                <input type="reset" value="Clear" class="register-action-btn apple-green">
+            </div>
+        </form>
+    </div>
+</main>
 
 {% endblock %}

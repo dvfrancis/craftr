@@ -8,63 +8,67 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Edit your Craftr profile, update your account details, and manage your crafting preferences and enrolled classes.">
+<meta name="description"
+    content="Edit your Craftr profile, update your account details, and manage your crafting preferences and enrolled classes.">
 
-<meta name="keywords" content="Update Profile, Craftr Account, Crafting Preferences, Account Settings, Profile Management">
+<meta name="keywords"
+    content="Update Profile, Craftr Account, Crafting Preferences, Account Settings, Profile Management">
 
 {% endblock %}
 
 {% block content %}
 
-<h1 class="mt-5 mb-3">Update Your Profile</h1>
-<div class="container-fluid mb-5">
-    <div class="row justify-content-center">
-        <div class="col-10 col-lg-10">
-            <h2>Keep your profile updated</h2>
-            <p>Make sure your details reflect the latest information</p>
+<main>
+    <h1 class="mt-5 mb-3">Update Your Profile</h1>
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-10">
+                <h2>Keep your profile updated</h2>
+                <p>Make sure your details reflect the latest information</p>
+            </div>
         </div>
     </div>
-</div>
-<div class="profile-form-container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
+    <div class="profile-form-container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
 
-        <div class="profile-form-group">
-            <label for="first_name">First Name</label>
-            {{ user_form.first_name }}
-        </div>
+            <div class="profile-form-group">
+                <label for="first_name">First Name</label>
+                {{ user_form.first_name }}
+            </div>
 
-        <div class="profile-form-group">
-            <label for="last_name">Last Name</label>
-            {{ user_form.last_name }}
-        </div>
+            <div class="profile-form-group">
+                <label for="last_name">Last Name</label>
+                {{ user_form.last_name }}
+            </div>
 
-        <div class="profile-form-group">
-            <label for="email">Email</label>
-            {{ user_form.email }}
-        </div>
+            <div class="profile-form-group">
+                <label for="email">Email</label>
+                {{ user_form.email }}
+            </div>
 
-        <div class="profile-form-group">
-            <label for="location">Location</label>
-            {{ profile_form.location }}
-        </div>
+            <div class="profile-form-group">
+                <label for="location">Location</label>
+                {{ profile_form.location }}
+            </div>
 
-        <div class="profile-form-group">
-            <label for="experience">Experience Level</label>
-            {{ profile_form.experience }}
-        </div>
+            <div class="profile-form-group">
+                <label for="experience">Experience Level</label>
+                {{ profile_form.experience }}
+            </div>
 
-        <div class="profile-form-group">
-            <label for="profile_picture">Profile Picture</label>
-            {{ profile_form.photograph }}
-        </div>
+            <div class="profile-form-group">
+                <label for="profile_picture">Profile Picture</label>
+                {{ profile_form.photograph }}
+            </div>
 
-        <div class="button-group">
-            <button type="submit" class="profile-action-btn royal-purple">Save Changes</button>
-            <input type="reset" value="Clear" class="profile-action-btn apple-green">
-            <a href="{% url 'account' %}" class="profile-action-btn crimson">Cancel</a>
-        </div>
-    </form>
-</div>
+            <div class="button-group">
+                <button type="submit" class="profile-action-btn royal-purple">Save Changes</button>
+                <input type="reset" value="Clear" class="profile-action-btn apple-green">
+                <a href="{% url 'account' %}" class="profile-action-btn crimson">Cancel</a>
+            </div>
+        </form>
+    </div>
+</main>
 
 {% endblock %}

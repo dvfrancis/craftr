@@ -364,7 +364,7 @@ a.nav-details:hover {
 /* Instagram icon*/
 
 .fa-square-instagram:hover {
-  color:#ff1493;
+  color: #ff1493;
   border: none;
 }
 
@@ -704,6 +704,13 @@ a.nav-details:hover {
 
 /* A C C O U N T */
 
+.account-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* User images */
 
 .user-image {
@@ -717,13 +724,12 @@ a.nav-details:hover {
 
 .enrolments {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: auto auto auto;
   gap: 10px;
   padding: 20px;
-  margin: auto;
+  margin: 0 auto;
   max-width: 900px;
+  grid-auto-flow: dense;
 }
 
 .enrolments>* {
@@ -737,11 +743,18 @@ a.nav-details:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 250px;
-  width: 250px;
+  width: 100%;
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  place-self: center;
+}
+
+.enrolment-item:nth-child(3n+1):last-of-type {
+  grid-column: 2 / span 1;
 }
 
 .site-heading {
@@ -838,11 +851,16 @@ a.nav-details:hover {
 
 /* 4 0 4  E R R O R */
 
-.error-container {
+.bg-image {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744567139/error-background_c9gyxk.png") no-repeat fixed center;
+  background-size: cover;
+}
+
+.error-container {
   width: 75%;
   margin: 100px auto;
   padding: 2rem;

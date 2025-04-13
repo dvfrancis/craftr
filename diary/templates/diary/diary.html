@@ -8,46 +8,49 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Stay up-to-date with Craftr 2025 events, workshops, and digital crafting sessions. Explore the full event diary and schedule.">
+<meta name="description"
+    content="Stay up-to-date with Craftr 2025 events, workshops, and digital crafting sessions. Explore the full event diary and schedule.">
 
-<meta name="keywords" content="Craftr Event Diary, Digital Crafting Schedule, Workshop Timetable, Crafting Sessions, Cricut, Silhouette, 3D Printing, Laser Cutting, Event Calendar">
+<meta name="keywords"
+    content="Craftr Event Diary, Digital Crafting Schedule, Workshop Timetable, Crafting Sessions, Cricut, Silhouette, 3D Printing, Laser Cutting, Event Calendar">
 
 {% endblock %}
 
 {% block content %}
 
-<h1 class="mt-5 mb-3">Classes</h1>
-<div class="container-fluid mb-4">
-    <div class="row justify-content-center">
-        <div class="col-10 col-lg-10">
-            <h2>Your crafting schedule awaits...</h2>
-            <p>Stay on top of all the exciting Craftr workshops, live sessions, and community events happening
-                throughout the festival.<br><br>Never miss a class - check the schedule now!</p>
-        </div>
-    </div>
-</div>
-<div class="diary-container">
-    {% for day in days %}
-    <div class="diary-day">
-        <h2 class="mb-2">{{ day.day_date|date:"d F Y" }}</h2>
-        <h3 class="mb-2">{{ day.day_title }}</h3>
-        <p class="mb-3">{{ day.day_description }}</p>
-        <div class="diary-classes">
-            {% for class in day.event_day.all|dictsort:"start_time" %}
-            <div class="diary-class">
-                <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="class-image">
-                <div class="class-details diary-container">
-                    <p class="site-heading">{{ class.class_title }}</p>
-                    <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
-                    <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
-                    <a href="{% url 'details' class.id %}" class="class-action-btn details-btn mt-3">Details</a>
-                </div>
+<main>
+    <h1 class="mt-5 mb-3">Classes</h1>
+    <div class="container-fluid mb-4">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-10">
+                <h2>Your crafting schedule awaits...</h2>
+                <p>Stay on top of all the exciting Craftr workshops, live sessions, and community events happening
+                    throughout the festival.<br><br>Never miss a class - check the schedule now!</p>
             </div>
-            {% endfor %}
         </div>
     </div>
-    {% endfor %}
-</div>
-
+    <div class="diary-container">
+        {% for day in days %}
+        <div class="diary-day">
+            <h2 class="mb-2">{{ day.day_date|date:"d F Y" }}</h2>
+            <h3 class="mb-2">{{ day.day_title }}</h3>
+            <p class="mb-3">{{ day.day_description }}</p>
+            <div class="diary-classes">
+                {% for class in day.event_day.all|dictsort:"start_time" %}
+                <div class="diary-class">
+                    <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="class-image">
+                    <div class="class-details diary-container">
+                        <p class="site-heading">{{ class.class_title }}</p>
+                        <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
+                        <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
+                        <a href="{% url 'details' class.id %}" class="class-action-btn details-btn mt-3">Details</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
 
 {% endblock %}

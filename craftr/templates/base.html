@@ -94,16 +94,12 @@
     </div>
     {% endif %}
 
-    <main>
+    {% block content %}
 
-        {% block content %}
-
-        {% endblock %}
-
-    </main>
+    {% endblock %}
 
     <!-- Footer -->
-    <footer class="container-fluid orange mt-5">
+    <footer class="container-fluid orange">
 
         <div class="row footer">
 
@@ -115,8 +111,9 @@
             </div>
             <!-- Site title -->
             <div class="col text-center social-container">
-                <a href="https://craftr-bfd2923e1ca4.herokuapp.com/" aria-label="Craftr Home Page"
-                    ><img src="{% get_media_prefix %}images/craftr-logo.webp" alt="Craftr Logo" class="footer-logo"></a>
+                <a href="https://craftr-bfd2923e1ca4.herokuapp.com/" aria-label="Craftr Home Page"><img
+                        src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744537296/c6sw9h4bjzlqmopsxfkl.webp"
+                        alt="Craftr Logo" class="footer-logo"></a>
             </div>
             <!-- Social media links -->
             <div class="col text-center social-container mt-3 mb-2">

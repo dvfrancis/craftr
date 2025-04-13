@@ -8,74 +8,80 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Explore all the details about Craftr 2025, including crafting class schedules, instructor biographies, and key event highlights.">
+<meta name="description"
+  content="Explore all the details about Craftr 2025, including crafting class schedules, instructor biographies, and key event highlights.">
 
-<meta name="keywords" content="Craftr Event Details, Digital Crafting Classes, Instructor Biographies, Crafting Techniques, Cricut, Silhouette, 3D Printing, Laser Cutting">
+<meta name="keywords"
+  content="Craftr Event Details, Digital Crafting Classes, Instructor Biographies, Crafting Techniques, Cricut, Silhouette, 3D Printing, Laser Cutting">
 
 {% endblock %}
 
 {% block content %}
 
-<h1 class="mt-5 mb-3">Class Details</h1>
-<div class="container-fluid mb-5">
-  <div class="row justify-content-center">
-    <div class="col-10 col-lg-10 mt-2">
-      <h2>Explore the Craftr 2025 experience</h2>
-      <p>Dive into all the details, including expert-led sessions, instructor biographies, and crafting techniques
-        covered at the event.<br><br>Whether you're a beginner or advanced crafter, there's something exciting for you!</p>
+<main>
+  <h1 class="mt-5 mb-3">Class Details</h1>
+  <div class="container-fluid mb-5">
+    <div class="row justify-content-center">
+      <div class="col-10 col-lg-10 mt-2">
+        <h2>Explore the Craftr 2025 experience</h2>
+        <p>Dive into all the details, including expert-led sessions, instructor biographies, and crafting techniques
+          covered at the event.<br><br>Whether you're a beginner or advanced crafter, there's something exciting for
+          you!</p>
+      </div>
     </div>
   </div>
-</div>
-<div class="class-details-container">
-  <div class="class-info">
-    <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-      alt="Class Image" class="class-image" />
+  <div class="class-details-container">
+    <div class="class-info">
+      <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
+        alt="Class Image" class="class-image" />
 
-    <p class="site-heading">Class Title</p>
-    <p>{{ event_class.class_title }}</p>
+      <p class="site-heading">Class Title</p>
+      <p>{{ event_class.class_title }}</p>
 
-    <p class="site-heading">Day</p>
-    <p>{{ event_class.event_day.day_date|date:"d F Y" }}</p>
+      <p class="site-heading">Day</p>
+      <p>{{ event_class.event_day.day_date|date:"d F Y" }}</p>
 
-    <p class="site-heading">Start Time</p>
-    <p>{{ event_class.start_time|time:"g:i a" }}</p>
+      <p class="site-heading">Start Time</p>
+      <p>{{ event_class.start_time|time:"g:i a" }}</p>
 
-    <p class="site-heading">End Time</p>
-    <p>{{ event_class.end_time|time:"g:i a" }}</p>
+      <p class="site-heading">End Time</p>
+      <p>{{ event_class.end_time|time:"g:i a" }}</p>
 
-    <p class="site-heading">Description</p>
-    <p>{{ event_class.class_description }}</p>
+      <p class="site-heading">Description</p>
+      <p>{{ event_class.class_description }}</p>
 
-    <p class="site-heading">Difficulty</p>
-    <p>{{ event_class.difficulty }}</p>
+      <p class="site-heading">Difficulty</p>
+      <p>{{ event_class.difficulty }}</p>
 
-    <div class="button-group">
-      {% if request.user.is_authenticated %}
-      <form method="POST" action="{% url 'details' event_class.id %}">
-        {% csrf_token %}
-        {% if is_enrolled %}
-        <button type="submit" name="action" value="remove" class="details-action-btn royal-purple">Withdraw</button>
+      <div class="button-group">
+        {% if request.user.is_authenticated %}
+        <form method="POST" action="{% url 'details' event_class.id %}">
+          {% csrf_token %}
+          {% if is_enrolled %}
+          <button type="submit" name="action" value="remove" class="details-action-btn royal-purple">Withdraw</button>
+          {% else %}
+          <button type="submit" name="action" value="enrol" class="details-action-btn mint">Enrol</button>
+          {% endif %}
+        </form>
+        <a href="{% url 'diary' %}" class="error-action-btn mint">Return to Diary</a>
         {% else %}
-        <button type="submit" name="action" value="enrol" class="details-action-btn mint">Enrol</button>
+        <a href="{% url 'login' %}?next={{ request.path }}" class="details-action-btn apple-green">Login</a>
+        <a href="{% url 'register' %}?next={{ request.path }}" class="details-action-btn crimson">Register</a>
         {% endif %}
-      </form>
-      {% else %}
-      <a href="{% url 'login' %}?next={{ request.path }}" class="details-action-btn apple-green">Login</a>
-      <a href="{% url 'register' %}?next={{ request.path }}" class="details-action-btn crimson">Register</a>
-      {% endif %}
+      </div>
+    </div>
+
+    <div class="instructor-info">
+      <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
+        alt="Instructor Image" class="instructor-image" />
+
+      <p class="site-heading">Instructor</p>
+      <p>{{ event_class.instructor }}</p>
+
+      <p class="site-heading">Biography</p>
+      <p>{{ event_class.instructor_bio }}</p>
     </div>
   </div>
-
-  <div class="instructor-info">
-    <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-      alt="Instructor Image" class="instructor-image" />
-
-    <p class="site-heading">Instructor</p>
-    <p>{{ event_class.instructor }}</p>
-
-    <p class="site-heading">Biography</p>
-    <p>{{ event_class.instructor_bio }}</p>
-  </div>
-</div>
+</main>
 
 {% endblock %}
