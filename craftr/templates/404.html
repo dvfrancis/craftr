@@ -3,11 +3,19 @@
 {% load static %}
 
 {% block head %}
-<title>Lost in the Web?</title>
+
+<title>Page Not Found | Craftr 2025</title>
+
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
+<meta name="description" content="Oops! The page you're looking for does not exist. Explore digital crafting classes, events, and more at Craftr.">
+
+<meta name="keywords" content="404 Error, Page Not Found, Page Not Loading, Website Error, Craftr Technical Support">
+
 {% endblock %}
 
 {% block content %}
+
 <div class="error-container">
     <h1 class="error-title">🤔 Well, This is Embarrassing...</h1>
     <p class="error-message">The page you’re looking for ran away. Maybe it's on vacation?</p>
@@ -22,4 +30,5 @@
         <a href="javascript:history.back()" class="error-action-btn mint">Go Back</a>
     </div>
 </div>
+
 {% endblock %}

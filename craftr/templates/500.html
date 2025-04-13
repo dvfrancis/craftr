@@ -3,11 +3,19 @@
 {% load static %}
 
 {% block head %}
-<title>Whoops! We Broke Something...</title>
+
+<title>Server Error | Craftr 2025</title>
+
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
+
+<meta name="description" content="Oops! Something went wrong on our end. Please try again later or contact support for assistance.">
+
+<meta name="keywords" content="500 Error, Server Issue, Page Not Loading, Website Error, Craftr Technical Support">
+
 {% endblock %}
 
 {% block content %}
+
 <div class="error-container">
     <h1 class="error-title">🚨 Well, This is Awkward... 🚨</h1>
     <p class="error-message">Our server had ONE job... and it failed spectacularly.</p>
@@ -22,4 +30,5 @@
         <button onclick="location.reload()" class="server-action-btn mint">Try Again</button>
     </div>
 </div>
+
 {% endblock %}
