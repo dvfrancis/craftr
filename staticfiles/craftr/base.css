@@ -475,13 +475,17 @@ a.nav-details:hover {
 
 .diary-classes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto auto;
   gap: 15px;
-  justify-content: center;
+  margin: 0 auto;
+  grid-auto-flow: dense;
+}
+
+.diary-class:nth-child(3n+1):last-of-type {
+  grid-column: 2 / span 1;
 }
 
 .diary-class {
-  display: flex;
   align-items: center;
   background: #fafafa;
   border-radius: 10px;
