@@ -17,6 +17,14 @@
 {% block content %}
 
 <h1 class="mt-5 mb-3">Account Details</h1>
+<div class="container-fluid mb-5">
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-10">
+            <h2>Welcome to your Craftr account</h2>
+            <p>Check your details, track your enrolled classes, and update your profile</p>
+        </div>
+    </div>
+</div>
 {% if user.profile and user.profile.photograph %}
 <p class="site-heading">Username</p>
 <p>{{ user.username }}</p>

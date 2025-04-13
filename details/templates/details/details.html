@@ -17,7 +17,15 @@
 {% block content %}
 
 <h1 class="mt-5 mb-3">Class Details</h1>
-
+<div class="container-fluid mb-5">
+  <div class="row justify-content-center">
+    <div class="col-10 col-lg-10 mt-2">
+      <h2>Explore the Craftr 2025 experience</h2>
+      <p>Dive into all the details, including expert-led sessions, instructor biographies, and crafting techniques
+        covered at the event.<br><br>Whether you're a beginner or advanced crafter, there's something exciting for you!</p>
+    </div>
+  </div>
+</div>
 <div class="class-details-container">
   <div class="class-info">
     <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
