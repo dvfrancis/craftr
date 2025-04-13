@@ -364,7 +364,7 @@ a.nav-details:hover {
 /* Instagram icon*/
 
 .fa-square-instagram:hover {
-  color: #ff68ed;
+  color:#ff1493;
   border: none;
 }
 
@@ -571,7 +571,6 @@ a.nav-details:hover {
   color: #000 !important;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.45rem rgba(117, 61, 162, 0.45);
 }
-
 
 /* C O N T A C T */
 
