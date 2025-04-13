@@ -8,7 +8,8 @@
 
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
-<meta name="description" content="Oops! The page you're looking for does not exist. Explore digital crafting classes, events, and more at Craftr.">
+<meta name="description"
+    content="Oops! The page you're looking for does not exist. Explore digital crafting classes, events, and more at Craftr.">
 
 <meta name="keywords" content="404 Error, Page Not Found, Page Not Loading, Website Error, Craftr Technical Support">
 
@@ -16,19 +17,17 @@
 
 {% block content %}
 
-<div class="error-container">
-    <h1 class="error-title">🤔 Well, This is Embarrassing...</h1>
-    <p class="error-message">The page you’re looking for ran away. Maybe it's on vacation?</p>
+    <div class="error-container">
+        <h1 class="error-title">Oops! Something Went Wrong On Our End</h1>
+        <p class="error-message">We're experiencing technical difficulties, but don't worry — we're working on fixing
+            it!<br><br>
+            In the meantime, try refreshing the page or visiting Craftr's <a href="{% url 'home' %}">homepage</a>
+            for more crafting inspiration.</p>
 
-    <img src="{% static 'craftr/images/missing-page.png' %}" alt="Lost Page" class="error-image" />
-
-    <p class="error-message">Or maybe we accidentally sent it to another dimension. 👽</p>
-    <p class="error-message">Either way, it's not here. But we can help you find your way back!</p>
-
-    <div class="error-actions">
-        <a href="{% url 'home' %}" class="error-action-btn apple-green">Return Home</a>
-        <a href="javascript:history.back()" class="error-action-btn mint">Go Back</a>
+        <div class="error-actions">
+            <a href="{% url 'home' %}" class="error-action-btn apple-green">Return Home</a>
+            <a href="javascript:history.back()" class="error-action-btn mint">Go Back</a>
+        </div>
     </div>
-</div>
 
 {% endblock %}

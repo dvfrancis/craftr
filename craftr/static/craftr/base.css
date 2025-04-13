@@ -782,6 +782,10 @@ a.nav-details:hover {
 /* 4 0 4  E R R O R */
 
 .error-container {
+  background-image: url("{% static 'images/error-background.webp' %}");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   width: 75%;
   margin: 100px auto;
   padding: 2rem;

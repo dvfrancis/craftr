@@ -225,7 +225,7 @@ ul li {
 }
 
 .royal-purple {
-  background-color: #753da2;
+  background-color: rgb(117, 61, 162);
   color: #FFF;
 }
 
@@ -501,27 +501,19 @@ a.nav-details:hover {
 
 /* F A Q */
 
-#faq-info {
-  /* margin-top: 50px; */
-}
-
 .accordion {
-  /* font-family: 'Hind Madurai', serif; */
   font-size: 1.25em;
-  /* margin-top: 75px; */
-  --bs-accordion-border-color: #FAC600 !important;
-}
-
-.accordion-item {
-  border: 1px solid #FAC600 !important;
+  --bs-accordion-border-color: rgb(250, 198, 0) !important;
 }
 
 .accordion-button {
-  /* font-family: 'Hind Madurai', serif; */
+  font-family: 'Hind Madurai', serif;
   font-size: 0.75em !important;
   background-color: #FAC600 !important;
   color: #000 !important;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.45rem rgba(117, 61, 162, 0.45);
 }
+
 
 /* C O N T A C T */
 
@@ -790,6 +782,10 @@ a.nav-details:hover {
 /* 4 0 4  E R R O R */
 
 .error-container {
+  background-image: url("{% static 'images/error-background.webp' %}");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   width: 75%;
   margin: 100px auto;
   padding: 2rem;
