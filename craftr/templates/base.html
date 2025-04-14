@@ -73,7 +73,13 @@
                                 class="nav-entry {% if request.resolver_match.url_name == 'account' %}
                                 active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="Account Page Link"
-                                    href="{% url 'account' %}">ACCOUNT</a>
+                                    href="{% url 'account' %}">
+                                    {% if request.user.is_authenticated %}
+                                    ACCOUNT
+                                    {% else %}
+                                    REGISTER / LOGIN
+                                    {% endif %}
+                                </a>
                             </li>
                         </ul>
                     </div>

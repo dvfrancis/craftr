@@ -152,7 +152,7 @@ body {
 /* Make footer stick to bottom of page (see https://materializecss.com/footer.html) */
 
 main {
-  margin-top: 100px;
+  margin-top: 75px;
   flex: 1 0 auto;
 }
 
@@ -202,13 +202,6 @@ a {
 ul li {
   list-style-position: inside;
   text-align: center;
-}
-
-/* Highlight active menu item */
-
-.nav-entry.active a {
-  color: #ffc500;
-  font-weight: bold;
 }
 
 /* Placeholder form text */
@@ -272,7 +265,7 @@ ul li {
 /* Navigation background */
 
 .bg-body-tertiary {
-  height: 100px;
+  height: 75px;
   background-color: #b40001 !important;
 }
 
@@ -295,8 +288,17 @@ a.nav-details {
 
 a.nav-details:hover {
   background-color: #ffc500;
-  color: #b40001;
-  border-radius: 15px;
+  color: #b40001!important;
+  border-radius: 150px;
+  box-shadow: 0px 0px 10px rgba(255, 197, 0, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Navigation item - selected */
+
+.nav-entry.active a {
+  color: #ffc500;
+  font-weight: bold;
 }
 
 /* Hamburger menu */
@@ -631,7 +633,7 @@ a.nav-details:hover {
 
 .register-form-container {
   width: 75%;
-  margin: 100px auto;
+  margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
   border-radius: 15px;
@@ -674,7 +676,7 @@ a.nav-details:hover {
 
 .login-form-container {
   width: 75%;
-  margin: 100px auto;
+  margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
   border-radius: 15px;
@@ -873,7 +875,7 @@ a.nav-details:hover {
 
 .error-container {
   width: 75%;
-  margin: 100px auto;
+  margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
   border-radius: 15px;
@@ -915,7 +917,7 @@ a.nav-details:hover {
   align-items: center;
   justify-content: center;
   width: 75%;
-  margin: 100px auto;
+  margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
   border-radius: 15px;
