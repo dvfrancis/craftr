@@ -288,28 +288,9 @@ ul li {
   background: #ffc500;
 }
 
-/* Alignment */
+/* Containers and groups */
 
-.centre-align-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.centre-align-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Forms */
-
-.register-form-container,
-.login-form-container,
-.profile-form-container,
-.error-container {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -322,24 +303,31 @@ ul li {
   text-align: center;
 }
 
-.register-form-group,
-.login-form-group {
+.form-group {
   width: 100%;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.register-form-group label,
-.login-form-group label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.register-button-group,
-.login-button-group {
+  margin-top: 15px;
   gap: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   margin-top: 20px;
+}
+
+/* User, class, and instructor images*/
+
+.photo-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 /* H E A D E R */
@@ -477,7 +465,7 @@ a.nav-details:hover {
 
 /* H O M E */
 
-/* Hero Section */
+/* Hero section */
 
 .hero {
   text-align: center;
@@ -500,7 +488,7 @@ a.nav-details:hover {
   border: 12px solid #191945;
 }
 
-/* Workshops */
+/* Workshop section */
 
 .workshop-grid {
   display: grid;
@@ -526,18 +514,7 @@ a.nav-details:hover {
   border-radius: 8px;
 }
 
-/* C L A S S E S */
-
-/* Class and Instructor images*/
-
-.class-image,
-.instructor-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto;
-}
+/* D I A R Y */
 
 .diary-container {
   display: flex;
@@ -585,7 +562,7 @@ a.nav-details:hover {
   text-align: center;
 }
 
-/* C L A S S  D E T A I L S */
+/* C L A S S E S */
 
 .class-details-container {
   display: flex;
@@ -620,12 +597,6 @@ a.nav-details:hover {
   font-size: 1.2rem;
 }
 
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
 /* F A Q */
 
 .accordion {
@@ -657,24 +628,7 @@ a.nav-details:hover {
   padding: 2rem;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
 /* A C C O U N T */
-
-/* User images */
-
-.user-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
 /* Enrolment item grid */
 
@@ -718,36 +672,9 @@ a.nav-details:hover {
   font-size: 1.2rem;
 }
 
-/* Account buttons */
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* U P D A T E  P R O F I L E */
-
-.profile-form-group {
-  width: 100%;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
 /* 4 0 4  A N D  5 0 0  E R R O R */
 
-.bg-image {
+.error-image {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -764,13 +691,6 @@ a.nav-details:hover {
 .error-message {
   font-size: 1.2rem;
   margin-bottom: 15px;
-}
-
-.error-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 /* M E D I A  Q U E R I E S */

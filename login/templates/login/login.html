@@ -29,18 +29,18 @@
             </div>
         </div>
     </div>
-    <div class="login-form-container mt-1">
+    <div class="form-container mt-1">
         <form method="POST">
             {% csrf_token %}
-            <div class="login-form-group">
+            <div class="form-group">
                 <label for="username">Username</label>
                 {{ form.username }}
             </div>
-            <div class="login-form-group">
+            <div class="form-group">
                 <label for="password">Password</label>
                 {{ form.password }}
             </div>
-            <div class="login-button-group">
+            <div class="form-group">
                 <button type="submit" class="base-button purple-btn">Login</button>
                 <input type="reset" value="Clear" class="base-button mint-btn">
             </div>

@@ -33,7 +33,7 @@
   <div class="class-details-container">
     <div class="class-info">
       <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-        alt="Class Image" class="class-image" />
+        alt="Class Image" class="photo-image" />
 
       <p class="site-heading">Class Title</p>
       <p>{{ event_class.class_title }}</p>
@@ -53,7 +53,7 @@
       <p class="site-heading">Difficulty</p>
       <p>{{ event_class.difficulty }}</p>
 
-      <div class="button-group">
+      <div class="button-container">
         {% if request.user.is_authenticated %}
         <form method="POST" action="{% url 'details' event_class.id %}">
           {% csrf_token %}
@@ -73,7 +73,7 @@
 
     <div class="instructor-info">
       <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-        alt="Instructor Image" class="instructor-image" />
+        alt="Instructor Image" class="photo-image" />
 
       <p class="site-heading">Instructor</p>
       <p>{{ event_class.instructor }}</p>

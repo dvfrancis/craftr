@@ -17,13 +17,13 @@
 
 {% block content %}
 
-<main class="bg-image">
-    <div class="error-container">
+<main class="error-image">
+    <div class="form-container">
         <h1 class="error-title">Oops! That Page Seems To be Missing</h1>
         <p class="error-message">It looks like the page you're searching for doesn't exist or has moved.<br><br> No
             worries - you can
             head back to the Craftr homepage and explore our latest crafting classes instead.</p>
-        <div class="error-actions">
+        <div class="button-container">
             <a href="{% url 'home' %}" class="base-button purple-btn">Home</a>
             <a href="javascript:history.back()" class="base-button orange-btn">Go Back</a>
         </div>
