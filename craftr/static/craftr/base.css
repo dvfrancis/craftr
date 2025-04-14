@@ -208,7 +208,7 @@ ul li {
   text-align: center;
 }
 
-/* Placeholder form text */
+/* Align form placeholder text */
 
 ::placeholder {
   text-align: center;
@@ -306,8 +306,8 @@ ul li {
 .form-group {
   width: 100%;
   margin-top: 15px;
-  gap: 10px;
   margin-bottom: 15px;
+  gap: 10px;
   text-align: center;
 }
 
@@ -430,28 +430,20 @@ a.nav-details:hover {
   color: #fff;
 }
 
-/* Facebook icon */
-
 .fa-square-facebook:hover {
   color: #0165e1;
   border: none;
 }
-
-/* Instagram icon*/
 
 .fa-square-instagram:hover {
   color: #ff1493;
   border: none;
 }
 
-/* Bluesky icon */
-
 .fa-bluesky:hover {
   color: #0084ff;
   border: none;
 }
-
-/* GitHub icon */
 
 .fa-github:hover {
   color: #191945;
@@ -615,17 +607,31 @@ a.nav-details:hover {
 /* C O N T A C T */
 
 .contact-form {
-  width: 75%;
-  height: auto;
-  margin: 50px auto;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #ffc500;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #ffc500;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  font-size: 16px;
+}
+
+.contact-textarea {
+  height: 100px;
 }
 
 /* A C C O U N T */

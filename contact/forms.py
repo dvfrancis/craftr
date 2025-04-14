@@ -17,6 +17,9 @@ class ContactForm(forms.ModelForm):
                 attrs={'placeholder': 'Enter your email address'}
             ),
             'message': forms.TextInput(
-                attrs={'placeholder': 'Enter your message'}
+                attrs={
+                    'class': 'contact-textarea',
+                    'placeholder': 'Enter your message',
+                }
             ),
         }
