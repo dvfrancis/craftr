@@ -50,21 +50,23 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarHome">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-entry">
+                            <li class="nav-entry {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="Home Page Link" href="{% url 'home' %}">HOME</a>
                             </li>
-                            <li class="nav-entry">
+                            <li class="nav-entry {% if request.resolver_match.url_name == 'diary' %}active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="Diary Page Link"
                                     href="{% url 'diary' %}">CLASSES</a>
                             </li>
-                            <li class="nav-entry">
+                            <li class="nav-entry {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
                             </li>
-                            <li class="nav-entry">
+                            <li
+                                class="nav-entry {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="Contact Page Link"
                                     href="{% url 'contact' %}">CONTACT</a>
                             </li>
-                            <li class="nav-entry">
+                            <li
+                                class="nav-entry {% if request.resolver_match.url_name == 'account' %}active{% endif %}">
                                 <a class="nav-details fs-5" aria-label="Account Page Link"
                                     href="{% url 'account' %}">ACCOUNT</a>
                             </li>

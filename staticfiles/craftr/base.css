@@ -204,6 +204,13 @@ ul li {
   text-align: center;
 }
 
+/* Highlight active menu item */
+
+.nav-entry.active a {
+  color: #ffc500;
+  font-weight: bold;
+}
+
 /* Placeholder form text */
 
 ::placeholder {
@@ -709,10 +716,10 @@ a.nav-details:hover {
 /* A C C O U N T */
 
 .account-align {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* User images */
