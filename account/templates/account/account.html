@@ -56,11 +56,11 @@
                 <p>{{ enrolment.enrolled_class.event_day.day_date }} at {{ enrolment.enrolled_class.start_time }}</p>
                 <p class="site-heading">{{ enrolment.enrolled_class.class_title }}</p>
                 <a href="{% url 'details' enrolment.enrolled_class.id %}">
-                    <button type="submit" class="account-action-btn details-btn mb-2">Details</button>
+                    <button type="submit" class="base-button purple-btn mb-2">Details</button>
                 </a>
                 <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
                     {% csrf_token %}
-                    <button type="submit" class="account-action-btn withdraw-btn">Withdraw</button>
+                    <button type="submit" class="base-button orange-btn">Withdraw</button>
                 </form>
             </div>
             {% endfor %}
@@ -72,16 +72,16 @@
     <div class="button-container mb-4">
         <form method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
-            <button type="submit" class="account-action-btn logout-btn">Logout</button>
+            <button type="submit" class="base-button orange-btn">Logout</button>
         </form>
         <a href="{% url 'update_profile' %}">
-            <button type="button" class="account-action-btn edit-profile-btn">Edit Profile</button>
+            <button type="button" class="base-button purple-btn">Edit</button>
         </a>
 
         {% if not user.is_superuser %}
         <form method="POST" action="{% url 'delete_account' %}">
             {% csrf_token %}
-            <button type="submit" class="account-action-btn delete-account-btn"
+            <button type="submit" class="base-button mint-btn"
                 onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
                 Delete Account
             </button>

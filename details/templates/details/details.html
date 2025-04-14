@@ -58,15 +58,15 @@
         <form method="POST" action="{% url 'details' event_class.id %}">
           {% csrf_token %}
           {% if is_enrolled %}
-          <button type="submit" name="action" value="remove" class="details-action-btn royal-purple">Withdraw</button>
+          <button type="submit" name="action" value="remove" class="base-button orange-btn">Withdraw</button>
           {% else %}
-          <button type="submit" name="action" value="enrol" class="details-action-btn mint">Enrol</button>
+          <button type="submit" name="action" value="enrol" class="base-button green-btn">Enrol</button>
           {% endif %}
         </form>
-        <a href="{% url 'diary' %}" class="error-action-btn mint">Return to Diary</a>
+        <a href="{% url 'diary' %}" class="base-button purple-btn">Diary</a>
         {% else %}
-        <a href="{% url 'login' %}?next={{ request.path }}" class="details-action-btn apple-green">Login</a>
-        <a href="{% url 'register' %}?next={{ request.path }}" class="details-action-btn crimson">Register</a>
+        <a href="{% url 'login' %}?next={{ request.path }}" class="base-button purple-btn">Login</a>
+        <a href="{% url 'register' %}?next={{ request.path }}" class="base-button green-btn">Register</a>
         {% endif %}
       </div>
     </div>

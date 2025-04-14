@@ -43,7 +43,7 @@
                         <p class="site-heading">{{ class.class_title }}</p>
                         <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
                         <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
-                        <a href="{% url 'details' class.id %}" class="class-action-btn details-btn mt-3">Details</a>
+                        <a href="{% url 'details' class.id %}" class="base-button purple-btn mt-3">Details</a>
                     </div>
                 </div>
                 {% endfor %}

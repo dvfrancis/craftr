@@ -18,15 +18,15 @@
 {% block content %}
 
 <main>
-    <div class="server-error-container">
-        <h1 class="server-error-title">Oops! Something Went Wrong On Our End</h1>
-        <p class="server-error-message">We're experiencing technical difficulties, but don't worry — we're working on
+    <div class="error-container">
+        <h1 class="error-title">Oops! Something Went Wrong On Our End</h1>
+        <p class="error-message">We're experiencing technical difficulties, but don't worry — we're working on
             fixing
             it!<br><br>
             In the meantime, try refreshing the page or visiting Craftr's homepage for more crafting inspiration.</p>
-        <div class="server-error-actions">
-            <a href="{% url 'home' %}" class="server-action-btn apple-green">Return Home</a>
-            <a href="javascript:history.back()" class="error-action-btn mint">Go Back</a>
+        <div class="error-actions">
+            <a href="{% url 'home' %}" class="base-button purple-btn">Home</a>
+            <a href="javascript:history.back()" class="base-button orange-btn">Go Back</a>
         </div>
     </div>
 </main>
