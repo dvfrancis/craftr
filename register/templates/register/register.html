@@ -34,43 +34,43 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ request.GET.next }}">
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="username">Username</label>
                 {{ user_form.username }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="first_name">First Name</label>
                 {{ user_form.first_name }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="last_name">Last Name</label>
                 {{ user_form.last_name }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="email">Email</label>
                 {{ user_form.email }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="password1">Password</label>
                 {{ user_form.password1 }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="password2">Confirm Password</label>
                 {{ user_form.password2 }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="location">Location</label>
                 {{ profile_form.location }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="experience">Experience Level</label>
                 {{ profile_form.experience }}
             </div>
-            <div class="form-group">
+            <div class="register-from-group">
                 <label for="profile_picture">Profile Picture</label>
                 {{ profile_form.photograph }}
             </div>
-            <div class="button-group">
+            <div class="register-button-group">
                 <button type="submit" class="register-action-btn mint">Register</button>
                 <input type="reset" value="Clear" class="register-action-btn apple-green">
             </div>

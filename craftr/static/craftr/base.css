@@ -270,16 +270,16 @@ ul li {
 
 /* Navigation item */
 
-li.nav-entry a {
-  color: #fff;
-}
-
-/* Navigation item style*/
-
 a.nav-details {
   margin-left: 4rem;
   margin-right: 4rem;
   padding: 0.5rem;
+  color: #fff;
+}
+
+/* Navigation item text */
+
+li.nav-entry a {
   color: #fff;
 }
 
@@ -319,6 +319,12 @@ a.nav-details:hover {
   height: 100px;
 }
 
+.footer-logo {
+  margin-top: 5px;
+  width: 85px;
+  border-radius: 100%;
+}
+
 .social-container {
   display: flex;
   justify-content: center;
@@ -332,20 +338,10 @@ a.nav-details:hover {
   text-decoration: none;
 }
 
-.footer-logo {
-  margin-top: 5px;
-  width: 85px;
-}
-
 .smallprint:hover {
   text-decoration: none;
   color: #753da2;
 
-}
-
-/* Hide social media text */
-.social-media {
-  display: none;
 }
 
 /* Social media icons */
@@ -390,9 +386,15 @@ a.nav-details:hover {
   border: none;
 }
 
+/* Hide social media icon text */
+.social-media {
+  display: none;
+}
+
 /* H O M E */
 
 /* Hero Section */
+
 .hero {
   text-align: center;
   background-color: #ffc500;
@@ -409,7 +411,8 @@ a.nav-details:hover {
 }
 
 .hero-img {
-  width: 500px;
+  width: 15rem;
+  border-radius: 100%;
 }
 
 .cta-btn {
@@ -426,6 +429,7 @@ a.nav-details:hover {
 }
 
 /* Workshops */
+
 .workshop-grid {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -445,7 +449,7 @@ a.nav-details:hover {
 }
 
 .workshop-img {
-  width: 250px;
+  height: 10em;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -456,8 +460,8 @@ a.nav-details:hover {
 
 .class-image,
 .instructor-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   margin: 0 auto;
@@ -481,6 +485,8 @@ a.nav-details:hover {
   margin-bottom: 20px;
 }
 
+/* Position grid and entries in the middle of the page */
+
 .diary-classes {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -488,6 +494,8 @@ a.nav-details:hover {
   margin: 0 auto;
   grid-auto-flow: dense;
 }
+
+/* Ensure any lone class is positioned in the centre of the grid */
 
 .diary-class:nth-child(3n+1):last-of-type {
   grid-column: 2 / span 1;
@@ -505,17 +513,22 @@ a.nav-details:hover {
   text-align: center;
 }
 
-.class-action-btn {
-  display: inline-block;
-  padding: 10px 15px;
+.class-action-btn,
+.details-action-btn,
+.register-action-btn,
+.login-action-btn,
+.account-action-btn,
+.profile-action-btn,
+.error-action-btn,
+.server-action-btn {
+  width: 200px;
+  padding: 10px;
   font-size: 1rem;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
   text-align: center;
-  background-color: #0091ac;
-  color: white;
-  text-decoration: none;
+  font-weight: bold;
 }
 
 /* C L A S S  D E T A I L S */
@@ -542,8 +555,8 @@ a.nav-details:hover {
 }
 
 .image-group img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -557,16 +570,6 @@ a.nav-details:hover {
   display: flex;
   gap: 10px;
   justify-content: center;
-}
-
-.details-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
 }
 
 /* F A Q */
@@ -630,98 +633,46 @@ a.nav-details:hover {
 
 /* R E G I S T E R */
 
-.register-form-container {
+.register-form-container,
+.login-form-container,
+.profile-form-container,
+.error-container,
+.server-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 75%;
   margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
-.form-group {
+.register-form-group,
+.login-form-group {
   width: 100%;
   margin-bottom: 15px;
   text-align: left;
 }
 
-.form-group label {
+.register-form-group label,
+.login-form-group label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
 
-.button-group {
-  display: flex;
+.register-button-group,
+.login-button-group {
+  /* display: flex; */
   gap: 10px;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 20px;
-}
-
-.register-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* L O G I N */
-
-.login-form-container {
-  width: 75%;
-  margin: 75px auto;
-  padding: 2rem;
-  background-color: #ffc500;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.form-group {
-  width: 100%;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.form-group label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.login-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
 }
 
 /* A C C O U N T */
-
-.account-align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 /* User images */
 
@@ -785,17 +736,6 @@ a.nav-details:hover {
   margin-top: 20px;
 }
 
-.account-action-btn {
-  width: 200px;
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-}
-
 .logout-btn {
   background-color: #0091ac;
   color: white;
@@ -823,20 +763,6 @@ a.nav-details:hover {
 
 /* U P D A T E  P R O F I L E */
 
-.profile-form-container {
-  width: 75%;
-  height: auto;
-  margin: 50px auto;
-  border: 1px solid #ccc;
-  background-color: #ffc500;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
 .profile-form-group {
   width: 100%;
   margin-bottom: 15px;
@@ -851,17 +777,7 @@ a.nav-details:hover {
   margin-top: 20px;
 }
 
-.profile-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* 4 0 4  E R R O R */
+/* 4 0 4  A N D  5 0 0  E R R O R */
 
 .bg-image {
   display: flex;
@@ -872,81 +788,24 @@ a.nav-details:hover {
   background-size: cover;
 }
 
-.error-container {
-  width: 75%;
-  margin: 75px auto;
-  padding: 2rem;
-  background-color: #ffc500;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.error-title {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.error-message {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-.error-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.error-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* 5 0 0  E R R O R */
-
-.server-error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 75%;
-  margin: 75px auto;
-  padding: 2rem;
-  background-color: #ffc500;
-  border-radius: 15px;
-  text-align: center;
-}
-
+.error-title,
 .server-error-title {
   font-size: 2rem;
   font-weight: bold;
 }
 
+.error-message,
 .server-error-message {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
+.error-actions,
 .server-error-actions {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 20px;
-}
-
-.server-action-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
 }
 
 /* M E D I A  Q U E R I E S */

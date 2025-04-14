@@ -27,26 +27,28 @@
             </div>
         </div>
     </div>
-    {% if user.profile and user.profile.photograph %}
-    <p class="site-heading">Username</p>
-    <p>{{ user.username }}</p>
-    <div class="centre-align-column mt-4">
-        <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
-            alt="Profile photo" class="user-image mt-3 mb-5" />
+    <div class="profile-form-container">
+        {% if user.profile and user.profile.photograph %}
+        <p class="site-heading">Username</p>
+        <p>{{ user.username }}</p>
+        <div class="centre-align-column mt-4">
+            <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
+                alt="Profile photo" class="user-image mt-3 mb-5" />
+        </div>
+        <p class="site-heading">Name</p>
+        <p>{{ user.first_name }} {{ user.last_name }}</p>
+        <p class="site-heading">Email</p>
+        <p>{{ user.email }}</p>
+        <p class="site-heading">Location</p>
+        <p>{{ user.profile.location }}</p>
+        <p class="site-heading">Experience Level</p>
+        <p>{{ user.profile.experience }}</p>
+        {% else %}
+        <p>No additional profile information is available.</p>
+        {% endif %}
     </div>
-    <p class="site-heading">Name</p>
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
-    <p class="site-heading">Email</p>
-    <p>{{ user.email }}</p>
-    <p class="site-heading">Location</p>
-    <p>{{ user.profile.location }}</p>
-    <p class="site-heading">Experience Level</p>
-    <p>{{ user.profile.experience }}</p>
-    {% else %}
-    <p>No additional profile information is available.</p>
-    {% endif %}
     <h2 class="mt-4 mb-3">Your Enrolments</h2>
-    <div class="account-align">
+    <div class="centre-align-column">
         <div class="enrolments">
             {% if enrolments %}
             {% for enrolment in enrolments %}
