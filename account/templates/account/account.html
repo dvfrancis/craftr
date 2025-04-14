@@ -18,8 +18,8 @@
 {% block content %}
 
 <main>
-    <h1 class="mt-5 mb-3">Account Details</h1>
-    <div class="container-fluid mb-5">
+    <h1 class="mt-5">Account Details</h1>
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-10 col-lg-10">
                 <h2>Welcome to your Craftr account</h2>
@@ -27,11 +27,11 @@
             </div>
         </div>
     </div>
-    <div class="form-container">
+    <div class="form-container mt-5 mb-5">
         {% if user.profile and user.profile.photograph %}
         <p class="site-heading">Username</p>
         <p>{{ user.username }}</p>
-        <div class="centre-align-column mt-4">
+        <div class="centre-align-column">
             <img src="{{ user.profile.photograph.url|default:default_profile_url|add:'?w=150&h=150&c_fill,g_face,r_max' }}"
                 alt="Profile photo" class="photo-image mt-3 mb-5" />
         </div>
@@ -47,7 +47,7 @@
         <p>No additional profile information is available.</p>
         {% endif %}
     </div>
-    <h2 class="mt-4 mb-3">Your Enrolments</h2>
+    <h2 class="mb-3">Your Enrolments</h2>
     <div class="centre-align-column">
         <div class="enrolments">
             {% if enrolments %}
@@ -56,7 +56,7 @@
                 <p>{{ enrolment.enrolled_class.event_day.day_date }} at {{ enrolment.enrolled_class.start_time }}</p>
                 <p class="site-heading">{{ enrolment.enrolled_class.class_title }}</p>
                 <a href="{% url 'details' enrolment.enrolled_class.id %}">
-                    <button type="submit" class="base-button purple-btn mb-2">Details</button>
+                    <button type="submit" class="base-button purple-btn mt-3 mb-2">Details</button>
                 </a>
                 <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
                     {% csrf_token %}

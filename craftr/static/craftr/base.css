@@ -153,7 +153,8 @@ body {
 main {
   margin-top: 75px;
   flex: 1 0 auto;
-  /* Sticky footer, see (see https://materializecss.com/footer.html) */
+  padding-bottom: 50px
+    /* Sticky footer, see (see https://materializecss.com/footer.html) */
 }
 
 h1 {
@@ -286,6 +287,20 @@ ul li {
 
 .gold-btn {
   background: #ffc500;
+}
+
+input[type="reset"] {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 100px!important;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Containers and groups */
@@ -480,6 +495,19 @@ a.nav-details:hover {
   border: 12px solid #191945;
 }
 
+.hero-background{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_192145506_XL_chjpxu.webp") no-repeat scroll center;
+  background-size: cover;
+  }
+
+.event-emphasis {
+  font-weight: bold;
+}
+
 /* Workshop section */
 
 .workshop-grid {
@@ -559,7 +587,7 @@ a.nav-details:hover {
 .class-details-container {
   display: flex;
   gap: 30px;
-  max-width: 900px;
+  width: 75%;
   margin: auto;
   padding: 20px;
   background-color: #ffc500;
@@ -568,7 +596,7 @@ a.nav-details:hover {
 }
 
 .class-info {
-  flex: 2;
+  flex: 1;
   text-align: center;
 }
 
@@ -686,6 +714,15 @@ label {
   align-items: center;
   justify-content: center;
   background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744567139/error-background_c9gyxk.png") no-repeat fixed center;
+  background-size: cover;
+}
+
+.server-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744649236/Depositphotos_171778606_XL_o4wchn.webp") no-repeat fixed center;
   background-size: cover;
 }
 

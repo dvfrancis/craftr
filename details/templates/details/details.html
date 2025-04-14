@@ -30,28 +30,25 @@
       </div>
     </div>
   </div>
-  <div class="class-details-container">
+  <div class="class-details-container mb-5 p-5">
     <div class="class-info">
       <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-        alt="Class Image" class="photo-image" />
+        alt="Class Image" class="photo-image mb-5" />
 
-      <p class="site-heading">Class Title</p>
-      <p>{{ event_class.class_title }}</p>
+      <p class="site-heading">This class is</p>
+      <p class="mb-3">{{ event_class.class_title }}</p>
 
-      <p class="site-heading">Day</p>
-      <p>{{ event_class.event_day.day_date|date:"d F Y" }}</p>
+      <p class="site-heading">and takes place on</p>
+      <p class="mb-3">{{ event_class.event_day.day_date|date:"d F Y" }}</p>
 
-      <p class="site-heading">Start Time</p>
-      <p>{{ event_class.start_time|time:"g:i a" }}</p>
+      <p class="site-heading">from</p>
+      <p class="mb-3">{{ event_class.start_time|time:"g:i a" }} to {{ event_class.end_time|time:"g:i a" }}</p>
 
-      <p class="site-heading">End Time</p>
-      <p>{{ event_class.end_time|time:"g:i a" }}</p>
-
-      <p class="site-heading">Description</p>
-      <p>{{ event_class.class_description }}</p>
+      <p class="site-heading">Overview</p>
+      <p class="mb-3">{{ event_class.class_description }}</p>
 
       <p class="site-heading">Difficulty</p>
-      <p>{{ event_class.difficulty }}</p>
+      <p class="mb-3">{{ event_class.difficulty }}</p>
 
       <div class="button-container">
         {% if request.user.is_authenticated %}
@@ -73,13 +70,13 @@
 
     <div class="instructor-info">
       <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-        alt="Instructor Image" class="photo-image" />
+        alt="Instructor Image" class="photo-image mb-5" />
 
       <p class="site-heading">Instructor</p>
-      <p>{{ event_class.instructor }}</p>
+      <p class="mb-4">{{ event_class.instructor|upper }}</p>
 
       <p class="site-heading">Biography</p>
-      <p>{{ event_class.instructor_bio }}</p>
+      <p>{{ event_class.instructor_bio|linebreaks }}</p>
     </div>
   </div>
 </main>
