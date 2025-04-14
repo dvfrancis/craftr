@@ -18,18 +18,21 @@
 
 {% block content %}
 
-<main>
-    <h1 class="mt-5 mb-3">Login</h1>
-    <div class="container-fluid mb-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-lg-10">
-                <h2>Welcome back, crafter!</h2>
-                <p>Log in to access your account, review your enrolled crafting classes, and connect with the community.
-                    Let's make something amazing today!</p>
+<main class="account-background">
+    <div class="hero mt-5 mb-5">
+        <h1 class="mb-3">Login</h1>
+        <div class="container-fluid mb-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-10">
+                    <h2>Welcome back, crafter!</h2>
+                    <p>Log in to access your account, review your enrolled crafting classes, and connect with the
+                        community.
+                        Let's make something amazing today!</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="form-container mt-1">
+    <div class="form-container mb-1 mt-1">
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">

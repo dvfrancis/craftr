@@ -293,7 +293,7 @@ input[type="reset"] {
   color: white;
   text-decoration: none;
   display: inline-block;
-  width: 100px!important;
+  width: 100px !important;
   padding: 10px;
   font-size: 1rem;
   border: none;
@@ -310,7 +310,7 @@ input[type="reset"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 65%;
   margin: 75px auto;
   padding: 2rem;
   background-color: #ffc500;
@@ -475,10 +475,19 @@ a.nav-details:hover {
 /* Hero section */
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background-color: #ffc500;
+  background-color: rgba(255, 255, 255, 0.95);
   color: #191945;
-  padding: 80px 20px;
+  padding: 80px;
+  border-radius: 15px;
+}
+
+section+div.hero {
+  width: 50%;
 }
 
 .hero h1 {
@@ -495,14 +504,27 @@ a.nav-details:hover {
   border: 12px solid #191945;
 }
 
-.hero-background{
+.hero-background {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_192145506_XL_chjpxu.webp") no-repeat scroll center;
+  background: none;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652041/Depositphotos_212311048_XL_ldghid.webp") no-repeat center;
   background-size: cover;
-  }
+  transform: scaleY(-1);
+  z-index: -1;
+}
 
 .event-emphasis {
   font-weight: bold;
@@ -582,6 +604,15 @@ a.nav-details:hover {
   text-align: center;
 }
 
+.diary-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_115696836_XL_nld94g.webp") no-repeat scroll center;
+  background-size: cover;
+}
+
 /* C L A S S E S */
 
 .class-details-container {
@@ -635,8 +666,7 @@ a.nav-details:hover {
 /* C O N T A C T */
 
 .contact-form {
-  max-width: 500px;
-  margin: auto;
+  width: 65%;
   padding: 20px;
   background: #ffc500;
   border-radius: 10px;
@@ -660,6 +690,15 @@ label {
 
 .contact-textarea {
   height: 100px;
+}
+
+.contact-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744651818/Depositphotos_350095596_XL_w0gxyf.webp") no-repeat scroll center;
+  background-size: cover;
 }
 
 /* A C C O U N T */
@@ -704,6 +743,15 @@ label {
 .site-heading {
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.account-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_501993588_XL_r9dhle.webp") no-repeat scroll center;
+  background-size: cover;
 }
 
 /* 4 0 4  A N D  5 0 0  E R R O R */

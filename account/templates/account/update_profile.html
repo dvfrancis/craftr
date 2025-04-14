@@ -18,17 +18,19 @@
 
 {% block content %}
 
-<main>
-    <h1 class="mt-5 mb-3">Update Your Profile</h1>
-    <div class="container-fluid mb-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-lg-10">
-                <h2>Keep your profile updated</h2>
-                <p>Make sure your details reflect the latest information</p>
+<main class="account-background">
+    <div class="hero mt-5">
+        <h1 class="mb-3">Update Your Profile</h1>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-10">
+                    <h2>Keep your profile updated</h2>
+                    <p>Make sure your details reflect the latest information</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="form-container">
+    <div class="form-container mb-2">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 

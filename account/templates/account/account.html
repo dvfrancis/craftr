@@ -17,13 +17,15 @@
 
 {% block content %}
 
-<main>
-    <h1 class="mt-5">Account Details</h1>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-10 col-lg-10">
-                <h2>Welcome to your Craftr account</h2>
-                <p>Check your details, track your enrolled classes, and update your profile</p>
+<main class="account-background">
+    <div class="hero mt-5 mb-3">
+        <h1 class="mb-4">Account Details</h1>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-10">
+                    <h2>Welcome to your Craftr account</h2>
+                    <p>Check your details, track your enrolled classes, and update your profile</p>
+                </div>
             </div>
         </div>
     </div>
@@ -47,29 +49,32 @@
         <p>No additional profile information is available.</p>
         {% endif %}
     </div>
-    <h2 class="mb-3">Your Enrolments</h2>
-    <div class="centre-align-column">
-        <div class="enrolments">
-            {% if enrolments %}
-            {% for enrolment in enrolments %}
-            <div class="enrolment-item">
-                <p>{{ enrolment.enrolled_class.event_day.day_date }} at {{ enrolment.enrolled_class.start_time }}</p>
-                <p class="site-heading">{{ enrolment.enrolled_class.class_title }}</p>
-                <a href="{% url 'details' enrolment.enrolled_class.id %}">
-                    <button type="submit" class="base-button purple-btn mt-3 mb-2">Details</button>
-                </a>
-                <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
-                    {% csrf_token %}
-                    <button type="submit" class="base-button orange-btn">Withdraw</button>
-                </form>
+    <div class="hero py-5">
+        <h2 class="mb-3">Your Enrolments</h2>
+        <div class="centre-align-column">
+            <div class="enrolments">
+                {% if enrolments %}
+                {% for enrolment in enrolments %}
+                <div class="enrolment-item">
+                    <p>{{ enrolment.enrolled_class.event_day.day_date }} at {{ enrolment.enrolled_class.start_time }}
+                    </p>
+                    <p class="site-heading">{{ enrolment.enrolled_class.class_title }}</p>
+                    <a href="{% url 'details' enrolment.enrolled_class.id %}">
+                        <button type="submit" class="base-button purple-btn mt-3 mb-2">Details</button>
+                    </a>
+                    <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="base-button orange-btn">Withdraw</button>
+                    </form>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>You are not enrolled in any classes yet</p>
+                {% endif %}
             </div>
-            {% endfor %}
-            {% else %}
-            <p>You are not enrolled in any classes yet</p>
-            {% endif %}
         </div>
     </div>
-    <div class="button-container mb-4">
+    <div class="button-container mt-5 mb-2">
         <form method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
             <button type="submit" class="base-button orange-btn">Logout</button>
