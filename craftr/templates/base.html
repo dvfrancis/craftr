@@ -41,7 +41,7 @@
     <!-- Header and navigation -->
     <header class="container-fluid mb-5 fixed-top">
         <div class="row">
-            <nav class="col-12 navbar navbar-expand-lg bg-body-tertiary pb-3 pt-3">
+            <nav class="col-12 navbar navbar-expand-lg bg-body-tertiary pb-3">
                 <div class="mx-auto">
                     <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarHome" aria-controls="navbarHome" aria-expanded="false"
@@ -52,27 +52,27 @@
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-entry {% if request.resolver_match.url_name == 'home' %}
                                 active{% endif %}">
-                                <a class="nav-details fs-5" aria-label="Home Page Link" href="{% url 'home' %}">HOME</a>
+                                <a class="nav-details" aria-label="Home Page Link" href="{% url 'home' %}">HOME</a>
                             </li>
                             <li class="nav-entry {% if request.resolver_match.url_name == 'diary' %}
                                 active{% endif %}">
-                                <a class="nav-details fs-5" aria-label="Diary Page Link"
+                                <a class="nav-details" aria-label="Diary Page Link"
                                     href="{% url 'diary' %}">CLASSES</a>
                             </li>
                             <li class="nav-entry {% if request.resolver_match.url_name == 'faq' %}
                                 active{% endif %}">
-                                <a class="nav-details fs-5" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
+                                <a class="nav-details" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
                             </li>
                             <li
                                 class="nav-entry {% if request.resolver_match.url_name == 'contact' %}
                                 active{% endif %}">
-                                <a class="nav-details fs-5" aria-label="Contact Page Link"
+                                <a class="nav-details" aria-label="Contact Page Link"
                                     href="{% url 'contact' %}">CONTACT</a>
                             </li>
                             <li
                                 class="nav-entry {% if request.resolver_match.url_name == 'account' %}
                                 active{% endif %}">
-                                <a class="nav-details fs-5" aria-label="Account Page Link"
+                                <a class="nav-details" aria-label="Account Page Link"
                                     href="{% url 'account' %}">
                                     {% if request.user.is_authenticated %}
                                     ACCOUNT
