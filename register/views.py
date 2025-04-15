@@ -26,7 +26,7 @@ def register_user(request):
             profile.experience = profile_form.cleaned_data["experience"]
             profile.photograph = profile_form.cleaned_data["photograph"]
             profile.save()
-            messages.success(request, "User registered successfully")
+            messages.success(request, "Account created, and logged in")
 
             # Log in user after successful registration
             login(request, user)
@@ -40,8 +40,8 @@ def register_user(request):
                 messages.error(
                     request,
                     (
-                        "Your passwords do not match, or are missing. "
-                        "Please enter them again."
+                        "The passwords do not match, or have not been entered."
+                        " Please enter them again."
                     ))
 
     return render(
