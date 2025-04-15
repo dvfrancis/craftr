@@ -75,7 +75,7 @@
                     <button type="submit" name="action" value="enrol" class="btn btn-success">Enrol</button>
                     {% endif %}
                   </form>
-                  <a href="{% url 'diary' %}" class="btn btn-primary">Diary</a>
+                  <a href="{% url 'diary' %}" class="btn btn-primary">Back to Diary</a>
                   {% else %}
                   <a href="{% url 'login' %}?next={{ request.path }}" class="btn btn-primary">Login</a>
                   <a href="{% url 'register' %}?next={{ request.path }}" class="btn btn-success">Register</a>
