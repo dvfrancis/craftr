@@ -513,10 +513,9 @@ section+div.hero {
 }
 
 .hero-img {
-  width: 50%;
+  width: 10em;
   border-radius: 100%;
-  padding: 15px;
-  border: 12px solid #191945;
+  border: 8px solid #191945;
 }
 
 .hero-background {
@@ -817,50 +816,4 @@ label {
 .error-message {
   font-size: 1.2rem;
   margin-bottom: 15px;
-}
-
-/* M E D I A  Q U E R I E S */
-
-/* Info used from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
-
-/* Bootstrap extra small (none) */
-@media (max-width: 575px) {
-  body {
-    /* padding-top: 185px; */
-  }
-}
-
-/* Bootstrap small (sm) */
-@media (min-width: 576px) and (max-width: 767px) {
-  body {
-    /* padding-top: 190px; */
-  }
-}
-
-/* Bootstrap medium (md) */
-@media (min-width: 768px) and (max-width: 991px) {
-  body {
-    /* padding-top: 190px; */
-  }
-}
-
-/* Bootstrap large (lg) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  body {
-    /* padding-top: 180px; */
-  }
-}
-
-/* Bootstrap extra large (xl) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  body {
-    /* padding-top: 180px; */
-  }
-}
-
-/* Bootstrap extra extra large (xxl) */
-@media (min-width: 1400px) {
-  body {
-    /* padding-top: 190px; */
-  }
 }
