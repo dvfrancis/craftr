@@ -142,7 +142,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.9);
+  ;
   color: #191945;
   font-family: "Hind Madurai", sans-serif;
   font-weight: 400;
@@ -221,32 +222,32 @@ ul li {
 
 .apple-green {
   background-color: #7db657;
-  color: #FFF;
+  color: #fafafa;
 }
 
 .mint {
   background-color: #0091ac;
-  color: #FFF;
+  color: #fafafa;
 }
 
 .royal-purple {
   background-color: rgb(117, 61, 162);
-  color: #FFF;
+  color: #fafafa;
 }
 
 .crimson {
   background-color: #b40001;
-  color: #FFF;
+  color: #fafafa;
 }
 
 .orange {
   background-color: #ff8500;
-  color: #FFF;
+  color: #fafafa;
 }
 
 .gold {
   background-color: #ffc500;
-  color: #FFF;
+  color: #fafafa;
 }
 
 /* Buttons */
@@ -313,7 +314,7 @@ input[type="reset"] {
   width: 65%;
   margin: 75px auto;
   padding: 2rem;
-  background-color: #ffc500;
+  background-color: rgba(250, 250, 250, 0.9);
   border-radius: 15px;
   text-align: center;
 }
@@ -360,22 +361,22 @@ a.nav-details {
   margin-left: 4rem;
   margin-right: 4rem;
   padding: 0.5rem;
-  color: #fff;
+  color: #fafafa;
 }
 
 /* Navigation item text */
 
 li.nav-entry a {
-  color: #fff;
+  color: #fafafa;
 }
 
 /* Navigation item - hover */
 
 a.nav-details:hover {
-  background-color: #ffc500;
+  background-color: rgba(255, 197, 0, 0.9);
   color: #b40001 !important;
   border-radius: 150px;
-  box-shadow: 0px 0px 10px rgba(255, 197, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(255, 197, 0, 0.9);
   transition: all 0.5s ease-in-out;
 }
 
@@ -391,9 +392,9 @@ a.nav-details:hover {
 /* Info from https://www.youtube.com/watch?v=45QSuJaHEss */
 
 .navbar-toggler {
-  --bs-navbar-toggler-border-color: #fff;
+  --bs-navbar-toggler-border-color: #fafafa;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  color: #fff;
+  color: #fafafa;
 }
 
 /* F O O T E R */
@@ -421,7 +422,7 @@ a.nav-details:hover {
 
 .smallprint {
   font-size: larger;
-  color: #FFF;
+  color: #fafafa;
   text-decoration: none;
 }
 
@@ -442,7 +443,7 @@ a.nav-details:hover {
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: #fafafa;
 }
 
 .fa-square-facebook:hover {
@@ -480,9 +481,10 @@ a.nav-details:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(250, 250, 250, 0.9);
   color: #191945;
   padding: 80px;
+  width: 65%;
   border-radius: 15px;
 }
 
@@ -570,7 +572,7 @@ section+div.hero {
 
 .diary-day {
   width: 100%;
-  background-color: #ffc500;
+  background-color: rgba(250, 250, 250, 0.9);
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
@@ -594,7 +596,8 @@ section+div.hero {
 
 .diary-class {
   align-items: center;
-  background: #fafafa;
+  background: rgba(255, 197, 0, 0.9);
+  ;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -621,7 +624,7 @@ section+div.hero {
   width: 75%;
   margin: auto;
   padding: 20px;
-  background-color: #ffc500;
+  background-color: rgba(250, 250, 250, 0.9);
   border-radius: 15px;
   justify-content: space-between;
 }
@@ -652,23 +655,59 @@ section+div.hero {
 
 .accordion {
   font-size: 1.25em;
-  --bs-accordion-border-color: rgb(250, 198, 0) !important;
+  --bs-accordion-border-color: rgba(117, 61, 162, 0.9) !important;
+}
+
+.accordion-body {
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.accordion-item {
+  margin-bottom: 7.5px;
+}
+
+.accordion-header {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .accordion-button {
+  outline: none;
   font-family: 'Hind Madurai', serif;
   font-size: 0.75em !important;
-  background-color: #FAC600 !important;
-  color: #191945 !important;
+  background-color: rgba(117, 61, 162, 0.9) !important;
+  color: #fafafa !important;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.45rem rgba(117, 61, 162, 0.45);
 }
+
+.accordion-button::after {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.accordion-collapse {
+  transition: height 0.3s ease-in-out;
+}
+
+.faq-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652041/Depositphotos_356425758_XL_jsstrh.webp") no-repeat scroll center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 
 /* C O N T A C T */
 
 .contact-form {
   width: 65%;
   padding: 20px;
-  background: #ffc500;
+  background: rgba(250, 250, 250, 0.9);
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -720,7 +759,7 @@ label {
 }
 
 .enrolment-item {
-  background-color: #ffc500;
+  background-color: rgba(255, 197, 0, 0.8);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
