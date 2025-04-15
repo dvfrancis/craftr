@@ -6,7 +6,7 @@ handler500 = 'craftr.views.custom_500'
 
 urlpatterns = [
     path(
-        "login/",
+        "",
         CustomLoginView.as_view(template_name="login/login.html"),
         name="login",
     ),

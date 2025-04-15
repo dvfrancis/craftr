@@ -39,7 +39,7 @@
       <div class="col-lg-6">
         <div class="class-info text-center">
           <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-            alt="Class Image" class="photo-image mb-4 img-fluid rounded" />
+            alt="Class Image" class="photo-image mb-4 img-fluid" />
           <p class="site-heading">This class is</p>
           <p class="mb-3">{{ event_class.class_title }}</p>
           <p class="site-heading">and takes place on</p>
@@ -56,7 +56,7 @@
       <div class="col-lg-6">
         <div class="instructor-info text-center">
           <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
-            alt="Instructor Image" class="photo-image mb-4 img-fluid rounded" />
+            alt="Instructor Image" class="photo-image mb-4 img-fluid" />
 
           <p class="site-heading">Instructor</p>
           <p class="mb-4">{{ event_class.instructor|upper }}</p>
