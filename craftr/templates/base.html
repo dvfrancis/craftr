@@ -41,6 +41,13 @@
     <!-- Header and navigation -->
     <header class="container-fluid mb-5 fixed-top">
         <div class="row">
+            <div class="col-12 text-center bg-body-tertiary">
+                <a href="https://craftr-bfd2923e1ca4.herokuapp.com/" aria-label="Craftr Home Page"><img
+                        src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744537296/c6sw9h4bjzlqmopsxfkl.webp"
+                        alt="Craftr Logo" class="header-logo"></a>
+            </div>
+        </div>
+        <div class="row">
             <nav class="col-12 navbar navbar-expand-lg bg-body-tertiary pb-3">
                 <div class="mx-auto">
                     <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse"
@@ -56,24 +63,20 @@
                             </li>
                             <li class="nav-entry {% if request.resolver_match.url_name == 'diary' %}
                                 active{% endif %}">
-                                <a class="nav-details" aria-label="Diary Page Link"
-                                    href="{% url 'diary' %}">CLASSES</a>
+                                <a class="nav-details" aria-label="Diary Page Link" href="{% url 'diary' %}">CLASSES</a>
                             </li>
                             <li class="nav-entry {% if request.resolver_match.url_name == 'faq' %}
                                 active{% endif %}">
                                 <a class="nav-details" aria-label="FAQ Page Link" href="{% url 'faq' %}">FAQ</a>
                             </li>
-                            <li
-                                class="nav-entry {% if request.resolver_match.url_name == 'contact' %}
+                            <li class="nav-entry {% if request.resolver_match.url_name == 'contact' %}
                                 active{% endif %}">
                                 <a class="nav-details" aria-label="Contact Page Link"
                                     href="{% url 'contact' %}">CONTACT</a>
                             </li>
-                            <li
-                                class="nav-entry {% if request.resolver_match.url_name == 'account' %}
+                            <li class="nav-entry {% if request.resolver_match.url_name == 'account' %}
                                 active{% endif %}">
-                                <a class="nav-details" aria-label="Account Page Link"
-                                    href="{% url 'account' %}">
+                                <a class="nav-details" aria-label="Account Page Link" href="{% url 'account' %}">
                                     {% if request.user.is_authenticated %}
                                     ACCOUNT
                                     {% else %}
@@ -117,19 +120,13 @@
         <div class="row footer">
 
             <!-- Legal and copyright information -->
-            <div class="col-12 col-md-4 text-center social-container">
+            <div class="col-6 text-center social-container">
                 <a href="https://www.dominicfrancis.co.uk" target="_blank" rel="noopener noreferrer"
                     aria-label="Dominic Francis's website" class="smallprint">&#169; 2025 | Dominic Francis | All
                     Rights Reserved</a>
             </div>
-            <!-- Site title -->
-            <div class="col-12 col-md-4 text-center social-container">
-                <a href="https://craftr-bfd2923e1ca4.herokuapp.com/" aria-label="Craftr Home Page"><img
-                        src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744537296/c6sw9h4bjzlqmopsxfkl.webp"
-                        alt="Craftr Logo" class="footer-logo"></a>
-            </div>
             <!-- Social media links -->
-            <div class="col-12 col-md-4 text-center social-container">
+            <div class="col-6 text-center social-container">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                     class="fa-brands fa-square-facebook" aria-label="Share on Facebook"><span
                         class="social-media">Facebook</span></a>

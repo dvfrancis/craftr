@@ -18,41 +18,49 @@
 
 {% block content %}
 
-<main class="diary-background mb-1">
-    <div class="mt-5 mb-4 hero">
-        <h1 class="mb-3">Schedule of Classes</h1>
-        <div class="container-fluid mb-4">
-            <div class="row justify-content-center">
-                <div class="col-10 col-lg-10">
-                    <h2>Your personalised diary awaits...</h2>
-                    <p>Stay on top of all the exciting Craftr workshops, live sessions, and community events happening
-                        throughout the festival.<br><br>Never miss a class - check the schedule below.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="diary-container">
-        {% for day in days %}
-        <div class="diary-day">
-            <h2 class="mb-2">{{ day.day_date|date:"d F Y" }}</h2>
-            <h3 class="mb-2">{{ day.day_title }}</h3>
-            <p class="mb-3">{{ day.day_description }}</p>
-            <div class="diary-classes">
-                {% for class in day.event_day.all|dictsort:"start_time" %}
-                <div class="diary-class">
-                    <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="photo-image">
-                    <div class="class-details">
-                        <p class="site-heading">{{ class.class_title }}</p>
-                        <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
-                        <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
-                        <a href="{% url 'details' class.id %}" class="base-button purple-btn mt-3">Details</a>
+<main class="container-fluid diary-background mb-1">
+    <section class="row mt-5 mb-4 hero">
+        <div class="col-12">
+            <h1 class="mb-3">Schedule of Classes</h1>
+            <div class="mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>Your personalised diary awaits...</h2>
+                        <p>Stay on top of all the exciting Craftr workshops, live sessions, and community events
+                            happening throughout the festival.<br><br>Never miss a class - check the schedule below.</p>
                     </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
-        {% endfor %}
-    </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="diary-container">
+            {% for day in days %}
+            <div class="diary-day">
+                <h2 class="mb-2">{{ day.day_date|date:"d F Y" }}</h2>
+                <h3 class="mb-2">{{ day.day_title }}</h3>
+                <p class="mb-3">{{ day.day_description }}</p>
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
+                    {% for class in day.event_day.all|dictsort:"start_time" %}
+                    <div class="col">
+                        <div class="diary-class">
+                            <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="photo-image">
+                            <div class="class-details">
+                                <p class="site-heading">{{ class.class_title }}</p>
+                                <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>
+                                <p><strong>End Time:</strong> {{ class.end_time|time:"g:i a" }}</p>
+                                <a href="{% url 'details' class.id %}" class="base-button purple-btn mt-3">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </main>
+
 
 {% endblock %}

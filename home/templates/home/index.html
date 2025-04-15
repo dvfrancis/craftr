@@ -18,15 +18,15 @@
 
 {% block content %}
 
-<main class="hero-background">
+<main class="container-fluid hero-background">
     <!-- Hero Section -->
-    <section class="mt-5 mb-5 hero">
-        <div class="">
+    <section class="row mt-5 mb-5 hero">
+        <div class="col-12">
             <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744537296/c6sw9h4bjzlqmopsxfkl.webp"
-                alt="Craftr Logo" class="hero-img mb-5">
-            <h1 class="mb-5">Discover the Art of Digital Crafting</h1>
-            <p class="mb-5">Join Craftr 2025 - a global crafting experience where creativity meets technology</p>
-            <p class="mb-5">Discover the future of digital crafting with expert-led workshops, live demonstrations,
+                alt="Craftr Logo" class="hero-img mb-3">
+            <h1 class="mb-3">Discover the Art of Digital Crafting</h1>
+            <p class="mb-3">Join Craftr 2025 - a global crafting experience where creativity meets technology</p>
+            <p class="mb-3">Discover the future of digital crafting with expert-led workshops, live demonstrations,
                 and
                 a
                 thriving creative community.</p>
@@ -42,8 +42,8 @@
     </section>
 
     <!-- About Section -->
-    <section class="mt-3 mb-5 hero">
-        <div>
+    <section class="row mt-3 mb-5 hero">
+        <div class="col-12">
             <h2 class="mb-4">Welcome to Craftr</h2>
             <p class="mb-2">The three-day annual digital crafting event <span class="event-emphasis">IS BACK</span>,
                 and
@@ -58,7 +58,7 @@
             <p class="mb-2">Experience live demonstrations showcasing cutting-edge techniques, tools, and digital
                 crafting
                 innovations -<br> watch skilled creators bring designs to life in real time.</p>
-            <p class="mb-4">Become part of a global crafting community where makers, hobbyists, and professionals
+            <p >Become part of a global crafting community where makers, hobbyists, and professionals
                 connect
                 to
                 share ideas,
@@ -70,55 +70,53 @@
     </section>
 
     <!-- Featured Workshops -->
-    <div class="hero mb-5">
-        <section>
-            <h2 class="mb-4">Featured Workshops</h2>
-            <div class="workshop-grid mt-5">
-                <div class="workshop-card">
-                    <a href="{% url 'details' 4 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566211/class-02_jsplby.webp"
-                            class="workshop-img" alt="Cricut Machine basics">
-                        <h3>Introduction to Cricut - Cutting Machine Basics</h3>
-                    </a>
+    <section class="container-fluid hero">
+                <h2 class="mb-4">Featured Workshops</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 4 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566211/class-02_jsplby.webp"
+                                class="workshop-img" alt="Cricut Machine basics">
+                            <h3>Introduction to Cricut - Cutting Machine Basics</h3>
+                        </a>
+                    </div>
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 5 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-03_stwmks.webp"
+                                class="workshop-img" alt="Wood & Glass Decals">
+                            <h3>3D Modelling for Fabric Designs</h3>
+                        </a>
+                    </div>
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 17 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744539200/wie9npmz3vb6uoblgjxi.jpg"
+                                class="workshop-img" alt="DIY Leathercraft">
+                            <h3>DIY Leathercraft with Digital Cutting Techniques</h3>
+                        </a>
+                    </div>
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 22 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744539222/lu2njzvdm65w8qmht6ys.jpg"
+                                class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                            <h3>Laser-Engraved Wood & Acrylic Jewellery</h3>
+                        </a>
+                    </div>
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 8 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-06_lkbhj3.webp"
+                                class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                            <h3>Custom Sticker & Decal Design</h3>
+                        </a>
+                    </div>
+                    <div class="workshop-card">
+                        <a href="{% url 'details' 11 %}">
+                            <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-09_lyngvk.webp"
+                                class="workshop-img" alt="Laser Engraved Wood Jewellery">
+                            <h3>3D Printing Basics for DIY Crafting</h3>
+                        </a>
+                    </div>
                 </div>
-                <div class="workshop-card">
-                    <a href="{% url 'details' 5 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-03_stwmks.webp"
-                            class="workshop-img" alt="Wood & Glass Decals">
-                        <h3>3D Modelling for Fabric Designs</h3>
-                    </a>
-                </div>
-                <div class="workshop-card">
-                    <a href="{% url 'details' 17 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744539200/wie9npmz3vb6uoblgjxi.jpg"
-                            class="workshop-img" alt="DIY Leathercraft">
-                        <h3>DIY Leathercraft with Digital Cutting Techniques</h3>
-                    </a>
-                </div>
-                <div class="workshop-card">
-                    <a href="{% url 'details' 22 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744539222/lu2njzvdm65w8qmht6ys.jpg"
-                            class="workshop-img" alt="Laser Engraved Wood Jewellery">
-                        <h3>Laser-Engraved Wood & Acrylic Jewellery</h3>
-                    </a>
-                </div>
-                <div class="workshop-card">
-                    <a href="{% url 'details' 8 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-06_lkbhj3.webp"
-                            class="workshop-img" alt="Laser Engraved Wood Jewellery">
-                        <h3>Custom Sticker & Decal Design</h3>
-                    </a>
-                </div>
-                <div class="workshop-card">
-                    <a href="{% url 'details' 11 %}">
-                        <img src="https://res.cloudinary.com/dvzs9gve0/image/upload/v1744566212/class-09_lyngvk.webp"
-                            class="workshop-img" alt="Laser Engraved Wood Jewellery">
-                        <h3>3D Printing Basics for DIY Crafting</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
+    </section>
 </main>
 
 {% endblock %}

@@ -152,7 +152,7 @@ body {
 }
 
 main {
-  margin-top: 75px;
+  margin-top: 150px;
   flex: 1 0 auto;
   padding-bottom: 50px
     /* Sticky footer, see (see https://materializecss.com/footer.html) */
@@ -165,7 +165,6 @@ h1 {
   font-size: xx-large;
   font-weight: 800;
   font-style: normal;
-  text-align: center;
   color: #191945
 }
 
@@ -176,7 +175,6 @@ h2 {
   font-size: x-large;
   font-weight: bolder;
   font-style: normal;
-  text-align: center;
   color: #191945
 }
 
@@ -187,7 +185,6 @@ h3 {
   font-size: large;
   font-weight: bold;
   font-style: normal;
-  text-align: center;
   color: #191945
 }
 
@@ -197,7 +194,6 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem;
-  text-align: center;
   color: #191945;
 }
 
@@ -325,8 +321,8 @@ input[type="reset"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
-  margin: 75px auto;
+  width: 85%;
+  margin: 100px auto;
   padding: 2rem;
   background-color: rgba(250, 250, 250, 0.9);
   border-radius: 15px;
@@ -362,14 +358,17 @@ input[type="reset"] {
 
 /* H E A D E R */
 
-/* Navigation background */
+.header-logo {
+  margin: 5px 0;
+  height: 65px;
+  border-radius: 100%;
+  border: 5px solid #191945;
+}
 
 .bg-body-tertiary {
   height: 75px;
-  background-color: #b40001!important;
+  background-color: #b40001 !important;
 }
-
-/* Navigation item */
 
 a.nav-details {
   margin-left: 3rem;
@@ -377,8 +376,6 @@ a.nav-details {
   padding: 0.5rem;
   color: #fafafa;
 }
-
-/* Navigation item - hover */
 
 a.nav-details:hover {
   background-color: rgba(255, 197, 0, 0.9);
@@ -388,15 +385,12 @@ a.nav-details:hover {
   transition: all 0.5s ease-in-out;
 }
 
-/* Navigation item - selected */
-
 .nav-entry.active a {
-  color: #ffc500!important;
+  color: #ffc500 !important;
   font-weight: bold;
 }
 
 /* Hamburger menu */
-
 /* Info from https://www.youtube.com/watch?v=45QSuJaHEss */
 
 .navbar-toggler {
@@ -426,16 +420,9 @@ a.nav-details:hover {
 
 .footer {
   display: flex;
+  height: 100px;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-}
-
-.footer-logo {
-  margin-top: 5px;
-  width: 85px;
-  border-radius: 100%;
-  border: 5px solid #191945;
 }
 
 .social-container {
@@ -446,7 +433,7 @@ a.nav-details:hover {
 }
 
 .smallprint {
-  font-size: larger;
+  font-size: 1rem;
   color: #fafafa;
   text-decoration: none;
 }
@@ -461,7 +448,7 @@ a.nav-details:hover {
 
 .fa-brands {
   font-size: 40px;
-  width: 50px;
+  width: 3rem;
   height: 50px;
   display: flex;
   align-items: center;
@@ -508,8 +495,8 @@ a.nav-details:hover {
   text-align: center;
   background-color: rgba(250, 250, 250, 0.9);
   color: #191945;
-  padding: 80px;
-  width: 65%;
+  padding: 30px;
+  width: 85%;
   border-radius: 15px;
 }
 
@@ -526,8 +513,9 @@ section+div.hero {
 }
 
 .hero-img {
-  width: 15rem;
+  width: 50%;
   border-radius: 100%;
+  padding: 15px;
   border: 12px solid #191945;
 }
 
@@ -561,13 +549,12 @@ section+div.hero {
 
 .workshop-grid {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
   justify-content: center;
-  width: 250px;
-  max-width: 350px;
-  gap: 15px;
+  gap: 25px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .workshop-card {
@@ -578,7 +565,7 @@ section+div.hero {
 }
 
 .workshop-img {
-  height: 10em;
+  width: 85%;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -586,38 +573,21 @@ section+div.hero {
 /* D I A R Y */
 
 .diary-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  width: 65%;
+  max-width: 85%;
   margin: 0 auto;
   padding: 20px;
 }
 
 .diary-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: rgba(250, 250, 250, 0.9);
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-/* Position grid and entries in the middle of the page */
-
-.diary-classes {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
-  margin: 0 auto;
-  grid-auto-flow: dense;
-}
-
-/* Ensure any lone class is positioned in the centre of the grid */
-
-.diary-class:nth-child(3n+1):last-of-type {
-  grid-column: 2 / span 1;
 }
 
 .diary-class {
@@ -647,7 +617,7 @@ section+div.hero {
 .class-details-container {
   display: flex;
   gap: 30px;
-  width: 65%;
+  width: 85%;
   margin: auto;
   padding: 20px;
   background-color: rgba(250, 250, 250, 0.9);
@@ -731,7 +701,7 @@ section+div.hero {
 /* C O N T A C T */
 
 .contact-form {
-  width: 65%;
+  width: 85%;
   padding: 20px;
   background: rgba(250, 250, 250, 0.9);
   border-radius: 10px;
@@ -792,7 +762,7 @@ label {
   text-align: center;
   max-width: 250px;
   width: 100%;
-  min-height: 200px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
