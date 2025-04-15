@@ -8,7 +8,14 @@ def login_page(request):
 
 
 class CustomLoginView(LoginView):
-    """Display message upon successful login"""
+    """Custom login view to display messages for login events"""
     def form_valid(self, form):
         messages.success(self.request, "You have been logged in successfully!")
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(
+            self.request,
+            "Invalid username or password. Please try again."
+        )
+        return super().form_invalid(form)
