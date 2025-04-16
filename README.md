@@ -4,7 +4,7 @@
 
 ## Overview
 
-Craftr is an annual (fictional) online event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
+Craftr is an annual online (fictional) event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
 
 Digital crafting is the dynamic fusion of technology and creativity, enabling individuals to design and create unique projects with precision and innovation. This evolving craft field spans a variety of disciplines, including:
 
