@@ -6,10 +6,23 @@ import os
 
 
 def contact_page(request):
+    """
+    Handle the contact page form submission.
+
+    This view processes the contact form, saves the data to the database,
+    sends an email with the form details, and provides feedback to the user.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered contact page with the form or a redirect
+        to the home page after successful submission.
+    """
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()  # Save to database
+            form.save()
             email = EmailMessage(
                 subject="Craftr Contact Form Submission",
                 body=(
@@ -24,8 +37,7 @@ def contact_page(request):
             )
             email.send()
             messages.success(request, "Your message has been sent")
-            return redirect('home')  # Redirect after submission
+            return redirect('home')
     else:
         form = ContactForm()
     return render(request, "contact/contact.html", {"form": form})
-    

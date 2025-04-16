@@ -9,6 +9,19 @@ from django.conf import settings
 
 @login_required
 def user_details(request):
+    """
+    Display user account details and enrolments.
+
+    This view retrieves the user's enrolments and displays them along with
+    their account details on the account page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered account page with user details and
+        enrolments.
+    """
     cloud_name = settings.CLOUDINARY_STORAGE['CLOUD_NAME']
     default_profile_url = (
         (
@@ -34,6 +47,18 @@ def user_details(request):
 
 
 def custom_logout(request):
+    """
+    Log out the user and redirect to the login page.
+
+    This view logs out the user, displays a success message, and redirects
+    them to the login page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponseRedirect: A redirect to the login page.
+    """
     logout(request)
     messages.success(
             request,
@@ -44,20 +69,26 @@ def custom_logout(request):
 
 @login_required
 def delete_account(request):
+    """
+    Delete the user's account and associated enrolments.
+
+    This view handles account deletion. It deletes the user's enrolments
+    and their account, displays a success message, and redirects to the
+    home page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponseRedirect: A redirect to the home page after deletion.
+    """
     if request.method == "POST":
         user = request.user
-
-        # Delete associated enrolments
         Enrolment.objects.filter(user=user).delete()
-
-        # Delete the user account
         user.delete()
-
         messages.success(
             request,
             "Your account (and any enrolments) have been deleted"
         )
-        return redirect("home")  # Redirect to the home page after deletion
-
+        return redirect("home")
     return redirect("account")
-    # Redirect back to account page for GET requests

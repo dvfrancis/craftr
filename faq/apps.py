@@ -1,3 +1,10 @@
+"""
+Configuration class for the 'faq' app.
+
+This class defines the default settings for the 'faq' app, including
+the app name and the default primary key field type.
+"""
+
 from django.apps import AppConfig
 
 

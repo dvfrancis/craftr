@@ -1,3 +1,11 @@
+"""
+URL configuration for the details app.
+
+This module defines the URL patterns for class enrolment and withdrawal
+functionality. It also specifies custom error handlers for 404 and 500 HTTP
+errors.
+"""
+
 from django.urls import path
 from details import views as details
 

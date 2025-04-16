@@ -6,6 +6,21 @@ from django.contrib import messages
 
 
 def register_user(request):
+    """
+    Handles user registration
+
+    This view handles the registration of a new user, including creating
+    a user account and associated profile. If the registration is successful,
+    the user is logged in and redirected to the specified 'next' URL or the
+    account page by default.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: Renders the registration page or redirects after
+        successful registration.
+    """
     next_url = (
         request.POST.get("next") or
         request.GET.get("next") or
@@ -31,7 +46,7 @@ def register_user(request):
             # Log in user after successful registration
             login(request, user)
 
-            # Redirect to the original page (class details) 
+            # Redirect to the original page (class details)
             # or account page, if missing
             return redirect(next_url)
         else:

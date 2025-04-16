@@ -1,3 +1,10 @@
+"""
+URL configuration for the diary app.
+
+This module defines the URL patterns for the diary details page and specifies
+custom error handlers for 404 and 500 HTTP errors.
+"""
+
 from django.urls import path
 from diary import views as diary
 

@@ -1,3 +1,14 @@
+/**
+ * Base CSS styles for the Craftr project.
+ *
+ * This file includes:
+ * - A CSS reset for consistent styling across browsers.
+ * - General project styles for typography, layout, and colors.
+ * - Utility classes for buttons, containers, and images.
+ * - Specific styles for various sections of the project, such as the header,
+ *   footer, home page, diary, classes, FAQ, contact, account, and error pages.
+ */
+
 /* C S S  R E S E T */
 
 /* Taken from http://meyerweb.com/eric/tools/css/reset v2.0 | 20110126 License: none (public domain) */

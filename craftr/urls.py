@@ -1,3 +1,15 @@
+"""
+URL configuration for the craftr project.
+
+This module defines the URL patterns for the entire project, including
+routes for various apps and custom error handlers for 404 and 500 errors.
+
+Attributes:
+    handler404 (str): Path to the custom 404 error handler view.
+    handler500 (str): Path to the custom 500 error handler view.
+    urlpatterns (list): List of URL patterns for the project.
+"""
+
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings

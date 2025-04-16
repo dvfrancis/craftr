@@ -17,6 +17,26 @@ DIFFICULTY_CHOICES = [
 
 
 class EventClass(models.Model):
+    """
+    Represents a class scheduled on a specific event day.
+
+    This model stores information about a class, including its start and end
+    times, title, description, difficulty level, instructor details, and
+    images.
+
+    Attributes:
+        event_day (ForeignKey): The event day associated with the class.
+        start_time (TimeField): The start time of the class.
+        end_time (TimeField): The end time of the class.
+        class_title (CharField): The title of the class.
+        class_description (TextField): A description of the class.
+        difficulty (CharField): The difficulty level of the class.
+        class_image (CloudinaryField): An optional image for the class.
+        instructor (CharField): The name of the instructor.
+        instructor_image (CloudinaryField): An optional image of the
+        instructor.
+        instructor_bio (TextField): A biography of the instructor.
+    """
     event_day = models.ForeignKey(
         EventDay,
         on_delete=models.CASCADE,
@@ -45,8 +65,13 @@ class EventClass(models.Model):
     )
     instructor_bio = models.TextField()
 
-    # Enforce unique class titles regardless of case
     class Meta:
+        """
+        Meta options for the EventClass model.
+
+        Enforces a unique constraint on the combination of event day and start
+        time to ensure no duplicate classes are scheduled at the same time.
+        """
         constraints = [
             models.UniqueConstraint(
                 fields=['event_day', 'start_time'],
@@ -55,14 +80,26 @@ class EventClass(models.Model):
         ]
 
     def clean(self):
-        # End time must be later than start time
+        """
+        Validate the EventClass instance.
+
+        Ensures that the end time is later than the start time.
+
+        Raises:
+            ValidationError: If the end time is not later than the start time.
+        """
         if self.end_time <= self.start_time:
             raise ValidationError("End time must be later than start time.")
 
     def __str__(self):
-        # Formats the date as "dd-mm-yyyy"
+        """
+        Return a string representation of the EventClass instance.
+
+        Returns:
+            str: A formatted string containing the class title, start and end
+            times, and the event day.
+        """
         class_date = self.event_day.day_date.strftime('%d %B %Y')
-        # Formats as "12:00pm"
         class_start = (
             f"{self.start_time.hour % 12 or 12}:"
             f"{self.start_time.minute:02d} "
@@ -81,6 +118,15 @@ class EventClass(models.Model):
 
 
 class Enrolment(models.Model):
+    """
+    Represents a user's enrolment in a specific class.
+
+    This model links a user to a class they are enrolled in.
+
+    Attributes:
+        user (ForeignKey): The user enrolled in the class.
+        enrolled_class (ForeignKey): The class the user is enrolled in.
+    """
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -92,8 +138,13 @@ class Enrolment(models.Model):
         related_name="enrolments"
     )
 
-    # Enforce unique enrolments for each user and class
     class Meta:
+        """
+        Meta options for the Enrolment model.
+
+        Enforces a unique constraint to ensure a user cannot enrol in the same
+        class multiple times.
+        """
         constraints = [
             models.UniqueConstraint(
                 fields=['user', 'enrolled_class'],
@@ -102,6 +153,12 @@ class Enrolment(models.Model):
         ]
 
     def __str__(self):
+        """
+        Return a string representation of the Enrolment instance.
+
+        Returns:
+            str: A formatted string indicating the user's enrolment in a class.
+        """
         return (
             f"{self.user.username} is enrolled on "
             f"{self.enrolled_class.class_title}"

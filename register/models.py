@@ -18,6 +18,20 @@ EXPERIENCE_CHOICES = [
 
 
 class UserProfile(models.Model):
+    """
+    Represents a user's profile
+
+    This model extends the default Django User model by adding additional
+    fields such as location, experience level, and a photograph.
+
+    Attributes:
+        user (User): A one-to-one relationship with the Django User model.
+        location (str): The user's location.
+        experience (str): The user's experience level, chosen from predefined
+        options.
+        photograph (CloudinaryField): An optional profile photograph
+        stored in Cloudinary.
+    """
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
@@ -36,13 +50,27 @@ class UserProfile(models.Model):
     )
 
     def clean(self):
+        """
+        Validates the UserProfile instance.
+
+        Ensures that the location and experience fields are not empty.
+        Raises:
+            ValidationError: If required fields are missing.
+        """
         # Require fields to be completed
         if (not self.location or not self.experience):
             raise ValidationError(
-                "Please complete user, location, and experience fields"
+                "Please complete the location and experience fields"
             )
 
     def __str__(self):
+        """
+        Returns a string representation of the UserProfile instance.
+
+        Returns:
+            str: The username associated with the profile, or a default message
+            if no user is associated.
+        """
         return (
             f"{self.user.username}'s profile"
             if self.user
@@ -52,6 +80,19 @@ class UserProfile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
+    """
+    Signal handler to create or update a UserProfile.
+
+    This function is triggered whenever a User instance is saved. If the
+    User is newly created, a corresponding UserProfile is created. If the
+    User already exists, the associated UserProfile is updated.
+
+    Args:
+        sender: The model class that sent the signal.
+        instance: The instance of the model that was saved.
+        created (bool): A boolean indicating whether the instance was created.
+        **kwargs: Additional keyword arguments.
+    """
     if created:
         UserProfile.objects.create(user=instance)
     else:

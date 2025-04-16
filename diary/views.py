@@ -4,14 +4,22 @@ from details.models import EventClass
 
 
 def diary_details(request):
-    # Fetch EventDay objects sorted by date
-    days = EventDay.objects.order_by("day_date")
+    """
+    Render the diary details page.
 
-    # Fetch EventClass objects, ensuring sorting by event day first,
-    # then start time
+    This view fetches and displays a list of event days and their associated
+    event classes, sorted by date and time.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered diary details page with event days and
+        classes.
+    """
+    days = EventDay.objects.order_by("day_date")
     classes = EventClass.objects.select_related("event_day") \
         .order_by("event_day__class_date", "start_time")
-
     return render(
         request,
         "diary/diary.html",

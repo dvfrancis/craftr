@@ -6,8 +6,10 @@
 
 <title>Craftr Diary | Craftr 2025</title>
 
+<!-- Website CSS file -->
 <link rel="stylesheet" href="{% static 'craftr/base.css' %}" />
 
+<!-- Meta tags -->
 <meta name="description"
     content="Stay up-to-date with Craftr 2025 events, workshops, and digital crafting sessions. Explore the full event diary and schedule.">
 
@@ -18,6 +20,7 @@
 
 {% block content %}
 
+<!-- Page explanation -->
 <main class="container-fluid diary-background mb-1">
     <section class="row mt-5 mb-4 hero">
         <div class="col-12">
@@ -33,7 +36,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Classes sorted by day -->
     <section class="container-fluid">
         <div class="diary-container">
             {% for day in days %}
