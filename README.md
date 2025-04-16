@@ -4,17 +4,27 @@
 
 ## Overview
 
-Craftr is a (fictional) digital crafting event, held annually online over three days every April; this year it runs from 21-23 April 2025.
+Craftr is an annual (fictional) online event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
 
-Digital crafting combines the latest tech with an individual's creativity to create unique craft projects. It encompasses paper and card crafts, such as scrapbooking, graphic designs for t-shirts and drinking vessels, fabric crafts, including embroidery, 3D modelling, and adhesive crafts such as stickers, signs, and decals.
+Digital crafting is the dynamic fusion of technology and creativity, enabling individuals to design and create unique projects with precision and innovation. This evolving craft field spans a variety of disciplines, including:
 
-These crafts commonly use a cutting machine, such as a [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/) (or even a laser cutter, like a [Glowforge](https://glowforge.com/)) to create precise designs that can be used with, or applied to, a variety of materials.
+- **Paper and Card Crafts**: ranging from scrapbooking to personalized greeting cards.
 
-The purpose of this site is to promote the Craftr event, and let interested crafters create accounts and register for chosen classes.
+- **Vinyl and Decal Crafts**: stickers, signage, decals, and vinyl applications.
+
+- **Graphic Design Applications**: custom artwork for t-shirts, drinkware, and other merchandise.
+
+- **Fabric Crafts**: intricate embroidery, textile design, and fabric embellishments.
+
+- **3D Modelling**: digital sculpting that brings ideas to life.
+
+To achieve professional results, many digital crafters utilize cutting machines such as [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/), or even laser cutters like [Glowforge](https://glowforge.com/)), to create intricate and precise designs that can be applied to a variety of materials.
+
+This website serves as the central hub for Craftr, providing information about the event, allowing participants to create accounts, browse, and register for available classes. Whether a beginner looking to experiment with digital crafting or an expert seeking new techniques, Craftr is the perfect platform for anyone to connect, learn, and create.
 
 ### Site Preview
 
-![A preview of the Hi-Lo website at various screen sizes](assets/images/site-preview.webp)
+![A preview of the Hi-Lo website at various screen sizes](https://res.cloudinary.com/dvzs9gve0/image/upload/v1744813127/all-devices-black_knk4fo.webp)
 
 ### Site Link
 
