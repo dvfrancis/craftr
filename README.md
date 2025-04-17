@@ -181,7 +181,7 @@ The website is designed to appeal to all demographics, but the following persona
 ###### Tasks
 
 - Add the ability for users to create their own account.
-- Ensure all classes have detailed descriptions and information about the class intructor.
+- Ensure all classes have detailed descriptions and information about the class instructor.
 - Links to share to social media are prominent, as well as being easy to find and use.
 
 ### Scope
