@@ -250,7 +250,7 @@ Custom model that stores the days on which the event runs. `Class Meta` options 
 
 |Description|Key|Name|Field Type|Validation|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-|Unique Field|Primary|`id`|AutoField|`primary_key=true` (I had a minor problem with the existing primary key field so added this as a solution)
+|Unique Field|Primary|`id`|AutoField|`primary_key=true` (the model had a conflict with the built-in primary key, so I added this as an alternative)
 |Date|Foreign|`day_date`|DateField|*Linked to the `EventClass` model, in a one-to-many relationship*. Field required through validation by `def clean(self)`
 |Title|Key|`day_title`|CharField|`max_length=100, unique=True`. Field required through validation by `def clean(self)`
 |Description|Key|`day_description`|TextField|
