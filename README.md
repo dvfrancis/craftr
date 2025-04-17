@@ -224,7 +224,7 @@ PostgreSQL was used to store the database for the site, and the ERD was created 
 
 1. **User**
 
-Django's User model was used for the creation of user accounts (and is extended by UserProfile).
+Django's User model was used for the creation of user accounts (and is extended by UserProfile). It is not a requirement for account creation that the email be confirmed.
 
 |Description|Key Type|Name|Field Type|Validation|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -321,46 +321,109 @@ Custom model that stores any messages sent through the contact form, for later r
 
 #### C R U D Fulfilment
 
-TBC
+In it's current form, the classes scheduled during the event are only editable via the admin portal, by an account with superuser privileges.
+
+However, the website still satisfies full Create (C), Read (R), Update (U), and Delete (D) functionality, in the following ways:
+
+- C - Create a user account / Create a class enrolment
+- R - Read the list of classes available / Read changes to a user profile / Read class enrolments on a user's account page
+- U - Update user profile details
+- D - Delete a user account (and associated user profile) / Delete a course enrolment
 
 ### Skeleton
 
 #### Wireframes
 
-Wireframe diagrams of my initial ideas:
+The wireframe designs shown below were my initial ideas for each page of the website (listed by device type). They have changed in a few ways during implementation; for example, the 'Diary' menu link is now called 'Classes'.
 
 ##### Mobile
 
 ###### Home
 
 <details>
-<summary>Click to view the mobile home page wireframe</summary>
+<summary>Click to view the mobile device home wireframe</summary>
 
 ![Mobile home page wireframe](documentation/wireframes/mobile/mobile-home.webp)
 </details>
 
-###### Game
+###### Classes
 
 <details>
-<summary>Click to view the mobile game page wireframe</summary>
+<summary>Click to view the mobile device classes wireframe</summary>
 
-![Mobile game page wireframe](documentation/wireframes/mobile/mobile-game.webp)
+![Mobile game page wireframe](documentation/wireframes/mobile/mobile-diary.webp)
+</details>
+
+###### Class Details
+
+<details>
+<summary>Click to view the mobile device class details wireframe</summary>
+
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-class-details.webp)
 </details>
 
 ###### FAQ
 
 <details>
-<summary>Click to view the mobile FAQ page wireframe</summary>
+<summary>Click to view the mobile device faq wireframe</summary>
 
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-faq.webp)
 </details>
 
-###### 404
+###### Contact
 
 <details>
-<summary>Click to view the mobile custom error page wireframe</summary>
+<summary>Click to view the mobile device contact wireframe</summary>
 
-![Mobile custom error page wireframe](documentation/wireframes/mobile/mobile-404.webp)
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-contact.webp)
+</details>
+
+###### User Registration
+
+<details>
+<summary>Click to view the mobile device user registration wireframe</summary>
+
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-user-registration.webp)
+</details>
+
+###### User Login
+
+<details>
+<summary>Click to view the mobile device user login wireframe</summary>
+
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-login.webp)
+</details>
+
+###### User Account
+
+<details>
+<summary>Click to view the mobile device user account wireframe</summary>
+
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-user-account.webp)
+</details>
+
+###### Update User Profile
+
+<details>
+<summary>Click to view the mobile device update user profile wireframe</summary>
+
+![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-update-profile.webp)
+</details>
+
+###### 404 HTTP Error
+
+<details>
+<summary>Click to view the mobile device custom error wireframe</summary>
+
+![Mobile custom error page wireframe](documentation/wireframes/mobile/mobile-custom-error-404.webp)
+</details>
+
+###### 500 HTTP Error
+
+<details>
+<summary>Click to view the mobile device server error wireframe</summary>
+
+![Mobile custom error page wireframe](documentation/wireframes/mobile/mobile-custom-error-500.webp)
 </details>
 
 ##### Tablet
@@ -368,33 +431,89 @@ Wireframe diagrams of my initial ideas:
 ###### Home
 
 <details>
-<summary>Click to view the tablet home page wireframe</summary>
+<summary>Click to view the tablet device home wireframe</summary>
 
 ![Tablet home page wireframe](documentation/wireframes/tablet/tablet-home.webp)
 </details>
 
-###### Game
+###### Classes
 
 <details>
-<summary>Click to view the tablet game page wireframe</summary>
+<summary>Click to view the tablet device classes wireframe</summary>
 
-![Tablet game page wireframe](documentation/wireframes/tablet/tablet-game.webp)
+![Tablet game page wireframe](documentation/wireframes/tablet/tablet-diary.webp)
+</details>
+
+###### Class Details
+
+<details>
+<summary>Click to view the tablet device class details wireframe</summary>
+
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-class-details.webp)
 </details>
 
 ###### FAQ
 
 <details>
-<summary>Click to view the tablet FAQ page wireframe</summary>
+<summary>Click to view the tablet device faq wireframe</summary>
 
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-faq.webp)
 </details>
 
-###### 404
+###### Contact
 
 <details>
-<summary>Click to view the tablet custom error page wireframe</summary>
+<summary>Click to view the tablet device contact wireframe</summary>
 
-![Tablet custom error page wireframe](documentation/wireframes/tablet/tablet-404.webp)
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-contact.webp)
+</details>
+
+###### User Registration
+
+<details>
+<summary>Click to view the tablet device user registration wireframe</summary>
+
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-user-registration.webp)
+</details>
+
+###### User Login
+
+<details>
+<summary>Click to view the tablet device user login wireframe</summary>
+
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-login.webp)
+</details>
+
+###### User Account
+
+<details>
+<summary>Click to view the tablet device user account wireframe</summary>
+
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-user-account.webp)
+</details>
+
+###### Update User Profile
+
+<details>
+<summary>Click to view the tablet device update user profile wireframe</summary>
+
+![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-update-profile.webp)
+</details>
+
+###### 404 HTTP Error
+
+<details>
+<summary>Click to view the tablet device custom error wireframe</summary>
+
+![Tablet custom error page wireframe](documentation/wireframes/tablet/tablet-custom-error-404.webp)
+</details>
+
+###### 500 HTTP Error
+
+<details>
+<summary>Click to view the tablet device server error wireframe</summary>
+
+![Tablet custom error page wireframe](documentation/wireframes/tablet/tablet-custom-error-500.webp)
 </details>
 
 ##### Desktop
@@ -402,33 +521,89 @@ Wireframe diagrams of my initial ideas:
 ###### Home
 
 <details>
-<summary>Click to view the desktop home page wireframe</summary>
+<summary>Click to view the desktop device home wireframe</summary>
 
 ![Desktop home page wireframe](documentation/wireframes/desktop/desktop-home.webp)
 </details>
 
-###### Game
+###### Classes
 
 <details>
-<summary>Click to view the desktop game page wireframe</summary>
+<summary>Click to view the desktop device classes wireframe</summary>
 
-![Desktop game page wireframe](documentation/wireframes/desktop/desktop-game.webp)
+![Desktop game page wireframe](documentation/wireframes/desktop/desktop-diary.webp)
+</details>
+
+###### Class Details
+
+<details>
+<summary>Click to view the desktop device class details wireframe</summary>
+
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-class-details.webp)
 </details>
 
 ###### FAQ
 
 <details>
-<summary>Click to view the desktop FAQ page wireframe</summary>
+<summary>Click to view the desktop device faq wireframe</summary>
 
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-faq.webp)
 </details>
 
-###### 404
+###### Contact
 
 <details>
-<summary>Click to view the desktop custom error page wireframe</summary>
+<summary>Click to view the desktop device contact wireframe</summary>
 
-![Desktop custom error page wireframe](documentation/wireframes/desktop/desktop-404.webp)
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-contact.webp)
+</details>
+
+###### User Registration
+
+<details>
+<summary>Click to view the desktop device user registration wireframe</summary>
+
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-user-registration.webp)
+</details>
+
+###### User Login
+
+<details>
+<summary>Click to view the desktop device user login wireframe</summary>
+
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-login.webp)
+</details>
+
+###### User Account
+
+<details>
+<summary>Click to view the desktop device user account wireframe</summary>
+
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-user-account.webp)
+</details>
+
+###### Update User Profile
+
+<details>
+<summary>Click to view the desktop device update user profile wireframe</summary>
+
+![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-update-profile.webp)
+</details>
+
+###### 404 HTTP Error
+
+<details>
+<summary>Click to view the desktop device custom error wireframe</summary>
+
+![Desktop custom error page wireframe](documentation/wireframes/desktop/desktop-custom-error-404.webp)
+</details>
+
+###### 500 HTTP Error
+
+<details>
+<summary>Click to view the desktop device server error wireframe</summary>
+
+![Desktop custom error page wireframe](documentation/wireframes/desktop/desktop-custom-error-500.webp)
 </details>
 
 ### Surface
@@ -436,31 +611,93 @@ Wireframe diagrams of my initial ideas:
 #### Colours
 
 <details>
-<summary>Click to view the chosen colour scheme</summary>
+<summary>Click to view the website colour scheme</summary>
 
-![Website colour scheme](assets/images/website-colour-scheme.png)
+![Website colour scheme](assets/images/website-colour-scheme.webp)
 
 </details>
 
-- Website colours taken from the Sarah Renae Clarke Colour Catalogue (Volume 2), card 390.
-- Text colours are split between black (#000) and white (#FFF).
+- Website colours were inspired by the Sarah Renae Clarke Colour Catalogue (Volume 2), card 390:
+    - Apple Green (#7db657)
+    - Mint (#0091ac)
+    - Royal Purple (#753da2)
+    - Crimson (#b40001)
+    - Orange (#ff8500)
+    - Gold (#ffc500)
+
+- Other colours used:
+
+    - Off-White (#fafafa)
+    - Off-Black (#191945)
+
+- For buttons, colours were divided depending on intended action:
+
+    - Apple Green for `Save` / `Register` / `Submit` / `Enrol` actions
+    - Royal Purple for `Edit` / `Details` / `Home` / `Diary` / `Login` actions
+    - Mint for `Clear` actions
+    - Orange for `Logout` / `Withdraw` actions
+    - Crimson for `Reset` / `Delete` / `Cancel` / `Go Back` actions
 
 #### Typography
 
-Google Fonts was used to source all fonts:
+All fonts were sourced from Google Fonts, and were used as follows:
   
-- [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
-- [Josefin Slab](https://fonts.google.com/specimen/Josefin+Slab)
-- [Junge](hhttps://fonts.google.com/specimen/Junge)
+- h1 tags - [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- h2 and h3 tags - [Lora](https://fonts.google.com/specimen/Lora)
+- body and p tags - [Hind Madurai](https://fonts.google.com/specimen/Hind+Madurai)
 
 #### Media
 
-The following image was taken from [Deposit Photos](https://depositphotos.com/), and used on the 404.html page:
-- [Devastated gambler man...](https://depositphotos.com/photo/devastated-gambler-man-losing-lot-money-playing-poker-casino-gambling-439339268.html)
+- The site logo was generated using [Artistly](https://artistly.ai/go/) with the following prompt:
+    - ```"I need a visually appealing and modern rectangular logo for a digital crafting event called Craftr, with a transparent background. The logo should convey a sense of creativity, innovation, and community, and effectively communicate the event's theme and tone. Please design a logo that incorporates elements of crafting, technology, and fun, and that will appeal to a diverse range of attendees, from hobbyists to professionals. The logo should be scalable, legible, and easy to recognize, even in small sizes. Additionally, the logo should be designed with a color scheme that is limited to the palette #7db657, #0091ac, #753da2, #b40001, #ff8500, #ffc500, and that reflects the playful and creative atmosphere of the event. I don't want a registered or trademark symbol on it. I only want the word Craftr on it and no other text."```
+
+- Images used on the website are stored in, and served from, [Cloudinary](https://cloudinary.com/).
+
+- Images used in the README.md and TESTING.md are stored in the [GitHub repository](https://github.com/dvfrancis/craftr) for this project.
+
+- Instructor images were generated at [This Person Does Not Exist](https://thispersondoesnotexist.com/), a website that uses AI to randomly generate anonymous facial images.
+
+- All other images were sourced from [Deposit Photos](https://depositphotos.com/) for the following parts of the website:
+
+- Background Images:
+    - index.html used [Background for handmade and craft ideas](https://depositphotos.com/photo/background-handmade-craft-ideas-212311048.html)
+    - diary.html and details.html used [Preparation for the holiday. Gifts wrapped in kraft paper...](https://depositphotos.com/photo/preparation-for-the-holiday-gifts-wrapped-in-kraft-paper-confe-115696836.html)
+    - faq.html used [Set of materials for packing holiday gifts. Kraft paper, jute twine, scissors, boxes on white background. Holiday zero waste and eco-friendly concept...](https://depositphotos.com/photo/set-materials-packing-holiday-gifts-kraft-paper-jute-twine-scissors-356425758.html)
+    - contact.html used [Rocket craft space toy. Made from felt. Material for children's creativity](https://depositphotos.com/photo/rocket-craft-space-toy-made-felt-material-children-creativity-350095596.html)
+    - register.html, login.html, account.html, and update.html used [Woman Making Greeting Cards Elements](https://depositphotos.com/photo/woman-making-greeting-cards-elements-501993588.html)
+    - 404.html used [Pile of torn paper pieces isolated](https://depositphotos.com/photo/pile-of-torn-paper-pieces-isolated-119329320.html)
+    - 500.html used [Seamstress has made a mistake](https://depositphotos.com/photo/seamstress-has-made-a-mistake-171778606.html)
+
+- Class Images:
+    - details.html/4 used [DIY made of colored paper, homemade postcard and scrapbooking tools on green mat for cutting, top view, no hands](https://depositphotos.com/photo/diy-made-colored-paper-homemade-postcard-scrapbooking-tools-green-mat-204041696.html)
+    - details.html/5 used [Heap of cloth fabric](https://depositphotos.com/photo/heap-of-cloth-fabric-37163707.html)
+    - details.html/6 used [The man is working with laser cutter machine and takes out the...](https://depositphotos.com/photo/the-man-is-working-with-laser-cutter-machine-and-takes-out-the-f-316435016.html)
+    - details.html/7 used [Clothes with shopping bags](https://depositphotos.com/illustration/clothes-with-shopping-bags-173885524.html)
+    - details.html/8 used [Party animal face stickers](https://depositphotos.com/vector/party-animal-face-stickers-10780069.html)
+    - details.html/9 used [Woman embroidering white shirt with colorful threads at wooden table, closeup. Ukrainian national clothes](https://depositphotos.com/photo/woman-embroidering-white-shirt-colorful-threads-wooden-table-closeup-ukrainian-602283612.html)
+    - details.html/10 used [Luxury dining table in a restaurant, Arcos de San Miguel, San Miguel de Allende, Guanajuato, Mexico](https://depositphotos.com/editorial/luxury-dining-table-restaurant-arcos-san-miguel-san-miguel-allende-189720010.html)
+    - details.html/11 used [Beautiful girl with three-dimensional printer](https://depositphotos.com/photo/beautiful-girl-with-three-dimensional-printer-73995545.html)
+    - details.html/12 used [Cropped image of woman adding wooden balloon to scrapbooking postcard cover](https://depositphotos.com/photo/cropped-image-woman-adding-wooden-balloon-scrapbooking-postcard-cover-174748548.html)
+    - details.html/13 used [Custom t-shirt. Using heat press to print image of giraffe blowing bubble gum](https://depositphotos.com/photo/custom-shirt-using-heat-press-print-image-giraffe-blowing-bubble-684334190.html)
+    - details.html/14 used [A laser engraving machine cuts out a picture on a gold glossy plastic plate. Closeup](https://depositphotos.com/photo/laser-engraving-machine-cuts-out-picture-gold-glossy-plastic-plate-362491484.html)
+    - details.html/15 used [3D model review](https://depositphotos.com/photo/3d-model-review-5424533.html)
+    - details.html/16 used [Business card template](https://depositphotos.com/vector/business-card-template-152005556.html)
+    - details.html/18 used [Punch needle. Asian Woman making handmade Hobby knitting in studio workshop. designer workplace Handmade craft project DIY embroidery concept](https://depositphotos.com/photo/punch-needle-asian-woman-making-handmade-hobby-knitting-studio-workshop-665145098.html)
+    - details.html/17 used [Man working with leather](https://depositphotos.com/photo/man-working-with-leather-99783124.html)
+    - details.html/19 used [Beautiful woman with elegant jewelry on blurred background, closeup](https://depositphotos.com/photo/beautiful-woman-elegant-jewelry-blurred-background-closeup-372701716.html)
+    - details.html/20 used [Golden floral decoration with marbles and colorful background](https://depositphotos.com/photo/golden-floral-decoration-marbles-colorful-background-339786702.html)
+    - details.html/21 used [Scrapbook craft product handmade](https://depositphotos.com/photo/scrapbook-craft-product-handmade-104769942.html)
+    - details.html/22 used [Valentine's day background with wooden heart. Red background](https://depositphotos.com/photo/valentine-day-background-wooden-heart-red-background-437749632.html)
+
+These images are only used when no class, instructor, or user image has been uploaded:
+
+- Class Placeholder Image - [Craft Room](https://depositphotos.com/photo/craft-room-12770268.html)
+- Instructor Placeholder Image - [Collection of characters...](https://depositphotos.com/vector/collection-of-characters-avatars-in-flat-design-style-56330559.html) 
+- User Placeholder Image - [Avatars...](https://depositphotos.com/vector/avatars-characters-or-profile-pictures-72611267.html)
 
 #### Content
 
-All website copy has been written by myself.
+[Microsoft CoPilot](https://copilot.microsoft.com/) was used to generate initial content, which I then reviewed and refined, making adjustments to ensure it was well-suited to the site’s specific needs and tone.
 
 ## Testing
 
@@ -468,100 +705,60 @@ All website copy has been written by myself.
 
 ## Technologies Used
 
-- [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), and [JavaScript.](https://en.wikipedia.org/wiki/JavaScript) - for website structure / interactivity.
-- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) - for layout / some styling.
-- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - for troubleshooting / testing (including for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) performance reports).
-- [Deck of Cards - An API](https://www.deckofcardsapi.com/) - for obtaining the deck of cards.
-- [GitHub](https://github.com/) - for version control.
-- [GitHub Pages](https://pages.github.com/) - for website hosting.
-- [Gitpod](https://gitpod.io/) - for online coding.
-- [Visual Studio Code](https://code.visualstudio.com/) - for local coding.
-- [Figma](https://www.figma.com/) - for flow diagram / flowchart / wireframe design.
-- [Microsoft CoPilot](https://copilot.microsoft.com/) - for general coding advice.
-- [Google Fonts](https://fonts.google.com/) - for all fonts.
-- [FontAwesome](https://fontawesome.com/) - for all icons.
-- [Markdown](https://en.wikipedia.org/wiki/Markdown) - for formatting all documentation.
-- [Google Chrome](https://www.google.co.uk/chrome/) - for website preview / testing.
-- [Microsoft Edge](https://www.microsoft.com/en-gb/edge/) - for website preview / testing.
-- [Firefox](https://www.mozilla.org/en-GB/firefox/new/) - for website preview / testing.
-- [Opera](https://www.opera.com/) - for website preview / testing.
-- [Safari](https://www.apple.com/uk/safari/) - for website preview / testing and mobile screenshots (using an iPad Pro (12.9-inch) (2nd generation)).
-- [W3C HTML Checker](https://validator.w3.org/) - for checking HTML code.
-- [W3C CSS Checker](https://jigsaw.w3.org/css-validator/) - for checking CSS code.
-- [JSHint](https://jshint.com/) - for checking JavaScript code.
-- [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/) - for checking website accessibility.
-- [Responsive Web Design Checker](https://responsivedesignchecker.com/) - for checking website responsiveness.
-- [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/) - for addressing browser inconsistencies.
-- [Website Mockup Generator](https://websitemockupgenerator.com/) - for a preview of the site on different devices.
-- [GoFullPage](https://gofullpage.com/) - for exporting full-size web page previews (this does not include Firefox, which does not support it).
-- [Deposit Photos](https://depositphotos.com/) - for the [Devastated gambler man...](https://depositphotos.com/photo/devastated-gambler-man-losing-lot-money-playing-poker-casino-gambling-439339268.html) image used on the 404.html page.
-- [Sarah Renae Clarke's Colour Catalogue V2](https://sarahrenaeclark.com/color-palettes/) - for website colours.
-- [Font Joy](https://fontjoy.com/) - for font pairing inspiration.
-- [Microsoft Photos](https://apps.microsoft.com/detail/9wzdncrfjbh4?hl=en-gb&gl=US) - for image editing.
-- [Affinity Photo 2](https://affinity.serif.com/en-gb/photo/) - for image editing.
-- [To WebP](https://towebp.io/) - for converting all images to webp format.
-- [Favicon Generator](https://favicon.io/favicon-converter/) - for generating the website favicon.
-- [Diffchecker](https://www.diffchecker.com/) - for comparing JavaScript code.
+- [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), and [JavaScript.](https://en.wikipedia.org/wiki/JavaScript) for page structure and interaction.
+- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) for website styling.
+- [Python](https://www.python.org/) for website coding.
+- [Django](https://www.djangoproject.com/) website framework.
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) troubleshooting and testing (plus [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) feedback on performance).
+- [GitHub](https://github.com/) versioning control.
+- [Heroku](https://www.heroku.com/) website deployment.
+- [Visual Studio Code](https://code.visualstudio.com/) local code editing.
+- [Figma](https://www.figma.com/) entity relationship diagram, user flow diagram, and wireframes.
+- [Microsoft CoPilot](https://copilot.microsoft.com/) for content ideas and coding advice.
+- [Google Fonts](https://fonts.google.com/) fonts.
+- [FontAwesome](https://fontawesome.com/) website icons.
+- [Markdown](https://en.wikipedia.org/wiki/Markdown) document formatting.
+- [Font Joy](https://fontjoy.com/) complementary fonts.
+- [Google Chrome](https://www.google.co.uk/chrome/) browser previews and testing.
+- [Microsoft Edge](https://www.microsoft.com/en-gb/edge/) browser previews and testing.
+- [Firefox](https://www.mozilla.org/en-GB/firefox/new/) browser previews and testing.
+- [Opera](https://www.opera.com/) browser previews and testing.
+- [Safari](https://www.apple.com/uk/safari/) browser previews and testing.
+- [W3C HTML Checker](https://validator.w3.org/) HTML code checker.
+- [W3C CSS Checker](https://jigsaw.w3.org/css-validator/) CSS code checker.
+- [JSHint](https://jshint.com/) JavaScript code checker.
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/) Python code checker.
+- [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/) website accessibility checker.
+- [Responsive Web Design Checker](https://responsivedesignchecker.com/) website responsiveness checker.
+- [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/) CSS reset code.
+- [Website Mockup Generator](https://websitemockupgenerator.com/) previewing website oon different devices.
+- [GoFullPage](https://gofullpage.com/) website previews (Firefox does not support this).
+- [Deposit Photos](https://depositphotos.com/) images.
+- [Sarah Renae Clarke's Colour Catalogue V2](https://sarahrenaeclark.com/color-palettes/) colours.
+- [Pixillion Image Converter Software](https://www.nchsoftware.com/imageconverter/index.html?theme=webp&kw=webp%20converter&m=e&d=c&c=76691136445782&ag=1227055160311186&msclkid=024126ffbd141fc2bb514100770aa72b&utm_source=bing&utm_medium=cpc&utm_campaign=EN-C1&utm_term=webp%20converter&utm_content=Pixillion%20-%20WebP%20Converter) any image to webp converter.
+- [Favicon Generator](https://favicon.io/favicon-converter/) favicon generator.
+- [Cloudinary](https://cloudinary.com/) image hosting.
+- [Artistly AI Image Generator](https://artistly.ai/go/) AI logo and image generator.
+- [This Person Does Not Exist](https://thispersondoesnotexist.com/) AI face generator.
+- [Beautify](https://marketplace.visualstudio.com/items/?itemName=HookyQR.beautify) Visual Studio Code plugin for code formatting.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker) Visual Studio Code plugin for checking spelling.
+- [GitHub Copilot](https://marketplace.visualstudio.com/items/?itemName=GitHub.copilot) Visual Studio Code plugin for AI coding help.
+- [Flake8](https://marketplace.visualstudio.com/items/?itemName=ms-python.flake8) Visual Studio Code plugin for Python linting.
 
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
-The site was deployed using GitHub Pages, as follows:
-
-- Open the repository > 'Settings'.
-- On the left, under 'Code and automation', click 'Pages'.
-- On the right section, under 'Build and deployment' and 'Source', click to select 'Deploy from a branch'.
-- Under 'Branch', click to select the main branch.
-- Click 'Save'.
-
-![Deploying to GitHub Pages](assets/images/github-pages-deployment.webp)
-
-### Forks
-
-To make changes to a repository, without affecting the original copy, you can fork (duplicate) it:
-
-- Open the repository.
-- To the right of the page, click the 'Fork' button.
-- You can then open this repository in the IDE of your choice, and make your own changes.
-
-![How to fork a repository](assets/images/github-fork-deployment.webp)
-
-### Local Clones
-
-To deploy the project on your own computer you can clone it:
-
-- Open the repository, and click the '<> Code' button.
-- On 'Local', select your preferred cloning method, and copy the link.
-- Open a prompt in your chosen IDE.
-- Navigate to the destination directory, and then enter `git clone`, paste the copied string, and hit 'Enter'.
-
-![Deploy a clone](assets/images/local-cloning-process.webp)
-
-### Automatically Create a Gitpod Workspace
-
-You can create a Gitpod workspace for this repository by clicking the following button (it requires the [Gitpod browser extension](https://www.gitpod.io/docs/configure/user-settings/browser-extension)).
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dvfrancis/hi-lo-card-game)
+- TBC
 
 ## Credits and References
 
 - [Duckett, J. (2011) HTML & CSS Design and Build Websites](https://htmlandcssbook.com/) - Indianapolis: John Wiley & Sons, Inc.
-- [Duckett, J. (2014) JavaScript and jQuery Interactive Front-End Web Development](https://javascriptbook.com/) - Indianapolis: John Wiley & Sons, Inc.
-- [How to create a copyright symbol](https://blog.hubspot.com/website/html-code-copyright) - for the footer copyright symbol.
-- [Displaying the current year](https://sysadminsage.com/javascript-get-current-year/) - for displaying the current copyright year in the footer.
-- [Generate a random boolean value](https://stackoverflow.com/questions/36756331/js-generate-random-boolean) - for assigning aces high or low.
-- [How to set a favicon in GitHub Pages](https://stackoverflow.com/questions/35037482/favicon-with-github-pages) - for setting a GitGub Pages favicon.
-- [Modal](https://getbootstrap.com/docs/5.0/components/modal/) - for generating a Bootstrap modal.
-- [Bootstrap 5 Modal](https://www.w3schools.com/bootstrap5/bootstrap_modal.php) - for Bootstrap pop-up modal dialogs.
-- [Element: insertAdjacentHTML() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) - for adding modal dialogs to pages.
-- [HTML DOM Element remove()](https://www.w3schools.com/jsref/met_element_remove.asp) - for removing modal dialogs from pages.
-- [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) - for testing calls to the API.
-- [Julia Konovalova's example of Try / Catch.](https://github.com/IuliiaKonovalova/flash_cards/blob/main/assets/js/grammar_quiz.js)
-- [localStorage in JavaScript: A complete guide.](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
-- [Extracting numbers from localStorage as numbers](https://stackoverflow.com/questions/40005108/extracting-numbers-from-localstorage-as-numbers) - how to convert localStorage values into numbers.
+- [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/) for the navigation menus.
+- [Bootstrap Grid System](https://getbootstrap.com/docs/5.3/layout/grid/) for layout of pages.
+- [Bootstrap Spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/) for element spacing.
 
 ## Acknowledgements
 
-- Extra special thanks to Andrew Parton, for his coding advice and support.
-- Thanks to my mentor, Juliia Konovalova, for her coding advice.
+- Andrew Parton, for his ongoing support.
+- Juliia Konovalova, for pushing me to achieve my best (even when I'm not in the mood).
