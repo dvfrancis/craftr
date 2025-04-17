@@ -254,54 +254,88 @@ The website is designed to appeal to all demographics, but the following persona
     <details>
     <summary>Click to view the home page</summary>
             
-    ![Website home page](assets/images/website-home-page.webp)
+    ![Website home page](assets/images/website-home.webp)
     </details>
-
-
 
 - diary.html
 
-
+    <details>
+    <summary>Click to view the diary of classes</summary>
+            
+    ![Website classes page](assets/images/website-classes-diary.webp)
+    </details>
 
 - details.html
 
-
+    <details>
+    <summary>Click to view the class details page</summary>
+            
+    ![Website class details page](assets/images/website-class-details.webp)
+    </details>
 
 - faq.html
 
-
+    <details>
+    <summary>Click to view the faq page</summary>
+            
+    ![Website faq page](assets/images/website-faq.webp)
+    </details>
 
 - contact.html
 
-
+    <details>
+    <summary>Click to view the contact page</summary>
+            
+    ![Website contact page](assets/images/website-contact-form.webp)
+    </details>
 
 - register.html
 
-
+    <details>
+    <summary>Click to view the registration page</summary>
+            
+    ![Website registration page](assets/images/website-register.webp)
+    </details>
 
 - login.html
 
-
+    <details>
+    <summary>Click to view the login page</summary>
+            
+    ![Website login page](assets/images/website-login.webp)
+    </details>
 
 - account.html
 
-
+    <details>
+    <summary>Click to view the account page</summary>
+            
+    ![Website account page](assets/images/website-account.webp)
+    </details>
 
 - update_profile.html
 
-
+    <details>
+    <summary>Click to view the update profile page</summary>
+            
+    ![Website update profile page](assets/images/website-update-profile.webp)
+    </details>
 
 - 404.html
 
-
+    <details>
+    <summary>Click to view the 404 error page</summary>
+            
+    ![Website 404 error page](assets/images/website-error-404.webp)
+    </details>
 
 - 500.html
 
-
-
-- base.html
-
-
+    <details>
+    <summary>Click to view the 500 error page</summary>
+            
+    ![Website 500 error page](assets/images/website-error-500.webp)
+    </details>
 
 #### Future Features
 
