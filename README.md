@@ -1,5 +1,3 @@
-# THIS IS A DRAFT DOCUMENT, AND NOT YET FINALISED #
-
 # Craftr
 
 ## Overview
@@ -71,7 +69,9 @@ Click [here] to access the GitHub repository.
 3. [Testing](#testing)
 4. [Technologies Used](#technologies-used)
 5. [Deployment](#deployment)
-    1. [Heroku](#heroku)
+    1. [Database Creation](#postgresql-database-creation-and-management)
+    2. [Local](#local-deployment)
+    3. [Heroku](#heroku-deployment)
 6. [Credits and References](#credits-and-references)
 7. [Acknowledgements](#acknowledgements)
 
@@ -193,6 +193,12 @@ The website is designed to appeal to all demographics, but the following persona
 
 #### Future Features
 
+|Task|Item|Description|
+| ------------- | ------------- | ------------- |
+| [Task #85](https://github.com/dvfrancis/craftr/issues/85) | Instructor portal | Add the ability for instructors to create and edit classes |
+| [Task #86](https://github.com/dvfrancis/craftr/issues/86) | Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
+| [Task #66](https://github.com/dvfrancis/craftr/issues/66) | Customise the Django administration portal| Update the admin portal to match the style of the site |
+| [Task #19](https://github.com/dvfrancis/craftr/issues/19) | JavaScript logic flowcharts| If the site were to expand with further features then it would probably require more JavaScript and, therefore, process breakdowns |
 
 ### Structure
 
@@ -644,12 +650,12 @@ All fonts were sourced from Google Fonts, and were used as follows:
 
 #### Media
 
-- The site logo was generated using [Artistly](https://artistly.ai/go/) with the following prompt:
-    - ```"I need a visually appealing and modern rectangular logo for a digital crafting event called Craftr, with a transparent background. The logo should convey a sense of creativity, innovation, and community, and effectively communicate the event's theme and tone. Please design a logo that incorporates elements of crafting, technology, and fun, and that will appeal to a diverse range of attendees, from hobbyists to professionals. The logo should be scalable, legible, and easy to recognize, even in small sizes. Additionally, the logo should be designed with a color scheme that is limited to the palette #7db657, #0091ac, #753da2, #b40001, #ff8500, #ffc500, and that reflects the playful and creative atmosphere of the event. I don't want a registered or trademark symbol on it. I only want the word Craftr on it and no other text."```
-
 - Images used on the website are stored in, and served from, [Cloudinary](https://cloudinary.com/).
 
 - Images used in the README.md and TESTING.md are stored in the [GitHub repository](https://github.com/dvfrancis/craftr) for this project.
+
+- The site logo was generated using [Artistly](https://artistly.ai/go/) with the following prompt:
+    - ```"I need a visually appealing and modern rectangular logo for a digital crafting event called Craftr, with a transparent background. The logo should convey a sense of creativity, innovation, and community, and effectively communicate the event's theme and tone. Please design a logo that incorporates elements of crafting, technology, and fun, and that will appeal to a diverse range of attendees, from hobbyists to professionals. The logo should be scalable, legible, and easy to recognize, even in small sizes. Additionally, the logo should be designed with a color scheme that is limited to the palette #7db657, #0091ac, #753da2, #b40001, #ff8500, #ffc500, and that reflects the playful and creative atmosphere of the event. I don't want a registered or trademark symbol on it. I only want the word Craftr on it and no other text."```
 
 - Instructor images were generated at [This Person Does Not Exist](https://thispersondoesnotexist.com/), a website that uses AI to randomly generate anonymous facial images.
 
@@ -685,7 +691,7 @@ All fonts were sourced from Google Fonts, and were used as follows:
     - details.html/21 used [Scrapbook craft product handmade](https://depositphotos.com/photo/scrapbook-craft-product-handmade-104769942.html)
     - details.html/22 used [Valentine's day background with wooden heart. Red background](https://depositphotos.com/photo/valentine-day-background-wooden-heart-red-background-437749632.html)
 
-These images are only used when no class, instructor, or user image has been uploaded:
+The following images are only used when no class, instructor, or user image has been uploaded:
 
 - Class Placeholder Image - [Craft Room](https://depositphotos.com/photo/craft-room-12770268.html)
 - Instructor Placeholder Image - [Collection of characters...](https://depositphotos.com/vector/collection-of-characters-avatars-in-flat-design-style-56330559.html) 
@@ -693,7 +699,7 @@ These images are only used when no class, instructor, or user image has been upl
 
 #### Content
 
-[Microsoft CoPilot](https://copilot.microsoft.com/) was used to generate initial content, which I then reviewed and refined, making adjustments to ensure it was well-suited to the site’s specific needs and tone.
+[Microsoft CoPilot](https://copilot.microsoft.com/) was used to generate initial content, which I then reviewed and refined - making adjustments to ensure it was well-suited to the site’s specific needs and tone.
 
 ## Testing
 
@@ -743,9 +749,117 @@ These images are only used when no class, instructor, or user image has been upl
 
 ## Deployment
 
-### Heroku
+### PostgreSQL Database Creation and Management
 
-- TBC
+Create a database at [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/); you will be emailed the database URL once this is completed:
+
+<details>
+<summary>Click to view step one of database creation</summary>
+
+![PostgreSQL from Code Institute - Step 1](documentation/deployment/postgresql-from-ci-step-1.webp)
+</details>
+
+<details>
+<summary>Click to view step two of database creation</summary>
+
+![PostgreSQL from Code Institute - Step 2](documentation/deployment/postgresql-from-ci-step-2.webp)
+</details>
+
+<details>
+<summary>Click to view step three of database creation</summary>
+
+![PostgreSQL from Code Institute - Step 3](documentation/deployment/postgresql-from-ci-step-3.webp)
+</details>
+
+This database can be managed at [CI Database Maker](https://dbs.ci-dbs.net/manage/), which gives the option to view further information the databases you've created (it also gives you the option to delete them).
+
+<details>
+<summary>Click to view initial login page</summary>
+
+![CI Database Maker - Login](documentation/deployment/postgresql-from-ci-database-maker-login.webp)
+</details>
+
+<details>
+<summary>Click to view management informational page</summary>
+
+![CI Database Maker - Management Page](documentation/deployment/postgresql-from-ci-database-maker-management.webp)
+</details>
+
+### Local deployment
+
+Copy the GitHub repository locally in one of two ways:
+
+1. Download a ZIP file from the GitHub repository page, and extract to a folder on your local computer, or
+2. Clone the repository using the `git clone` command followed by the repository clone link; for example:
+    - `git clone https://github.com/dvfrancis/craftr.git`
+
+- Once this has been done, open a terminal window and install all requirements using the command:
+    - `pip3 install -r requirements.txt`
+- In the root of the project folder, create a `.gitignore` file, and add `env.py` and `__pycache__` to protect sensitive data.
+- Create a file called `env.py` in the root of the project folder and add the following information:
+    
+   ```python
+    import os
+
+      os.environ['SECRET_KEY'] = 'Add your database secret key'
+      os.environ['DATABASE_URL'] = 'Add your database URL'
+      os.environ['DEBUG'] = 'Set this to True'
+    ```
+*While developing leave `DEBUG=True`, but remember to change it to `DEBUG=False` when you deploy your final project*
+- Run the following commands to push everything to the database:
+    
+    ```Python
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+    ```
+
+- Now create the superuser account (completing the necessary information when prompted):
+    - `python3 manage.py createsuperuser`
+- Run the webserver:
+    - `python3 manage.py runserver`
+- Ctrl + click (Cmd + Click on a Mac) the link to open the website.
+- Add `/admin` to the end of the URL to enter the administration panel. You will need to enter the details for the superuser you created earlier.
+- You will now be able to see the admin portal, and add, amend, or delete users.
+
+### Heroku Deployment
+
+- Ensure that you have pushed any changes to your GitHub repository.
+- Visit the Heroku [website](https://www.heroku.com/), and create an account (if you don't already have one).
+- Login, and create a new app.
+- In your local environment create a `Procfile` in the root of your project folder, and add the following to it (remember to push changes to GitHub afterwards):
+
+   ```python
+        web: gunicorn <your app name>.wsgi:application
+    ```
+
+- Inside your Heroku app, click `Settings`, then click `Reveal Config Vars`, and add the following:
+
+| Key      | Value          |
+|-------------|-------------|
+| `DISABLE_COLLECTSTATIC` | `1` |
+| `DATABASE_URL` | *Your database URL* | 
+| `SECRET_KEY` | *Your database secret key* |
+| `EMAIL_USER` | *Email address from your email provider* |
+| `EMAIL_PASSWORD` | *Email password from your email provider* |
+
+- Ensure that `DATABASE_URL`, `SECRET_KEY`, `EMAIL_USER`, and `EMAIL_PASSWORD` are added to your local `env.py` file in the following format (substituting `KEY` and `VALUE` for the relevant information):
+    
+    ```Python
+        os.environ.setdefault("KEY",("VALUE"))
+    ```
+
+- You may also need to add additional key / value pairs if you are using additional services, such as Cloudinary to serve images for your website.
+- Migrate changes to your database:
+
+    ```Python
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+    ```
+- In `settings.py`, set `DEBUG=False`, and push changes to GitHub.
+- In your Heroku app's `Deploy` settings, connect your repository, and click `Deploy Branch` to deploy the app (you can also set it to automatically deploy when changes are made to the repository, if desired).
+- You will see the deployment building at the bottom of your Heroku app's `Deploy` settings page.
+- When you are ready to finalise your project, set `DEBUG=False` in your local `settings.py` file, and delete `DISABLE_COLLECTSTATIC` from the Heroku app's config variables.
+- Commit any changes to GitHub, and deploy from Heroku as before.
 
 ## Credits and References
 
@@ -758,4 +872,4 @@ These images are only used when no class, instructor, or user image has been upl
 ## Acknowledgements
 
 - Andrew Parton, for his ongoing support.
-- Juliia Konovalova, for pushing me to achieve my best (even when I'm not in the mood).
+- Juliia Konovalova, for pushing me to achieve my best (even when I wasn't in the mood 😁).
