@@ -257,7 +257,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website home page](assets/images/website-home.webp)
     </details>
 
-- diary.html
+- Diary of Classes (diary.html)
 
     <details>
     <summary>Click to view the diary of classes</summary>
@@ -265,7 +265,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website classes page](assets/images/website-classes-diary.webp)
     </details>
 
-- details.html
+- Class Details (details.html)
 
     <details>
     <summary>Click to view the class details page</summary>
@@ -273,7 +273,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website class details page](assets/images/website-class-details.webp)
     </details>
 
-- faq.html
+- FAQ (faq.html)
 
     <details>
     <summary>Click to view the faq page</summary>
@@ -281,7 +281,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website faq page](assets/images/website-faq.webp)
     </details>
 
-- contact.html
+- Contact Form (contact.html)
 
     <details>
     <summary>Click to view the contact page</summary>
@@ -289,7 +289,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website contact page](assets/images/website-contact-form.webp)
     </details>
 
-- register.html
+- User Registration (register.html)
 
     <details>
     <summary>Click to view the registration page</summary>
@@ -297,7 +297,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website registration page](assets/images/website-register.webp)
     </details>
 
-- login.html
+- User Login (login.html)
 
     <details>
     <summary>Click to view the login page</summary>
@@ -305,7 +305,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website login page](assets/images/website-login.webp)
     </details>
 
-- account.html
+- User Account (account.html)
 
     <details>
     <summary>Click to view the account page</summary>
@@ -313,7 +313,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website account page](assets/images/website-account.webp)
     </details>
 
-- update_profile.html
+- Update User Profile (update_profile.html)
 
     <details>
     <summary>Click to view the update profile page</summary>
@@ -321,7 +321,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website update profile page](assets/images/website-update-profile.webp)
     </details>
 
-- 404.html
+- Error 404 (404.html)
 
     <details>
     <summary>Click to view the 404 error page</summary>
@@ -329,7 +329,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website 404 error page](assets/images/website-error-404.webp)
     </details>
 
-- 500.html
+- Error 500 (500.html)
 
     <details>
     <summary>Click to view the 500 error page</summary>
