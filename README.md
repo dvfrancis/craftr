@@ -2,7 +2,7 @@
 
 ## Overview
 
-Craftr is an annual online (fictional) event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
+Craftr (pronounced as 'Crafter') is an annual online (fictional) event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
 
 Digital crafting is the dynamic fusion of technology and creativity, enabling individuals to design and create unique projects with precision and innovation. This evolving craft field spans a variety of disciplines, including:
 
@@ -257,6 +257,10 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website home page](assets/images/website-home.webp)
     </details>
 
+    - The home page gives background on the Craftr event, and acts as an introduction to those who know nothing about it.
+    - The hero section at the top of the page includes buttons that take visitors to register for an account or to view the classes that are scheduled during the event.
+    - It teases the visitor with a selection of 'Featured Classes' to entice them into registering and enrolling in some of them. 
+
 - Diary of Classes (diary.html)
 
     <details>
@@ -264,6 +268,9 @@ The website is designed to appeal to all demographics, but the following persona
             
     ![Website classes page](assets/images/website-classes-diary.webp)
     </details>
+
+    - The diary page lists every class happening during the event, organised by date and time.
+    - It encourages visitors to click on a specific class and view it in further detail.
 
 - Class Details (details.html)
 
@@ -273,6 +280,8 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website class details page](assets/images/website-class-details.webp)
     </details>
 
+    - When someone clicks on the 'Details' button on the diary of classes, it brings them to a specific page that gives in-depth information about that particular class. Information includes when the class will run, an indication of difficulty level, and an overview of what will be covered. It also includes information about the instructor of the class, and their biography.
+
 - FAQ (faq.html)
 
     <details>
@@ -280,6 +289,9 @@ The website is designed to appeal to all demographics, but the following persona
             
     ![Website faq page](assets/images/website-faq.webp)
     </details>
+
+    - The FAQ page contains commonly asked questions for the event presented in a responsive accordion.
+    - If the visitor cannot find an answer, it encourages them to get in touch via the contact page.
 
 - Contact Form (contact.html)
 
@@ -289,6 +301,10 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website contact page](assets/images/website-contact-form.webp)
     </details>
 
+    - Incorporates a standard contact form for visitors to send messages to the organisers of the event.
+    - When they send a message an email is sent to the organisers automatically with all the details.
+    - This information is also stored in the database for later reference, if required.
+
 - User Registration (register.html)
 
     <details>
@@ -296,6 +312,15 @@ The website is designed to appeal to all demographics, but the following persona
             
     ![Website registration page](assets/images/website-register.webp)
     </details>
+
+    - The user registration page allows a visitor to create an account that they can then use to enrol on specific classes.
+    - It asks for name, email, location, and experience level, with the option to add a photograph if they want to. 
+    - The website does not allow them to pick a username that conflicts with an existing user.
+    - The site also has standard email and password validation, so that only valid information can be entered
+    - Once an account has been created, the user is logged in automatically.
+    - If another user is already logged in, they are logged out automatically beforehand.
+    - If they make a mistake on the form, they can click 'Clear' to remove any information entered.
+
 
 - User Login (login.html)
 
@@ -305,6 +330,9 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website login page](assets/images/website-login.webp)
     </details>
 
+    - The user login page allows visitors with user accounts to login and view their account and class enrolments.
+    - It also has a link for a new user to register an account.
+
 - User Account (account.html)
 
     <details>
@@ -312,6 +340,11 @@ The website is designed to appeal to all demographics, but the following persona
             
     ![Website account page](assets/images/website-account.webp)
     </details>
+
+    - The user account page displays all of the user's information entered when the account was created.
+    - It also lists all of the classes that the user has been enrolled on.
+    - The 'Edit' button takes the user to a screen where they can update any of the personal information stored about them.
+    - The 'Delete Account' button allows the user to remove their account entirely. They are prompted to ask if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time.
 
 - Update User Profile (update_profile.html)
 
@@ -321,6 +354,10 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website update profile page](assets/images/website-update-profile.webp)
     </details>
 
+    - The update user profile page allows the user to amend any of the information held about them.
+    - If they change their mind, they can click 'Cancel' and be returned to their account page.
+    - If they make a mistake on the form, they can click 'Clear' to remove any information entered.
+
 - Error 404 (404.html)
 
     <details>
@@ -329,6 +366,10 @@ The website is designed to appeal to all demographics, but the following persona
     ![Website 404 error page](assets/images/website-error-404.webp)
     </details>
 
+    - This page is displayed if a visitor attempts to navigate to a non-existent page.
+    - It contains buttons to go to the home page, or return to whatever page they were previously viewing.
+    - The visitor is also still able to click on any of the other navigation buttons to take them somewhere else.
+
 - Error 500 (500.html)
 
     <details>
@@ -336,6 +377,10 @@ The website is designed to appeal to all demographics, but the following persona
             
     ![Website 500 error page](assets/images/website-error-500.webp)
     </details>
+
+    - This page is displayed if there is an internal server error.
+    - It contains buttons to go to the home page, or return to whatever page they were previously viewing.
+    - The visitor is also still able to click on any of the other navigation buttons to take them somewhere else.
 
 #### Future Features
 
@@ -484,9 +529,9 @@ However, the website still satisfies full Create (C), Read (R), Update (U), and 
 
 The wireframe designs shown below were my initial ideas for each page of the website (listed by device type). They have changed in a few ways during implementation; for example, the 'Diary' menu link is now called 'Classes'.
 
-##### Mobile
+#### Mobile
 
-###### Home
+##### Home
 
 <details>
 <summary>Click to view the mobile device home wireframe</summary>
@@ -494,7 +539,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile home page wireframe](documentation/wireframes/mobile/mobile-home.webp)
 </details>
 
-###### Classes
+##### Classes
 
 <details>
 <summary>Click to view the mobile device classes wireframe</summary>
@@ -502,7 +547,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile game page wireframe](documentation/wireframes/mobile/mobile-diary.webp)
 </details>
 
-###### Class Details
+##### Class Details
 
 <details>
 <summary>Click to view the mobile device class details wireframe</summary>
@@ -510,7 +555,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-class-details.webp)
 </details>
 
-###### FAQ
+##### FAQ
 
 <details>
 <summary>Click to view the mobile device faq wireframe</summary>
@@ -518,7 +563,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-faq.webp)
 </details>
 
-###### Contact
+##### Contact
 
 <details>
 <summary>Click to view the mobile device contact wireframe</summary>
@@ -526,7 +571,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-contact.webp)
 </details>
 
-###### User Registration
+##### User Registration
 
 <details>
 <summary>Click to view the mobile device user registration wireframe</summary>
@@ -534,7 +579,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-user-registration.webp)
 </details>
 
-###### User Login
+##### User Login
 
 <details>
 <summary>Click to view the mobile device user login wireframe</summary>
@@ -542,7 +587,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-login.webp)
 </details>
 
-###### User Account
+##### User Account
 
 <details>
 <summary>Click to view the mobile device user account wireframe</summary>
@@ -550,7 +595,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-user-account.webp)
 </details>
 
-###### Update User Profile
+##### Update User Profile
 
 <details>
 <summary>Click to view the mobile device update user profile wireframe</summary>
@@ -558,7 +603,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile FAQ page wireframe](documentation/wireframes/mobile/mobile-update-profile.webp)
 </details>
 
-###### 404 HTTP Error
+##### 404 HTTP Error
 
 <details>
 <summary>Click to view the mobile device custom error wireframe</summary>
@@ -566,7 +611,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile custom error page wireframe](documentation/wireframes/mobile/mobile-custom-error-404.webp)
 </details>
 
-###### 500 HTTP Error
+##### 500 HTTP Error
 
 <details>
 <summary>Click to view the mobile device server error wireframe</summary>
@@ -574,9 +619,9 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Mobile custom error page wireframe](documentation/wireframes/mobile/mobile-custom-error-500.webp)
 </details>
 
-##### Tablet
+#### Tablet
 
-###### Home
+##### Home
 
 <details>
 <summary>Click to view the tablet device home wireframe</summary>
@@ -584,7 +629,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet home page wireframe](documentation/wireframes/tablet/tablet-home.webp)
 </details>
 
-###### Classes
+##### Classes
 
 <details>
 <summary>Click to view the tablet device classes wireframe</summary>
@@ -592,7 +637,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet game page wireframe](documentation/wireframes/tablet/tablet-diary.webp)
 </details>
 
-###### Class Details
+##### Class Details
 
 <details>
 <summary>Click to view the tablet device class details wireframe</summary>
@@ -600,7 +645,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-class-details.webp)
 </details>
 
-###### FAQ
+##### FAQ
 
 <details>
 <summary>Click to view the tablet device faq wireframe</summary>
@@ -608,7 +653,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-faq.webp)
 </details>
 
-###### Contact
+##### Contact
 
 <details>
 <summary>Click to view the tablet device contact wireframe</summary>
@@ -616,7 +661,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-contact.webp)
 </details>
 
-###### User Registration
+##### User Registration
 
 <details>
 <summary>Click to view the tablet device user registration wireframe</summary>
@@ -624,7 +669,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-user-registration.webp)
 </details>
 
-###### User Login
+##### User Login
 
 <details>
 <summary>Click to view the tablet device user login wireframe</summary>
@@ -632,7 +677,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-login.webp)
 </details>
 
-###### User Account
+##### User Account
 
 <details>
 <summary>Click to view the tablet device user account wireframe</summary>
@@ -640,7 +685,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-user-account.webp)
 </details>
 
-###### Update User Profile
+##### Update User Profile
 
 <details>
 <summary>Click to view the tablet device update user profile wireframe</summary>
@@ -648,7 +693,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet FAQ page wireframe](documentation/wireframes/tablet/tablet-update-profile.webp)
 </details>
 
-###### 404 HTTP Error
+##### 404 HTTP Error
 
 <details>
 <summary>Click to view the tablet device custom error wireframe</summary>
@@ -656,7 +701,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet custom error page wireframe](documentation/wireframes/tablet/tablet-custom-error-404.webp)
 </details>
 
-###### 500 HTTP Error
+##### 500 HTTP Error
 
 <details>
 <summary>Click to view the tablet device server error wireframe</summary>
@@ -664,9 +709,9 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Tablet custom error page wireframe](documentation/wireframes/tablet/tablet-custom-error-500.webp)
 </details>
 
-##### Desktop
+#### Desktop
 
-###### Home
+##### Home
 
 <details>
 <summary>Click to view the desktop device home wireframe</summary>
@@ -674,7 +719,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop home page wireframe](documentation/wireframes/desktop/desktop-home.webp)
 </details>
 
-###### Classes
+##### Classes
 
 <details>
 <summary>Click to view the desktop device classes wireframe</summary>
@@ -682,7 +727,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop game page wireframe](documentation/wireframes/desktop/desktop-diary.webp)
 </details>
 
-###### Class Details
+##### Class Details
 
 <details>
 <summary>Click to view the desktop device class details wireframe</summary>
@@ -690,7 +735,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-class-details.webp)
 </details>
 
-###### FAQ
+##### FAQ
 
 <details>
 <summary>Click to view the desktop device faq wireframe</summary>
@@ -698,7 +743,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-faq.webp)
 </details>
 
-###### Contact
+##### Contact
 
 <details>
 <summary>Click to view the desktop device contact wireframe</summary>
@@ -706,7 +751,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-contact.webp)
 </details>
 
-###### User Registration
+##### User Registration
 
 <details>
 <summary>Click to view the desktop device user registration wireframe</summary>
@@ -714,7 +759,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-user-registration.webp)
 </details>
 
-###### User Login
+##### User Login
 
 <details>
 <summary>Click to view the desktop device user login wireframe</summary>
@@ -722,7 +767,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-login.webp)
 </details>
 
-###### User Account
+##### User Account
 
 <details>
 <summary>Click to view the desktop device user account wireframe</summary>
@@ -730,7 +775,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-user-account.webp)
 </details>
 
-###### Update User Profile
+##### Update User Profile
 
 <details>
 <summary>Click to view the desktop device update user profile wireframe</summary>
@@ -738,7 +783,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop FAQ page wireframe](documentation/wireframes/desktop/desktop-update-profile.webp)
 </details>
 
-###### 404 HTTP Error
+##### 404 HTTP Error
 
 <details>
 <summary>Click to view the desktop device custom error wireframe</summary>
@@ -746,7 +791,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 ![Desktop custom error page wireframe](documentation/wireframes/desktop/desktop-custom-error-404.webp)
 </details>
 
-###### 500 HTTP Error
+##### 500 HTTP Error
 
 <details>
 <summary>Click to view the desktop device server error wireframe</summary>
