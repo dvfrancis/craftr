@@ -8,17 +8,19 @@ Craftr is an annual online (fictional) event dedicated to digital crafting, brin
 
 Digital crafting is the dynamic fusion of technology and creativity, enabling individuals to design and create unique projects with precision and innovation. This evolving craft field spans a variety of disciplines, including:
 
-- **Paper and Card Crafts**: ranging from scrapbooking to personalized greeting cards.
+- **Paper and Card Crafts**: ranging from scrapbooking to personalised greeting cards.
 
 - **Vinyl and Decal Crafts**: stickers, signage, decals, and vinyl applications.
 
-- **Graphic Design Applications**: custom artwork for t-shirts, drinkware, and other merchandise.
+- **Graphic Design Applications**: custom artwork for t-shirts, drinkware, and other items.
 
 - **Fabric Crafts**: intricate embroidery, textile design, and fabric embellishments.
 
 - **3D Modelling**: digital sculpting that brings ideas to life.
 
-To achieve professional results, many digital crafters utilize cutting machines such as [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/), or even laser cutters like [Glowforge](https://glowforge.com/)), to create intricate and precise designs that can be applied to a variety of materials.
+- **Laser Cutting**: create, cut, and embellish unique designs for any item including jewellery, signage, and other items.
+
+To achieve professional results, many digital crafters utilise cutting machines such as [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/), or even laser cutters like [Glowforge](https://glowforge.com/), to create intricate and precise designs that can be applied to a variety of materials.
 
 This website serves as the central hub for Craftr, providing information about the event, allowing participants to create accounts, browse, and register for available classes. Whether a beginner looking to experiment with digital crafting or an expert seeking new techniques, Craftr is the perfect platform for anyone to connect, learn, and create.
 
