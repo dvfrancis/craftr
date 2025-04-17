@@ -190,6 +190,118 @@ The website is designed to appeal to all demographics, but the following persona
 
 #### Existing Features
 
+- Please note that all screenshots (unless otherwise stated) are taken from the desktop version of the website.
+
+- General
+    - The site should adjust to different screen sizes responsively.
+    - It should be identifiable via the favicon shown in the browser tab. When bookmarking the site, this favicon appears next to the bookmarked link making it easily recognisable among other bookmarks:
+
+        <details>
+        <summary>Click to view the site favicon, in the browser tab</summary>
+            
+        ![Website favicon](assets/images/website-favicon.webp)
+        </details>
+
+- Header
+    
+    <details>
+    <summary>Click to view the site header as it appears on a desktop device</summary>
+            
+    ![Desktop website header](assets/images/desktop-website-header.webp)
+    </details>
+
+    <details>
+    <summary>Click to view the site header as it appears on a mobile device</summary>
+            
+    ![Mobile website header](assets/images/mobile-website-header.webp)
+    </details>
+
+    - The header stays fixed to the top of the window, allowing visitors to see the navigation bar at all times. This lets the visitor know where they are at all times (links remain highlighted when that page is currently displayed). The high contrast between the text and the header means it is both stylish and easy to read.
+    - The website logo is also shown in the header, reinforcing the site branding in the mind of the visitor.
+    - Visible navigation links:
+        - *Home*: brings the user to the home page, which has links to register for an account, or see a list of all classes across the event. It also has a 'Featured Classes' section to whet the visitor's appetite.
+        - *Classes*: takes the use to a list of classes that are running across the event.
+        - *FAQ*: a page of frequently asked questions about the event.
+        - *Contact*: allows messages to be sent to the organisers.
+        - *Register / Login* (changes to *Account* when a user is logged in): users can create an account on the site from this page, and then use that account to enrol for particular classes.
+    - Hidden navigation links:
+        - *Base Template*: contains the code for the header and the footer and is used by all pages, which helps reduce duplication of code. It is not directly accessible to a website user.
+        - *Details*: shown when a user is on the classes page and clicks the details button. It contains information specific to a chosen class, which is generated automatically from information stored in the database.
+        - *Account*: shown when a user has created an account, or logs in successfully. It allows them to view all of their class enrolments, edit their profile, or delete their account.
+        - *Update Profile*: shown when a user clicks 'Edit' on their account page. They can update any of the information held about them on the site.
+        - *404 Error*: shown when a visitor attempts to access a non-existent page. It is not directly accessible to a website user.
+        - *500 Error*: shown when a the web server encounters an problem. It is not directly accessible to a website user.
+    
+- Footer
+
+    <details>
+    <summary>Click to view the site footer as it appears on a desktop device</summary>
+            
+    ![Desktop website footer](assets/images/desktop-website-footer.webp)
+    </details>
+
+    <details>
+    <summary>Click to view the site footer as it appears on a mobile device</summary>
+            
+    ![Mobile website footer](assets/images/mobile-website-footer.webp)
+    </details>
+
+    - The footer remains at the bottom of all screens, underneath any website content.
+    - It contains copyright information, and also the social media buttons.
+
+- Home (index.html)
+
+    <details>
+    <summary>Click to view the home page</summary>
+            
+    ![Website home page](assets/images/website-home-page.webp)
+    </details>
+
+
+
+- diary.html
+
+
+
+- details.html
+
+
+
+- faq.html
+
+
+
+- contact.html
+
+
+
+- register.html
+
+
+
+- login.html
+
+
+
+- account.html
+
+
+
+- update_profile.html
+
+
+
+- 404.html
+
+
+
+- 500.html
+
+
+
+- base.html
+
+
 
 #### Future Features
 
