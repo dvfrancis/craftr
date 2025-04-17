@@ -26,18 +26,23 @@ This website serves as the central hub for Craftr, providing information about t
 
 ### Site Preview
 
-![A preview of the Hi-Lo website at various screen sizes](https://res.cloudinary.com/dvzs9gve0/image/upload/v1744813127/all-devices-black_knk4fo.webp)
+![A preview of the Hi-Lo website at various screen sizes](assets/images/site-preview.webp)
 
 ### Site Link
 
 [live site]: https://craftr-bfd2923e1ca4.herokuapp.com/
 The [live site] is hosted by Heroku.
 
+### GitHub Repository
+[here]: https://github.com/dvfrancis/craftr
+Click [here] to access the GitHub repository.
+
 ## Index
 
 1. [Overview](#overview)
     1. [Site Preview](#site-preview)
     2. [Site Link](#site-link)
+    3. [GitHub Repository](#github-repository)
 2. [User Experience Design](#user-experience-design)
     1. [Strategy](#strategy)
         1. [Key Business Goals](#key-business-goals)
@@ -104,16 +109,16 @@ The [live site] is hosted by Heroku.
     - is intuitive, accessible, responsive, and easy to navigate.
     - has a design that visitors will immediately understand, and be able to use; for example, HTML elements behave in the way most people would expect.
     - contains useful information that will prompt a visitor to sign up for classes.
-    - is designed to appeal to those who like crafting, and help them feel comfortable and welcome.
+    - is designed to appeal to those who are creative, and possibly enjoy crafting, and help them feel comfortable and welcome.
     - allows a user to register their details so that they can bookmark or register for interesting classes.
 
 #### User Stories
 
 ##### First time visitor goals
     
-- "What is this website promoting?”
+- "What is Craftr about?”
 - “What training is being given?”
-- "When does the online event happen?"
+- "When do the classes happen?"
 - “How do I sign up?”
         
 ##### Returning visitor goals
@@ -133,7 +138,7 @@ The [live site] is hosted by Heroku.
 The website is designed to appeal to all demographics, but the following personas are meant to represent a range of potential users:
 
 - User 1: Female aged 20-50, enthusiast who wants to develop her crafting skills, loves creating things, unsure where to start.
-- User 2: Female aged 18-35, looking for a way to relax, enjoys new hobbies, limited knowledge about the subject.
+- User 2: Male aged 18-35, looking for a way to relax, enjoys new hobbies, limited knowledge about the subject.
 - User 3: Female aged 25-45, looking for free training, enjoys connecting with others, hasn't been able to find many beginner-friendly workshops.
 
 ##### User 1
@@ -142,15 +147,15 @@ The website is designed to appeal to all demographics, but the following persona
 
 ###### Acceptance Criteria
 
-- Classes should be suitable for all abilities (beginner through to advanced).
-- It is easy to navigate the site to find classes and inspiration.
-- It should be possible to keep updated about future site updates.
+- Ensure users of all skill levels (beginner to advanced) find suitable classes ([see issue #55](https://github.com/dvfrancis/craftr/issues/55)) .
+- Provide an intuitive way to navigate the site and discover content ([see issue #56](https://github.com/dvfrancis/craftr/issues/56)).
+- Enable users to create accounts and track enrolments ([see issue #59](https://github.com/dvfrancis/craftr/issues/59)).
     
 ###### Tasks
 
-- Classes state the minimum skill level required to participate effectively.
-- Menus make it easy to find information on the website.
-- Enable visitors to add their details to the event email list.
+- Label each class with its appropriate skill level.
+- Design an intuitive navigation menu for easy browsing.
+- Develop a user-friendly account creation and class tracking system.
     
 ##### User 2
 
@@ -158,31 +163,31 @@ The website is designed to appeal to all demographics, but the following persona
 
 ###### Acceptance Criteria
 
-- A variety of crafts are featured on the home page.
-- Information on the site is easily accessible.
-- The website design does not deter first-time users.
+- Make diverse craft types visible and engaging on the homepage ([see issue #57](https://github.com/dvfrancis/craftr/issues/57)).
+- Ensure information is easily accessible for first-time visitors ([see issue #58](https://github.com/dvfrancis/craftr/issues/58)).
+- Create an inviting and user-friendly interface ([see issue #57](https://github.com/dvfrancis/craftr/issues/57)).
     
 ###### Tasks
 
-- Design a visually appealing home page that mentions the different crafts featured on the website.
-- Class details are simple to find, directly from the diary page.
-- Create a clean, simple design that is easy to use and welcoming to first-time users.
+- Design an engaging homepage that showcases various craft types.
+- Ensure class details are prominently displayed and easy to locate.
+- Develop a clean and welcoming website layout.
 
 ##### User 3
 
-“I'm seeking accessible training courses that I can register for and attend with confidence.”
+“I'm seeking accessible training courses that I can attend with confidence.”
 
 ###### Acceptance Criteria
 
-- Users find it simple and easy to register on the website.
-- Classes are clearly explained, and include instructors' details.
-- It is easy to share information from the website via social media.
+- Ensure class information is detailed and easily accessible ([see issue #60](https://github.com/dvfrancis/craftr/issues/60)).
+- Clearly outline instructor details and course descriptions ([see issue #60](https://github.com/dvfrancis/craftr/issues/60)).
+- Make sharing information simple and effective ([see issue #54](https://github.com/dvfrancis/craftr/issues/54)).
     
 ###### Tasks
 
-- Add the ability for users to create their own account.
-- Ensure all classes have detailed descriptions and information about the class instructor.
-- Links to share to social media are prominent, as well as being easy to find and use.
+- Maintain a well-organized and searchable class directory.
+- Provide comprehensive course descriptions, including instructor details.
+- Implement easy-to-use social media sharing features.
 
 ### Scope
 
@@ -199,20 +204,94 @@ The website is designed to appeal to all demographics, but the following persona
 <details>
 <summary>Click to view the user flow diagram</summary>
 
-![User flow diagram](documentation/flowcharts/user-flow.webp)
+![User flow diagram](documentation/flowcharts/user-flow-diagram.webp)
 </details>
 
-User flow diagram of potential user-website interaction routes - optional pathways indicated by dashed lines.
+User routes through the site have been plotted as a user flow diagram; pathways can be compulsory or optional, which is shown on the diagram.
 
-#### Logic Flowchart
+#### Database Architecture
 
 <details>
-<summary>Click to view the gameplay logic flowchart</summary>
+<summary>Click to view the entity relationship diagram (ERD)</summary>
 
-![Hi-Lo gameplay logic flowchart](documentation/flowcharts/game-logic.webp)
+![Craftr ERD](documentation/flowcharts/entity-relationship-diagram.webp)
 </details>
 
-Flowchart explaining the logic behind the HI | LO game, and used to formulate the JavaScript code.
+PostgreSQL was used to store the database for the site, and the ERD was created using [Figma](https://www.figma.com/).
+
+#### Data Models
+
+1. **User**
+
+Django's User model was used for the creation of user accounts (and is extended by UserProfile).
+
+|Description|Key Type|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Username|Key|`username`|CharField|*Django ensures `username` is unique and limited to 150 characters*
+|Password|Key|`password`|CharField|*Django provides built-in validation for `password`, which can be customised via settings.py*
+|First Name|Key|`first_name`|CharField|*Django ensures `first_name` is limited to 150 characters*
+|Last Name|Key|`last_name`|CharField|*Django ensures `last_name` is limited to 150 characters*
+|Email address|Key|`email`|EmailField|*Django provides built-in validation for `email`*
+
+2. **UserProfile**
+
+Custom model that extends Django's User model by adding site-specific fields.
+
+|Description|Key|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Username|Foreign|`username`|CharField|*Linked to the `User` model, in a 1-2-1 relationship*
+|Location|Key|`location`|CharField|`max_length=100`. Field required through validation by `def clean(self)`
+|Experience Level|Key|`experience`|ChoiceField|`choices=EXPERIENCE_CHOICES, default=BEGINNER, max_length=12`. Field required through validation by `def clean(self)`
+|User Photograph|Key|`photograph`|CloudinaryField|`default='placeholder', blank=True, null=True`
+
+3. **EventDay**
+
+Custom model that stores the days on which the event runs. `Class Meta` options ensure the day title is unique regardless of case sensitivity.
+
+|Description|Key|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Unique Field|Primary|`id`|AutoField|`primary_key=true` (I had a minor problem with the existing primary key field so added this as a solution)
+|Date|Foreign|`day_date`|DateField|*Linked to the `EventClass` model, in a one-to-many relationship*. Field required through validation by `def clean(self)`
+|Title|Key|`day_title`|CharField|`max_length=100, unique=True`. Field required through validation by `def clean(self)`
+|Description|Key|`day_description`|TextField|
+
+4. **EventClass**
+
+Custom model that lists the classes that run across the entire event. `Class Meta` options ensure that multiple classes cannot be scheduled at the same time.
+
+|Description|Key|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Date|Foreign|`event_day`|DateField|*Linked to the `EventDay` model, in a many-to-one relationship*
+|Start Time|Key|`start_time`|TimeField|`start_time` cannot be later than `end_time` as validated by `def clean(self)`
+|End Time|Key|`end_time`|TimeField|
+|Title|Key|`class_title`|CharField|`max_length=100`
+|Description|Key|`class_description`|TextField|
+|Difficulty|Key|`difficulty`|ChoiceField|`choices=DIFFICULTY_CHOICES, default=BEGINNER, max_length=12`
+|Image|Key|`class_image`|CloudinaryField|`default='class_placeholder', blank=True, null=True`
+|Instructor|Key|`instructor`|CharField|`max_length=100`
+|Instructor Photo|Key|`instructor_photo`|CloudinaryField|`default='instructor_placeholder', blank=True, null=True`
+|Instructor Biography|Key|`instructor_bio`|TextField|
+
+5. **Enrolment**
+
+Custom model that tracks which classes different users are enrolled upon. `Class Meta` options ensure users cannot enrol on the same class multiple times.
+
+|Description|Key|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Username|Foreign|`username`|CharField|*Linked to the `User` model, in a many-to-one relationship* `on_delete=models.CASCADE, related_name="enrol_status"`
+|Class Title|Foreign|`class_title`|TextField|*Linked to the `EventClass` model, in a many-to-one relationship* `on_delete=models.CASCADE, related_name="enrolments"`
+
+6. **Contact**
+
+Custom model that stores any messages sent through the contact form, for later reference.
+
+|Description|Key|Name|Field Type|Validation|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|First Name|Key|`first_name`|CharField|`max_length=100`
+|Last Name|Key|`last_name`|CharField|`max_length=100`
+|Email|Key|`email`|EmailField|*Django provides built-in validation for `email`*
+|Message|Key|`message`|TextField|
+|Creation Date/Time|Key|`created_at`|DateTimeField|`auto_now_add=True`
 
 ### Skeleton
 
