@@ -56,7 +56,8 @@ Click [here] to access the GitHub repository.
         2. [Future Features](#future-features)
     3. [Structure](#structure)
         1. [User Flow Diagram](#user-flow-diagram)
-        2. [Logic Flowchart](#logic-flowchart)
+        2. [Database Architecture](#database-architecture)
+            1. [C R U D Fulfilment](#c-r-u-d-fulfilment)
     4. [Skeleton](#skeleton)
         1. [Wireframes](#wireframes)
             1. [Mobile](#mobile)
@@ -244,6 +245,19 @@ Custom model that extends Django's User model by adding site-specific fields.
 |Experience Level|Key|`experience`|ChoiceField|`choices=EXPERIENCE_CHOICES, default=BEGINNER, max_length=12`. Field required through validation by `def clean(self)`
 |User Photograph|Key|`photograph`|CloudinaryField|`default='placeholder', blank=True, null=True`
 
+```Python
+# Define the choices for experience levels
+BEGINNER = 'Beginner'
+INTERMEDIATE = 'Intermediate'
+ADVANCED = 'Advanced'
+
+EXPERIENCE_CHOICES = [
+    (BEGINNER, 'Beginner'),
+    (INTERMEDIATE, 'Intermediate'),
+    (ADVANCED, 'Advanced'),
+]
+```
+
 3. **EventDay**
 
 Custom model that stores the days on which the event runs. `Class Meta` options ensure the day title is unique regardless of case sensitivity.
@@ -272,6 +286,18 @@ Custom model that lists the classes that run across the entire event. `Class Met
 |Instructor Photo|Key|`instructor_photo`|CloudinaryField|`default='instructor_placeholder', blank=True, null=True`
 |Instructor Biography|Key|`instructor_bio`|TextField|
 
+```Python
+# Define the choices for difficulty levels
+BEGINNER = 'Beginner'
+INTERMEDIATE = 'Intermediate'
+ADVANCED = 'Advanced'
+
+DIFFICULTY_CHOICES = [
+    (BEGINNER, 'Beginner'),
+    (INTERMEDIATE, 'Intermediate'),
+    (ADVANCED, 'Advanced'),
+]
+```
 5. **Enrolment**
 
 Custom model that tracks which classes different users are enrolled upon. `Class Meta` options ensure users cannot enrol on the same class multiple times.
@@ -292,6 +318,10 @@ Custom model that stores any messages sent through the contact form, for later r
 |Email|Key|`email`|EmailField|*Django provides built-in validation for `email`*
 |Message|Key|`message`|TextField|
 |Creation Date/Time|Key|`created_at`|DateTimeField|`auto_now_add=True`
+
+#### C R U D Fulfilment
+
+TBC
 
 ### Skeleton
 
