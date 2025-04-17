@@ -71,12 +71,8 @@ Click [here] to access the GitHub repository.
 3. [Testing](#testing)
 4. [Technologies Used](#technologies-used)
 5. [Deployment](#deployment)
-    1. [GitHub Pages](#github-pages)
-    2. [Forks](#forks)
-    3. [Local Clones](#local-clones)
-    4. [Automatically Create a Gitpod Workspaces](#automatically-create-a-gitpod-workspace)
+    1. [Heroku](#heroku)
 6. [Credits and References](#credits-and-references)
-
 7. [Acknowledgements](#acknowledgements)
 
 ## User Experience Design
