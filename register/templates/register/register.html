@@ -20,17 +20,17 @@
 <!-- Page explanation -->
 <main class="account-background">
     <div class="hero mt-5 mb-5">
-    <h1 class="mb-3">Register an Account</h1>
-    <div class="container-fluid mb-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-lg-10">
-                <h2>Join the Craftr community</h2>
-                <p>Sign up and unlock access to digital crafting workshops, expert-led sessions, and interactive
-                    tutorials.
-                    Start your creative journey now!</p>
+        <h1 class="mb-3">Register an Account</h1>
+        <div class="container-fluid mb-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-10">
+                    <h2>Join the Craftr community</h2>
+                    <p>Sign up and unlock access to digital crafting workshops, expert-led sessions, and interactive
+                        tutorials.
+                        Start your creative journey now!</p>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Registration form -->
     <div class="form-container mt-1">
@@ -60,6 +60,11 @@
             <div class="form-group">
                 <label for="password2" class="mb-3">Confirm Password</label>
                 {{ user_form.password2 }}
+            </div>
+            <div class="form-group">
+                <p class="pass-text">Passwords should be unique, at least
+                    8 characters long, not easily guessed, or composed
+                    entirely of numbers.</p>
             </div>
             <div class="form-group">
                 <label for="location" class="mb-3">Location</label>

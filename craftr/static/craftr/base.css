@@ -746,6 +746,12 @@ label {
   background-size: cover;
 }
 
+/* R E G I S T E R */
+
+.pass-text {
+  font-size: small;
+}
+
 /* A C C O U N T */
 
 /* Enrolment item grid */
