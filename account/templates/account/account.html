@@ -69,10 +69,10 @@
                             {{ enrolment.enrolled_class.start_time }}</p>
                         <p class="site-heading">{{ enrolment.enrolled_class.class_title }}</p>
                         <a href="{% url 'details' enrolment.enrolled_class.id %}"
-                            class="btn btn-primary mt-3 mb-2">Details</a>
+                            class="btn btn-primary mt-3 mb-2" aria-label="Show class details">Details</a>
                         <form method="POST" action="{% url 'remove_enrolment' enrolment.enrolled_class.id %}">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-danger">Withdraw</button>
+                            <button type="submit" class="btn btn-danger" aria-label="Withdraw from the class">Withdraw</button>
                         </form>
                     </div>
                 </div>
@@ -93,14 +93,14 @@
                 </form>
             </div>
             <div class="col-md-auto">
-                <a href="{% url 'update_profile' %}" class="btn btn-info">Edit</a>
+                <a href="{% url 'update_profile' %}" class="btn btn-info" aria-label="Edit user profile">Edit</a>
             </div>
             {% if not user.is_superuser %}
             <div class="col-md-auto">
                 <form method="POST" action="{% url 'delete_account' %}"
                     onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Delete Account</button>
+                    <button type="submit" class="btn btn-danger" aria-label="Delete user account">Delete Account</button>
                 </form>
             </div>
             {% endif %}
