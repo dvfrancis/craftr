@@ -391,7 +391,7 @@ The website is designed to appeal to all demographics, but the following persona
 
     - The user account page displays all of the user's information entered when the account was created.
     - The 'Edit' button takes the user to a screen where they can update any of the personal information stored about them.
-    - The 'Delete Account' button allows the user to remove their account entirely. They are prompted to ask if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time.
+    - The 'Delete Account' button allows the user to remove their account entirely. They are prompted to ask if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time. After the account is deleted they are automatically redirected to the home page.
     - A user can also see a list of all the classes that they're enrolled on.
     - Users can 'Withdraw' from a class, or see 'Details' about any class they have enrolled on, by clicking the corresponding button beneath the enrolment. The list of enrolments updates dynamically if a user withdraws from a class.
 
