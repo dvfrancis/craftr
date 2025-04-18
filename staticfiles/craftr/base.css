@@ -172,7 +172,6 @@ main {
 h1 {
   padding: 1rem 0;
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-size: xx-large;
   font-weight: 800;
   font-style: normal;
@@ -182,7 +181,6 @@ h1 {
 h2 {
   padding: 1rem 0;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
   font-size: x-large;
   font-weight: bolder;
   font-style: normal;
@@ -192,7 +190,6 @@ h2 {
 h3 {
   padding: 1rem 0;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
   font-size: large;
   font-weight: bold;
   font-style: normal;
