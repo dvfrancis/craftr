@@ -503,92 +503,10 @@ The website has been tested on the following browsers:
 
 Accessibility was tested using the [Wave Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org):
 
-#### index.html
-
 <details>
-<summary>Click here to see the accessibility report for index.html</summary>
+<summary>Click here to see the accessibility report</summary>
 
-![Accessibility of index.html](documentation/validation/accessibility/accessibility-index-page.webp)
-</details>
-
-#### diary.html
-
-<details>
-<summary>Click here to see the accessibility report for diary.html</summary>
-
-![Accessibility of diary.html](documentation/validation/accessibility/accessibility-diary-page.webp)
-</details>
-
-#### details.html
-
-<details>
-<summary>Click here to see the accessibility report for details.html</summary>
-
-![Accessibility of details.html](documentation/validation/accessibility/accessibility-details-page.webp)
-</details>
-
-#### faq.html
-
-<details>
-<summary>Click here to see the accessibility report for faq.html</summary>
-
-![Accessibility of faq.html](documentation/validation/accessibility/accessibility-faq-page.webp)
-</details>
-
-#### contact.html
-
-<details>
-<summary>Click here to see the accessibility report for contact.html</summary>
-
-![Accessibility of contact.html](documentation/validation/accessibility/accessibility-contact-page.webp)
-</details>
-
-#### register.html
-
-<details>
-<summary>Click here to see the accessibility report for register.html</summary>
-
-![Accessibility of register.html](documentation/validation/accessibility/accessibility-register-page.webp)
-</details>
-
-#### login.html
-
-<details>
-<summary>Click here to see the accessibility report for login.html</summary>
-
-![Accessibility of login.html](documentation/validation/accessibility/accessibility-login-page.webp)
-</details>
-
-#### account.html
-
-<details>
-<summary>Click here to see the accessibility report for account.html</summary>
-
-![Accessibility of account.html](documentation/validation/accessibility/accessibility-account-page.webp)
-</details>
-
-#### update_profile.html
-
-<details>
-<summary>Click here to see the accessibility report for update_profile.html</summary>
-
-![Accessibility of update_profile.html](documentation/validation/accessibility/accessibility-update_profile-page.webp)
-</details>
-
-#### 404.html
-
-<details>
-<summary>Click here to see the accessibility report for 404.html</summary>
-
-![Accessibility of 404.html](documentation/validation/accessibility/accessibility-404-page.webp)
-</details>
-
-#### 500.html
-
-<details>
-<summary>Click here to see the accessibility report for 500.html</summary>
-
-![Accessibility of 500.html](documentation/validation/accessibility/accessibility-500-page.webp)
+![Accessibility of index.html](documentation/validation/accessibility/accessibility-report.pdf)
 </details>
 
 ## Responsiveness
