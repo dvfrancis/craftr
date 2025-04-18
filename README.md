@@ -439,6 +439,8 @@ The website is designed to appeal to all demographics, but the following persona
 
 #### Future Features
 
+- This is a list of features that would have been nice to include in this project, but were not due to time constraints.
+
 |Task|Item|Description|
 | ------------- | ------------- | ------------- |
 | [Task #85](https://github.com/dvfrancis/craftr/issues/85) | Instructor portal | Add the ability for instructors to create and edit classes |
