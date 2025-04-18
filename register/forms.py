@@ -26,6 +26,26 @@ class UserRegistrationForm(UserCreationForm):
             "password1",
             "password2",
         ]
+        widgets = {
+            "username": forms.TextInput(
+                attrs={"placeholder": "Enter your username"}
+            ),
+            "first_name": forms.TextInput(
+                attrs={"placeholder": "Enter your first name"}
+            ),
+            "last_name": forms.TextInput(
+                attrs={"placeholder": "Enter your last name"}
+            ),
+            "email": forms.EmailInput(
+                attrs={"placeholder": "Enter your email address"}
+            ),
+            "password1": forms.PasswordInput(
+                attrs={"placeholder": "Enter your password"}
+            ),
+            "password2": forms.PasswordInput(
+                attrs={"placeholder": "Confirm your password"}
+            ),
+        }
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -49,3 +69,8 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ["location", "experience", "photograph"]
+        widgets = {
+            "location": forms.TextInput(
+                attrs={"placeholder": "Enter your location"}
+            ),
+        }
