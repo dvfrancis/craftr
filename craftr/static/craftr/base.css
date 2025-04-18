@@ -273,6 +273,11 @@ ul li {
 
 /* Buttons */
 
+button>a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
 .base-button {
   color: white;
   text-decoration: none;
