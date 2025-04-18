@@ -457,12 +457,12 @@ These results apply to all 21 classes:
 
 ## Browser Compatibility
 
-The following browsers have been used to test the website (screenshots taken from a Windows desktop setup for a clearer view - there is no Windows version of Safari):
+The website has been tested on the following browsers:
 
 ### Google Chrome
 
 <details>
-<summary>Click here to view in Google Chrome</summary>
+<summary>Click here for a preview of the home page in Google Chrome</summary>
 
 ![Website in Google Chrome](documentation/validation/browsers/preview-in-google-chrome.webp)
 </details>
@@ -470,7 +470,7 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Microsoft Edge
 
 <details>
-<summary>Click here to view in Microsoft Edge</summary>
+<summary>Click here for a preview of the home page in Microsoft Edge</summary>
 
 ![Website in Microsoft Edge](documentation/validation/browsers/preview-in-microsoft-edge.webp)
 </details>
@@ -478,7 +478,7 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Firefox
 
 <details>
-<summary>Click here to view in Mozilla Firefox</summary>
+<summary>Click here for a preview of the home page in Mozilla Firefox</summary>
 
 ![Website in Mozilla Firefox](documentation/validation/browsers/preview-in-mozilla-firefox.webp)
 </details>
@@ -486,7 +486,7 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Opera
 
 <details>
-<summary>Click here to view in Opera</summary>
+<summary>Click here for a preview of the home page in Opera</summary>
 
 ![Website in Opera](documentation/validation/browsers/preview-in-opera.webp)
 </details>
@@ -494,14 +494,14 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Safari
 
 <details>
-<summary>Click here to view in Safari</summary>
+<summary>Click here for a preview of the home page in Safari</summary>
 
 ![Website in Safari](documentation/validation/browsers/preview-in-safari.webp)
 </details>
 
 ## Accessibility
 
-Accessibility was tested on all pages with the [Wave Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org):
+Accessibility was tested using the [Wave Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org):
 
 #### index.html
 
@@ -511,12 +511,20 @@ Accessibility was tested on all pages with the [Wave Accessibility Evaluation To
 ![Accessibility of index.html](documentation/validation/accessibility/accessibility-index-page.webp)
 </details>
 
-#### game.html
+#### diary.html
 
 <details>
-<summary>Click here to see the accessibility report for game.html</summary>
+<summary>Click here to see the accessibility report for diary.html</summary>
 
-![Accessibility of game.html](documentation/validation/accessibility/accessibility-game-page.webp)
+![Accessibility of diary.html](documentation/validation/accessibility/accessibility-diary-page.webp)
+</details>
+
+#### details.html
+
+<details>
+<summary>Click here to see the accessibility report for details.html</summary>
+
+![Accessibility of details.html](documentation/validation/accessibility/accessibility-details-page.webp)
 </details>
 
 #### faq.html
@@ -527,14 +535,60 @@ Accessibility was tested on all pages with the [Wave Accessibility Evaluation To
 ![Accessibility of faq.html](documentation/validation/accessibility/accessibility-faq-page.webp)
 </details>
 
-#### 404.html
+#### contact.html
 
-The error is caused by the auto-redirect on this page, which is a design feature. The alert is for a possible redundant tag, linking to faq.html, which is also part of the intended design:
+<details>
+<summary>Click here to see the accessibility report for contact.html</summary>
+
+![Accessibility of contact.html](documentation/validation/accessibility/accessibility-contact-page.webp)
+</details>
+
+#### register.html
+
+<details>
+<summary>Click here to see the accessibility report for register.html</summary>
+
+![Accessibility of register.html](documentation/validation/accessibility/accessibility-register-page.webp)
+</details>
+
+#### login.html
+
+<details>
+<summary>Click here to see the accessibility report for login.html</summary>
+
+![Accessibility of login.html](documentation/validation/accessibility/accessibility-login-page.webp)
+</details>
+
+#### account.html
+
+<details>
+<summary>Click here to see the accessibility report for account.html</summary>
+
+![Accessibility of account.html](documentation/validation/accessibility/accessibility-account-page.webp)
+</details>
+
+#### update_profile.html
+
+<details>
+<summary>Click here to see the accessibility report for update_profile.html</summary>
+
+![Accessibility of update_profile.html](documentation/validation/accessibility/accessibility-update_profile-page.webp)
+</details>
+
+#### 404.html
 
 <details>
 <summary>Click here to see the accessibility report for 404.html</summary>
 
 ![Accessibility of 404.html](documentation/validation/accessibility/accessibility-404-page.webp)
+</details>
+
+#### 500.html
+
+<details>
+<summary>Click here to see the accessibility report for 500.html</summary>
+
+![Accessibility of 500.html](documentation/validation/accessibility/accessibility-500-page.webp)
 </details>
 
 ## Responsiveness

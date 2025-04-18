@@ -1,3 +1,5 @@
+/* global bootstrap */
+
 /**
  * Display a Bootstrap toast message on page load.
  *
