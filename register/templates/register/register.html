@@ -54,6 +54,18 @@
                 {{ user_form.email }}
             </div>
             <div class="form-group">
+                <label for="id_location" class="mb-3">Location</label>
+                {{ profile_form.location }}
+            </div>
+            <div class="form-group">
+                <label for="id_experience" class="mb-3">Experience Level</label>
+                {{ profile_form.experience }}
+            </div>
+            <div class="form-group">
+                <label for="id_photograph" class="mb-3">Profile Picture</label>
+                {{ profile_form.photograph }}
+            </div>
+            <div class="form-group">
                 <label for="id_password1" class="mb-3" id="id_password1_helptext">Password</label>
                 {{ user_form.password1 }}
             </div>
@@ -67,18 +79,6 @@
                     can't be a commonly used password,
                     and can't be entirely numeric.
                 </p>
-            </div>
-            <div class="form-group">
-                <label for="id_location" class="mb-3">Location</label>
-                {{ profile_form.location }}
-            </div>
-            <div class="form-group">
-                <label for="id_experience" class="mb-3">Experience Level</label>
-                {{ profile_form.experience }}
-            </div>
-            <div class="form-group">
-                <label for="id_photograph" class="mb-3">Profile Picture</label>
-                {{ profile_form.photograph }}
             </div>
             <div class="button-container form-group">
                 <button type="submit" class="base-button green-btn">Register</button>
