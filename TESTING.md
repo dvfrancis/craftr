@@ -8,53 +8,9 @@
 
 1. [Code Validation](#code-validation)
     1. [HTML](#html)
-        1. [index.html]()
-        2. [diary.html]()
-        3. [details.html]()
-        4. [faq.html]()
-        5. [contact.html]()
-        6. [register.html]()
-        7. [login.html]()
-        8. [account.html]()
-        9. [update_profile.html]()
-        10. [404.html]()
-        11. [500.html]()
     2. [CSS](#css)
-        1. [index.html]()
-        2. [diary.html]()
-        3. [details.html]()
-        4. [faq.html]()
-        5. [contact.html]()
-        6. [register.html]()
-        7. [login.html]()
-        8. [account.html]()
-        9. [update_profile.html]()
-        10. [404.html]()
-        11. [500.html]()
     3. [JavaScript](#javascript)
-        1. [index.html]()
-        2. [diary.html]()
-        3. [details.html]()
-        4. [faq.html]()
-        5. [contact.html]()
-        6. [register.html]()
-        7. [login.html]()
-        8. [account.html]()
-        9. [update_profile.html]()
-        10. [404.html]()
-        11. [500.html]()
-    4. [Python]()
-        1. []()
-        2. []()
-        3. []()
-        4. []()
-        5. []()
-        6. []()
-        7. []()
-        8. []()
-        9. []()
-        10. []()
-        11. []()
+    4. [Python](#python)
 2. [Manual Validation](#manual-validation)
     1. [index.html](#404html)
     2. [diary.html]()
@@ -124,79 +80,23 @@
 
 ### HTML
 
-<details>
-<summary>Click here to see the HTML validation report (which covers all pages)</summary>
+- Click to view the [HTML Validation Report](documentation/validation/html/html-validation-report.pdf).
 
-![HTML validation report](documentation/validation/html/html-validation-report.pdf)
-</details>
+- All HTML was validated by direct input of copied page source code into the [W3C Markup Validation Service](https://validator.w3.org).
 
-All HTML was validated by direct input of copied page source code into the [W3C Markup Validation Service](https://validator.w3.org).
-
-The base.html template file has not been tested directly as it is tested as part of the other pages.
+- The base.html template file has been tested as part of all the other pages.
 
 ### CSS
 
-Below are the results of CSS validation for each page, using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
-
-#### index.html
-
-<details>
-<summary>Click here to see the CSS validation report for index.html</summary>
-
-![CSS validation of index.html](documentation/validation/css/css-validation-index-page.webp)
-</details>
-
-#### game.html
-
-<details>
-<summary>Click here to see the CSS validation report for game.html</summary>
-
-![CSS validation of game.html](documentation/validation/css/css-validation-game-page.webp)
-</details>
-
-#### faq.html
-
-<details>
-<summary>Click here to see the CSS validation report for faq.html</summary>
-
-![CSS validation of faq.html](documentation/validation/css/css-validation-faq-page.webp)
-</details>
-
-#### 404.html
-
-<details>
-<summary>Click here to see the CSS validation report for 404.html</summary>
-
-![CSS validation of 404.html](documentation/validation/css/css-validation-404-page.webp)
-</details>
+- Click to view the report from the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
 
 ### JavaScript
 
-Below are the results of JavaScript validation for each script file, using [JSHint](https://jshint.com/).
+- Click to view the report from [JSHint](https://jshint.com/).
 
-#### general.js
+### Python
 
-<details>
-<summary>Click here to see the JavaScript validation report for general.js</summary>
-
-![JavaScript validation of general.js](documentation/validation/javascript/js-validation-general.webp)
-</details>
-
-#### index.js
-
-<details>
-<summary>Click here to see the JavaScript validation report for index.js</summary>
-
-![JavaScript validation of index.js](documentation/validation/javascript/js-validation-index.webp)
-</details>
-
-#### game.js
-
-<details>
-<summary>Click here to see the JavaScript validation report for game.js</summary>
-
-![JavaScript validation of game.js](documentation/validation/javascript/js-validation-game.webp)
-</details>
+- Click to view the report from the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 ## Manual Validation
 
