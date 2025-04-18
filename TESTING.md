@@ -130,6 +130,8 @@ The base.html template file has not been tested directly as it will be tested as
 
 #### index.html
 
+Visual inspection of the page source code appears to show correctly structured HTML without duplication of tags.
+
 <details>
 <summary>Click here to see the HTML validation report for index.html</summary>
 
