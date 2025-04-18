@@ -112,14 +112,131 @@
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Navigation bar link - "Home" | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
-| Navigation bar link - "Game" | Click to open game.html | The user is directed to game.html | The user is directed to game.html | WORKS AS EXPECTED |
-| Navigation bar link - "FAQ" | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
-| Button link - "Play"" | Click to open game.html | The user is directed to game.html | The user is directed to game.html | WORKS AS EXPECTED |
-| Social media icon - Threads | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Footer link - "Dominic Francis" | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link for 'Explore' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Button link for 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
+| Featured class link for 'Introduction to Cricut - Cutting Machine Basics' | Click to open details.html for database item 4 | The user is directed to details.html for database item 4 | The user is directed to details.html for database item 4 | WORKS AS EXPECTED |
+| Featured class link for '3D Modelling for Fabric Designs' | Click to open details.html for database item 4 | The user is directed to details.html for database item 4 | The user is directed to details.html for database item 4 | WORKS AS EXPECTED |
+| Featured class link for 'DIY Leathercraft with Digital Cutting Techniques' | Click to open details.html for database item 17 | The user is directed to details.html for database item 17 | The user is directed to details.html for database item 17 | WORKS AS EXPECTED |
+| Featured class link for 'Laser-Engraved Wood & Acrylic Jewellery' | Click to open details.html for database item 22 | The user is directed to details.html for database item 22 | The user is directed to details.html for database item 22 | WORKS AS EXPECTED |
+| Featured class link for 'Custom Sticker & Decal Design' | Click to open details.html for database item 8 | The user is directed to details.html for database item 8 | The user is directed to details.html for database item 8 | WORKS AS EXPECTED |
+| Featured class link for '3D Printing Basics for DIY Crafting' | Click to open details.html for database item 11 | The user is directed to details.html for database item 11 | The user is directed to details.html for database item 11 | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### diary.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link for 'Details' (for all 21 classes listed) | Click to open details for that class in the database | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### details.html
+
+These results apply to all 21 classes:
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| For a logged in user - button link to 'Enrol' | Click to enrol on the class selected | The user is enrolled on the class selected | The user is enrolled on the class selected | WORKS AS EXPECTED |
+| For a logged in user - button link to go 'Back to Diary' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| For a logged in user, who is enrolled on this class - button link to 'Withdraw' | Click to withdraw from the class enrolled on | The user is withdrawn from the class enrolled on | The user is withdrawn from the class enrolled on | WORKS AS EXPECTED |
+| For a non-logged in user - button link to 'Login' | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| For a non-logged in user - button link to 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### faq.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Accordion header for all 14 items | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### contact.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Input field for 'First name' | Where all other fields are empty, enter first name and click 'Send' | The user is asked to complete their last name | The user is asked to complete their last name | WORKS AS EXPECTED |
+| Input field for 'Last name' | Where other fields are empty (excluding 'First name') enter last name and click 'Send' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
+| Input field for a valid 'Email' | Where other fields are empty (excluding 'First name' and 'Last name'), enter email address and click 'Send' | The user is asked to enter their message | The user is asked to enter their message | WORKS AS EXPECTED |
+| Input field for an invalid 'Email' | Where other fields are empty (excluding 'First name' and 'Last name'), enter email address and click 'Send' | The email is rejected, and the user is asked to enter a valid email address | The email is rejected, and the user is asked to enter a valid email address | WORKS AS EXPECTED |
+| Input field for 'Message' | Where all other fields are completed correctly, enter message and click 'Send' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | The form is accepted, the message is emailed to the organisers, and the user receives aToast informing them 'Your message has been sent' | WORKS AS EXPECTED |
+| Button link to 'Send' | When all fields are completed correctly, click 'Send' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | WORKS AS EXPECTED |
+| Button link to 'Clear' | Enter any information into the field, click 'Clear' | The form is cleared of any input | The form is cleared of any input | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### register.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Input field for 'Username' | Where all other fields are empty, enter username and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
+| Input field for 'First name' | Where all other fields are empty (excluding 'Username') enter first name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
+| Input field for 'Last name' | Where other fields are empty (excluding 'Username') enter last name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
+| Input field for a valid 'Email' | Where other fields are empty (excluding 'Username'), enter email address and click 'Register' | The user is asked to enter their password | The user is asked to enter their password | WORKS AS EXPECTED |
+| Input field for an invalid 'Email' | Where other fields are empty (excluding 'Username'), enter email address and click 'Register' | The email is rejected, and the user is asked to enter a valid email address | The email is rejected, and the user is asked to enter a valid email address | WORKS AS EXPECTED |
+| Input field for a valid 'Password' | Where other fields are empty (excluding 'Username', 'Email', and 'Location'), enter password and click 'Register' | The user is asked to confirm their password | The email is asked to confirm their password | WORKS AS EXPECTED |
+| Input field for a valid 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username', 'Email', and 'Location'), enter matching valid passwords and click 'Register' | The user account is created and logged in. The user is redirected to account.html | The user account is created and logged in. The user is redirected to account.html | WORKS AS EXPECTED |
+| Input field for an invalid non-matching 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username' and 'Email'), enter invalid non-matching passwords and click 'Register' | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | WORKS AS EXPECTED |
+| Button link to 'Register' | Do not complete any fields and click 'Register' | The form returns to the 'Username' field ready for completion | The form returns to the 'Username' field ready for completion | WORKS AS EXPECTED |
+| Button link to 'Clear' | Enter any information into the field, click 'Clear' | The form is cleared of any input | The form is cleared of any input | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 
 ### game.html
 
@@ -136,22 +253,6 @@
 | Game - "Is the next card HIGHER or LOWER than your card?" (when a round is completed successfully) | Player guesses "HIGH" or "LOW" correctly on the final card of a round | A modal dialog appears to inform the player that they won the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | A modal dialog appears to inform the player that they won the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds.  | WORKS AS EXPECTED |
 | Game - "Is the next card HIGHER or LOWER than your card?" (on the penultimate round of a game) | Player guesses "HIGH" or "LOW" correctly on round nine of ten | A modal dialog appears to inform the player that the next round of cards is the final round and asks if they want to continue. If they click "YES" the final deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | A modal dialog appears to inform the player that the next round of cards is the final round and asks if they want to continue. If they click "YES" the final deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | WORKS AS EXPECTED |
 | Game - "Is the next card HIGHER or LOWER than your card?" (on the final round of a game) | Player guesses "HIGH" or "LOW" correctly or incorrectly on round ten | A modal dialog appears to inform the player that the game has finished, and displays their score for that game as well as their highest score of all the games they have played. The player is also asked if they want to continue; if they click "YES" a new game begins, and they make their next guess (The ROUND number resets to one / the CARD number resets to one / their POINTS are reset to 100 / the WAGER is reset to zero); if they click "NO", they are directed to index.html immediately | A modal dialog appears to inform the player that the game has finished, and displays their score for that game as well as their highest score of all the games they have played. The player is also asked if they want to continue; if they click "YES" a new game begins, and they make their next guess (The ROUND number resets to one / the CARD number resets to one / their POINTS are reset to 100 / the WAGER is reset to zero); if they click "NO", they are directed to index.html immediately | WORKS AS EXPECTED |
-| Social media icon - Threads | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Footer link - "Dominic Francis" | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-
-### faq.html
-
-| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
-| --- | --- | --- | --- | --- |
-| Navigation bar link - "Home" | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
-| Navigation bar link - "Game" | Click to open game.html | The user is directed to game.html | The user is directed to game.html | WORKS AS EXPECTED |
-| Navigation bar link - "FAQ" | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
-| Accordion header - "What is HI LO?" | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
-| Accordion header - "How do I play?" | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
-| Accordion header - "Is there a minimum or maximum wager for each round?" | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
-| Accordion header - "Are Aces considered high or low?" | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
 | Social media icon - Threads | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media icon - Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media icon - Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
