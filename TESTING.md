@@ -8,84 +8,148 @@
 
 1. [Code Validation](#code-validation)
     1. [HTML](#html)
-        1. [index.html](#indexhtml)
-        2. [game.html](#gamehtml)
-        3. [faq.html](#faqhtml)
-        4. [404.html](#404html)
+        1. [index.html]()
+        2. [diary.html]()
+        3. [details.html]()
+        4. [faq.html]()
+        5. [contact.html]()
+        6. [register.html]()
+        7. [login.html]()
+        8. [account.html]()
+        9. [update_profile.html]()
+        10. [404.html]()
+        11. [500.html]()
     2. [CSS](#css)
-        1. [index.html](#indexhtml-1)
-        2. [game.html](#gamehtml-1)
-        3. [faq.html](#faqhtml-1)
-        4. [404.html](#404html-1)
+        1. [index.html]()
+        2. [diary.html]()
+        3. [details.html]()
+        4. [faq.html]()
+        5. [contact.html]()
+        6. [register.html]()
+        7. [login.html]()
+        8. [account.html]()
+        9. [update_profile.html]()
+        10. [404.html]()
+        11. [500.html]()
     3. [JavaScript](#javascript)
-        1. [general.js](#generaljs)
-        2. [index.js](#indexjs)
-        3. [game.js](#gamejs)
+        1. [index.html]()
+        2. [diary.html]()
+        3. [details.html]()
+        4. [faq.html]()
+        5. [contact.html]()
+        6. [register.html]()
+        7. [login.html]()
+        8. [account.html]()
+        9. [update_profile.html]()
+        10. [404.html]()
+        11. [500.html]()
+    4. [Python]()
+        1. []()
+        2. []()
+        3. []()
+        4. []()
+        5. []()
+        6. []()
+        7. []()
+        8. []()
+        9. []()
+        10. []()
+        11. []()
 2. [Manual Validation](#manual-validation)
-    1. [index.html](#indexhtml-2)
-    2. [game.html](#gamehtml-2)
-    3. [faq.html](#faqhtml-2)
-    4. [404.html](#404html-2)
-    5. [general.js](#generaljs-1)
-    6. [index.js](#indexjs-1)
-    7. [game.js](#gamejs-1)
-3. [Automated Validation](#automated-validation)
-    1. [general.js](#generaljs-2)
-    2. [index.js](#indexjs-2)
-    3. [game.js](#gamejs-2)
-4. [User Story Validation](#user-story-validation)
+    1. [index.html](#404html)
+    2. [diary.html]()
+    3. [details.html]()
+    4. [faq.html]()
+    5. [contact.html]()
+    6. [register.html]()
+    7. [login.html]()
+    8. [account.html]()
+    9. [update_profile.html]()
+    10. [404.html]()
+    11. [500.html]()
+3. [User Story Validation](#user-story-validation)
     1. [First Time Visitor Goals](#first-time-visitor-goals)
     2. [Returning Visitor Goals](#returning-visitor-goals)
     3. [Frequent Visitor Goals](#frequent-visitor-goals)
-5. [User Personas](#user-personas)
+4. [User Personas](#user-personas)
     1. [User 1](#user-1)
     2. [User 2](#user-2)
     3. [User 3](#user-3)
-    4. [User 4](#user-4)
-6. [Browser Compatibility](#browser-compatibility)
+5. [Browser Compatibility](#browser-compatibility)
     1. [Google Chrome](#google-chrome)
     2. [Microsoft Edge](#microsoft-edge)
     3. [Firefox](#firefox)
     4. [Opera](#opera)
-    5. [Safari (on an iPad)](#safari-on-an-ipad)
-7. [Accessibility](#accessibility)
-    1. [index.html](#indexhtml-3)
-    2. [game.html](#gamehtml-3)
-    3. [faq.html](#faqhtml-3)
-    4. [404.html](#404html-3)
-8. [Responsiveness](#responsiveness)
-    1. [index.html](#indexhtml-4)
-    2. [game.html](#gamehtml-4)
-    3. [faq.html](#faqhtml-4)
-    4. [404.html](#404html-4)
-9. [Performance](#performance)
-    1. [index.html](#indexhtml-5)
-    2. [game.html](#gamehtml-5)
-    3. [faq.html](#faqhtml-5)
-    4. [404.html](#404html-5)
-10. [Fixed Bugs](#fixed-bugs)
-11. [Unfixed Bugs](#unfixed-bugs)
+    5. [Safari](#safari-on-an-ipad)
+6. [Accessibility](#accessibility)
+    1. [index.html]()
+    2. [diary.html]()
+    3. [details.html]()
+    4. [faq.html]()
+    5. [contact.html]()
+    6. [register.html]()
+    7. [login.html]()
+    8. [account.html]()
+    9. [update_profile.html]()
+    10. [404.html]()
+    11. [500.html]()
+7. [Responsiveness](#responsiveness)
+    1. [index.html]()
+    2. [diary.html]()
+    3. [details.html]()
+    4. [faq.html]()
+    5. [contact.html]()
+    6. [register.html]()
+    7. [login.html]()
+    8. [account.html]()
+    9. [update_profile.html]()
+    10. [404.html]()
+    11. [500.html]()
+8. [Performance](#performance)
+    1. [index.html]()
+    2. [diary.html]()
+    3. [details.html]()
+    4. [faq.html]()
+    5. [contact.html]()
+    6. [register.html]()
+    7. [login.html]()
+    8. [account.html]()
+    9. [update_profile.html]()
+    10. [404.html]()
+    11. [500.html]()
+9. [Fixed Bugs](#fixed-bugs)
+10. [Unfixed Bugs](#unfixed-bugs)
 
 ## Code Validation
 
 ### HTML
 
-Below are the results of HTML validation for each page, using the [W3C Markup Validation Service](https://validator.w3.org):
+All HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org):
+
+The base.html template file has not been tested directly as it will be tested as part of the other pages.
 
 #### index.html
 
 <details>
 <summary>Click here to see the HTML validation report for index.html</summary>
 
-![HTML validation of index.html](documentation/validation/html/html-validation-index-page.webp)
+![HTML validation of index.html](documentation/validation/html/html-validation-index.webp)
 </details>
 
-#### game.html
+#### diary.html
 
 <details>
-<summary>Click here to see the HTML validation report for game.html</summary>
+<summary>Click here to see the HTML validation report for diary.html</summary>
 
-![HTML validation of game.html](documentation/validation/html/html-validation-game-page.webp)
+![HTML validation of diary.html](documentation/validation/html/html-validation-diary.webp)
+</details>
+
+#### details.html
+
+<details>
+<summary>Click here to see the HTML validation report for details.html</summary>
+
+![HTML validation of details.html](documentation/validation/html/html-validation-details.webp)
 </details>
 
 #### faq.html
@@ -93,7 +157,47 @@ Below are the results of HTML validation for each page, using the [W3C Markup Va
 <details>
 <summary>Click here to see the HTML validation report for faq.html</summary>
 
-![HTML validation of faq.html](documentation/validation/html/html-validation-faq-page.webp)
+![HTML validation of faq.html](documentation/validation/html/html-validation-faq.webp)
+</details>
+
+#### contact.html
+
+<details>
+<summary>Click here to see the HTML validation report for contact.html</summary>
+
+![HTML validation of contact.html](documentation/validation/html/html-validation-contact.webp)
+</details>
+
+#### register.html
+
+<details>
+<summary>Click here to see the HTML validation report for register.html</summary>
+
+![HTML validation of register.html](documentation/validation/html/html-validation-register.webp)
+</details>
+
+#### login.html
+
+<details>
+<summary>Click here to see the HTML validation report for login.html</summary>
+
+![HTML validation of login.html](documentation/validation/html/html-validation-login.webp)
+</details>
+
+#### account.html
+
+<details>
+<summary>Click here to see the HTML validation report for account.html</summary>
+
+![HTML validation of account.html](documentation/validation/html/html-validation-account.webp)
+</details>
+
+#### update_profile.html
+
+<details>
+<summary>Click here to see the HTML validation report for update_profile.html</summary>
+
+![HTML validation of update_profile.html](documentation/validation/html/html-validation-update-profile.webp)
 </details>
 
 #### 404.html
@@ -101,7 +205,15 @@ Below are the results of HTML validation for each page, using the [W3C Markup Va
 <details>
 <summary>Click here to see the HTML validation report for 404.html</summary>
 
-![HTML validation of 404.html](documentation/validation/html/html-validation-404-page.webp)
+![HTML validation of 404.html](documentation/validation/html/html-validation-404.webp)
+</details>
+
+#### 500.html
+
+<details>
+<summary>Click here to see the HTML validation report for 500.html</summary>
+
+![HTML validation of 500.html](documentation/validation/html/html-validation-500.webp)
 </details>
 
 ### CSS
@@ -279,7 +391,7 @@ Below are the results of JavaScript validation for each script file, using [JSHi
 
 I've done one test for each of the three JavaScript files (general.js, index.js, and game,js) as, unfortunately, I ran out of time to do any more.
 
-The `module.exports` commmand, required by Jest at the end of each JavaScript file, causes an `Uncaught ReferenceError: module is not defined` in the browser. This is because it is Node.js-specific and part of the CommonJS module system, whereas the browser uses the ES6 module system. I have therefore run the tests with this code and then deleted it from each file - this doesn't affect the functioning of the website in any way.
+The `module.exports` command, required by Jest at the end of each JavaScript file, causes an `Uncaught ReferenceError: module is not defined` in the browser. This is because it is Node.js-specific and part of the CommonJS module system, whereas the browser uses the ES6 module system. I have therefore run the tests with this code and then deleted it from each file - this doesn't affect the functioning of the website in any way.
 
 Shown below are the exact commands used in each file, alongside the tests used by the test files.
 
@@ -818,7 +930,7 @@ The fixed bugs listed here are numbered to match the cases logged in the GitGub 
 
 | Bug | Fix |
 | --- | --- |
-| Points reset at the start of each round instead of at the start of a new game, and points are not updating correctly at the start of the new round | I was declaring the code shown above with all the variables at the top of the code, and it was picking up the default value for playerPoints from there everytime the HTML was inserted into the game.html page, when I moved it into the getWager function the problem was resolved |
+| Points reset at the start of each round instead of at the start of a new game, and points are not updating correctly at the start of the new round | I was declaring the code shown above with all the variables at the top of the code, and it was picking up the default value for playerPoints from there every time the HTML was inserted into the game.html page, when I moved it into the getWager function the problem was resolved |
 
 ### Bug 67
 
@@ -848,7 +960,7 @@ The fixed bugs listed here are numbered to match the cases logged in the GitGub 
 
 | Bug | Fix |
 | --- | --- |
-| When `noPoints()` or `finalRound()` are called they immediately redirect to index.html | In both functions, I was calling the leaveGame() function via an addEventListerner event `bsBtn2.addEventListener("click", leaveGame("index.html"));`. However, this immediately runs the called function, so I had to wrap them in an anonymous function so they were only called when the associated button was clicked, and not when the script file itself was loaded `bsBtn2.addEventListener("click", function () {leaveGame("index.html")});` |
+| When `noPoints()` or `finalRound()` are called they immediately redirect to index.html | In both functions, I was calling the leaveGame() function via an addEventListener event `bsBtn2.addEventListener("click", leaveGame("index.html"));`. However, this immediately runs the called function, so I had to wrap them in an anonymous function so they were only called when the associated button was clicked, and not when the script file itself was loaded `bsBtn2.addEventListener("click", function () {leaveGame("index.html")});` |
 
 ### Bug 72
 
@@ -894,7 +1006,7 @@ The unfixed bugs listed here are numbered to match the cases logged in the GitGu
 
 | Bug | Fix |
 | --- | --- |
-| The background image that is being loaded using `background: #1A4E04 url("assets/images/playing-cards-background.webp") center cover no-repeat;` is not loading, and is instead returnng an error in the console | I tried using the following - a combined background selector command, a separate background selector commands, the full file path, the relative file path, a different image location, recreating the image, compressing the image, checking all spelling, checking all tags were closed. None of these fixed the issue. I also brought it up with my mentor, Julia Konovalova, and she couldn't work out why it wasn't working either. She did suggest it might be something to do with Bootstrap. Ultimately, I decided not to use an image on the page |
+| The background image that is being loaded using `background: #1A4E04 url("assets/images/playing-cards-background.webp") center cover no-repeat;` is not loading, and is instead returning an error in the console | I tried using the following - a combined background selector command, a separate background selector commands, the full file path, the relative file path, a different image location, recreating the image, compressing the image, checking all spelling, checking all tags were closed. None of these fixed the issue. I also brought it up with my mentor, Julia Konovalova, and she couldn't work out why it wasn't working either. She did suggest it might be something to do with Bootstrap. Ultimately, I decided not to use an image on the page |
 
 ### Bug 76
 
