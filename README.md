@@ -370,7 +370,6 @@ The website is designed to appeal to all demographics, but the following persona
     - If another user is already logged in, they are logged out automatically beforehand.
     - If they make a mistake on the form, they can click 'Clear' to remove any information entered.
 
-
 - User Login (login.html)
 
     <details>
