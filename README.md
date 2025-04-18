@@ -42,26 +42,27 @@ Click [here] to access the GitHub repository.
     2. [Site Link](#site-link)
     3. [GitHub Repository](#github-repository)
 2. [User Experience Design](#user-experience-design)
-    1. [Strategy](#strategy)
+    1. [Project Board](#project-board)
+    2. [Strategy](#strategy)
         1. [Key Business Goals](#key-business-goals)
         2. [Key User Goals](#key-user-goals)
         3. [User Experience](#user-experience)
         4. [User Expectations](#user-expectations)
         5. [User Stories](#user-stories)
         6. [User Personas](#user-personas)
-    2. [Scope](#scope)
+    3. [Scope](#scope)
         1. [Existing Features](#existing-features)
         2. [Future Features](#future-features)
-    3. [Structure](#structure)
+    4. [Structure](#structure)
         1. [User Flow Diagram](#user-flow-diagram)
         2. [Database Architecture](#database-architecture)
             1. [C R U D Fulfilment](#c-r-u-d-fulfilment)
-    4. [Skeleton](#skeleton)
+    5. [Skeleton](#skeleton)
         1. [Wireframes](#wireframes)
             1. [Mobile](#mobile)
             2. [Tablet](#tablet)
             3. [Desktop](#desktop)
-    5. [Surface](#surface)
+    6. [Surface](#surface)
         1. [Colours](#colours)
         2. [Typography](#typography)
         3. [Media](#media)
@@ -76,6 +77,24 @@ Click [here] to access the GitHub repository.
 7. [Acknowledgements](#acknowledgements)
 
 ## User Experience Design
+
+### Project Board
+
+- A GitHub [project board](https://github.com/users/dvfrancis/projects/6) was used throughout the implementation process to keep track of all project-related tasks, such as adding features, handling bugs, and fulfilling user stories.
+
+   <details>
+    <summary>Click to view a screenshot of the project board</summary>
+            
+    ![Project board](assets/images/project-board-overview.webp)
+    </details>
+
+- Each task was categorised with the relevant milestone and labels (including [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) categorisation).
+
+   <details>
+    <summary>Click to view an example of a project task</summary>
+            
+    ![Project board](assets/images/project-board-task.webp)
+    </details>
 
 ### Strategy
 
@@ -224,6 +243,13 @@ The website is designed to appeal to all demographics, but the following persona
         - *FAQ*: a page of frequently asked questions about the event.
         - *Contact*: allows messages to be sent to the organisers.
         - *Register / Login* (changes to *Account* when a user is logged in): users can create an account on the site from this page, and then use that account to enrol for particular classes.
+
+    <details>
+    <summary>Click to view navigation bar when a user is logged in</summary>
+            
+    ![Navigation bar when a user logged in](assets/images/nav-bar-when-user-logged-in.webp)
+    </details>
+
     - Hidden navigation links:
         - *Base Template*: contains the code for the header and the footer and is used by all pages, which helps reduce duplication of code. It is not directly accessible to a website user.
         - *Details*: shown when a user is on the classes page and clicks the details button. It contains information specific to a chosen class, which is generated automatically from information stored in the database.
@@ -281,6 +307,29 @@ The website is designed to appeal to all demographics, but the following persona
     </details>
 
     - When someone clicks on the 'Details' button on the diary of classes, it brings them to a specific page that gives in-depth information about that particular class. Information includes when the class will run, an indication of difficulty level, and an overview of what will be covered. It also includes information about the instructor of the class, and their biography.
+    - When not logged in, the buttons on the page change to 'Login' and 'Register' to encourage sign-up. If a user clicks 'Login' it takes them to the login page to enter their username and password and, upon successful login, returns them to the class page to allow them to enrol for the class.
+
+    <details>
+    <summary>Click to view buttons when user is not logged in</summary>
+            
+    ![Buttons when user not logged in](assets/images/user-not-logged-in-buttons.webp)
+    </details>
+
+    - When logged in, the buttons change to 'Enrol' and 'Back to Diary'.
+
+    <details>
+    <summary>Click to view buttons when user is logged in</summary>
+            
+    ![Buttons when user logged in](assets/images/user-logged-in-buttons.webp)
+    </details>
+
+    - If a user clicks 'Enrol' they will see the button change to 'Withdraw', allowing them to change their mind if so desired.
+
+    <details>
+    <summary>Click to view buttons when user logged in and enrolled</summary>
+            
+    ![Buttons when user logged in and enrolled](assets/images/user-logged-in-and-enrolled-buttons.webp)
+    </details>
 
 - FAQ (faq.html)
 
@@ -342,9 +391,16 @@ The website is designed to appeal to all demographics, but the following persona
     </details>
 
     - The user account page displays all of the user's information entered when the account was created.
-    - It also lists all of the classes that the user has been enrolled on.
     - The 'Edit' button takes the user to a screen where they can update any of the personal information stored about them.
     - The 'Delete Account' button allows the user to remove their account entirely. They are prompted to ask if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time.
+    - A user can also see a list of all the classes that they're enrolled on.
+    - Users can 'Withdraw' from a class, or see 'Details' about any class they have enrolled on, by clicking the corresponding button beneath the enrolment. The list of enrolments updates dynamically if a user withdraws from a class.
+
+    <details>
+    <summary>Click to view 'Withdraw' and 'Details' buttons under each enrolment on the user account page</summary>
+            
+    ![Buttons under enrolled classes](assets/images/buttons-under-enrolled-classes.webp)
+    </details>
 
 - Update User Profile (update_profile.html)
 
@@ -898,10 +954,11 @@ The following images are only used when no class, instructor, or user image has 
 
 ## Technologies Used
 
-- [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), and [JavaScript.](https://en.wikipedia.org/wiki/JavaScript) for page structure and interaction.
+- [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), and [JavaScript.](https://en.wikipedia.org/wiki/JavaScript) for page presentation / interaction.
 - [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) for website styling.
 - [Python](https://www.python.org/) for website coding.
 - [Django](https://www.djangoproject.com/) website framework.
+- [PostgreSQL](https://www.postgresql.org/) website database.
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) troubleshooting and testing (plus [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) feedback on performance).
 - [GitHub](https://github.com/) versioning control.
 - [Heroku](https://www.heroku.com/) website deployment.
@@ -925,7 +982,6 @@ The following images are only used when no class, instructor, or user image has 
 - [Responsive Web Design Checker](https://responsivedesignchecker.com/) website responsiveness checker.
 - [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/) CSS reset code.
 - [Website Mockup Generator](https://websitemockupgenerator.com/) previewing website oon different devices.
-- [GoFullPage](https://gofullpage.com/) website previews (Firefox does not support this).
 - [Deposit Photos](https://depositphotos.com/) images.
 - [Sarah Renae Clarke's Colour Catalogue V2](https://sarahrenaeclark.com/color-palettes/) colours.
 - [Pixillion Image Converter Software](https://www.nchsoftware.com/imageconverter/index.html?theme=webp&kw=webp%20converter&m=e&d=c&c=76691136445782&ag=1227055160311186&msclkid=024126ffbd141fc2bb514100770aa72b&utm_source=bing&utm_medium=cpc&utm_campaign=EN-C1&utm_term=webp%20converter&utm_content=Pixillion%20-%20WebP%20Converter) any image to webp converter.
@@ -933,10 +989,12 @@ The following images are only used when no class, instructor, or user image has 
 - [Cloudinary](https://cloudinary.com/) image hosting.
 - [Artistly AI Image Generator](https://artistly.ai/go/) AI logo and image generator.
 - [This Person Does Not Exist](https://thispersondoesnotexist.com/) AI face generator.
-- [Beautify](https://marketplace.visualstudio.com/items/?itemName=HookyQR.beautify) Visual Studio Code plugin for code formatting.
-- [Code Spell Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker) Visual Studio Code plugin for checking spelling.
-- [GitHub Copilot](https://marketplace.visualstudio.com/items/?itemName=GitHub.copilot) Visual Studio Code plugin for AI coding help.
-- [Flake8](https://marketplace.visualstudio.com/items/?itemName=ms-python.flake8) Visual Studio Code plugin for Python linting.
+- [Beautify](https://marketplace.visualstudio.com/items/?itemName=HookyQR.beautify) Visual Studio Code plugin - code formatting.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker) Visual Studio Code plugin - spelling checker.
+- [GitHub Copilot](https://marketplace.visualstudio.com/items/?itemName=GitHub.copilot) Visual Studio Code plugin - AI coding help.
+- [Flake8](https://marketplace.visualstudio.com/items/?itemName=ms-python.flake8) Visual Studio Code plugin - Python linting.
+- [GoFullPage](https://gofullpage.com/) browser plugin - website previews (not supported by Firefox).
+- [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) browser plugin - responsive design tester.
 
 ## Deployment
 
