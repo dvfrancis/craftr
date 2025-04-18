@@ -117,7 +117,7 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when a user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Button link for 'Explore' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Button link for 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
 | Featured class link for 'Introduction to Cricut - Cutting Machine Basics' | Click to open details.html for database item 4 | The user is directed to details.html for database item 4 | The user is directed to details.html for database item 4 | WORKS AS EXPECTED |
@@ -141,7 +141,7 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Button link for 'Details' (for all 21 classes listed) | Click to open details for that class in the database | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
 | Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -160,7 +160,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | For a logged in user - button link to 'Enrol' | Click to enrol on the class selected | The user is enrolled on the class selected | The user is enrolled on the class selected | WORKS AS EXPECTED |
 | For a logged in user - button link to go 'Back to Diary' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | For a logged in user, who is enrolled on this class - button link to 'Withdraw' | Click to withdraw from the class enrolled on | The user is withdrawn from the class enrolled on | The user is withdrawn from the class enrolled on | WORKS AS EXPECTED |
@@ -181,7 +181,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Accordion header for all 14 items | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
 | Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -198,7 +198,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty, enter first name and click 'Send' | The user is asked to complete their last name | The user is asked to complete their last name | WORKS AS EXPECTED |
 | Input field for 'Last name' | Where other fields are empty (excluding 'First name') enter last name and click 'Send' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for a valid 'Email' | Where other fields are empty (excluding 'First name' and 'Last name'), enter email address and click 'Send' | The user is asked to enter their message | The user is asked to enter their message | WORKS AS EXPECTED |
@@ -221,14 +221,14 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Account' | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Input field for 'Username' | Where all other fields are empty, enter username and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty (excluding 'Username') enter first name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for 'Last name' | Where other fields are empty (excluding 'Username') enter last name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for a valid 'Email' | Where other fields are empty (excluding 'Username'), enter email address and click 'Register' | The user is asked to enter their password | The user is asked to enter their password | WORKS AS EXPECTED |
 | Input field for an invalid 'Email' | Where other fields are empty (excluding 'Username'), enter email address and click 'Register' | The email is rejected, and the user is asked to enter a valid email address | The email is rejected, and the user is asked to enter a valid email address | WORKS AS EXPECTED |
 | Input field for a valid 'Password' | Where other fields are empty (excluding 'Username', 'Email', and 'Location'), enter password and click 'Register' | The user is asked to confirm their password | The email is asked to confirm their password | WORKS AS EXPECTED |
-| Input field for a valid 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username', 'Email', and 'Location'), enter matching valid passwords and click 'Register' | The user account is created and logged in. The user is redirected to account.html | The user account is created and logged in. The user is redirected to account.html | WORKS AS EXPECTED |
+| Input field for a valid 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username', 'Email', and 'Location'), enter matching valid passwords and click 'Register' | The user account is created and logged in. The user is redirected to account.html, and receives the Toast message "Account created, and logged in" | The user account is created and logged in. The user is redirected to account.html, and receives the Toast message "Account created, and logged in" | WORKS AS EXPECTED |
 | Input field for an invalid non-matching 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username' and 'Email'), enter invalid non-matching passwords and click 'Register' | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | WORKS AS EXPECTED |
 | Button link to 'Register' | Do not complete any fields and click 'Register' | The form returns to the 'Username' field ready for completion | The form returns to the 'Username' field ready for completion | WORKS AS EXPECTED |
 | Button link to 'Clear' | Enter any information into the field, click 'Clear' | The form is cleared of any input | The form is cleared of any input | WORKS AS EXPECTED |
@@ -238,189 +238,104 @@ These results apply to all 21 classes:
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 
-### game.html
+### login.html
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Navigation bar link - "Home" | Click to open index.html | The user is asked if they want to leave the game. If they click 'Yes', they are directed to index.html, following a five second delay. If they click 'No' the modal dialog disappears, and they remain on game.html  | The user is asked if they want to leave the game. If they click 'Yes', they are directed to index.html, following a five second delay. If they click 'No' the modal dialog disappears, and they remain on game.html | WORKS AS EXPECTED |
-| Navigation bar link - "Game" | Click to open game.html | The user is asked if they want to leave the game. If they click 'Yes', game.html is reloaded in the same window (and a new game begins), following a five second delay. If they click 'No' the modal dialog disappears, and they continue their current game on game.html |  The user is asked if they want to leave the game. If they click 'Yes', game.html is reloaded in the same window (and a new game begins), following a five second delay. If they click 'No' the modal dialog disappears, and they continue their current game on game.html | WORKS AS EXPECTED |
-| Navigation bar link - "FAQ" | Click to open faq.html | The user is asked if they want to leave the game. If they click 'Yes', they are directed to faq.html, following a five second delay. If they click 'No' the modal dialog disappears, and they remain on game.html | The user is asked if they want to leave the game. If they click 'Yes', they are directed to faq.html, following a five second delay. If they click 'No' the modal dialog disappears, and they remain on game.html | WORKS AS EXPECTED |
-| Game - wager entry field (with a valid entry - more than zero and less than total player points) | Enter a valid wager amount, and click 'OK' to submit | The player's wager is accepted, and they are prompted to guess if the next card is higher or lower | The player's wager is accepted, and they are prompted to guess if the next card is higher or lower | WORKS AS EXPECTED |
-| Game - wager entry field (with an invalid entry - more than total player points / a zero amount / a blank entry / a text entry) | Enter an invalid wager amount, and click 'OK' to submit | The player's wager is rejected, the field is cleared, a message is displayed "Your wager must be a number between 1 and `playerPoints`. Please try again.", and they are able to re-enter a new amount | The player's wager is rejected, the field is cleared, a message is displayed "Your wager must be a number between 1 and `playerPoints`. Please try again.", and they are able to re-enter a new amount | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (with a valid guess) | Player guesses "HIGH" or "LOW" correctly | The next card is displayed, and the game continues | The next card is displayed, and the game continues | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (with an invalid guess) | Player guesses "HIGH" or "LOW" incorrectly | The next card is displayed but a modal dialog appears to inform the player that they have lost the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are decreased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are decreased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | The next card is displayed but a modal dialog appears to inform the player that they have lost the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are decreased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are decreased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (when it's a draw) | Player guesses "HIGH" or "LOW" correctly | The next card is displayed, but a modal dialog appears to inform the player that it was a draw. The player does not lose their wager, and their points are not reduced | The next card is displayed, but a modal dialog appears to inform the player that it was a draw. The player does not lose their wager, and their points are not reduced | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (when a round is completed successfully) | Player guesses "HIGH" or "LOW" correctly on the final card of a round | A modal dialog appears to inform the player that they won the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | A modal dialog appears to inform the player that they won the round and asks if they want to continue. If they click "YES" a new deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds.  | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (on the penultimate round of a game) | Player guesses "HIGH" or "LOW" correctly on round nine of ten | A modal dialog appears to inform the player that the next round of cards is the final round and asks if they want to continue. If they click "YES" the final deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | A modal dialog appears to inform the player that the next round of cards is the final round and asks if they want to continue. If they click "YES" the final deck of cards is dealt, and they make their next guess (The ROUND number increases / the CARD number increases / their POINTS are increased by the wager amount / the WAGER is reset to zero); if they click "NO", the CARD number increases, their POINTS are increased by the wager amount, their final score is displayed, and they are directed to index.html after five seconds | WORKS AS EXPECTED |
-| Game - "Is the next card HIGHER or LOWER than your card?" (on the final round of a game) | Player guesses "HIGH" or "LOW" correctly or incorrectly on round ten | A modal dialog appears to inform the player that the game has finished, and displays their score for that game as well as their highest score of all the games they have played. The player is also asked if they want to continue; if they click "YES" a new game begins, and they make their next guess (The ROUND number resets to one / the CARD number resets to one / their POINTS are reset to 100 / the WAGER is reset to zero); if they click "NO", they are directed to index.html immediately | A modal dialog appears to inform the player that the game has finished, and displays their score for that game as well as their highest score of all the games they have played. The player is also asked if they want to continue; if they click "YES" a new game begins, and they make their next guess (The ROUND number resets to one / the CARD number resets to one / their POINTS are reset to 100 / the WAGER is reset to zero); if they click "NO", they are directed to index.html immediately | WORKS AS EXPECTED |
-| Social media icon - Threads | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Footer link - "Dominic Francis" | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Input field for 'Username' | Where all other fields are empty, enter username and click 'Login' | The user is asked to complete their password | The user is asked to complete their password | WORKS AS EXPECTED |
+| Input field for 'Password' | Where all other fields are empty, enter password and click 'Login' | The user is asked to complete their username | The user is asked to complete their username | WORKS AS EXPECTED |
+| Input field for a valid 'Username' and 'Password' | Enter a valid username and password, and click 'Login' | The user is logged in, redirected to account.html, and receives the Toast "You have been logged in successfully!" | The user is logged in, redirected to account.html, and receives the Toast "You have been logged in successfully!" | WORKS AS EXPECTED |
+| Input field for a valid 'Username' and invalid 'Password' | Enter a valid username but invalid password, and click 'Login' | The password field is cleared and the user receives a Toast message saying "Invalid username or password. Please try again." | The password field is cleared and the user receives a Toast message saying "Invalid username or password. Please try again." | WORKS AS EXPECTED |
+| Input field for a invalid 'Username' and valid 'Password' | Enter an invalid username but valid password, and click 'Login' | The password field is cleared and the user receives a Toast message saying "Invalid username or password. Please try again." | The password field is cleared and the user receives a Toast message saying "Invalid username or password. Please try again." | WORKS AS EXPECTED |
+| Button link to 'Login' | Do not complete any fields and click 'Login' | The form returns to 'Username' and prompts for it to completed | The form returns to 'Username' and prompts for it to completed | WORKS AS EXPECTED |
+| Button link to 'Clear' | Whether or not the fields are completed, click 'Clear' | Both fields are cleared of any input | Both fields are cleared of any input | WORKS AS EXPECTED |
+| Button link to 'Register' | Whether or not the fields are completed, click 'Register' | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### account.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link beneath any class enrolments to view 'Details' | Click 'Details' below any enrolled class | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
+| Button link beneath any class enrolments to view 'Withdraw' | Click 'Withdraw' below any enrolled class | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | WORKS AS EXPECTED |
+| Button link to 'Logout' | Click 'Logout' | Both fields are cleared of any input | Both fields are cleared of any input | WORKS AS EXPECTED |
+| Button link to 'Edit' | Click 'Edit' | The user is directed to update_profile.html | The user is directed to update_profile.html | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+
+### update_profile.html
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link to 'Save' | Click 'Save' | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | WORKS AS EXPECTED |
+| Button link to 'Clear' | Click 'Clear' | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | WORKS AS EXPECTED |
+| Button link to 'Cancel' | Click 'Cancel' | No changes are made and the user is directed to account.html | No changes are made and the user is directed to account.html | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 
 ### 404.html
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Navigation bar link - "Home" | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
-| Navigation bar link - "Game" | Click to open game.html | The user is directed to game.html | The user is directed to game.html | WORKS AS EXPECTED |
-| Navigation bar link - "FAQ" | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
-| Navigation link in text - "Alternatively, you might want to play your cards right by visiting the FAQ" | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
-| Auto redirect (after 15 seconds) | The page is automatically redirected to index.html after 15 seconds have elapsed | The index.html page loads after 15 seconds | The index.html page loads after 15 seconds | WORKS AS EXPECTED |
-| Social media icon - Threads | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Social media icon - Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
-| Footer link - "Dominic Francis" | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 
-### general.js
-
-| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
-| --- | --- | --- | --- | --- |
-| Function `updateCopyrightYear()` | Keep copyright year current, in each page footer | The copyright year is set to the current year, in all footer sections | The copyright year is set to the current year, in all footer sections | WORKS AS EXPECTED |
-
-### index.js
+### 500.html
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Function `startGame()` | Start the game when 'PLAY' is clicked | User is taken to game.html and a new game begins | User is taken to game.html and a new game begins | WORKS AS EXPECTED |
-
-### game.js
-
-| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
-| --- | --- | --- | --- | --- |
-| Function `displayPoints()` | Read `playerPoints` and display on game.html | The player's points are shown on game.html | The player's points are shown on game.html | WORKS AS EXPECTED |
-| Function `decideAces()` | Generate a True or False value, store as "HIGH" or "LOW", and pass value when calling `amendCardsObject()`  | acesValue stores "HIGH" or "LOW" and this is passed to `amendCardsObject()` | acesValue stores "HIGH" or "LOW" and this is passed to `amendCardsObject()` | WORKS AS EXPECTED |
-| Function `amendCardsObject()` | Update `cardsObject` so the value of any Aces are either 1 or 14 | `cardsObject` contains Aces that have a value of either 1 or 14 | `cardsObject` contains Aces that have a value of either 1 or 14 | WORKS AS EXPECTED |
-| Function `displayAces()` | Read `acesValue` and display on game.html | "ACES ARE LOW" or "ACES ARE HIGH" is displayed on game.html  | "ACES ARE LOW" or "ACES ARE HIGH" is displayed on game.html | WORKS AS EXPECTED |
-| Function `createModal()` | Create and store a Bootstrap modal dialog, insert at the end of the HTML file | The modal is inserted into the HTML, and `messageModal` contains a DOM reference to the newly created modal | The modal is inserted into the HTML, and `messageModal` contains a DOM reference to the newly created modal | WORKS AS EXPECTED |
-| Function `displayModal()` | If `messageModal` exists then make it visible, or log an error message | The modal is displayed on the page, or an error is logged | The modal is displayed on the page, or an error is logged | WORKS AS EXPECTED |
-| Function `deleteModal()` | If `messageModal` exists then delete it, or log an error message | The modal is deleted from the HTML file, or an error is logged | The modal is deleted from the HTML file, or an error is logged | WORKS AS EXPECTED |
-| Function `shuffleCards()` | Make an API call to shuffle a new pack of cards, set initial variables for the game, and call `drawCards()` | A new deck of cards is generated, variables initialised, and `drawCards()` called | A new deck of cards is generated, variables initialised, and `drawCards()` called | WORKS AS EXPECTED |
-| Function `drawCards()` | Draw five cards, create the initial card view and display the first card, display the wager, reset all initial variables before the round starts, decide and display value of Aces for the round, display round and card number, and call `getWager()` | Five cards are displayed, along with all other relevant information, and `getWager()` is called | Five cards are displayed, along with all other relevant information, and `getWager()` is called | WORKS AS EXPECTED |
-| Function `displayRound()` | Read `roundCount` and display on game.html | The current round number is displayed | The current round number is displayed | WORKS AS EXPECTED |
-| Function `initialView()` | Create and display the initial card view | The initial card view is displayed | The initial card view is displayed | WORKS AS EXPECTED |
-| Function `getWager()` | Get the player's wager, and pass value when calling `handleWagerSubmit()` | Get a wager amount from the player, and pass value when calling `handleWagerSubmit()` | Get a wager amount from the player, and pass value when calling `handleWagerSubmit()` | WORKS AS EXPECTED |
-| Function `handleWagerSubmit()` | Check that the player's wager is valid | A valid wager is stored in `playerWager`, the current card number is displayed on game.html, the current wager is displayed on game.html, and `playerChoice()` is called | A valid wager is stored in `playerWager`, the current card number is displayed on game.html, the current wager is displayed on game.html, and `playerChoice()` is called | WORKS AS EXPECTED |
-| Function `displayWager()` | Read `playerWager` and display on game.html | The current wager is displayed | The current wager is displayed | WORKS AS EXPECTED |
-| Function `playerChoice()` | Get the player's higher or lower choice, and pass the value when calling `flipCard()`  | The player's choice is passed to `flipCard()` | The player's choice is passed to `flipCard()` | WORKS AS EXPECTED |
-| Function `flipCard()` | Use `playerChoice()` to reveal each card, based on whether the choice was valid or not. Display the card and call `playerChoice()` | The card is revealed | The card is revealed | WORKS AS EXPECTED |
-| Function `displayCard()` | Read `totalCards` and display on game.html | The current card number is displayed | The current card number is displayed | WORKS AS EXPECTED |
-| Function `calculateOutcome()` | Calculate if the player's choice was correct and what the next step should be | The player's choice is evaluated and they are then directed to the next step (based on that calculation) | The player's choice is evaluated and they are then directed to the next step (based on that calculation) | WORKS AS EXPECTED |
-| Function `continueGame()` | Display the appropriate modal dialog asking if the player wishes to continue, based on the result of their last guess | The correct modal dialog is displayed | The correct modal dialog is displayed | WORKS AS EXPECTED |
-| Function `decideGameState()` | Determine where the player is in the game | Player is guided along the correct decision path based on their position in the game | Player is guided along the correct decision path based on their position in the game | WORKS AS EXPECTED |
-| Function `gameOver()` | Display modal dialog at the end of a game, asking what the player wants to do next | Modal dialog is displayed, and player decides whether to play again or exit the game | Modal dialog is displayed, and player decides whether to play again or exit the game | WORKS AS EXPECTED |
-| Function `displayScore()` | If player exits a game early, display their final score and redirect to index.html | Final score is displayed, and player is directed to the correct page according to their choice | Final score is displayed, and player is directed to the correct page according to their choice | WORKS AS EXPECTED |
-| Function `finalRound()` | Display a modal dialog informing the player they have reached the final round, and ask if they want to continue | A modal dialog is displayed and player chooses next step | A modal dialog is displayed and player chooses next step | WORKS AS EXPECTED |
-| Function `noPoints()` | End the game if the player has exhausted their points | A modal dialog is displayed informing the player they have no points remaining, and asking what they wish to do next | A modal dialog is displayed informing the player they have no points remaining, and asking what they wish to do next | WORKS AS EXPECTED |
-| Function `leaveGame()` | Display a modal dialog asking the player if they want to abandon the game | A modal dialog is displayed and player chooses next step; if they want to leave, their final score is displayed and they are redirected to index.html after five seconds; if not, they remain on the same page | A modal dialog is displayed and player chooses next step; if they want to leave, their final score is displayed and they are redirected to index.html after five seconds; if not, they remain on the same page | WORKS AS EXPECTED |
-
-## Automated Validation
-
-I've done one test for each of the three JavaScript files (general.js, index.js, and game,js) as, unfortunately, I ran out of time to do any more.
-
-The `module.exports` command, required by Jest at the end of each JavaScript file, causes an `Uncaught ReferenceError: module is not defined` in the browser. This is because it is Node.js-specific and part of the CommonJS module system, whereas the browser uses the ES6 module system. I have therefore run the tests with this code and then deleted it from each file - this doesn't affect the functioning of the website in any way.
-
-Shown below are the exact commands used in each file, alongside the tests used by the test files.
-
-### general.js
-
-Export command for Jest testing (removed after testing)
-
-```
-module.exports = {
-    updateCopyrightYear
-};
-```
-
-Jest tests from general.test.js:
-
-```
-describe('updating the copyright year', () => {
-    beforeEach(() => {
-        document.body.innerHTML = '<div id="copyright"></div>'; // Create mock DOM element for testing
-    });
-
-    test('should update copyright year', () => {
-        const {
-            updateCopyrightYear
-        } = require('../general'); // Import JavaScript file
-        updateCopyrightYear(); // Run function to be tested
-        const yearNow = new Date().getFullYear(); // Create yearNow variable for testing below
-        expect(document.getElementById('copyright').innerHTML).toBe(` ${yearNow} `); // Assert the result
-    });
-});
-```
-
-### index.js
-
-Export command for Jest testing (removed after testing)
-
-```
-module.exports = {
-  startGame
-};
-```
-
-Jest tests from index.test.js:
-
-```
-describe('starting the game', () => {
-    beforeEach(() => {
-        document.body.innerHTML = '<input type="submit" id="play-game" value="PLAY">'; // Create mock DOM element for testing
-        delete window.location; // Remove current window object
-        window.location = {
-            href: ''
-        }; // Create mock window object
-    });
-
-    test('should navigate to game.html when play-game button clicked', () => {
-        const {
-            startGame
-        } = require('../index'); // Import JavaScript file
-        startGame(); // Run function to be tested
-        const playGame = document.getElementById("play-game");
-        playGame.click(); // Simulate play-game button click
-        expect(window.location.href).toBe("game.html"); // Assert the result
-    });
-});
-```
-
-### game.js
-
-Export command for Jest testing (removed after testing)
-
-```
-module.exports = {
-  leaveGame
-};
-```
-
-Jest tests from game.test.js:
-
-```
-describe('gameplay', () => {
-    beforeEach(() => {
-        document.body.innerHTML = '<input type="submit" id="play-game" value="PLAY">';
-        delete window.location;
-        window.location = {
-            href: ''
-        };
-    });
-
-    test("leaveGame function should navigate to specified URL", () => {
-        const {
-            leaveGame
-        } = require('../game');
-        const testUrl = "index.html";
-        leaveGame(testUrl);
-        expect(window.location.href).toBe(testUrl);
-    });
-});
-```
-
-All three tests passed successfully.
-
-![Automated test results](documentation/validation/automated/automated-validation-results.webp)
+| Navigation link for site logo | Click logo to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Home' | Click to open index.html | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
+| Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
+| Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
+| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Social media link for GitHub | Click to open the Craftr project repository in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 
 ## User Story Validation
 
