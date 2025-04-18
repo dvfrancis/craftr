@@ -35,11 +35,12 @@
             <div class="col-lg-8">
                 <div class="form-container mt-5 mb-5">
                     {% if user.profile and user.profile.photograph %}
+                    <h2 class="mb-3">Welcome back, {{ user.first_name }}!</h2>
                     <p class="site-heading">Username</p>
                     <p>{{ user.username }}</p>
                     <div class="text-center">
                         <img src="{{ user.profile.photograph.url }}" alt="Profile photo"
-                            class="photo-image mt-3 mb-5 img-fluid rounded-circle" />
+                            class="photo-image mt-3 mb-5 img-fluid rounded-circle">
                     </div>
                     <p class="site-heading">Name</p>
                     <p>{{ user.first_name }} {{ user.last_name }}</p>
@@ -84,7 +85,7 @@
         </div>
     </section>
     <!-- Page buttons -->
-    <section class="container text-center mt-5 mb-2">
+    <aside class="container text-center mt-5 mb-2">
         <div class="row justify-content-center g-3">
             <div class="col-md-auto">
                 <form method="POST" action="{% url 'logout' %}">
@@ -105,7 +106,7 @@
             </div>
             {% endif %}
         </div>
-    </section>
+    </aside>
 
 </main>
 
