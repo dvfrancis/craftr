@@ -14,7 +14,12 @@ class UserRegistrationForm(UserCreationForm):
     Attributes:
         email (EmailField): A required email field.
     """
-    email = forms.EmailField(required=True)
+    email = forms.EmailField(
+        required=True,
+        widget=forms.EmailInput(
+            attrs={"placeholder": "Enter your email address"}
+        )
+    )
 
     class Meta:
         model = User
@@ -36,16 +41,16 @@ class UserRegistrationForm(UserCreationForm):
             "last_name": forms.TextInput(
                 attrs={"placeholder": "Enter your last name"}
             ),
-            "email": forms.EmailInput(
-                attrs={"placeholder": "Enter your email address"}
-            ),
-            "password1": forms.PasswordInput(
-                attrs={"placeholder": "Enter your password"}
-            ),
-            "password2": forms.PasswordInput(
-                attrs={"placeholder": "Confirm your password"}
-            ),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["password1"].widget = forms.PasswordInput(
+            attrs={"placeholder": "Enter your password"}
+        )
+        self.fields["password2"].widget = forms.PasswordInput(
+            attrs={"placeholder": "Confirm your password"}
+        )
 
 
 class UserUpdateForm(forms.ModelForm):
