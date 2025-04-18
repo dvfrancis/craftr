@@ -94,9 +94,11 @@
 
 ### JavaScript
 
-- Click to view the [JavaScript Validation Report](documentation/validation/javascript/).
+- Click to view the [JavaScript Validation Report](documentation/validation/javascript/javascript-validation-report.pdf).
 
 - All JavaScript code was tested using [JSHint](https://jshint.com/).
+
+- I did not need to use JavaScript in this project, except for the provision of Bootstrap Toast messages.
 
 ### Python
 
