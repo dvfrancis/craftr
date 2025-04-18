@@ -12,17 +12,17 @@
     3. [JavaScript](#javascript)
     4. [Python](#python)
 2. [Manual Validation](#manual-validation)
-    1. [index.html](#404html)
-    2. [diary.html]()
-    3. [details.html]()
-    4. [faq.html]()
-    5. [contact.html]()
-    6. [register.html]()
-    7. [login.html]()
-    8. [account.html]()
-    9. [update_profile.html]()
-    10. [404.html]()
-    11. [500.html]()
+    1. [index.html](#indexhtml)
+    2. [diary.html](#diaryhtml)
+    3. [details.html](#detailshtml)
+    4. [faq.html](#faqhtml)
+    5. [contact.html](#contacthtml)
+    6. [register.html](#registerhtml)
+    7. [login.html](#loginhtml)
+    8. [account.html](#accounthtml)
+    9. [update_profile.html](#update_profilehtml)
+    10. [404.html](#404html)
+    11. [500.html](#500html)
 3. [User Story Validation](#user-story-validation)
     1. [First Time Visitor Goals](#first-time-visitor-goals)
     2. [Returning Visitor Goals](#returning-visitor-goals)
@@ -341,86 +341,119 @@ These results apply to all 21 classes:
 
 ### First Time Visitor Goals
 
-“What is this website about?”
+"What is Craftr about?” and “How do I sign up?”
 
 <details>
-<summary>Click here to see proof of first time visitor goal number 1</summary>
+<summary>Click here to see proof of first time visitor goal number 1 and 4</summary>
 
-![First time visitor goal 1](documentation/validation/user-stories-personas/first-time-visitor-goal-1.webp)
+![First time visitor goal 1 and 4](documentation/validation/users-stories-personas/first-time-visitor-goal-1-4.webp)
 </details>
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Home page | Scroll down to the text box | View information about the website | View information about the website | WORKS AS EXPECTED |
+| Home page | Scroll down to the hero section and below | View information about the event, and register | View information about register | WORKS AS EXPECTED |
 
-“How do you play the game?”, “What are the rules of the game?”, and "What can I win?"
+“What training is being given?” and "When do the classes happen?"
 
 <details>
-<summary>Click here to see proof of first time visitor goals 2 to 4</summary>
+<summary>Click here to see proof of first time visitor goals 2 and 3</summary>
 
-![First time visitor goal 2 to 4](documentation/validation/user-stories-personas/first-time-visitor-goal-2-to-4.webp)
+![First time visitor goal 2 and 3](documentation/validation/users-stories-personas/first-time-visitor-goal-2-3.webp)
 </details>
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| FAQ page | Navigate to the FAQ page using the navigation link at the top of each page, and scroll down to the FAQ accordion | View information about the game and how to play it | View information about the game and how to play it | WORKS AS EXPECTED |
+| Classes page | Scroll down to the complete list of classes | See what classes are running, and at the exact day and time | See what classes are running, and at the exact day and time | WORKS AS EXPECTED |
 
 ### Returning Visitor Goals
 
-“Will I be able to beat my score from the last time I played?”
+“What other classes am I interested in attending?” and "When is my class due to start?"
 
 <details>
-<summary>Click here to see proof of the returning visitor goal</summary>
+<summary>Click here to see proof of the returning visitor goals 1 and 2</summary>
 
-![Returning visitor goal](documentation/validation/user-stories-personas/returning-visitor-goal.webp)
+![Returning visitor goals 1 and 2](documentation/validation/users-stories-personas/returning-visitor-goal-1-2.webp)
 </details>
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Game page | Complete a game of 10 rounds of five cards | Modal dialog displays current game score, and highest previous score | Modal dialog displays current game score, and highest previous score | WORKS AS EXPECTED |
+| Classes page | Scroll down to the complete list of classes | See what classes are running, and at the exact day and time | See what classes are running, and at the exact day and time | WORKS AS EXPECTED |
+
+"Where can I keep track of the classes I've signed up for?"
+
+<details>
+<summary>Click here to see proof of the returning visitor goals 3</summary>
+
+![Returning visitor goal 3](documentation/validation/users-stories-personas/returning-visitor-goal-3.webp)
+</details>
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Account page | When logged in, scroll down to the complete list of enrolled classes | User can see the exact classes they are enrolled on | User can see the exact classes they are enrolled on | WORKS AS EXPECTED |
 
 ### Frequent Visitor Goals
 
-“I would like to play the game on my mobile device, while travelling”
+“Who running my class?”
 
 <details>
-<summary>Click here to see proof of the frequent visitor goal</summary>
+<summary>Click here to see proof of frequent visitor goal 1</summary>
 
-![Frequent visitor goal](documentation/validation/user-stories-personas/frequent-visitor-goal.webp)
+![Frequent visitor goal 1](documentation/validation/users-stories-personas/frequent-visitor-goal-1.webp)
 </details>
 
 | ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
 | --- | --- | --- | --- | --- |
-| Game page | Navigate to the game page on a mobile device | The game adapts to the screen size and can still be played | The game adapts to the screen size and can still be played | WORKS AS EXPECTED | 
+| Details page | Navigate to the details of a particular class | Details of the instructor can be seen on the class details page | Details of the instructor can be seen on the class details page | WORKS AS EXPECTED | 
+
+"How do I cancel my class enrolment?"
+
+<details>
+<summary>Click here to see proof of frequent visitor goal 2</summary>
+
+![Frequent visitor goal 2](documentation/validation/users-stories-personas/frequent-visitor-goal-2.webp)
+</details>
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Account page or Class Details page | Navigate to the user account page or the details of an enrolled class, and click 'Withdraw' by the relevant class | The user is no longer enrolled on the class | The user is no longer enrolled on the class | WORKS AS EXPECTED | 
+
+"How can I contact the organisers of this event?"
+
+<details>
+<summary>Click here to see proof of frequent visitor goal 3</summary>
+
+![Frequent visitor goal 3](documentation/validation/users-stories-personas/frequent-visitor-goal-3.webp)
+</details>
+
+| ITEM | PROCESS | EXPECTED RESULT | ACTUAL RESULT | STATUS |
+| --- | --- | --- | --- | --- |
+| Contact page | Complete the fields of the contact form and click send | The message is sent to the event organisers | The message is sent to the event organisers | WORKS AS EXPECTED | 
 
 ## User Personas
 
 ### User 1
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS |
-| --- | --- | --- |
-| The website is responsive and displays correctly on a mobile device | Style a responsive website using Bootstrap and / or media queries | COMPLETED SUCCESSFULLY |
-| All messages are clearly displayed and easy to read on smaller screens | Display any system messages in a larger format | COMPLETED SUCCESSFULLY |
+| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| --- | --- | --- | --- |
+| Ensure users of all skill levels (beginner to advanced) find suitable classes | Label each class with its appropriate skill level | COMPLETED SUCCESSFULLY |[see issue #55](https://github.com/dvfrancis/craftr/issues/55)|
+| Provide an intuitive way to navigate the site and discover content | Design an intuitive navigation menu for easy browsing | COMPLETED SUCCESSFULLY |[see issue #56](https://github.com/dvfrancis/craftr/issues/56)|
+| Enable users to create accounts and track enrolments | Develop a user-friendly account creation and class tracking system | COMPLETED SUCCESSFULLY |[see issue #59](https://github.com/dvfrancis/craftr/issues/59)|
 
 ### User 2
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS |
-| --- | --- | --- |
-| The website is quick to load | Ensure the website has excellent load performance on Google Lighthouse | COMPLETED SUCCESSFULLY |
-| The game can be abandoned, if necessary | Add ability to navigate away from the game at any point | COMPLETED SUCCESSFULLY |
+| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| --- | --- | --- | ---|
+| Make diverse craft types visible and engaging on the homepage | Design an engaging homepage that showcases various craft types | COMPLETED SUCCESSFULLY |[see issue #57](https://github.com/dvfrancis/craftr/issues/57)|
+| Ensure information is easily accessible for first-time visitors | Ensure class details are prominently displayed and easy to locate | COMPLETED SUCCESSFULLY |[see issue #58](https://github.com/dvfrancis/craftr/issues/58)|
+| Create an inviting and user-friendly interface | Develop a clean and welcoming website layout | COMPLETED SUCCESSFULLY |[see issue #57](https://github.com/dvfrancis/craftr/issues/57)|
 
 ### User 3
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS |
-| --- | --- | --- |
-| Gameplay is streamlined and easy to understand, offering an easy distraction to daily life | Add an FAQ page that explains the game and its rules, and guide the user through the game via messages on screen | COMPLETED SUCCESSFULLY |
-
-### User 4
-
-| ACCEPTANCE CRITERIA | TASKS | STATUS |
-| --- | --- | --- |
-| The game has a visually interesting design | Implement a design that is bright and colourful | COMPLETED SUCCESSFULLY |
-| Cards and scores are displayed clearly and are easy to understand | Display scores clearly on all screen sizes and ensure cards are easy to see and understand | COMPLETED SUCCESSFULLY |
+| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| --- | --- | --- | ---|
+| Ensure class information is detailed and easily accessible | Maintain a well-organized and searchable class directory | COMPLETED SUCCESSFULLY |[see issue #60](https://github.com/dvfrancis/craftr/issues/60)|
+| Clearly outline instructor details and course descriptions | Provide comprehensive course descriptions, including instructor details | COMPLETED SUCCESSFULLY |[see issue #60](https://github.com/dvfrancis/craftr/issues/60)|
+| Make sharing information simple and effective  | Implement easy-to-use social media sharing features | COMPLETED SUCCESSFULLY |[see issue #54](https://github.com/dvfrancis/craftr/issues/54)|
 
 ## Browser Compatibility
 
@@ -429,7 +462,7 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Google Chrome
 
 <details>
-<summary>Click here to view the site in Google Chrome</summary>
+<summary>Click here to view in Google Chrome</summary>
 
 ![Website in Google Chrome](documentation/validation/browsers/preview-in-google-chrome.webp)
 </details>
@@ -437,7 +470,7 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Microsoft Edge
 
 <details>
-<summary>Click here to view the site in Microsoft Edge</summary>
+<summary>Click here to view in Microsoft Edge</summary>
 
 ![Website in Microsoft Edge](documentation/validation/browsers/preview-in-microsoft-edge.webp)
 </details>
@@ -445,27 +478,25 @@ The following browsers have been used to test the website (screenshots taken fro
 ### Firefox
 
 <details>
-<summary>Click here to view the site in Firefox</summary>
+<summary>Click here to view in Mozilla Firefox</summary>
 
-![Website in Firefox](documentation/validation/browsers/preview-in-firefox.webp)
+![Website in Mozilla Firefox](documentation/validation/browsers/preview-in-mozilla-firefox.webp)
 </details>
 
 ### Opera
 
 <details>
-<summary>Click here to view the site in Opera</summary>
+<summary>Click here to view in Opera</summary>
 
 ![Website in Opera](documentation/validation/browsers/preview-in-opera.webp)
 </details>
 
-### Safari (on an iPad)
-
-Unfixed bug 76 (below) relates to this screenshot.
+### Safari
 
 <details>
-<summary>Click here to view the site in Safari (on an iPad)</summary>
+<summary>Click here to view in Safari</summary>
 
-![Website in Opera](documentation/validation/browsers/preview-in-safari-on-ipad.webp)
+![Website in Safari](documentation/validation/browsers/preview-in-safari.webp)
 </details>
 
 ## Accessibility
