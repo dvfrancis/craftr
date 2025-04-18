@@ -506,193 +506,27 @@ Accessibility was tested using the [Wave Accessibility Evaluation Tool (WAVE)](h
 <details>
 <summary>Click here to see the accessibility report</summary>
 
-![Accessibility of index.html](documentation/validation/accessibility/accessibility-report.pdf)
+![Accessibility report](documentation/validation/accessibility/accessibility-report.pdf)
 </details>
 
 ## Responsiveness
 
 Pages were tested for responsiveness on mobile (Apple iPhone 6s Plus/7 Plus - 414px x 736px), tablet (Amazon Kindle Fire - 768px 1024px), and desktop (24" - 1920px x 1200px), using the [Responsive Web Design Checker](https://responsivedesignchecker.com/). On the game.html page, the playing cards are not appearing as the Responsive Web Design Checker is not pulling them from the API (although they appear as expected in all browsers tested).
 
-### index.html
-
-#### Mobile
-
 <details>
-<summary>Click here to see the responsiveness report for index.html, on a mobile device</summary>
+<summary>Click here to see the responsiveness report</summary>
 
-![Responsiveness report for index.html](documentation/validation/responsiveness/mobile-responsiveness-index-page.webp)
-</details>
-
-#### Tablet
-
-<details>
-<summary>Click here to see the responsiveness report for index.html, on a tablet device</summary>
-
-![Responsiveness report for index.html](documentation/validation/responsiveness/tablet-responsiveness-index-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the responsiveness report for index.html, on a desktop device</summary>
-
-![Responsiveness report for index.html](documentation/validation/responsiveness/desktop-responsiveness-index-page.webp)
-</details>
-
-### game.html
-
-#### Mobile
-
-<details>
-<summary>Click here to see the responsiveness report for game.html, on a mobile device</summary>
-
-![Responsiveness report for game.html](documentation/validation/responsiveness/mobile-responsiveness-game-page.webp)
-</details>
-
-#### Tablet
-
-<details>
-<summary>Click here to see the responsiveness report for game.html, on a tablet device</summary>
-
-![Responsiveness report for game.html](documentation/validation/responsiveness/tablet-responsiveness-game-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the responsiveness report for game.html, on a desktop device</summary>
-
-![Responsiveness report for game.html](documentation/validation/responsiveness/desktop-responsiveness-game-page.webp)
-</details>
-
-### faq.html
-
-#### Mobile
-
-<details>
-<summary>Click here to see the responsiveness report for faq.html, on a mobile device</summary>
-
-![Responsiveness report for faq.html](documentation/validation/responsiveness/mobile-responsiveness-faq-page.webp)
-</details>
-
-#### Tablet
-
-<details>
-<summary>Click here to see the responsiveness report for faq.html, on a tablet device</summary>
-
-![Responsiveness report for faq.html](documentation/validation/responsiveness/tablet-responsiveness-faq-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the responsiveness report for faq.html, on a desktop device</summary>
-
-![Responsiveness report for faq.html](documentation/validation/responsiveness/desktop-responsiveness-faq-page.webp)
-</details>
-
-### 404.html
-
-#### Mobile
-
-<details>
-<summary>Click here to see the responsiveness report for 404.html, on a mobile device</summary>
-
-![Responsiveness report for 404.html](documentation/validation/responsiveness/mobile-responsiveness-404-page.webp)
-</details>
-
-#### Tablet
-
-<details>
-<summary>Click here to see the responsiveness report for 404.html, on a tablet device</summary>
-
-![Responsiveness report for 404.html](documentation/validation/responsiveness/tablet-responsiveness-404-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the responsiveness report for 404.html, on a desktop device</summary>
-
-![Responsiveness report for 404.html](documentation/validation/responsiveness/desktop-responsiveness-404-page.webp)
+![Responsiveness report](documentation/validation/responsiveness/responsiveness-report.pdf)
 </details>
 
 ## Performance
 
 Mobile and desktop page performance was assessed using the [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/):
 
-### index.html
-
-#### Mobile
-
 <details>
-<summary>Click here to see the mobile performance report for index.html</summary>
+<summary>Click here to see the performance report</summary>
 
-![Mobile performance report for index.html](documentation/validation/performance/mobile-performance-index-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the desktop performance report for index.html</summary>
-
-![Desktop performance report for index.html](documentation/validation/performance/desktop-performance-index-page.webp)
-</details>
-
-### game.html
-
-#### Mobile
-
-<details>
-<summary>Click here to see the mobile performance report for game.html</summary>
-
-![Mobile performance report for game.html](documentation/validation/performance/mobile-performance-game-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the desktop performance report for game.html</summary>
-
-![Desktop performance report for game.html](documentation/validation/performance/desktop-performance-game-page.webp)
-</details>
-
-### faq.html
-
-#### Mobile
-
-<details>
-<summary>Click here to see the mobile performance report for faq.html</summary>
-
-![Mobile performance report for faq.html](documentation/validation/performance/mobile-performance-faq-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the desktop performance report for faq.html</summary>
-
-![Desktop performance report for faq.html](documentation/validation/performance/desktop-performance-faq-page.webp)
-</details>
-
-### 404.html
-
-As the site design requires an automatic redirect on this page, it results in a slightly lower accessibility score for both metrics.
-
-#### Mobile
-
-<details>
-<summary>Click here to see the mobile performance report for 404.html</summary>
-
-![Mobile performance report for 404.html](documentation/validation/performance/mobile-performance-404-page.webp)
-</details>
-
-#### Desktop
-
-<details>
-<summary>Click here to see the desktop performance report for 404.html</summary>
-
-![Desktop performance report for 404.html](documentation/validation/performance/desktop-performance-404-page.webp)
+![Performance report](documentation/validation/performance/performance-report.pdf)
 </details>
 
 ## Fixed Bugs
