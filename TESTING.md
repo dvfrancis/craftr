@@ -98,11 +98,11 @@
 
 - All JavaScript code was tested using [JSHint](https://jshint.com/).
 
-- I did not need to use JavaScript in this project, except for the provision of Bootstrap Toast messages.
+- I did not need to use JavaScript in this project, apart for the provision of Bootstrap Toast messages.
 
 ### Python
 
-- Click to view the [Python Validation Report](documentation/validation/python/).
+- Click to view the [Python Validation Report](documentation/validation/python/python-validation-report.pdf).
 
 - All Python code was tested using [CI Python Linter](https://pep8ci.herokuapp.com/).
 
