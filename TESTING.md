@@ -82,21 +82,27 @@
 
 - Click to view the [HTML Validation Report](documentation/validation/html/html-validation-report.pdf).
 
-- All HTML was validated by direct input of copied page source code into the [W3C Markup Validation Service](https://validator.w3.org).
+- All HTML code was validated by direct input of copied page source code into the [W3C Markup Validation Service](https://validator.w3.org).
 
 - The base.html template file has been tested as part of all the other pages.
 
 ### CSS
 
-- Click to view the report from the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
+- Click to view the [CSS Validation Report](documentation/validation/css/css-validation-report.pdf).
+
+- All CSS code was tested using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator).
 
 ### JavaScript
 
-- Click to view the report from [JSHint](https://jshint.com/).
+- Click to view the [JavaScript Validation Report](documentation/validation/javascript/).
+
+- All JavaScript code was tested using [JSHint](https://jshint.com/).
 
 ### Python
 
-- Click to view the report from the [CI Python Linter](https://pep8ci.herokuapp.com/).
+- Click to view the [Python Validation Report](documentation/validation/python/).
+
+- All Python code was tested using [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 ## Manual Validation
 
