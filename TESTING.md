@@ -124,99 +124,15 @@
 
 ### HTML
 
-All HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org):
-
-The base.html template file has not been tested directly as it will be tested as part of the other pages.
-
-#### index.html
-
-Visual inspection of the page source code appears to show correctly structured HTML without duplication of tags.
-
 <details>
-<summary>Click here to see the HTML validation report for index.html</summary>
+<summary>Click here to see the HTML validation report (which covers all pages)</summary>
 
-![HTML validation of index.html](documentation/validation/html/html-validation-index.webp)
+![HTML validation report](documentation/validation/html/html-validation-report.pdf)
 </details>
 
-#### diary.html
+All HTML was validated by direct input of copied page source code into the [W3C Markup Validation Service](https://validator.w3.org).
 
-<details>
-<summary>Click here to see the HTML validation report for diary.html</summary>
-
-![HTML validation of diary.html](documentation/validation/html/html-validation-diary.webp)
-</details>
-
-#### details.html
-
-<details>
-<summary>Click here to see the HTML validation report for details.html</summary>
-
-![HTML validation of details.html](documentation/validation/html/html-validation-details.webp)
-</details>
-
-#### faq.html
-
-<details>
-<summary>Click here to see the HTML validation report for faq.html</summary>
-
-![HTML validation of faq.html](documentation/validation/html/html-validation-faq.webp)
-</details>
-
-#### contact.html
-
-<details>
-<summary>Click here to see the HTML validation report for contact.html</summary>
-
-![HTML validation of contact.html](documentation/validation/html/html-validation-contact.webp)
-</details>
-
-#### register.html
-
-<details>
-<summary>Click here to see the HTML validation report for register.html</summary>
-
-![HTML validation of register.html](documentation/validation/html/html-validation-register.webp)
-</details>
-
-#### login.html
-
-<details>
-<summary>Click here to see the HTML validation report for login.html</summary>
-
-![HTML validation of login.html](documentation/validation/html/html-validation-login.webp)
-</details>
-
-#### account.html
-
-<details>
-<summary>Click here to see the HTML validation report for account.html</summary>
-
-![HTML validation of account.html](documentation/validation/html/html-validation-account.webp)
-</details>
-
-#### update_profile.html
-
-<details>
-<summary>Click here to see the HTML validation report for update_profile.html</summary>
-
-![HTML validation of update_profile.html](documentation/validation/html/html-validation-update-profile.webp)
-</details>
-
-#### 404.html
-
-<details>
-<summary>Click here to see the HTML validation report for 404.html</summary>
-
-![HTML validation of 404.html](documentation/validation/html/html-validation-404.webp)
-</details>
-
-#### 500.html
-
-<details>
-<summary>Click here to see the HTML validation report for 500.html</summary>
-
-![HTML validation of 500.html](documentation/validation/html/html-validation-500.webp)
-</details>
+The base.html template file has not been tested directly as it is tested as part of the other pages.
 
 ### CSS
 

@@ -32,7 +32,6 @@ class ContactForm(forms.ModelForm):
                 attrs={
                     'class': 'contact-textarea',
                     'placeholder': 'Enter your message',
-                    'rows': 6,
                 }
             ),
         }
