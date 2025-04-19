@@ -868,11 +868,11 @@ The wireframe designs shown below were my initial ideas for each page of the web
 </details>
 
 - Website colours were inspired by the Sarah Renae Clarke Colour Catalogue (Volume 2), card 390:
-    - Apple Green (#2e6b05) - this was darkened due to poor colour contrast
-    - Mint (#006274) - this was darkened due to poor colour contrast
+    - Apple Green (#7db657) - this was darkened to #2e6b05, later in the project, due to poor colour contrast
+    - Mint (#0091ac) - this was darkened to #006274, later in the project, due to poor colour contrast
     - Royal Purple (#753da2)
     - Crimson (#b40001) 
-    - Orange (#a55500) - this was darkened due to poor colour contrast
+    - Orange (#ff8500) - this was darkened to #a55500, later in the project, due to poor colour contrast
     - Gold (#ffc500)
 
 - Other colours used:
