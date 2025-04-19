@@ -70,7 +70,7 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link for 'Explore' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Button link for 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
@@ -95,7 +95,7 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link for 'Details' (for all 21 classes listed) | Click to open details for that class in the database | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
 | Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -115,7 +115,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | For a logged in user - button link to 'Enrol' | Click to enrol on the class selected | The user is enrolled on the class selected | The user is enrolled on the class selected | WORKS AS EXPECTED |
 | For a logged in user - button link to go 'Back to Diary' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
@@ -137,7 +137,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Accordion header for all 14 items | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
 | Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -155,7 +155,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty, enter first name and click 'Send' | The user is asked to complete their last name | The user is asked to complete their last name | WORKS AS EXPECTED |
 | Input field for 'Last name' | Where other fields are empty (excluding 'First name') enter last name and click 'Send' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
@@ -179,7 +179,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'Username' | Where all other fields are empty, enter username and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty (excluding 'Username') enter first name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
@@ -206,7 +206,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'Username' | Where all other fields are empty, enter username and click 'Login' | The user is asked to complete their password | The user is asked to complete their password | WORKS AS EXPECTED |
 | Input field for 'Password' | Where all other fields are empty, enter password and click 'Login' | The user is asked to complete their username | The user is asked to complete their username | WORKS AS EXPECTED |
@@ -231,7 +231,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link beneath any class enrolments to view 'Details' | Click 'Details' below any enrolled class | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
 | Button link beneath any class enrolments to view 'Withdraw' | Click 'Withdraw' below any enrolled class | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | WORKS AS EXPECTED |
@@ -252,7 +252,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Save' | Click 'Save' | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | WORKS AS EXPECTED |
 | Button link to 'Clear' | Click 'Clear' | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | WORKS AS EXPECTED |
@@ -272,7 +272,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
 | Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
@@ -291,7 +291,7 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
 | Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
