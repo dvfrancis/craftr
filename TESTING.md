@@ -70,7 +70,8 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when a user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link for 'Explore' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Button link for 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
 | Featured class link for 'Introduction to Cricut - Cutting Machine Basics' | Click to open details.html for database item 4 | The user is directed to details.html for database item 4 | The user is directed to details.html for database item 4 | WORKS AS EXPECTED |
@@ -79,7 +80,7 @@
 | Featured class link for 'Laser-Engraved Wood & Acrylic Jewellery' | Click to open details.html for database item 22 | The user is directed to details.html for database item 22 | The user is directed to details.html for database item 22 | WORKS AS EXPECTED |
 | Featured class link for 'Custom Sticker & Decal Design' | Click to open details.html for database item 8 | The user is directed to details.html for database item 8 | The user is directed to details.html for database item 8 | WORKS AS EXPECTED |
 | Featured class link for '3D Printing Basics for DIY Crafting' | Click to open details.html for database item 11 | The user is directed to details.html for database item 11 | The user is directed to details.html for database item 11 | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -94,9 +95,10 @@
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link for 'Details' (for all 21 classes listed) | Click to open details for that class in the database | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -113,13 +115,14 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | For a logged in user - button link to 'Enrol' | Click to enrol on the class selected | The user is enrolled on the class selected | The user is enrolled on the class selected | WORKS AS EXPECTED |
 | For a logged in user - button link to go 'Back to Diary' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | For a logged in user, who is enrolled on this class - button link to 'Withdraw' | Click to withdraw from the class enrolled on | The user is withdrawn from the class enrolled on | The user is withdrawn from the class enrolled on | WORKS AS EXPECTED |
 | For a non-logged in user - button link to 'Login' | Click to open login.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
 | For a non-logged in user - button link to 'Register' | Click to open register.html | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -134,9 +137,10 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Accordion header for all 14 items | Click to expand / collapse the section | The section expands / collapses  | The section expands / collapses | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -151,7 +155,8 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty, enter first name and click 'Send' | The user is asked to complete their last name | The user is asked to complete their last name | WORKS AS EXPECTED |
 | Input field for 'Last name' | Where other fields are empty (excluding 'First name') enter last name and click 'Send' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for a valid 'Email' | Where other fields are empty (excluding 'First name' and 'Last name'), enter email address and click 'Send' | The user is asked to enter their message | The user is asked to enter their message | WORKS AS EXPECTED |
@@ -159,7 +164,7 @@ These results apply to all 21 classes:
 | Input field for 'Message' | Where all other fields are completed correctly, enter message and click 'Send' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | The form is accepted, the message is emailed to the organisers, and the user receives aToast informing them 'Your message has been sent' | WORKS AS EXPECTED |
 | Button link to 'Send' | When all fields are completed correctly, click 'Send' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | The form is accepted, the message is emailed to the organisers, and the user receives a Toast informing them 'Your message has been sent' | WORKS AS EXPECTED |
 | Button link to 'Clear' | Enter any information into the field, click 'Clear' | The form is cleared of any input | The form is cleared of any input | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -174,7 +179,8 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'Username' | Where all other fields are empty, enter username and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for 'First name' | Where all other fields are empty (excluding 'Username') enter first name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
 | Input field for 'Last name' | Where other fields are empty (excluding 'Username') enter last name and click 'Register' | The user is asked to complete their email address | The user is asked to complete their email address | WORKS AS EXPECTED |
@@ -185,7 +191,7 @@ These results apply to all 21 classes:
 | Input field for an invalid non-matching 'Password' and 'Confirm Password' | Where other fields are empty (excluding 'Username' and 'Email'), enter invalid non-matching passwords and click 'Register' | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | The password fields are cleared and the user receives a Toast message saying "The passwords do not match, or have not been entered. Please enter them again" | WORKS AS EXPECTED |
 | Button link to 'Register' | Do not complete any fields and click 'Register' | The form returns to the 'Username' field ready for completion | The form returns to the 'Username' field ready for completion | WORKS AS EXPECTED |
 | Button link to 'Clear' | Enter any information into the field, click 'Clear' | The form is cleared of any input | The form is cleared of any input | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -200,7 +206,8 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Input field for 'Username' | Where all other fields are empty, enter username and click 'Login' | The user is asked to complete their password | The user is asked to complete their password | WORKS AS EXPECTED |
 | Input field for 'Password' | Where all other fields are empty, enter password and click 'Login' | The user is asked to complete their username | The user is asked to complete their username | WORKS AS EXPECTED |
 | Input field for a valid 'Username' and 'Password' | Enter a valid username and password, and click 'Login' | The user is logged in, redirected to account.html, and receives the Toast "You have been logged in successfully!" | The user is logged in, redirected to account.html, and receives the Toast "You have been logged in successfully!" | WORKS AS EXPECTED |
@@ -209,7 +216,7 @@ These results apply to all 21 classes:
 | Button link to 'Login' | Do not complete any fields and click 'Login' | The form returns to 'Username' and prompts for it to completed | The form returns to 'Username' and prompts for it to completed | WORKS AS EXPECTED |
 | Button link to 'Clear' | Whether or not the fields are completed, click 'Clear' | Both fields are cleared of any input | Both fields are cleared of any input | WORKS AS EXPECTED |
 | Button link to 'Register' | Whether or not the fields are completed, click 'Register' | The user is directed to register.html | The user is directed to register.html | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -224,12 +231,13 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link beneath any class enrolments to view 'Details' | Click 'Details' below any enrolled class | The user is directed to details for that class in the database | The user is directed to details for that class in the database | WORKS AS EXPECTED |
 | Button link beneath any class enrolments to view 'Withdraw' | Click 'Withdraw' below any enrolled class | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | The user is withdrawn from the class and the page updates automatically to remove the class from the list of enrolled classes; the user receives a Toast message saying "Your enrolment has been withdrawn" | WORKS AS EXPECTED |
 | Button link to 'Logout' | Click 'Logout' | Both fields are cleared of any input | Both fields are cleared of any input | WORKS AS EXPECTED |
 | Button link to 'Edit' | Click 'Edit' | The user is directed to update_profile.html | The user is directed to update_profile.html | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -244,11 +252,12 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Save' | Click 'Save' | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | Whether or not changes have been made, the details are saved and the user is redirected to account.html; the user receives a Toast message saying "Profile updated" | WORKS AS EXPECTED |
 | Button link to 'Clear' | Click 'Clear' | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | If changes have been made, the values revert to what was stored. Otherwise, nothing happens. | WORKS AS EXPECTED |
 | Button link to 'Cancel' | Click 'Cancel' | No changes are made and the user is directed to account.html | No changes are made and the user is directed to account.html | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -263,10 +272,11 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
 | Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
@@ -281,10 +291,11 @@ These results apply to all 21 classes:
 | Navigation link for 'Classes' | Click to open diary.html | The user is directed to diary.html | The user is directed to diary.html | WORKS AS EXPECTED |
 | Navigation link for 'FAQ' | Click to open faq.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
 | Navigation link for 'Contact' | Click to open contact.html | The user is directed to contact.html | The user is directed to contact.html | WORKS AS EXPECTED |
-| Navigation link for 'Register / Login' (it changes to 'Account' when user is logged in) | Click to open account.html | The user is directed to faq.html | The user is directed to faq.html | WORKS AS EXPECTED |
+| Navigation link for 'Register / Login' (when a user is NOT logged in) | Click to open account.html | The user is directed to login.html | The user is directed to login.html | WORKS AS EXPECTED |
+| Navigation link for 'Account' (when a user is logged in) | Click to open account.html | The user is directed to account.html | The user is directed to account.html | WORKS AS EXPECTED |
 | Button link to 'Home' | Click 'Home' | The user is directed to index.html | The user is directed to index.html | WORKS AS EXPECTED |
 | Button link to 'Go Back' | Click 'Go Back' | The user is directed to the page they were previously viewing | The user is directed to the page they were previously viewing | WORKS AS EXPECTED |
-| Link in footer for '© 2025 | Dominic Francis | All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
+| Link in footer for '© 2025 Dominic Francis All Rights Reserved' | Click to open dominicfrancis.co.uk in a new tab | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Facebook | Click to open Facebook in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Instagram | Click to open Instagram in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
 | Social media link for Bluesky | Click to open Threads in a new tab  | The link opens in a new tab  | The link opens in a new tab | WORKS AS EXPECTED |
