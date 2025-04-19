@@ -2,25 +2,25 @@
 
 ## Overview
 
-Craftr (pronounced as 'Crafter') is an annual online (fictional) event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in craft technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
+Craftr (pronounced as 'Crafter') is an annual online (fictional) event dedicated to digital crafting, bringing together creative minds from around the world to explore the latest innovations in crafting technology. Held over three days every April, this year's event will take place from 21 to 23 April 2025.
 
-Digital crafting is the dynamic fusion of technology and creativity, enabling individuals to design and create unique projects with precision and innovation. This evolving craft field spans a variety of disciplines, including:
+Digital crafting is the fusion of technology with creativity, enabling individuals to design and make unique projects with precision and innovation. This evolving field spans a variety of crafts, including:
 
-- **Paper and Card Crafts**: ranging from scrapbooking to personalised greeting cards.
+- **Paper and Card** - ranging from scrapbooking to personalised greeting cards.
 
-- **Vinyl and Decal Crafts**: stickers, signage, decals, and vinyl applications.
+- **Vinyl and Decal** - stickers, signage, decals, and vinyl applications.
 
-- **Graphic Design Applications**: custom artwork for t-shirts, drinkware, and other items.
+- **Graphic Design** - custom artwork for t-shirts, drinkware, and other items.
 
-- **Fabric Crafts**: intricate embroidery, textile design, and fabric embellishments.
+- **Fabric** - intricate embroidery, textile design, and fabric embellishments.
 
-- **3D Modelling**: digital sculpting that brings ideas to life.
+- **3D Modelling** - digital sculpting that brings ideas to life.
 
-- **Laser Cutting**: create, cut, and embellish unique designs for any item including jewellery, signage, and other items.
+- **Laser Cutting** - creating, cutting, and embellishing unique designs for anything including jewellery, signage, and other items.
 
-To achieve professional results, many digital crafters utilise cutting machines such as [Cricut](https://cricut.com/en-gb/) or [Silhouette](https://www.silhouetteamerica.com/), or even laser cutters like [Glowforge](https://glowforge.com/), to create intricate and precise designs that can be applied to a variety of materials.
+To achieve professional results, many digital crafters utilise cutting machines such as those produced by [Cricut](https://cricut.com/en-gb/) and [Silhouette](https://www.silhouetteamerica.com/), or even laser cutters like [Glowforge](https://glowforge.com/), to create intricate and precise designs that can be applied to a variety of materials.
 
-This website serves as the central hub for Craftr, providing information about the event, allowing participants to create accounts, browse, and register for available classes. Whether a beginner looking to experiment with digital crafting or an expert seeking new techniques, Craftr is the perfect platform for anyone to connect, learn, and create.
+This website serves as the central hub for the Craftr event, providing information about the event, allowing participants to create accounts, browse, and register for available classes. Whether a beginner looking to experiment with digital crafting or an expert seeking new techniques, Craftr is the perfect platform for anyone to connect, learn, and create.
 
 ### Site Preview
 
@@ -103,7 +103,7 @@ Click [here] to access the GitHub repository.
 These figures are well within the usual "60% Must Haves / 20% Should Haves / 20% Could Haves" percentage split.
 
 <details>
-  <summary>Click to view a screenshot of the project task</summary>
+  <summary>Click to view a screenshot of a project task</summary>
 
   ![Project task](assets/images/project-board-task.webp)
 </details>
@@ -247,14 +247,14 @@ The website is designed to appeal to all demographics, but the following persona
     ![Mobile website header](assets/images/mobile-website-header.webp)
     </details>
 
-    - The header stays fixed to the top of the window, allowing visitors to see the navigation bar at all times. This lets the visitor know where they are at all times (links remain highlighted when that page is currently displayed). The high contrast between the text and the header means it is both stylish and easy to read.
+    - The header stays fixed to the top of the window, allowing visitors to see the navigation bar at all times. This lets the visitor know where they are (links remain highlighted when that page is currently displayed). The high contrast between the text and the header means it is both stylish and easy to read.
     - The website logo is also shown in the header, reinforcing the site branding in the mind of the visitor.
     - Visible navigation links:
-        - *Home*: brings the user to the home page, which has links to register for an account, or see a list of all classes across the event. It also has a 'Featured Classes' section to whet the visitor's appetite.
-        - *Classes*: takes the use to a list of classes that are running across the event.
-        - *FAQ*: a page of frequently asked questions about the event.
-        - *Contact*: allows messages to be sent to the organisers.
-        - *Register / Login* (changes to *Account* when a user is logged in): users can create an account on the site from this page, and then use that account to enrol for particular classes.
+        - *Home* - brings the user to the home page, which has links to register for an account, or see a list of all classes across the event. It also has a 'Featured Classes' section to whet the visitor's appetite.
+        - *Classes* - takes the use to a list of classes that are running across the event.
+        - *FAQ* - a page of frequently asked questions about the event.
+        - *Contact* - allows messages to be sent to the organisers.
+        - *Register / Login* (changes to *Account* when a user is logged in) - users can create an account on the site from this page, and then use that account to enrol for particular classes.
 
     <details>
     <summary>Click to view navigation bar when a user is logged in</summary>
@@ -263,12 +263,12 @@ The website is designed to appeal to all demographics, but the following persona
     </details>
 
     - Hidden navigation links:
-        - *Base Template*: contains the code for the header and the footer and is used by all pages, which helps reduce duplication of code. It is not directly accessible to a website user.
-        - *Details*: shown when a user is on the classes page and clicks the details button. It contains information specific to a chosen class, which is generated automatically from information stored in the database.
-        - *Account*: shown when a user has created an account, or logs in successfully. It allows them to view all of their class enrolments, edit their profile, or delete their account.
-        - *Update Profile*: shown when a user clicks 'Edit' on their account page. They can update any of the information held about them on the site.
-        - *404 Error*: shown when a visitor attempts to access a non-existent page. It is not directly accessible to a website user.
-        - *500 Error*: shown when a the web server encounters an problem. It is not directly accessible to a website user.
+        - *Base Template* - contains the code for the header and the footer and is used by all pages, which helps reduce duplication of code. It is not directly accessible to a website user.
+        - *Details* - shown when a user is on the classes page and clicks the 'Details' button. It contains information specific to a chosen class, which is generated automatically from information stored in the database.
+        - *Account* - shown when a user has created an account, or logs in successfully. It allows them to view all of their class enrolments, edit their profile, or delete their account.
+        - *Update Profile* - shown when a user clicks 'Edit' on their account page. They can update any of the information held about them on the site.
+        - *404 Error* - shown when a visitor attempts to access a non-existent page. It is not directly accessible to a website user.
+        - *500 Error* - shown when a the web server encounters an problem. It is not directly accessible to a website user.
     
 - Footer
 
@@ -319,14 +319,8 @@ The website is designed to appeal to all demographics, but the following persona
     </details>
 
     - When someone clicks on the 'Details' button on the diary of classes, it brings them to a specific page that gives in-depth information about that particular class. Information includes when the class will run, an indication of difficulty level, and an overview of what will be covered. It also includes information about the instructor of the class, and their biography.
-    - When not logged in, the buttons on the page change to 'Login' and 'Register' to encourage sign-up. If a user clicks 'Login' it takes them to the login page to enter their username and password and, upon successful login, returns them to the class page to allow them to enrol for the class.
-
-    <details>
-    <summary>Click to view buttons when user is not logged in</summary>
-            
-    ![Buttons when user not logged in](assets/images/user-not-logged-in-buttons.webp)
-    </details>
-
+    - When not logged in, the buttons on the page are 'Login' and 'Register' to encourage sign-up. If a user clicks 'Login' it takes them to the login page to enter their username and password and, upon successful login, returns them to the class page to allow them to enrol for the class.
+    - If a user clicks 'Register', it takes them to a page to create a new account, before returning them to the class page (to be able to enrol).
     - When logged in, the buttons change to 'Enrol' and 'Back to Diary'.
 
     <details>
@@ -335,7 +329,7 @@ The website is designed to appeal to all demographics, but the following persona
     ![Buttons when user logged in](assets/images/user-logged-in-buttons.webp)
     </details>
 
-    - If a user clicks 'Enrol' they will see the button change to 'Withdraw', allowing them to change their mind if so desired.
+    - If a user clicks 'Enrol' their account is updated accordingly (see 'User Account' further down) and the button changes to 'Withdraw', allowing them to change their mind if so desired.
 
     <details>
     <summary>Click to view buttons when user logged in and enrolled</summary>
@@ -379,8 +373,8 @@ The website is designed to appeal to all demographics, but the following persona
     - The website does not allow them to pick a username that conflicts with an existing user.
     - The site also has standard email and password validation, so that only valid information can be entered
     - Once an account has been created, the user is logged in automatically.
-    - If another user is already logged in, they are logged out automatically beforehand.
-    - If they make a mistake on the form, they can click 'Clear' to remove any information entered.
+    - If another user is already logged in, they are logged out beforehand.
+    - If a mistake is made on the form, the user can click 'Clear' to remove any information entered.
 
 - User Login (login.html)
 
@@ -403,15 +397,9 @@ The website is designed to appeal to all demographics, but the following persona
 
     - The user account page displays all of the user's information entered when the account was created.
     - The 'Edit' button takes the user to a screen where they can update any of the personal information stored about them.
-    - The 'Delete Account' button allows the user to remove their account entirely. They are prompted to ask if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time. After the account is deleted they are automatically redirected to the home page.
+    - The 'Delete Account' button allows the user to remove their account entirely. They are asked if they are sure they want to delete their account. If they do, then their account is deleted along with any class enrolments. This button does not appear for accounts with 'superuser' permissions, so that the organisers (who would be superusers) are not accidentally locked out at any time. After the account is deleted they are automatically redirected to the home page.
     - A user can also see a list of all the classes that they're enrolled on.
-    - Users can 'Withdraw' from a class, or see 'Details' about any class they have enrolled on, by clicking the corresponding button beneath the enrolment. The list of enrolments updates dynamically if a user withdraws from a class.
-
-    <details>
-    <summary>Click to view 'Withdraw' and 'Details' buttons under each enrolment on the user account page</summary>
-            
-    ![Buttons under enrolled classes](assets/images/buttons-under-enrolled-classes.webp)
-    </details>
+    - Users can 'Withdraw' from a class, or see 'Details' about any class they have enrolled on, by clicking the corresponding button beneath the enrolment. The list of enrolments updates dynamically if a user withdraws from a class (this can be seen at the bottom of the screenshot above).
 
 - Update User Profile (update_profile.html)
 
@@ -423,7 +411,7 @@ The website is designed to appeal to all demographics, but the following persona
 
     - The update user profile page allows the user to amend any of the information held about them.
     - If they change their mind, they can click 'Cancel' and be returned to their account page.
-    - If they make a mistake on the form, they can click 'Clear' to remove any information entered.
+    - If they make a mistake on the form, they can click 'Clear' to revert to the information currently stored in the database.
 
 - Error 404 (404.html)
 
@@ -453,12 +441,12 @@ The website is designed to appeal to all demographics, but the following persona
 
 - This is a list of features that would have been nice to include in this project, but were not due to time constraints.
 
-|Task|Item|Description|
+|Issue|Item|Description|
 | ------------- | ------------- | ------------- |
-| [Task #85](https://github.com/dvfrancis/craftr/issues/85) | Instructor portal | Add the ability for instructors to create and edit classes |
-| [Task #86](https://github.com/dvfrancis/craftr/issues/86) | Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
-| [Task #66](https://github.com/dvfrancis/craftr/issues/66) | Customise the Django administration portal| Update the admin portal to match the style of the site |
-| [Task #19](https://github.com/dvfrancis/craftr/issues/19) | JavaScript logic flowcharts| If the site were to expand with further features then it would probably require more JavaScript and, therefore, process breakdowns |
+| [#85](https://github.com/dvfrancis/craftr/issues/85) | Instructor portal | Add the ability for instructors to create and edit classes |
+| [#86](https://github.com/dvfrancis/craftr/issues/86) | Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
+| [#66](https://github.com/dvfrancis/craftr/issues/66) | Customise the Django administration portal| Update the admin portal to match the style of the site |
+| [#19](https://github.com/dvfrancis/craftr/issues/19) | JavaScript logic flowcharts| If the site were to expand with further features then it would probably require more JavaScript and, therefore, process breakdowns |
 
 ### Structure
 
@@ -1060,7 +1048,7 @@ Copy the GitHub repository locally in one of two ways:
 - Once this has been done, open a terminal window and install all requirements using the command:
     - `pip3 install -r requirements.txt`
 - In the root of the project folder, create a `.gitignore` file, and add `env.py` and `__pycache__` to protect sensitive data.
-- Create a file called `env.py` in the root of the project folder and add the following information:
+- Add the following information to `env.py`:
     
    ```python
     import os

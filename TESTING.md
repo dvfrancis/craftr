@@ -1,5 +1,3 @@
-# THIS IS A DRAFT DOCUMENT, AND NOT YET FINALISED #
-
 [Return to the Craftr README.md](https://github.com/dvfrancis/craftr/blob/main/README.md)
 
 # Testing
