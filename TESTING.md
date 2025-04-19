@@ -530,7 +530,7 @@ Fixed bugs match the cases raised on the project board attached to the GitGub re
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#63](https://github.com/dvfrancis/craftr/issues/63) | Unable to login as supervisor | After migrating some changes to the database I was unable to login as superuser (as shown in the screenshot above). Django is attempting to access the profile field of a User object, but a corresponding UserProfile does not exist for that user. This often happens because of a misalignment between the User model and the UserProfile model's one-to-one relationship. I ran the python shell using `python manage.py shell`, and in the shell ran the commands shown below to create a profile for each user that was missing one. This ensured that every User had a UserProfile, and allowed the superuser to login successfully
+| [#63](https://github.com/dvfrancis/craftr/issues/63) | Unable to login as supervisor | After migrating some changes to the database I was unable to login as superuser (as shown in the screenshot above). Django is attempting to access the profile field of a User object, but a corresponding UserProfile does not exist for that user. This often happens because of a misalignment between the User model and the UserProfile model's one-to-one relationship. I ran the python shell using `python manage.py shell`, and in the shell ran the commands shown below to create a profile for each user that was missing one. This ensured that every User had a UserProfile, and allowed the superuser to login successfully (see code below this table).
 
 ```Python
 from django.contrib.auth.models import User
@@ -556,7 +556,7 @@ for user in User.objects.all():
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#64](https://github.com/dvfrancis/craftr/issues/64) | Unable to see apps in Django admin portal - I am only able to see the event `Event days` app in the Django admin portal. | I had forgotten to add the apps to INSTALLED_APPS in settings.py. Once I did this, they appeared in the admin portal, as shown in the second screenshot above |
+| [#64](https://github.com/dvfrancis/craftr/issues/64) | Unable to see apps in Django admin portal - I am only able to see the event `Event days` app in the Django admin portal. | I had forgotten to add the apps to `INSTALLED_APPS` in `settings.py`. Once I did this, they appeared in the admin portal, as shown in the second screenshot above |
 
 ### Bug 65
 
@@ -568,7 +568,7 @@ for user in User.objects.all():
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#65](https://github.com/dvfrancis/craftr/issues/65) | I am able to create duplicate vent classes (a class with the same title as another)  | I changed the fields which were being compared so that no two events can be created for the same date and time, which fixed the issue (see code below)
+| [#65](https://github.com/dvfrancis/craftr/issues/65) | I am able to create duplicate vent classes (a class with the same title as another)  | I changed the fields which were being compared so that no two events can be created for the same date and time, which fixed the issue (see code below this table).
 
 ```Python
 # Enforce unique class titles regardless of case
@@ -597,7 +597,7 @@ for user in User.objects.all():
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#67](https://github.com/dvfrancis/craftr/issues/67) | When registering a new user via the web form at "register/register.html", the error shown in the first screenshot above occurs. The user account and profile are still created, although the user profile is missing the supplied location and photograph (see second screenshot above of entry below for 'anparton') | It appears that the profile is being created twice - once by the UserProfile model and then again in the registration view. This was the original code for the registration view:
+| [#67](https://github.com/dvfrancis/craftr/issues/67) | When registering a new user via the web form at "register/register.html", the error shown in the first screenshot above occurs. The user account and profile are still created, although the user profile is missing the supplied location and photograph (see second screenshot above of entry below for 'anparton') | It appears that the profile is being created twice - once by the UserProfile model and then again in the registration view. This was the original code for the registration view (see code below this table).
 
 ```Python
 def register_user(request):
@@ -695,7 +695,7 @@ def register_user(request):
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#75](https://github.com/dvfrancis/craftr/issues/75) | No feedback is given if non-matching passwords are entered | Conditional statement added to check for errors (error message delivered via Toast as shown in screenshot above):
+| [#75](https://github.com/dvfrancis/craftr/issues/75) | No feedback is given if non-matching passwords are entered | Conditional statement added to check for errors (error message delivered via Toast as shown in screenshot above). See code below this table.
 
 ```Python
 else:
@@ -736,7 +736,7 @@ else:
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#84](https://github.com/dvfrancis/craftr/issues/84) | On `faq.html`, when you expand an accordion item the background images appears to enlarge | I used `background-attachment: fixed;` to lock the background so it doesn't "expand" when an accordion item is clicked. The background no longer changes, see amended code below:
+| [#84](https://github.com/dvfrancis/craftr/issues/84) | On `faq.html`, when you expand an accordion item the background images appears to enlarge | I used `background-attachment: fixed;` to lock the background so it doesn't "expand" when an accordion item is clicked. The background no longer changes  (see code below this table).
 
 ```CSS
 .faq-background {
@@ -753,7 +753,7 @@ else:
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#87](https://github.com/dvfrancis/craftr/issues/87) | `Uncaught TypeError: Cannot read properties of null (reading 'defaultPrevented') toast.js:76` console error | It looks like this is related to the JavaScript that handles Toast messages. The original JavaScript was:
+| [#87](https://github.com/dvfrancis/craftr/issues/87) | `Uncaught TypeError: Cannot read properties of null (reading 'defaultPrevented') toast.js:76` console error | It looks like this is related to the JavaScript that handles Toast messages. The original JavaScript is shown below this table.
 
 ```JavaScript
 document.addEventListener("DOMContentLoaded", function () {
