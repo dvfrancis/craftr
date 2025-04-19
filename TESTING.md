@@ -7,10 +7,6 @@
 ## Index
 
 1. [Code Validation](#code-validation)
-    1. [HTML](#html)
-    2. [CSS](#css)
-    3. [JavaScript](#javascript)
-    4. [Python](#python)
 2. [Manual Validation](#manual-validation)
     1. [index.html](#indexhtml)
     2. [diary.html](#diaryhtml)
@@ -28,51 +24,10 @@
     2. [Returning Visitor Goals](#returning-visitor-goals)
     3. [Frequent Visitor Goals](#frequent-visitor-goals)
 4. [User Personas](#user-personas)
-    1. [User 1](#user-1)
-    2. [User 2](#user-2)
-    3. [User 3](#user-3)
 5. [Browser Compatibility](#browser-compatibility)
-    1. [Google Chrome](#google-chrome)
-    2. [Microsoft Edge](#microsoft-edge)
-    3. [Firefox](#firefox)
-    4. [Opera](#opera)
-    5. [Safari](#safari-on-an-ipad)
 6. [Accessibility](#accessibility)
-    1. [index.html]()
-    2. [diary.html]()
-    3. [details.html]()
-    4. [faq.html]()
-    5. [contact.html]()
-    6. [register.html]()
-    7. [login.html]()
-    8. [account.html]()
-    9. [update_profile.html]()
-    10. [404.html]()
-    11. [500.html]()
 7. [Responsiveness](#responsiveness)
-    1. [index.html]()
-    2. [diary.html]()
-    3. [details.html]()
-    4. [faq.html]()
-    5. [contact.html]()
-    6. [register.html]()
-    7. [login.html]()
-    8. [account.html]()
-    9. [update_profile.html]()
-    10. [404.html]()
-    11. [500.html]()
 8. [Performance](#performance)
-    1. [index.html]()
-    2. [diary.html]()
-    3. [details.html]()
-    4. [faq.html]()
-    5. [contact.html]()
-    6. [register.html]()
-    7. [login.html]()
-    8. [account.html]()
-    9. [update_profile.html]()
-    10. [404.html]()
-    11. [500.html]()
 9. [Fixed Bugs](#fixed-bugs)
 10. [Unfixed Bugs](#unfixed-bugs)
 
@@ -433,27 +388,27 @@ These results apply to all 21 classes:
 
 ### User 1
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| ISSUE | ACCEPTANCE CRITERIA | TASKS | STATUS |
 | --- | --- | --- | --- |
-| Ensure users of all skill levels (beginner to advanced) find suitable classes | Label each class with its appropriate skill level | COMPLETED SUCCESSFULLY |[see issue #55](https://github.com/dvfrancis/craftr/issues/55)|
-| Provide an intuitive way to navigate the site and discover content | Design an intuitive navigation menu for easy browsing | COMPLETED SUCCESSFULLY |[see issue #56](https://github.com/dvfrancis/craftr/issues/56)|
-| Enable users to create accounts and track enrolments | Develop a user-friendly account creation and class tracking system | COMPLETED SUCCESSFULLY |[see issue #59](https://github.com/dvfrancis/craftr/issues/59)|
+| [#55](https://github.com/dvfrancis/craftr/issues/55) | Ensure users of all skill levels (beginner to advanced) find suitable classes | Label each class with its appropriate skill level | COMPLETED SUCCESSFULLY |
+| [#56](https://github.com/dvfrancis/craftr/issues/56) | Provide an intuitive way to navigate the site and discover content | Design an intuitive navigation menu for easy browsing | COMPLETED SUCCESSFULLY |
+| [#59](https://github.com/dvfrancis/craftr/issues/59) | Enable users to create accounts and track enrolments | Develop a user-friendly account creation and class tracking system | COMPLETED SUCCESSFULLY |
 
 ### User 2
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| ISSUE | ACCEPTANCE CRITERIA | TASKS | STATUS |
 | --- | --- | --- | ---|
-| Make diverse craft types visible and engaging on the homepage | Design an engaging homepage that showcases various craft types | COMPLETED SUCCESSFULLY |[see issue #57](https://github.com/dvfrancis/craftr/issues/57)|
-| Ensure information is easily accessible for first-time visitors | Ensure class details are prominently displayed and easy to locate | COMPLETED SUCCESSFULLY |[see issue #58](https://github.com/dvfrancis/craftr/issues/58)|
-| Create an inviting and user-friendly interface | Develop a clean and welcoming website layout | COMPLETED SUCCESSFULLY |[see issue #57](https://github.com/dvfrancis/craftr/issues/57)|
+| [#57](https://github.com/dvfrancis/craftr/issues/57) | Make diverse craft types visible and engaging on the homepage | Design an engaging homepage that showcases various craft types | COMPLETED SUCCESSFULLY |
+| [#58](https://github.com/dvfrancis/craftr/issues/58) | Ensure information is easily accessible for first-time visitors | Ensure class details are prominently displayed and easy to locate | COMPLETED SUCCESSFULLY |
+| [#57](https://github.com/dvfrancis/craftr/issues/57) | Create an inviting and user-friendly interface | Develop a clean and welcoming website layout | COMPLETED SUCCESSFULLY |
 
 ### User 3
 
-| ACCEPTANCE CRITERIA | TASKS | STATUS | ISSUE |
+| ISSUE | ACCEPTANCE CRITERIA | TASKS | STATUS |
 | --- | --- | --- | ---|
-| Ensure class information is detailed and easily accessible | Maintain a well-organized and searchable class directory | COMPLETED SUCCESSFULLY |[see issue #60](https://github.com/dvfrancis/craftr/issues/60)|
-| Clearly outline instructor details and course descriptions | Provide comprehensive course descriptions, including instructor details | COMPLETED SUCCESSFULLY |[see issue #60](https://github.com/dvfrancis/craftr/issues/60)|
-| Make sharing information simple and effective  | Implement easy-to-use social media sharing features | COMPLETED SUCCESSFULLY |[see issue #54](https://github.com/dvfrancis/craftr/issues/54)|
+| [#60](https://github.com/dvfrancis/craftr/issues/60) | Ensure class information is detailed and easily accessible | Maintain a well-organized and searchable class directory | COMPLETED SUCCESSFULLY |
+| [#60](https://github.com/dvfrancis/craftr/issues/60) | Clearly outline instructor details and course descriptions | Provide comprehensive course descriptions, including instructor details | COMPLETED SUCCESSFULLY |
+| [#54](https://github.com/dvfrancis/craftr/issues/54) | Make sharing information simple and effective  | Implement easy-to-use social media sharing features | COMPLETED SUCCESSFULLY |
 
 ## Browser Compatibility
 
@@ -501,200 +456,287 @@ The website has been tested on the following browsers:
 
 ## Accessibility
 
-Accessibility was tested using the [Wave Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org):
+Accessibility was tested using the [Wave Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org).
 
-<details>
-<summary>Click here to see the accessibility report</summary>
-
-![Accessibility report](documentation/validation/accessibility/accessibility-report.pdf)
-</details>
+Click here to see the [Accessibility report](documentation/validation/accessibility/accessibility-report.pdf)
 
 ## Responsiveness
 
-Pages were tested for responsiveness on mobile (Apple iPhone 6s Plus/7 Plus - 414px x 736px), tablet (Amazon Kindle Fire - 768px 1024px), and desktop (24" - 1920px x 1200px), using the [Responsive Web Design Checker](https://responsivedesignchecker.com/). On the game.html page, the playing cards are not appearing as the Responsive Web Design Checker is not pulling them from the API (although they appear as expected in all browsers tested).
+Pages were going to be assessed using the [Responsive Web Design Checker](https://responsivedesignchecker.com/) but, unfortunately, the site won't load there. Instead, they have been presented using the [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en-GB&utm_source=ext_sidebar) Google Chrome browser plugin.
 
-<details>
-<summary>Click here to see the responsiveness report</summary>
+Pages were tested for responsiveness on mobile (Apple iPhone 14 - 390px x 844px), tablet (Apple iPad Air 5 - 820px x 1180px), and desktop (MacBook Pro 16 - 1728px x 1117px).
 
-![Responsiveness report](documentation/validation/responsiveness/responsiveness-report.pdf)
-</details>
+Click here to see the [Responsiveness report](documentation/validation/responsiveness/responsiveness-report.pdf)
 
 ## Performance
 
-Mobile and desktop page performance was assessed using the [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/):
+Both mobile and desktop page performance was assessed with [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/).
 
-<details>
-<summary>Click here to see the performance report</summary>
-
-![Performance report](documentation/validation/performance/performance-report.pdf)
-</details>
+Click here to see the [Performance report](documentation/validation/performance/performance-report.pdf)
 
 ## Fixed Bugs
 
-The fixed bugs listed here are numbered to match the cases logged in the GitGub repository project (they do not follow a set sequential order).
-
-### Bug 47
-
-<details>
-<summary>Click here to see a screenshot showing the result of bug 47</summary>
-
-![Fixed Bug 47](documentation/bugs/bug-47-padding-on-nav-link.webp)
-</details>
-
-| Bug | Fix |
-| --- | --- |
-| Nav link is too close to right-hand side edge of the page | The following code below was added to remove extraneous padding elsewhere but this also affected the padding on the nav link `.row > * { padding-left: 0 !important; padding-right: 0 !important; }`. I added this selector beneath the above to over-ride its effects `#nav { padding-right: 15px !important; }` |
-
-### Bug 52
-
-<details>
-<summary>Click here to see a screenshot showing the result of bug 52</summary>
-
-![Fixed Bug 52](documentation/bugs/bug-52-cards-not-displayed.webp)
-</details>
-
-| Bug | Fix |
-| --- | --- |
-| The initial card view is not displaying any playing cards | I renamed some classes and IDs in JavaScript and HTML but forgot to use the correct names in my initial JavaScript variable declarations. Once I had updated those the cards were displayed correctly |
+Fixed bugs match the cases raised on the project board attached to the GitGub repository.
 
 ### Bug 61
 
 <details>
-<summary>Click here to see a screenshot showing the result of bug 61</summary>
+<summary>Click here to see a screenshot of bug #61</summary>
 
-![Fixed Bug 61](documentation/bugs/bug-61-cards-not-resizing-correctly-on-flip.webp)
-</details>
-
-| Bug | Fix |
-| --- | --- |
-| Renamed some classes and IDs to help in coding but now cards are not resizing correctly when flipped | This is the code I amended to auto-generate the id name based on array position `cards[cardIndex].innerHTML = <img id="card-${dealtCards.cards[cardIndex]}" src="${dealtCards.cards[cardIndex].images.png}" alt="The first card">;`. However, looking at this in the browser console it appears the name is not generating as I expected - it says `id="card-[object Object]"` when it should be `id="card-1"` or `id=card-2`, etc. What I needed to do was simplify the code to just use the currentCard variable (which stores the index of the currently flipped card) - `cards[cardIndex].innerHTML = <img id="card-${currentCard}" src="${dealtCards.cards[cardIndex].images.png}" alt="The first card">; // Flip the next card`. Now the cards are targeted by the CSS correctly, and display at their correct size |
-
-### Bug 62
-
-<details>
-<summary>Click here to see a screenshot showing the result of bug 62</summary>
-
-![Fixed Bug 62](documentation/bugs/bug-62-game-finishes-before-last-card-is-flipped-unfixed.webp)
+![Fixed Bug 61](documentation/bugs/bug-61-1.webp)
 </details>
 
 <details>
-<summary>Click here to see a screenshot showing the result when bug 62 was fixed</summary>
+<summary>Click here to see folder structure</summary>
 
-![Fixed Bug 62](documentation/bugs/bug-62-game-finishes-before-last-card-is-flipped-fixed.webp)
+![Fixed Bug 61 folder structure](documentation/bugs/bug-61-2.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| When playing the game it should get to the last (known as the fourth) card and then calculate if you have won or lost. At the moment it gets to the third card and then calculates if you have won or lost | The correctGuesses variable needs to be of value 4 before the game calculates if you have won or lost. However, it was only reaching 3 because there was a section of unnecessary code in the flipCard function that was from an earlier version of the code. Once removed, correctGuesses could correctly increment to 4 and the game could complete successfully |
+<details>
+<summary>Click here to see the local site working</summary>
+
+![Fixed Bug 61 working local site](documentation/bugs/bug-61-3.webp)
+</details>
+
+<details>
+<summary>Click here to see the deployed site working</summary>
+
+![Fixed Bug 61 working deployed site](documentation/bugs/bug-61-4.webp)
+</details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#61](https://github.com/dvfrancis/craftr/issues/61) | Heroku deployment keeps failing with the error shown above. Settings.py, Procfile, and requirements.txt all checked and confirmed as correctly configured | When I first created the project I used the following command but forgot to add the full stop at the end `django-admin startproject craftr.` This meant that the files were created in a directory called craftr, and not directly in the root. The folders and files highlighted in the above folder structure image should be in the root. This also had a knock-on effect as the local server no longer worked either. This is because manage.py and db.sqlite3 ended up in the craftr folder, and not in the root as expected. Once they were moved to the root, the local server also started working again |
 
 ### Bug 63
 
 <details>
-<summary>Click here to see a screenshot showing the result of bug 63</summary>
+<summary>Click here to see a screenshot of bug #63</summary>
 
-![Fixed Bug 63](documentation/bugs/bug-63-multiple-card-decks-being-drawn-at-once.webp)
+![Fixed Bug 63](documentation/bugs/bug-63.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| When a round is won, instead of drawing a new deck of cards the game appears to be drawing a random number of decks. The console.log output after four winning rounds shows the multiple drawn decks | When a player wins a round they are asked if they wish to continue. My code uses a Bootstrap modal template that is stored in a variable, and an event listener is added to the 'Yes' button of this modal each time the round is completed. I hadn't removed this event listener between rounds and so, as the game progressed, additional event listeners were being added to the button and then all of them were calling the drawCards function when the 'Yes' button was clicked. I added the following into my code to remove any previous event listener `bsBtn1.removeEventListener("click", handleClick);`. I also added this to the drawCards function, using a variable called cardsDrawn to act as a true or false checkpoint. The cardsDrawn variable is set to true when the drawCards function runs (preventing the drawCards function being called multiple times in a short space of time), and to false by the continueGame function (to allow a new deck to be drawn from the current card pile) `if (cardsDrawn) {return;} // Additional check to ensure that the drawCards function is not called multiple times` |
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#63](https://github.com/dvfrancis/craftr/issues/63) | Unable to login as supervisor | After migrating some changes to the database I was unable to login as superuser (as shown in the screenshot above). Django is attempting to access the profile field of a User object, but a corresponding UserProfile does not exist for that user. This often happens because of a misalignment between the User model and the UserProfile model's one-to-one relationship. I ran the python shell using `python manage.py shell`, and in the shell ran the commands shown below to create a profile for each user that was missing one. This ensured that every User had a UserProfile, and allowed the superuser to login successfully
 
-### Bug 66
+```Python
+from django.contrib.auth.models import User
+from register.models import UserProfile
+
+for user in User.objects.all():
+    UserProfile.objects.get_or_create(user=user)
+```
+
+### Bug 64
 
 <details>
-<summary>Click here to see a screenshot showing the result of bug 66</summary>
+<summary>Click here to see a screenshot of bug #64</summary>
 
-![Fixed Bug 66](documentation/bugs/bug-66-points-reset-incorrectly.webp)
+![Fixed Bug 64](documentation/bugs/bug-64-1.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| Points reset at the start of each round instead of at the start of a new game, and points are not updating correctly at the start of the new round | I was declaring the code shown above with all the variables at the top of the code, and it was picking up the default value for playerPoints from there every time the HTML was inserted into the game.html page, when I moved it into the getWager function the problem was resolved |
+<details>
+<summary>Click here to see a screenshot of the fixed issue</summary>
+
+![Fixed Bug 64](documentation/bugs/bug-64-2.webp)
+</details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#64](https://github.com/dvfrancis/craftr/issues/64) | Unable to see apps in Django admin portal - I am only able to see the event `Event days` app in the Django admin portal. | I had forgotten to add the apps to INSTALLED_APPS in settings.py. Once I did this, they appeared in the admin portal, as shown in the second screenshot above |
+
+### Bug 65
+
+<details>
+<summary>Click here to see a screenshot of bug #65</summary>
+
+![Fixed Bug 65](documentation/bugs/bug-65.webp)
+</details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#65](https://github.com/dvfrancis/craftr/issues/65) | I am able to create duplicate vent classes (a class with the same title as another)  | I changed the fields which were being compared so that no two events can be created for the same date and time, which fixed the issue (see code below)
+
+```Python
+# Enforce unique class titles regardless of case
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['event_day', 'start_time'],
+                name='unique_class_title_case_insensitive'
+            )
+        ]
+```
 
 ### Bug 67
 
 <details>
-<summary>Click here to see a screenshot showing the multiple modal elements in game.html caused by bug 67 (in the lower centre of the image)</summary>
+<summary>Click here to see a screenshot of bug #67</summary>
 
-![Fixed Bug 67](documentation/bugs/bug-67-game-continues-when-no-cards-remaining-unfixed-showing-multiple-modal-elements-created-in-game-page-html.webp)
+![Fixed Bug 67](documentation/bugs/bug-67-1.webp)
 </details>
 
 <details>
-<summary>Click here to see a screenshot showing the API error caused by bug 67 (on the bottom right of the image)</summary>
+<summary>Click here to see an example result of this error</summary>
 
-![Fixed Bug 67](documentation/bugs/bug-67-game-continues-when-no-cards-remaining-unfixed-showing-the-error-generated-by-the-API.webp)
+![Fixed Bug 67](documentation/bugs/bug-67-2.webp)
 </details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#67](https://github.com/dvfrancis/craftr/issues/67) | When registering a new user via the web form at "register/register.html", the error shown in the first screenshot above occurs. The user account and profile are still created, although the user profile is missing the supplied location and photograph (see second screenshot above of entry below for 'anparton') | It appears that the profile is being created twice - once by the UserProfile model and then again in the registration view. This was the original code for the registration view:
+
+```Python
+def register_user(request):
+    if request.method == "POST":
+        user_form = UserRegistrationForm(request.POST)
+        profile_form = UserProfileForm(request.POST, request.FILES)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            # Save the user
+            user = user_form.save()
+            # Create the associated profile
+            profile = profile_form.save(commit=False)
+            profile.user = user
+            profile.save()
+
+            # Log in the user
+            login(request, user)
+            # Replace "home" with your desired redirect
+            return redirect("account/account.html")
+    else:
+        user_form = UserRegistrationForm()
+        profile_form = UserProfileForm()
+```
+and this is it updated so it doesn't attempt to create a duplicate user profile, and instead just updates the existing fields:
+```Python
+from django.shortcuts import render, redirect
+from django.contrib.auth import login
+from .forms import UserRegistrationForm, UserProfileForm
+
+def register_user(request):
+    if request.method == "POST":
+        user_form = UserRegistrationForm(request.POST)
+        profile_form = UserProfileForm(request.POST, request.FILES)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            # Save the user
+            user = user_form.save()
+            profile = user.profile  # Access the profile created by the signal
+            profile.location = profile_form.cleaned_data['location']
+            profile.experience = profile_form.cleaned_data['experience']
+            profile.photograph = profile_form.cleaned_data['photograph']
+            profile.save()
+
+            # Log in the user
+            login(request, user)
+            return redirect("account/account.html")
+    else:
+        user_form = UserRegistrationForm()
+        profile_form = UserProfileForm()
+
+    return render(
+        request,
+        "app_name/register.html",
+        {"user_form": user_form, "profile_form": profile_form}
+    )
+```
+
+### Bug 68
 
 <details>
-<summary>Click here to see a screenshot showing the newly generated pack of cards when bug 67 was fixed (on the bottom right of the image)</summary>
+<summary>Click here to see a screenshot of bug #68</summary>
 
-![Fixed Bug 67](documentation/bugs/bug-67-game-continues-when-no-cards-remaining-fixed-showing-the-newly-generated-pack-at-the-end-of-a-game.webp)
+![Fixed Bug 68](documentation/bugs/bug-68.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| When you play all ten rounds of the game it should display a modal that asks if you wish to start a new game. What it is actually doing is trying to carry on drawing cards from the exhausted deck, and this prompts the API to return an error | In the hideModal function (later renamed to deleteModal) I was using code to hide all modal windows created during program use. Unfortunately, this was only hiding them and, as more modals were added to the document, it was having a negative effect on the way the game ran - for example, the modal that asks if you wish to start a new game was not being displayed at the end of the game. I altered the code to completely remove the modal using `messageModal.remove()` once it had been displayed, and this fixed the problem. Now when the pack is empty the modal that asks if you wish to start a new game is displayed so that the player can start a new game (and create a new pack of cards in the process) |
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#68](https://github.com/dvfrancis/craftr/issues/68) | SMTP authentication error - when sending a message via the contact form, it is unable to email the administrator due to the error shown in the screenshot above | I cannot use my main email account password directly as my email provider requires the use of app-specific passwords. Once I had generated one and updated `env.py`, the form was able to send the email as expected.|
 
-### Bug 71
+### Bug 69
 
-| Bug | Fix |
-| --- | --- |
-| When `noPoints()` or `finalRound()` are called they immediately redirect to index.html | In both functions, I was calling the leaveGame() function via an addEventListener event `bsBtn2.addEventListener("click", leaveGame("index.html"));`. However, this immediately runs the called function, so I had to wrap them in an anonymous function so they were only called when the associated button was clicked, and not when the script file itself was loaded `bsBtn2.addEventListener("click", function () {leaveGame("index.html")});` |
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#69](https://github.com/dvfrancis/craftr/issues/69) | The contact form does not send an email notification to the admin of the site when deployed to Heroku (although it still creates the contact form in the database). | I have put all sensitive info (secret key, email addresses, passwords) into `env.py`, which is not synced to GitHub as it is in `.gitignore`. I needed to add the email address and email password variables to Heroku, after which the email functionality worked as expected |
 
-### Bug 72
+### Bug 70
 
 <details>
-<summary>Click here to see a screenshot showing the result of bug 72</summary>
+<summary>Click here to see a screenshot of bug #70</summary>
 
-![Fixed Bug 72](documentation/bugs/bug-72-blocked-aria-hidden-on-an-element.webp)
+![Fixed Bug 70](documentation/bugs/bug-70.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| Blocked aria-hidden on an element | I removed `aria-hidden="true"` from the code shown above |
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#70](https://github.com/dvfrancis/craftr/issues/70) | When attempting to register a new account from the login page, you are prompted to login first. When logged in, it redirects to the details page when the register button is clicked. | The 'Register' button was defined within the `<form>` HTML element, which was causing this bug. When moved outside of that element it behaves as expected. Buttons inside `<form>` elements often inherit functionality tied to the form itself |
 
 ### Bug 75
 
 <details>
-<summary>Click here to see a screenshot showing the first part of the result of bug 75</summary>
+<summary>Click here to see a screenshot of bug #75</summary>
 
-![Fixed Bug 75](documentation/bugs/bug-75-fetch-error-part-one.webp)
+![Fixed Bug 75](documentation/bugs/bug-75.webp)
+</details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#75](https://github.com/dvfrancis/craftr/issues/75) | The registration form does not include the first name and the last name fields, and no feedback is given if non-matching passwords are entered | Missing fields added and validation fixed using an else statement, as shown below:
+
+```Python
+else:
+            # Show validation errors when passwords don't match or are missing
+            if user_form.errors:
+                messages.error(
+                    request,
+                    (
+                        "Your passwords do not match, or are missing. "
+                        "Please enter them again."
+                    ))
+```
+### Bug 83
+
+<details>
+<summary>Click here to see a screenshot of bug #83</summary>
+
+![Fixed Bug 83](documentation/bugs/bug-83.webp)
+</details>
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#83](https://github.com/dvfrancis/craftr/issues/83) | Images do not appear to work correctly when DEBUG is set to False; for example, the logo in the footer displays without problem when `DEBUG=True` but not when `DEBUG=False` | Apparently, this behaviour is by design (as detailed in [this article](https://www.geeksforgeeks.org/why-django-not-serve-your-static-files-in-debug-false-mode/)). Once I uploaded the images to Cloudinary, and used the correct URL, the images appeared as expected - even when `DEBUG=False` |
+
+### Bug 84
+
+<details>
+<summary>Click here to see a screenshot of bug #84, before clicking an accordion item</summary>
+
+![Fixed Bug 84](documentation/bugs/bug-84-1.webp)
 </details>
 
 <details>
-<summary>Click here to see a screenshot showing the second part of the result of bug 75</summary>
+<summary>Click here to see a screenshot of bug #84, after clicking an accordion item</summary>
 
-![Fixed Bug 75](documentation/bugs/bug-75-fetch-error-part-two.webp)
+![Fixed Bug 84](documentation/bugs/bug-84-2.webp)
 </details>
 
-| Bug | Fix |
-| --- | --- |
-| Fetch error in console when using Jest tests | Although the Jest test run as expected, this error was caused by `console.error('Fetch error:', error);`, which is used in a try / catch statement. When the line is commented out, the error disappears (However, I cannot remove the line completely as it is essential to the code) |
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#84](https://github.com/dvfrancis/craftr/issues/84) | On `faq.html`, when you expand an accordion item the background images appears to enlarge | I used `background-attachment: fixed;` to lock the background so it doesn't "expand" when an accordion item is clicked. The background no longer changes, see amended code below:
 
+```Python
+.faq-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652041/Depositphotos_356425758_XL_jsstrh.webp") no-repeat scroll center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+```
 ## Unfixed Bugs
 
-The unfixed bugs listed here are numbered to match the cases logged in the GitGub repository project (they do not follow a set sequential order). Despite best efforts, I was unable to fix them.
-
-### Bug 74
-
-<details>
-<summary>Click here to see a screenshot of the console error produced by bug 74</summary>
-
-![Unfixed Bug 74](documentation/bugs/bug-74-background-image-not-loading.webp)
-</details>
-
-| Bug | Fix |
-| --- | --- |
-| The background image that is being loaded using `background: #1A4E04 url("assets/images/playing-cards-background.webp") center cover no-repeat;` is not loading, and is instead returning an error in the console | I tried using the following - a combined background selector command, a separate background selector commands, the full file path, the relative file path, a different image location, recreating the image, compressing the image, checking all spelling, checking all tags were closed. None of these fixed the issue. I also brought it up with my mentor, Julia Konovalova, and she couldn't work out why it wasn't working either. She did suggest it might be something to do with Bootstrap. Ultimately, I decided not to use an image on the page |
-
-### Bug 76
-
-<details>
-<summary>Click here to see a screenshot showing the result of bug 76</summary>
-
-![Unfixed Bug 74](documentation/bugs/bug-76-misaligned-button-text.webp)
-</details>
-
-| Bug | Fix |
-| --- | --- |
-| The button text on the 'PLAY' button on index.html is misaligned only when using the Safari browser | I ran out of time to fix this issue |
+There are no unfixed bugs in the project.

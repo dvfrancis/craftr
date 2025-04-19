@@ -985,7 +985,9 @@ The following images are only used when no class, instructor, or user image has 
 - [Website Mockup Generator](https://websitemockupgenerator.com/) previewing website oon different devices.
 - [Deposit Photos](https://depositphotos.com/) images.
 - [Sarah Renae Clarke's Colour Catalogue V2](https://sarahrenaeclark.com/color-palettes/) colours.
+- [Free Convert WebP Converter](https://www.freeconvert.com/webp-converter) any image to webp converter.
 - [Pixillion Image Converter Software](https://www.nchsoftware.com/imageconverter/index.html?theme=webp&kw=webp%20converter&m=e&d=c&c=76691136445782&ag=1227055160311186&msclkid=024126ffbd141fc2bb514100770aa72b&utm_source=bing&utm_medium=cpc&utm_campaign=EN-C1&utm_term=webp%20converter&utm_content=Pixillion%20-%20WebP%20Converter) any image to webp converter.
+- [Image Resizer Image Converter](https://imageresizer.com/image-converter) any image to webp converter.
 - [Favicon Generator](https://favicon.io/favicon-converter/) favicon generator.
 - [Cloudinary](https://cloudinary.com/) image hosting.
 - [Artistly AI Image Generator](https://artistly.ai/go/) AI logo and image generator.
