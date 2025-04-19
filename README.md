@@ -89,12 +89,24 @@ Click [here] to access the GitHub repository.
     </details>
 
 - Each task was categorised with the relevant milestone and labels (including [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) categorisation).
+- The MoSCoW prioritisation of all 89 tasks in the project is split as follows:
 
-   <details>
-    <summary>Click to view an example of a project task</summary>
-            
-    ![Project board](assets/images/project-board-task.webp)
-    </details>
+| Type | Total | % Total |
+| --- | --- | --- |
+| Must Have | 27 | 30% |
+| Should Have | 6 | 7% |
+| Could Have | 0 | 0% |
+| Won't Have | 4 | 5% |
+| Not Categorised | 52 | 58% |
+| TOTALS | 89 | 100% |
+
+These figures are well within the usual "60% Must Haves / 20% Should Haves / 20% Could Haves" percentage split.
+
+<details>
+  <summary>Click to view a screenshot of the project task</summary>
+
+  ![Project task](assets/images/project-board-task.webp)
+</details>
 
 ### Strategy
 
