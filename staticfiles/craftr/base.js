@@ -7,8 +7,10 @@
  * by its ID, initializes it using Bootstrap's Toast component, and displays it.
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-  var toastEl = document.getElementById("toastMessage");
-  var toast = new bootstrap.Toast(toastEl);
-  toast.show();
+document.addEventListener('DOMContentLoaded', () => {
+  let toastElement = document.getElementById('toastMessage');
+  if (toastElement) {
+    let toast = new bootstrap.Toast(toastElement);
+    toast.show();
+  }
 });
