@@ -476,7 +476,7 @@ Click here to see the [Performance report](documentation/validation/performance/
 
 ## Fixed Bugs
 
-Fixed bugs match the cases raised on the project board attached to the GitGub repository.
+Fixed bugs match the cases raised on the project board attached to the GitGub repository. They're named after their GitHub issue number (so are not sequential).
 
 ### Bug 61
 
@@ -726,7 +726,7 @@ else:
 | --- | --- | --- |
 | [#84](https://github.com/dvfrancis/craftr/issues/84) | On `faq.html`, when you expand an accordion item the background images appears to enlarge | I used `background-attachment: fixed;` to lock the background so it doesn't "expand" when an accordion item is clicked. The background no longer changes, see amended code below:
 
-```Python
+```CSS
 .faq-background {
   display: flex;
   flex-direction: column;
@@ -737,6 +737,34 @@ else:
   background-attachment: fixed;
 }
 ```
+### Bug 87
+
+| Issue | Bug | Fix |
+| --- | --- | --- |
+| [#87](https://github.com/dvfrancis/craftr/issues/87) | `Uncaught TypeError: Cannot read properties of null (reading 'defaultPrevented') toast.js:76` console error | It looks like this is related to the JavaScript that handles Toast messages. The original JavaScript was:
+
+```JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  var toastEl = document.getElementById("toastMessage");
+  var toast = new bootstrap.Toast(toastEl);
+  toast.show();
+});
+```
+It is attempting to show `toastmessage` before the DOM element has been initialised. I've updated the code so that the element is created first before a Toast message is created:
+
+```JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  let toastElement = document.getElementById('toastMessage');
+  if (toastElement) {
+    let toast = new bootstrap.Toast(toastElement);
+    toast.show();
+  }
+});
+```
+I've also created an if statement to check a Toast message exists, before attempting to access the DOM element created and display the message.
+
+The updated code removes the error from the console.
+
 ## Unfixed Bugs
 
 There are no unfixed bugs in the project.
