@@ -547,7 +547,7 @@ section+div.hero {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745000822/Depositphotos_212311048_XL_vp5arb.webp") no-repeat center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062395/home-background_q4qea8.webp") no-repeat fixed center;
   background-size: cover;
   transform: scaleY(-1);
   z-index: -1;
@@ -620,7 +620,7 @@ section+div.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_115696836_XL_nld94g.webp") no-repeat scroll center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062392/classes-background_bvoekn.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -704,7 +704,7 @@ section+div.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652041/Depositphotos_356425758_XL_jsstrh.webp") no-repeat scroll center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062394/faq-background_uxozvd.webp") no-repeat fixed center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -744,7 +744,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744651818/Depositphotos_350095596_XL_w0gxyf.webp") no-repeat scroll center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062393/contact-background_ij9kn3.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -803,7 +803,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744652042/Depositphotos_501993588_XL_r9dhle.webp") no-repeat scroll center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062391/account-background_ejihpe.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -814,7 +814,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744567139/error-background_c9gyxk.png") no-repeat fixed center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062389/404-background_ssii2q.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -823,7 +823,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1744649236/Depositphotos_171778606_XL_o4wchn.webp") no-repeat fixed center;
+  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062390/500-background_agemgi.webp") no-repeat fixed center;
   background-size: cover;
 }
 
