@@ -683,7 +683,7 @@ def register_user(request):
 
 | Issue | Bug | Fix |
 | --- | --- | --- |
-| [#75](https://github.com/dvfrancis/craftr/issues/75) | The registration form does not include the first name and the last name fields, and no feedback is given if non-matching passwords are entered | Missing fields added and validation fixed using an else statement, as shown below:
+| [#75](https://github.com/dvfrancis/craftr/issues/75) | No feedback is given if non-matching passwords are entered | Conditional statement added to check for errors (error message delivered via Toast as shown in screenshot above):
 
 ```Python
 else:
