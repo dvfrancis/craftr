@@ -17,12 +17,16 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000/",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://*.railway.app",
+    "https://*.vercel.app",
 ]
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.railway.app', '.vercel.app', '.herokuapp.com']
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -98,8 +102,19 @@ WSGI_APPLICATION = 'craftr.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'craftr',  # your Neon DB name
+        'USER': 'neondb_owner',
+        'PASSWORD': 'NeonDB2025_SafeKey',
+        'HOST': 'ep-divine-wildflower-abbi9c5n-pooler.eu-west-2.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',  # Neon requires SSL
+        },
+    }
 }
+
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/account/'
