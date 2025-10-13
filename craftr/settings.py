@@ -102,19 +102,12 @@ WSGI_APPLICATION = 'craftr.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'craftr',  # your Neon DB name
-        'USER': 'neondb_owner',
-        'PASSWORD': 'NeonDB2025_SafeKey',
-        'HOST': 'ep-divine-wildflower-abbi9c5n-pooler.eu-west-2.aws.neon.tech',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',  # Neon requires SSL
-        },
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
-
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/account/'
