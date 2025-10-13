@@ -4,12 +4,18 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env # noqa
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.fastmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+if not DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.fastmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,9 +27,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
     "https://*.vercel.app",
 ]
-
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.railway.app', '.vercel.app']
 
