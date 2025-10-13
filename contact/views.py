@@ -3,7 +3,8 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 from django.contrib import messages
 import os
-from django.conf import settings
+import logging
+logger = logging.getLogger(__name__)
 
 
 def contact_page(request):
@@ -40,7 +41,8 @@ def contact_page(request):
                 email.send()
                 print("Email sent successfully (or printed to console in dev)")
             except Exception as e:
-                print("Email sending error:", e)
+                logger.error(f"Contact form email failed: {e}")
+                messages.error(request, "We couldn't send your message at this time. Please try again later.")
 
             messages.success(request, "Your message has been sent")
             return redirect('home')
