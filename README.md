@@ -28,7 +28,7 @@ This website serves as the central hub for the Craftr event, providing informati
 
 ### Site Link
 
-[live site]: https://craftr-bfd2923e1ca4.herokuapp.com/
+[live site]: https://web-production-e914f.up.railway.app
 The [live site] is hosted by Heroku.
 
 ### GitHub Repository
