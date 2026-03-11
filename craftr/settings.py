@@ -1,8 +1,12 @@
 from pathlib import Path
 import os
 import dj_database_url
-if os.path.isfile('env.py'):
-    import env # noqa
+from dotenv import load_dotenv
+
+if os.path.isfile(".env"):
+    load_dotenv()
+
+SITE_ID = 1
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
