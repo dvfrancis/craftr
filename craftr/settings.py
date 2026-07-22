@@ -25,14 +25,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+# Both lists come from the environment as comma-separated values, so the same
+# code runs on Railway and on the AWS box without an edit. The defaults are the
+# values that were previously hardcoded here, so leaving the variables unset
+# keeps the existing deployment behaving exactly as before.
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:8000/",
-    "https://*.herokuapp.com",
-    "https://*.railway.app",
-    "https://*.vercel.app",
+    o.strip() for o in os.environ.get(
+        "CSRF_TRUSTED_ORIGINS",
+        "http://127.0.0.1:8000/,https://*.herokuapp.com,"
+        "https://*.railway.app,https://*.vercel.app",
+    ).split(",") if o.strip()
 ]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.railway.app', '.vercel.app']
+ALLOWED_HOSTS = [
+    h.strip() for h in os.environ.get(
+        "ALLOWED_HOSTS",
+        "localhost,127.0.0.1,.railway.app,.vercel.app",
+    ).split(",") if h.strip()
+]
 
 
 INSTALLED_APPS = [
