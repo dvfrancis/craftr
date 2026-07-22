@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
+from django.conf import settings
 from .forms import ContactForm
 from django.contrib import messages
-import os
 import logging
 logger = logging.getLogger(__name__)
 
@@ -23,9 +23,12 @@ def contact_page(request):
                 f"Email: {form.cleaned_data.get('email', '')}\n"
                 f"Message: {form.cleaned_data.get('message', '')}"
             )
-            # Use safe from_email fallback
-            from_email = os.getenv("EMAIL_USER") or "no-reply@example.com"
-            to_email = [os.getenv("EMAIL_USER") or "no-reply@example.com"]
+            # The sender has to be an address SES is allowed to send as, which
+            # EMAIL_USER (a Fastmail login) is not - every message was refused.
+            # Enquiries come from and go to the site's own address; replies go
+            # to whoever filled the form in.
+            from_email = settings.DEFAULT_FROM_EMAIL
+            to_email = [settings.DEFAULT_FROM_EMAIL]
             reply_to_email = [form.cleaned_data.get("email", from_email)]
 
             email = EmailMessage(
@@ -36,13 +39,15 @@ def contact_page(request):
                 reply_to=reply_to_email
             )
 
-            # Try sending the email safely
+            # The submission is saved above, so the enquiry is safe whether or
+            # not this email gets out - the email only notifies us sooner. The
+            # visitor is told it was received either way, because it was;
+            # showing them an error would only prompt a duplicate submission.
+            # Previously a failure showed the error AND the success message.
             try:
                 email.send()
-                print("Email sent successfully (or printed to console in dev)")
             except Exception as e:
-                logger.error(f"Contact form email failed: {e}")
-                messages.error(request, "We couldn't send your message at this time. Please try again later.")
+                logger.exception("Contact form notification failed: %s", e)
 
             messages.success(request, "Your message has been sent")
             return redirect('home')
