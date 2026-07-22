@@ -10,16 +10,28 @@ SITE_ID = 1
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
+# Email goes through Amazon SES, which has dominicfrancis.co.uk verified with
+# DKIM, so any address on the domain can send.
+#
+# DEFAULT_FROM_EMAIL was never set, so Django fell back to webmaster@localhost
+# and every message was refused by the mail server. Nothing the app sends -
+# the contact form, password resets - has ever been delivered.
+#
+# No credentials are configured: django-ses uses boto3, which picks up the
+# EC2 instance role. The role may only send as the address below.
+DEFAULT_FROM_EMAIL = 'craftr@dominicfrancis.co.uk'
+
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 if not DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.fastmail.com'
-    EMAIL_PORT = 587
-    EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = os.getenv('EMAIL_USER')
-    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+    EMAIL_BACKEND = 'django_ses.SESBackend'
+    AWS_SES_REGION_NAME = 'eu-west-2'
+    AWS_SES_REGION_ENDPOINT = 'email.eu-west-2.amazonaws.com'
+    # django-ses throttles itself by calling ses:GetSendQuota before every
+    # send. That action cannot be scoped to a resource, so allowing it would
+    # mean granting it account-wide. SES enforces its own rate limit anyway.
+    AWS_SES_AUTO_THROTTLE = None
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
