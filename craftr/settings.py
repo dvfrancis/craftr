@@ -172,3 +172,30 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django sends 500 tracebacks to ADMINS by email and prints nothing when
+# DEBUG is False. With no ADMINS set, unhandled exceptions vanish entirely.
+# Writing to stderr puts them wherever the process log goes - the console in
+# development, the systemd journal in production. The app's own loggers are
+# covered by root, since its apps are top-level modules rather than sharing a
+# package namespace.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
+}
