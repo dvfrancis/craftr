@@ -93,7 +93,8 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# Media storage is configured in the STORAGES dict, down with the static
+# settings, because Django 5.1 collapsed both into that one dict.
 
 MEDIA_URL = '/assets/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "assets")
@@ -179,9 +180,29 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# BASE_DIR/'static' has never existed. The only static sources in the repo
+# sit under the project package, which is not in INSTALLED_APPS and so is
+# never reached by AppDirectoriesFinder either.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'craftr', 'static')]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Django 5.1 replaced DEFAULT_FILE_STORAGE and STATICFILES_STORAGE with this
+# dict. The old names were ignored in silence, which is why STATIC_ROOT holds
+# no compressed assets and no staticfiles.json manifest.
+#
+# staticfiles deliberately uses the non-manifest backend. Manifest storage
+# resolves every {% static %} tag through staticfiles.json and raises
+# ValueError when the entry is missing, so a deploy that does not run
+# collectstatic takes the whole site down rather than one page. Nothing in
+# this repo shows whether the box's deploy script runs it. Confirm that
+# before switching to CompressedManifestStaticFilesStorage.
+STORAGES = {
+    'default': {
+        'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
+    },
+}
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
