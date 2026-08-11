@@ -28,8 +28,8 @@ This website serves as the central hub for the Craftr event, providing informati
 
 ### Site Link
 
-[live site]: https://web-production-e914f.up.railway.app
-The [live site] is hosted by Heroku.
+[live site]: https://craftr.dominicfrancis.co.uk
+The [live site] is hosted on AWS.
 
 ### GitHub Repository
 [here]: https://github.com/dvfrancis/craftr
@@ -72,7 +72,7 @@ Click [here] to access the GitHub repository.
 5. [Deployment](#deployment)
     1. [Database Creation](#postgresql-database-creation-and-management)
     2. [Local](#local-deployment)
-    3. [Heroku](#heroku-deployment)
+    3. [AWS](#aws-deployment)
 6. [Credits and References](#credits-and-references)
 7. [Acknowledgements](#acknowledgements)
 
@@ -962,7 +962,9 @@ The following images are only used when no class, instructor, or user image has 
 - [PostgreSQL](https://www.postgresql.org/) website database.
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) troubleshooting and testing (plus [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) feedback on performance).
 - [GitHub](https://github.com/) versioning control.
-- [Heroku](https://www.heroku.com/) website deployment.
+- [Amazon EC2](https://aws.amazon.com/ec2/) website hosting.
+- [Amazon SES](https://aws.amazon.com/ses/) transactional email.
+- [GitHub Actions](https://github.com/features/actions) automated deployment.
 - [Visual Studio Code](https://code.visualstudio.com/) local code editing.
 - [Figma](https://www.figma.com/) entity relationship diagram, user flow diagram, and wireframes.
 - [Microsoft CoPilot](https://copilot.microsoft.com/) for content ideas and coding advice.
@@ -1084,45 +1086,50 @@ Copy the GitHub repository locally in one of two ways:
 - Add `/admin` to the end of the URL to enter the administration panel. You will need to enter the details for the superuser you created earlier.
 - You will now be able to see the admin portal, and add, amend, or delete users.
 
-### Heroku Deployment
+### AWS deployment
 
-- Ensure that you have pushed any changes to your GitHub repository.
-- Visit the Heroku [website](https://www.heroku.com/), and create an account (if you don't already have one).
-- Login, and create a new app.
-- In your local environment create a `Procfile` in the root of your project folder, and add the following to it (remember to push changes to GitHub afterwards):
+The live site is at [craftr.dominicfrancis.co.uk](https://craftr.dominicfrancis.co.uk), running on an EC2 instance in `eu-west-2`. nginx terminates TLS and proxies to Gunicorn, WhiteNoise serves the static files, Cloudinary serves uploaded media, and transactional email goes out through Amazon SES. The database is the PostgreSQL instance described above.
 
-   ```python
-        web: gunicorn <your app name>.wsgi:application
-    ```
+**Deployment is automatic.** Merging a pull request into `main` puts the change into production, usually in under a minute. There is no separate release step, so an unfinished change should stay on its branch.
 
-- Inside your Heroku app, click `Settings`, then click `Reveal Config Vars`, and add the following:
+#### How a deploy runs
 
-| Key      | Value          |
+- `.github/workflows/deploy.yml` fires on any push to `main`. It can also be started by hand from the repository's `Actions` tab, which is how you redeploy without a code change.
+- A `deploy-craftr` concurrency group limits this to one deploy at a time, so two merges in quick succession cannot leave the instance pulling a new commit while the previous install is still running.
+- The workflow asks the instance to run its deploy script, then polls until it finishes and prints that script's own output into the workflow log. A failed deploy fails the workflow, so a red cross in `Actions` means the site did not update.
+
+#### Credentials
+
+No AWS keys are stored in GitHub. The workflow exchanges a short-lived GitHub OIDC token for temporary AWS credentials, which expire when the job ends. There is nothing to rotate and nothing to leak from the repository settings.
+
+The role those credentials assume is deliberately narrow:
+
+| Permission | Scope |
 |-------------|-------------|
-| `DISABLE_COLLECTSTATIC` | `1` |
-| `DATABASE_URL` | *Your database URL* | 
-| `SECRET_KEY` | *Your database secret key* |
-| `EMAIL_USER` | *Email address from your email provider* |
-| `EMAIL_PASSWORD` | *Email password from your email provider* |
+| `ssm:SendCommand` | The `DeployCraftr` document only, and only on the one instance. Both have to match. |
+| `ssm:GetCommandInvocation` | Read the result back, so the script's output reaches the workflow log. |
 
-- Ensure that `DATABASE_URL`, `SECRET_KEY`, `EMAIL_USER`, and `EMAIL_PASSWORD` are added to your local `env.py` file in the following format (substituting `KEY` and `VALUE` for the relevant information):
-    
-    ```Python
-        os.environ.setdefault("KEY",("VALUE"))
-    ```
+The `DeployCraftr` document runs one hardcoded line, `/usr/local/bin/deploy-app craftr`, so it cannot deploy any other application or run arbitrary commands. Its trust policy accepts tokens only from this repository's `main` branch.
 
-- You may also need to add additional key / value pairs if you are using additional services, such as Cloudinary to serve images for your website.
-- Migrate changes to your database:
+*Renaming or moving this repository will break deploys. The trust policy matches the OIDC subject claim as an exact string, and pins the repository name alongside its immutable ID. The resulting error, `Not authorized to perform sts:AssumeRoleWithWebIdentity`, names neither the repository nor the condition that failed to match, so it is worth knowing about in advance. If the repository is renamed, update the trust policy to match.*
 
-    ```Python
-        python3 manage.py makemigrations
-        python3 manage.py migrate
-    ```
-- In `settings.py`, set `DEBUG=False`, and push changes to GitHub.
-- In your Heroku app's `Deploy` settings, connect your repository, and click `Deploy Branch` to deploy the app (you can also set it to automatically deploy when changes are made to the repository, if desired).
-- You will see the deployment building at the bottom of your Heroku app's `Deploy` settings page.
-- When you are ready to finalise your project, set `DEBUG=False` in your local `settings.py` file, and delete `DISABLE_COLLECTSTATIC` from the Heroku app's config variables.
-- Commit any changes to GitHub, and deploy from Heroku as before.
+#### What happens on the instance
+
+The deploy script lives on the instance at `/usr/local/bin/deploy-app`, not in this repository. Changing how a deploy behaves usually means changing that script rather than this workflow. It:
+
+1. Pulls the commit that triggered the deploy.
+2. Installs any new requirements.
+3. Snapshots the database if the schema has changed, then applies migrations.
+4. Runs `collectstatic`, so the copy of `staticfiles/` on the instance is rebuilt from source. Editing `craftr/static/craftr/base.css` or `base.js` is enough; there is no second copy to update by hand.
+5. Restarts the application and smoke-tests it, rolling back if the smoke test fails.
+
+The application's environment variables live on the instance, not in this repository and not in GitHub. `DEBUG` is left unset in production, which is what switches the email backend from the console to SES.
+
+SES needs no credentials in the application itself. django-ses authenticates through boto3, which picks up the instance's own IAM role.
+
+#### Leftovers
+
+`Procfile` is left over from the project's earlier Heroku and Railway hosting. Nothing in the current deployment reads it.
 
 ## Credits and References
 
