@@ -1045,26 +1045,37 @@ Copy the GitHub repository locally in one of two ways:
 2. Clone the repository using the `git clone` command followed by the repository clone link; for example:
     - `git clone https://github.com/dvfrancis/craftr.git`
 
-- Once this has been done, open a terminal window and install all requirements using the command:
+- Open a terminal window in the root of the project folder. Stay there for everything that follows, because `settings.py` looks for your environment file in the current working directory rather than alongside itself.
+- Create and activate a virtual environment, so the project's packages are kept out of your system Python:
+
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+    On Windows the activation command is `.venv\Scripts\activate` instead.
+
+- Install all requirements using the command:
     - `pip3 install -r requirements.txt`
-- In the root of the project folder, create a `.gitignore` file, and add `env.py` and `__pycache__` to protect sensitive data.
-- Add the following information to `env.py`:
-    
-   ```python
-    import os
+- Create a file named `.env` in the root of the project folder. There is no need to create a `.gitignore`; the repository ships with one that already covers `.env`, `.venv` and `__pycache__`. Add the following:
 
-      os.environ['SECRET_KEY'] = 'Add your database secret key'
-      os.environ['DATABASE_URL'] = 'Add your database URL'
-      os.environ['DEBUG'] = 'Set this to True'
-    ```
-*While developing leave `DEBUG=True`, but remember to change it to `DEBUG=False` when you deploy your final project*
-- Run the following commands to push everything to the database:
-    
-    ```Python
-        python3 manage.py makemigrations
-        python3 manage.py migrate
+    ```text
+    SECRET_KEY='Add your Django secret key'
+    DATABASE_URL='Add your database URL'
+    DEBUG='True'
+    CLOUDINARY_CLOUD_NAME='Add your Cloudinary cloud name'
+    CLOUDINARY_API_KEY='Add your Cloudinary API key'
+    CLOUDINARY_API_SECRET='Add your Cloudinary API secret'
     ```
 
+*`SECRET_KEY` and `DATABASE_URL` have no fallback, so `manage.py` will not start without them. The three Cloudinary values fall back to `None`, which lets the site run but leaves every uploaded image broken.*
+
+*`DEBUG` is compared against the exact string `True`, so `true` and `1` both count as false. Leave it as `True` while developing. In production the variable is left unset, which also switches the email backend from the console to Amazon SES.*
+
+*The database is configured with `ssl_require=True`. The Code Institute database described above supports TLS, but a plain local PostgreSQL install will refuse the connection with `server does not support SSL, but SSL was required` until you enable SSL on it.*
+
+- Apply the migrations. Every migration file is committed, so `makemigrations` is not needed on a fresh clone:
+    - `python3 manage.py migrate`
 - Now create the superuser account (completing the necessary information when prompted):
     - `python3 manage.py createsuperuser`
 - Run the webserver:
