@@ -176,3 +176,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# macOS Finder metadata. These were tracked in ten directories and rewrote
+# themselves whenever a folder was opened in Finder, so an ordinary `git pull`
+# failed with unstaged changes that had nothing to do with any real work.
+.DS_Store
