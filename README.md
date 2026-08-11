@@ -24,7 +24,7 @@ This website serves as the central hub for the Craftr event, providing informati
 
 ### Site Preview
 
-![A preview of the Hi-Lo website at various screen sizes](assets/images/site-preview.webp)
+![A preview of the Craftr website at various screen sizes](assets/images/site-preview.webp)
 
 ### Site Link
 
@@ -601,7 +601,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 <details>
 <summary>Click to view the mobile device classes wireframe</summary>
 
-![Mobile game page wireframe](documentation/wireframes/mobile/mobile-diary.webp)
+![Mobile classes page wireframe](documentation/wireframes/mobile/mobile-diary.webp)
 </details>
 
 ##### Class Details
@@ -691,7 +691,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 <details>
 <summary>Click to view the tablet device classes wireframe</summary>
 
-![Tablet game page wireframe](documentation/wireframes/tablet/tablet-diary.webp)
+![Tablet classes page wireframe](documentation/wireframes/tablet/tablet-diary.webp)
 </details>
 
 ##### Class Details
@@ -781,7 +781,7 @@ The wireframe designs shown below were my initial ideas for each page of the web
 <details>
 <summary>Click to view the desktop device classes wireframe</summary>
 
-![Desktop game page wireframe](documentation/wireframes/desktop/desktop-diary.webp)
+![Desktop classes page wireframe](documentation/wireframes/desktop/desktop-diary.webp)
 </details>
 
 ##### Class Details
