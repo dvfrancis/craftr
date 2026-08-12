@@ -547,7 +547,7 @@ section+div.hero {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062395/home-background_q4qea8.webp") no-repeat fixed center;
+  background: url("images/home-background.webp") no-repeat fixed center;
   background-size: cover;
   transform: scaleY(-1);
   z-index: -1;
@@ -620,7 +620,7 @@ section+div.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062392/classes-background_bvoekn.webp") no-repeat fixed center;
+  background: url("images/classes-background.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -704,7 +704,7 @@ section+div.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062394/faq-background_uxozvd.webp") no-repeat fixed center;
+  background: url("images/faq-background.webp") no-repeat fixed center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -744,7 +744,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062393/contact-background_ij9kn3.webp") no-repeat fixed center;
+  background: url("images/contact-background.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -803,7 +803,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062391/account-background_ejihpe.webp") no-repeat fixed center;
+  background: url("images/account-background.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -814,7 +814,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062389/404-background_ssii2q.webp") no-repeat fixed center;
+  background: url("images/404-background.webp") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -823,7 +823,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("https://res.cloudinary.com/dvzs9gve0/image/upload/v1745062390/500-background_agemgi.webp") no-repeat fixed center;
+  background: url("images/500-background.webp") no-repeat fixed center;
   background-size: cover;
 }
 
