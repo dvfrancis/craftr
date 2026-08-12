@@ -45,7 +45,10 @@
                     {% for class in day.event_day.all|dictsort:"start_time" %}
                     <div class="col">
                         <div class="diary-class">
-                            <img src="{{ class.class_image.url }}" alt="{{ class.class_title }}" class="photo-image">
+                            {# Unguarded before #112, which was a latent 500:
+                               .url raises ValueError on an empty image. Every
+                               class happened to have one, so it never fired. #}
+                            <img src="{% if class.class_image %}{{ class.class_image.url }}{% else %}{{ class_placeholder }}{% endif %}" alt="{{ class.class_title }}" class="photo-image">
                             <div class="class-details">
                                 <p class="site-heading">{{ class.class_title }}</p>
                                 <p><strong>Start Time:</strong> {{ class.start_time|time:"g:i a" }}</p>

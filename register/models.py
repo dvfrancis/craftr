@@ -29,8 +29,8 @@ class UserProfile(models.Model):
         location (str): The user's location.
         experience (str): The user's experience level, chosen from predefined
         options.
-        photograph (CloudinaryField): An optional profile photograph
-        stored in Cloudinary.
+        photograph (ImageField): An optional profile photograph stored in
+        the S3 media bucket.
     """
     user = models.OneToOneField(
         User,
@@ -42,9 +42,10 @@ class UserProfile(models.Model):
         choices=EXPERIENCE_CHOICES,
         default=BEGINNER,
         max_length=12)
-    photograph = CloudinaryField(
-        'image',
-        default='placeholder',
+    # See the note in details/models.py: this prefix is also named in
+    # infra/media-permissions.yaml and the two have to agree.
+    photograph = models.ImageField(
+        upload_to='profiles/',
         blank=True,
         null=True
     )

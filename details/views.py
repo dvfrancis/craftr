@@ -20,10 +20,12 @@ def enrol(request, class_id):
         HttpResponse: The rendered class details page or a redirect after
         processing the enrolment/withdrawal.
     """
-    cloud_name = settings.CLOUDINARY_STORAGE["CLOUD_NAME"]
-    placeholder = (
-        f"https://res.cloudinary.com/{cloud_name}/image/upload/placeholder"
-    )
+    # Issue #112: these were built from the Cloudinary cloud name at request
+    # time, so they broke the moment that setting went away. They are now
+    # static files in the repository, and the class and the instructor get
+    # their own rather than sharing one.
+    class_placeholder = settings.DEFAULT_CLASS_IMAGE_URL
+    instructor_placeholder = settings.DEFAULT_INSTRUCTOR_IMAGE_URL
     # Retrieve the specific class using the class_id
     event_class = get_object_or_404(EventClass, id=class_id)
     # Check if the user is enrolled in this class
@@ -58,7 +60,8 @@ def enrol(request, class_id):
         {
             "event_class": event_class,
             "is_enrolled": is_enrolled,
-            "placeholder": placeholder,
+            "class_placeholder": class_placeholder,
+            "instructor_placeholder": instructor_placeholder,
         },
     )
 
