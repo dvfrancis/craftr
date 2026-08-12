@@ -1,0 +1,86 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >-
+  Lets the apps box read and write uploaded images in the
+  craftr-dominicfrancis bucket, so uploads through the Django admin and the
+  profile form work.
+
+# The last infrastructure piece of issue #112, after infra/media-bucket.yaml
+# and infra/media-cdn.yaml. Nothing else is needed in AWS after this; what
+# remains is application code and the copy itself.
+#
+# apps-ec2-role was created by hand and is not owned by any CloudFormation
+# stack. Rather than import that shared production role, this attaches one
+# more inline policy to it, exactly as write-tardis-covers and
+# write-cultfilmclub-media already do. It is the smallest footprint that keeps
+# the change in version control.
+#
+# To apply:
+#
+#   aws cloudformation deploy \
+#     --stack-name craftr-media-permissions \
+#     --template-file infra/media-permissions.yaml \
+#     --capabilities CAPABILITY_NAMED_IAM \
+#     --region eu-west-2 \
+#     --profile admin
+#
+# Keep that --capabilities flag even though `validate-template` reports this
+# template as needing none. It does not recognise AWS::IAM::RolePolicy, but
+# the deploy does: the applied tardis-media-permissions stack has
+# CAPABILITY_NAMED_IAM recorded against it.
+
+# No delete permission of any kind, matching the other two sites' reasoning.
+# Django does not need it: since 1.3 deleting a model row leaves its file
+# alone, and the admin's "clear" tickbox blanks the database column rather
+# than removing anything from storage. So nothing legitimate breaks, and a
+# compromised box cannot erase the images. Combined with versioning on the
+# bucket, even an overwrite of every image is recoverable.
+#
+# The trade is that replacing an image leaves the old object unreferenced
+# rather than gone. At a fraction of a penny each, that is worth paying.
+
+Resources:
+  MediaWritePolicy:
+    Type: AWS::IAM::RolePolicy
+    Properties:
+      RoleName: apps-ec2-role
+      PolicyName: write-craftr-media
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: ReadWriteUploadedImages
+            Effect: Allow
+            Action:
+              - s3:PutObject
+              # Read matters more than it looks. django-storages checks whether
+              # a key already exists before saving, to avoid overwriting, and
+              # that check is a HEAD request needing this permission. Without it
+              # S3 answers 403 rather than 404 for a key that is simply absent,
+              # and the upload fails with a permissions error that names no
+              # permission.
+              - s3:GetObject
+            # The three prefixes the application writes, and nothing wider.
+            # These must match the upload_to values on the model fields
+            # exactly or every upload is denied, so they change together.
+            #
+            # Unlike the-cult-film-club there is no decorative prefix to
+            # exclude here: Craftr's 14 background, workshop and logo images
+            # were moved into the repository and are served by WhiteNoise, so
+            # this bucket holds only genuinely uploaded content.
+            Resource:
+              - arn:aws:s3:::craftr-dominicfrancis/classes/*
+              - arn:aws:s3:::craftr-dominicfrancis/instructors/*
+              - arn:aws:s3:::craftr-dominicfrancis/profiles/*
+
+          - Sid: ListUploadedPrefixes
+            Effect: Allow
+            Action: s3:ListBucket
+            # Bucket ARN, not an object ARN: ListBucket is a bucket-level
+            # action, and pointing it at objects silently grants nothing.
+            Resource: arn:aws:s3:::craftr-dominicfrancis
+            Condition:
+              StringLike:
+                s3:prefix:
+                  - classes/*
+                  - instructors/*
+                  - profiles/*
