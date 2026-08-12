@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Craftr is a Django 5.2 site for a fictional three-day digital-crafting event. Visitors browse a diary of event days, drill into individual classes, and register an account to enrol on them. Deployed on an AWS EC2 box behind Gunicorn; media is hosted on Cloudinary and transactional email goes through Amazon SES.
+Craftr is a Django 5.2 site for a fictional three-day digital-crafting event. Visitors browse a diary of event days, drill into individual classes, and register an account to enrol on them. Deployed on an AWS EC2 box behind Gunicorn; uploaded images live in a private S3 bucket served through CloudFront at `media.craftr.dominicfrancis.co.uk`, and transactional email goes through Amazon SES.
 
 ## Commands
 
@@ -35,8 +35,8 @@ Python is held to PEP 8 at a 79-character limit — every module in the repo alr
 Only four apps own models; the rest are view-and-template only:
 
 - **diary** — `EventDay` (date, unique title, description).
-- **details** — `EventClass` (FK to `EventDay`, start/end times, difficulty, instructor, Cloudinary images) and `Enrolment` (unique user × class).
-- **register** — `UserProfile`, one-to-one with `auth.User`, carrying location, experience level and a Cloudinary photograph.
+- **details** — `EventClass` (FK to `EventDay`, start/end times, difficulty, instructor, two `ImageField`s under `classes/` and `instructors/`) and `Enrolment` (unique user × class).
+- **register** — `UserProfile`, one-to-one with `auth.User`, carrying location, experience level and an `ImageField` photograph under `profiles/`.
 - **contact** — `Contact`, a stored copy of every contact-form submission.
 
 `home`, `faq`, `login`, `account` render pages and hold no models.
@@ -61,7 +61,7 @@ Everything comes from the environment. `settings.py` calls `load_dotenv()` only 
 | `DATABASE_URL` | Parsed by `dj_database_url` with `ssl_require=True`, so a plain local Postgres without TLS will be rejected. |
 | `DEBUG` | String comparison against `'True'`; anything else is false. |
 | `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS` | Comma-separated. Defaults preserve the old hardcoded Railway/Vercel values so unset behaves as before. |
-| `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET` | Read via `os.getenv`, so absent means `None` rather than an error. |
+| `AWS_STORAGE_BUCKET_NAME`, `AWS_S3_REGION_NAME`, `AWS_S3_CUSTOM_DOMAIN` | All default to the production values, so unset works. No AWS credentials are read: boto3 uses the EC2 instance role. |
 
 `DEBUG` also selects the email backend: console when true, `django_ses.SESBackend` (region `eu-west-2`) when false. SES needs no credentials in the app — django-ses uses boto3, which picks up the EC2 instance role. `AWS_SES_AUTO_THROTTLE` is deliberately `None` because django-ses's throttling calls `ses:GetSendQuota`, which cannot be scoped to a resource.
 
@@ -92,3 +92,30 @@ The rest of `STATIC_ROOT` is reproducible. `STATICFILES_DIRS` now points at `cra
 Every module, class, view and non-trivial method carries a Google-style docstring with `Args:`/`Returns:`/`Raises:` sections; match that when adding code. Comments in `settings.py` and the contact view explain *why* a non-obvious choice was made rather than what the line does — preserve that style. User-facing strings are British English (`enrolment`, `Enrol`), matching `LANGUAGE_CODE = 'en-gb'`. Feedback to users goes through `django.contrib.messages` and surfaces as Bootstrap toasts from `base.html`.
 
 Work happens on branches named `feat/`, `fix/`, `chore/`, `ci/` or `docs/` and lands on `main` by pull request; commits use Conventional Commit prefixes. Merging to `main` deploys to production immediately.
+
+## Media
+
+Uploaded images are `ImageField`s stored in the private `craftr-dominicfrancis`
+S3 bucket and served through CloudFront at `media.craftr.dominicfrancis.co.uk`.
+The three `upload_to` prefixes (`classes/`, `instructors/`, `profiles/`) are
+also named in `infra/media-permissions.yaml`, which scopes the instance role's
+write access to exactly those paths — change one without the other and every
+upload is denied with an error that names no permission.
+
+The bucket holds only genuinely uploaded content. Decorative images (page
+backgrounds, the six landing-page photographs, the logo, and the three
+placeholder images) live in `craftr/static/craftr/images/` and are served by
+WhiteNoise. Fallbacks for records with no image come from the
+`DEFAULT_CLASS_IMAGE_URL`, `DEFAULT_INSTRUCTOR_IMAGE_URL` and
+`DEFAULT_PROFILE_IMAGE_URL` settings.
+
+**`ImageField.url` raises `ValueError` when the field is empty, and a
+`|default:` filter cannot catch it** — the exception happens during variable
+resolution, before any filter runs. Templates must guard with `{% if %}`.
+
+Cloudinary was removed in issue #112. Historical migrations that referenced
+`CloudinaryField` now use `CharField(max_length=255)`, which produces an
+identical column; do not reintroduce the import, or `migrate` breaks on a
+fresh database. The reverse of `details/0012` and `register/0004` still runs
+but leads nowhere, since the package is gone: recovery means restoring a
+snapshot, not migrating backwards.

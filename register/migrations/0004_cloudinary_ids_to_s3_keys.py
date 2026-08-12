@@ -8,6 +8,10 @@ Of the six profiles in production on 12 August 2026, five held the bare
 default "image/upload/placeholder" and only one held a real photograph. The
 five are emptied; account.html already falls through to the default image
 when photograph is falsy, so nothing on the page changes.
+
+As with details/0012, the reverse no longer leads anywhere: the cloudinary
+package has since been removed, so 0003 cannot be unapplied. Recovering means
+restoring a database snapshot.
 """
 
 import re

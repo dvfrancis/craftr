@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-import cloudinary
 import dj_database_url
 from dotenv import load_dotenv
 
@@ -65,8 +64,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',
-    'cloudinary',
     'home',
     'diary',
     'details',
@@ -87,33 +84,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-}
-
-# Force HTTPS on every generated image URL (issue #113). Without this, images
-# were served over http:// on an https:// page, which browsers treat as mixed
-# content.
-#
-# Setting SECURE in the dict above does nothing, which is the trap here.
-# django-cloudinary-storage already defaults it to True, but it applies that
-# default from cloudinary_storage.app_settings, and that module is only
-# imported when something touches the storage backend. CloudinaryField comes
-# from cloudinary.models and talks to Cloudinary directly, so STORAGES never
-# gets instantiated, the package never loads, and the global config stays at
-# secure=None - which the library reads as false.
-#
-# Configuring it here does not depend on another package's import order.
-cloudinary.config(secure=True)
-
-# Media storage is configured in the STORAGES dict, down with the static
-# settings, because Django 5.1 collapsed both into that one dict.
-
-MEDIA_URL = '/assets/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "assets")
 
 ROOT_URLCONF = 'craftr.urls'
 

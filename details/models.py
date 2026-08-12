@@ -1,6 +1,5 @@
 from django.db import models
 from diary.models import EventDay
-from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
