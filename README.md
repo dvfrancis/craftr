@@ -493,7 +493,7 @@ Custom model that extends Django's User model by adding site-specific fields.
 |Username|Foreign|`username`|CharField|*Linked to the `User` model, in a 1-2-1 relationship*
 |Location|Key|`location`|CharField|`max_length=100`. Field required through validation by `def clean(self)`
 |Experience Level|Key|`experience`|ChoiceField|`choices=EXPERIENCE_CHOICES, default=BEGINNER, max_length=12`. Field required through validation by `def clean(self)`
-|User Photograph|Key|`photograph`|CloudinaryField|`default='placeholder', blank=True, null=True`
+|User Photograph|Key|`photograph`|ImageField|`upload_to='profiles/', blank=True, null=True`
 
 ```Python
 # Define the choices for experience levels
@@ -531,9 +531,9 @@ Custom model that lists the classes that run across the entire event. `Class Met
 |Title|Key|`class_title`|CharField|`max_length=100`
 |Description|Key|`class_description`|TextField|
 |Difficulty|Key|`difficulty`|ChoiceField|`choices=DIFFICULTY_CHOICES, default=BEGINNER, max_length=12`
-|Image|Key|`class_image`|CloudinaryField|`default='class_placeholder', blank=True, null=True`
+|Image|Key|`class_image`|ImageField|`upload_to='classes/', blank=True, null=True`
 |Instructor|Key|`instructor`|CharField|`max_length=100`
-|Instructor Photo|Key|`instructor_photo`|CloudinaryField|`default='instructor_placeholder', blank=True, null=True`
+|Instructor Photo|Key|`instructor_photo`|ImageField|`upload_to='instructors/', blank=True, null=True`
 |Instructor Biography|Key|`instructor_bio`|TextField|
 
 ```Python
@@ -898,7 +898,7 @@ All fonts were sourced from Google Fonts, and were used as follows:
 
 #### Media
 
-- Images used on the website are stored in, and served from, [Cloudinary](https://cloudinary.com/).
+- Uploaded images are stored in a private Amazon S3 bucket and served through CloudFront at `media.craftr.dominicfrancis.co.uk`. Decorative images, the page backgrounds and the logo, live in the repository and are served by WhiteNoise alongside the CSS.
 
 - Images used in the README.md and TESTING.md are stored in the [GitHub repository](https://github.com/dvfrancis/craftr) for this project.
 
@@ -991,7 +991,8 @@ The following images are only used when no class, instructor, or user image has 
 - [Pixillion Image Converter Software](https://www.nchsoftware.com/imageconverter/index.html?theme=webp&kw=webp%20converter&m=e&d=c&c=76691136445782&ag=1227055160311186&msclkid=024126ffbd141fc2bb514100770aa72b&utm_source=bing&utm_medium=cpc&utm_campaign=EN-C1&utm_term=webp%20converter&utm_content=Pixillion%20-%20WebP%20Converter) any image to webp converter.
 - [Image Resizer Image Converter](https://imageresizer.com/image-converter) any image to webp converter.
 - [Favicon Generator](https://favicon.io/favicon-converter/) favicon generator.
-- [Cloudinary](https://cloudinary.com/) image hosting.
+- [Amazon S3](https://aws.amazon.com/s3/) uploaded image storage.
+- [Amazon CloudFront](https://aws.amazon.com/cloudfront/) image delivery.
 - [Artistly AI Image Generator](https://artistly.ai/go/) AI logo and image generator.
 - [This Person Does Not Exist](https://thispersondoesnotexist.com/) AI face generator.
 - [Beautify](https://marketplace.visualstudio.com/items/?itemName=HookyQR.beautify) Visual Studio Code plugin - code formatting.
@@ -1065,12 +1066,11 @@ Copy the GitHub repository locally in one of two ways:
     SECRET_KEY='Add your Django secret key'
     DATABASE_URL='Add your database URL'
     DEBUG='True'
-    CLOUDINARY_CLOUD_NAME='Add your Cloudinary cloud name'
-    CLOUDINARY_API_KEY='Add your Cloudinary API key'
-    CLOUDINARY_API_SECRET='Add your Cloudinary API secret'
     ```
 
-*`SECRET_KEY` and `DATABASE_URL` have no fallback, so `manage.py` will not start without them. The three Cloudinary values fall back to `None`, which lets the site run but leaves every uploaded image broken.*
+*`SECRET_KEY` and `DATABASE_URL` have no fallback, so `manage.py` will not start without them.*
+
+*Uploaded images need no credentials. On the deployed instance boto3 picks up the EC2 instance role; locally, uploads will fail without AWS credentials but every existing image still loads, because they are read from CloudFront over plain HTTPS.*
 
 *`DEBUG` is compared against the exact string `True`, so `true` and `1` both count as false. Leave it as `True` while developing. In production the variable is left unset, which also switches the email backend from the console to Amazon SES.*
 
@@ -1088,7 +1088,7 @@ Copy the GitHub repository locally in one of two ways:
 
 ### AWS deployment
 
-The live site is at [craftr.dominicfrancis.co.uk](https://craftr.dominicfrancis.co.uk), running on an EC2 instance in `eu-west-2`. nginx terminates TLS and proxies to Gunicorn, WhiteNoise serves the static files, Cloudinary serves uploaded media, and transactional email goes out through Amazon SES. The database is the PostgreSQL instance described above.
+The live site is at [craftr.dominicfrancis.co.uk](https://craftr.dominicfrancis.co.uk), running on an EC2 instance in `eu-west-2`. nginx terminates TLS and proxies to Gunicorn, WhiteNoise serves the static files, uploaded images come from S3 through CloudFront, and transactional email goes out through Amazon SES. The database is the PostgreSQL instance described above.
 
 **Deployment is automatic.** Merging a pull request into `main` puts the change into production, usually in under a minute. There is no separate release step, so an unfinished change should stay on its branch.
 

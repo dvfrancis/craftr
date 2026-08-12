@@ -12,8 +12,6 @@ Attributes:
 
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
 
 handler404 = 'craftr.views.custom_404'
 handler500 = 'craftr.views.custom_500'
@@ -28,4 +26,9 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('register/', include('register.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# The local media route that used to be appended here is gone with issue #112.
+# django.conf.urls.static.static() only ever served files from MEDIA_ROOT on
+# disk, and uploaded images now live in S3 behind CloudFront. It returned an
+# empty list whenever DEBUG was False, so production never used it either.

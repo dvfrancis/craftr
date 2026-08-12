@@ -6,9 +6,15 @@ historical model hands back plain strings rather than CloudinaryResource
 objects.
 
 The objects must already be in the bucket before this is applied. See the
-copy_media_to_s3 management command, which has to be run first: this
+copy_media_to_s3 management command, which had to be run first: this
 migration rewrites the rows to point at S3, and if the files are not there
 yet every class image on the site 404s until they are.
+
+The reverse below no longer leads anywhere. It still runs, but the cloudinary
+package was removed once this had proved itself in production, so 0011 cannot
+be unapplied and the values it rebuilds have no backend to serve them.
+Recovering from here means restoring a database snapshot, not migrating
+backwards.
 """
 
 import re
