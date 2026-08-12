@@ -212,13 +212,58 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'craftr', 'static')]
 # this repo shows whether the box's deploy script runs it. Confirm that
 # before switching to CompressedManifestStaticFilesStorage.
 STORAGES = {
+    # Uploaded images moved to S3 in issue #112. Every row was rewritten from
+    # a Cloudinary public ID to a key like classes/<name>.webp by
+    # details/0012 and register/0004, so this backend and those migrations
+    # have to move together: point this at S3 with the old IDs still in the
+    # column, or roll the data back without reverting this, and every image
+    # 404s.
     'default': {
-        'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+        'BACKEND': 'storages.backends.s3.S3Storage',
     },
     'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
     },
 }
+
+# S3Storage reads these settings itself, so STORAGES above needs no OPTIONS
+# block. No credentials appear here: boto3 picks up the EC2 instance role,
+# which infra/media-permissions.yaml grants PutObject and GetObject on the
+# three upload prefixes and nothing else.
+AWS_STORAGE_BUCKET_NAME = os.environ.get(
+    'AWS_STORAGE_BUCKET_NAME', 'craftr-dominicfrancis'
+)
+AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME', 'eu-west-2')
+
+# Serve through CloudFront rather than the bucket's own endpoint. The bucket
+# blocks all public access, so this is the only route a browser has to it.
+AWS_S3_CUSTOM_DOMAIN = os.environ.get(
+    'AWS_S3_CUSTOM_DOMAIN', 'media.craftr.dominicfrancis.co.uk'
+)
+
+# Unsigned URLs. The objects are public through CloudFront, and signing would
+# add a query string that defeats caching for no benefit.
+AWS_QUERYSTRING_AUTH = False
+
+# The bucket has ACLs disabled, which is the modern default. Sending one at
+# all would be rejected.
+AWS_DEFAULT_ACL = None
+
+# Let django-storages rename on collision instead of silently overwriting an
+# existing key. It is also why the IAM policy grants GetObject: the check for
+# an existing key is a HEAD request.
+AWS_S3_FILE_OVERWRITE = False
+
+# Fallbacks for records with no image. These were Cloudinary public IDs built
+# into two views at request time; they are now real files in the repository,
+# served by WhiteNoise alongside the backgrounds and logo moved in #115.
+DEFAULT_CLASS_IMAGE_URL = STATIC_URL + 'craftr/images/class-placeholder.jpg'
+DEFAULT_INSTRUCTOR_IMAGE_URL = (
+    STATIC_URL + 'craftr/images/instructor-placeholder.jpg'
+)
+DEFAULT_PROFILE_IMAGE_URL = (
+    STATIC_URL + 'craftr/images/profile-placeholder.jpg'
+)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

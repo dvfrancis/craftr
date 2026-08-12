@@ -31,9 +31,9 @@ class EventClass(models.Model):
         class_title (CharField): The title of the class.
         class_description (TextField): A description of the class.
         difficulty (CharField): The difficulty level of the class.
-        class_image (CloudinaryField): An optional image for the class.
+        class_image (ImageField): An optional image for the class.
         instructor (CharField): The name of the instructor.
-        instructor_image (CloudinaryField): An optional image of the
+        instructor_image (ImageField): An optional image of the
         instructor.
         instructor_bio (TextField): A biography of the instructor.
     """
@@ -50,16 +50,21 @@ class EventClass(models.Model):
         max_length=12,
         choices=DIFFICULTY_CHOICES,
         default=BEGINNER)
-    class_image = CloudinaryField(
-        'image',
-        default='class_placeholder',
+    # The upload_to prefixes must match infra/media-permissions.yaml, which
+    # scopes the box's write access to exactly these three paths. Change one
+    # without the other and every upload is denied.
+    #
+    # No default any more. These held Cloudinary public IDs, and the
+    # replacement is a real image in the repository, reached through
+    # settings.DEFAULT_CLASS_IMAGE_URL when the field is empty.
+    class_image = models.ImageField(
+        upload_to='classes/',
         blank=True,
         null=True
     )
     instructor = models.CharField(max_length=100)
-    instructor_image = CloudinaryField(
-        'image',
-        default='instructor_placeholder',
+    instructor_image = models.ImageField(
+        upload_to='instructors/',
         blank=True,
         null=True
     )

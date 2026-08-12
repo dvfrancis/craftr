@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 from diary.models import EventDay
 
@@ -14,7 +15,15 @@ def diary_details(request):
         request: The HTTP request object.
 
     Returns:
-        HttpResponse: The rendered diary details page with event days.
+        HttpResponse: The rendered diary details page with event days, and
+        the fallback image for a class that has none.
     """
     days = EventDay.objects.order_by("day_date")
-    return render(request, "diary/diary.html", {"days": days})
+    return render(
+        request,
+        "diary/diary.html",
+        {
+            "days": days,
+            "class_placeholder": settings.DEFAULT_CLASS_IMAGE_URL,
+        },
+    )

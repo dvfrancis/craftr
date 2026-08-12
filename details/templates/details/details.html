@@ -38,7 +38,11 @@
       <!-- Class Information -->
       <div class="col-lg-6">
         <div class="class-info text-center">
-          <img src="{{ event_class.class_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
+          {# Guarded rather than |default: because .url raises ValueError on
+             an empty ImageField, before any filter can substitute. The
+             Cloudinary sizing parameters are gone with Cloudinary; .photo-image
+             already crops to a 150px circle in CSS. #}
+          <img src="{% if event_class.class_image %}{{ event_class.class_image.url }}{% else %}{{ class_placeholder }}{% endif %}"
             alt="Class Image" class="photo-image mb-4 img-fluid">
           <h2 class="mb-3">{{ event_class.class_title }}</h2>
           <p class="site-heading">takes place on</p>
@@ -54,7 +58,7 @@
       <!-- Instructor Information -->
       <div class="col-lg-6">
         <div class="instructor-info text-center">
-          <img src="{{ event_class.instructor_image.url|default:placeholder|add:'?w=250&h=250&c_fill,g_face,r_max' }}"
+          <img src="{% if event_class.instructor_image %}{{ event_class.instructor_image.url }}{% else %}{{ instructor_placeholder }}{% endif %}"
             alt="Instructor Image" class="photo-image mb-4 img-fluid">
 
           <p class="site-heading">Instructor</p>

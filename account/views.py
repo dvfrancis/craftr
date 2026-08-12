@@ -22,13 +22,10 @@ def user_details(request):
         HttpResponse: The rendered account page with user details and
         enrolments.
     """
-    cloud_name = settings.CLOUDINARY_STORAGE['CLOUD_NAME']
-    default_profile_url = (
-        (
-            f"https://res.cloudinary.com/{cloud_name}/image/upload/"
-            f"placeholder"
-        )
-    )
+    # Issue #112: this was built from the Cloudinary cloud name at request
+    # time, so it broke the moment that setting went away. It is now a static
+    # file in the repository.
+    default_profile_url = settings.DEFAULT_PROFILE_IMAGE_URL
     user_enrolments = Enrolment.objects.filter(
         user=request.user
     ).select_related("enrolled_class").order_by(
