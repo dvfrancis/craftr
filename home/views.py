@@ -13,4 +13,4 @@ def home_page(request):
     Returns:
         HttpResponse: The rendered home page.
     """
-    return render(request, 'home/index.html/')
+    return render(request, 'home/index.html')

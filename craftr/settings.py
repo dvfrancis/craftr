@@ -105,21 +105,27 @@ WSGI_APPLICATION = 'craftr.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-# This code commented out but kept for future automated testing
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+#
+# TLS is required for the managed PostgreSQL this points at in production and
+# in development, so ssl_require stays on for anything that speaks it.
+#
+# SQLite has no such concept, and dj-database-url passes the option straight
+# through to the driver, which rejects it with "Connection() got an unexpected
+# keyword argument 'sslmode'". Making the flag conditional is what lets the
+# test suite run without a PostgreSQL server:
+#
+#   DATABASE_URL=sqlite:// python3 manage.py test
+#
+# Production is unaffected: its URL is postgres://, so ssl_require is True
+# exactly as before.
+DATABASE_URL = os.environ.get('DATABASE_URL', '')
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=DATABASE_URL,
         conn_max_age=600,
-        ssl_require=True
+        ssl_require=not DATABASE_URL.startswith('sqlite'),
     )
 }
 
