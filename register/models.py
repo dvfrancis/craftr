@@ -79,21 +79,35 @@ class UserProfile(models.Model):
 
 
 @receiver(post_save, sender=User)
-def create_or_update_user_profile(sender, instance, created, **kwargs):
+def create_user_profile(sender, instance, created, raw=False, **kwargs):
     """
-    Signal handler to create or update a UserProfile.
+    Ensure every User has a UserProfile.
 
-    This function is triggered whenever a User instance is saved. If the
-    User is newly created, a corresponding UserProfile is created. If the
-    User already exists, the associated UserProfile is updated.
+    Triggered whenever a User is saved. Creates the profile when one is
+    missing and does nothing when it already exists, so a User can always
+    be saved regardless of what state its profile is in.
+
+    This used to call instance.profile.save() on every non-creating save,
+    which raised RelatedObjectDoesNotExist for a User with no profile. That
+    was reachable through the admin, where UserProfile can be deleted on its
+    own: editing that user afterwards then failed (issue #105). Nothing on
+    UserProfile derives from User, so the re-save it performed achieved
+    nothing anyway.
 
     Args:
         sender: The model class that sent the signal.
         instance: The instance of the model that was saved.
-        created (bool): A boolean indicating whether the instance was created.
+        created (bool): Whether the instance was newly created.
+        raw (bool): True while loaddata is replaying a fixture.
         **kwargs: Additional keyword arguments.
+
+    Returns:
+        None.
     """
-    if created:
-        UserProfile.objects.create(user=instance)
-    else:
-        instance.profile.save()
+    # loaddata sends post_save with raw=True while the fixture is still
+    # loading, before related rows necessarily exist. Creating related
+    # objects at that point can fail or write rows the fixture then
+    # duplicates, so the documented behaviour is to return early.
+    if raw:
+        return
+    UserProfile.objects.get_or_create(user=instance)
