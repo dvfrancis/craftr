@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 if os.path.isfile(".env"):
     load_dotenv()
 
-SITE_ID = 1
-
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 # Email goes through Amazon SES, which has dominicfrancis.co.uk verified with
