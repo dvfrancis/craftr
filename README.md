@@ -951,7 +951,16 @@ The following images are only used when no class, instructor, or user image has 
 
 ## Testing
 
-- Please refer to [TESTING.md](TESTING.md) for details.
+- Manual testing, including per-template walkthroughs, user story checks, the browser matrix, and the fixed bug log, is recorded in [TESTING.md](TESTING.md).
+- Automated tests run with:
+
+    ```bash
+    python3 manage.py test --settings=craftr.test_settings
+    ```
+
+- There are 49 tests across all eight apps. They need no environment variables, no `.env` file, and no PostgreSQL server: `craftr/test_settings.py` supplies a throwaway key and an in-memory SQLite database.
+- The `--settings` flag is required rather than optional. Production serves static files through a hashed manifest, which tests cannot use because they never run `collectstatic`, so the test settings swap that backend out. Running the suite without the flag fails on the first template it renders.
+- The suite covers behaviour, not appearance. Layout, responsiveness, and browser compatibility are still checked by hand and written up in TESTING.md.
 
 ## Technologies Used
 

@@ -20,9 +20,19 @@ There is **no virtualenv, no `.env`, and no local database** checked in. Both `m
 
 ### Tests
 
-`python3 manage.py test` runs, but every app's `tests.py` is an untouched three-line stub — there is no automated test suite. Verification for this project is manual and recorded in `TESTING.md` (per-template walkthroughs, user-story checks, browser matrix, fixed-bug log). Extend that document when changing behaviour.
+```bash
+python3 manage.py test --settings=craftr.test_settings
+```
 
-Running `manage.py test` still needs a reachable PostgreSQL server, because Django builds the test database from `DATABASES`. `settings.py` keeps a commented-out SQLite block "for future automated testing"; switching to it is the intended route if a no-Postgres test path is ever wanted.
+49 tests across all eight apps. **The `--settings` flag is not optional.** `craftr/test_settings.py` does three things the suite cannot run without: it defaults `SECRET_KEY` and `DATABASE_URL` so no environment is needed, it swaps the staticfiles backend, and it points default file storage at memory.
+
+That middle one matters. Production uses `CompressedManifestStaticFilesStorage`, which resolves every `{% static %}` tag through `staticfiles.json`. Tests never run `collectstatic`, so without the override every test that renders a template dies with `Missing staticfiles manifest entry`.
+
+The `ssl_require` flag in `DATABASES` is conditional on the URL scheme for the same reason: SQLite's driver rejects `sslmode`, so a hardcoded `True` made any local test database impossible. Production still gets `sslmode: require`, since its URL is `postgres://`.
+
+Manual verification is still recorded in `TESTING.md` (per-template walkthroughs, user-story checks, browser matrix, fixed-bug log), and still worth extending; the suite covers behaviour, not appearance.
+
+One trap is written into `register/tests.py` and worth knowing before touching that file: a `User` caches its profile, so the issue #105 regression passes against the broken code unless the instance is reloaded from the database first.
 
 ### Linting
 
@@ -43,9 +53,9 @@ Only four apps own models; the rest are view-and-template only:
 
 The data flow is `EventDay → EventClass → Enrolment`. `details.enrol` is the hub: it serves the class detail page and handles both enrol and withdraw as POSTs on the same URL, keyed on an `action` field. `account.user_details` reads the other direction, listing a user's enrolments ordered by event date then start time.
 
-`UserProfile` is created by a `post_save` signal on `User` in `register/models.py`, so a profile always exists for `request.user.profile` — but the signal calls `instance.profile.save()` on every non-creating `User` save, which means a `User` saved before its profile exists will raise.
+`UserProfile` is created by a `post_save` signal on `User` in `register/models.py`, so a profile always exists for `request.user.profile`. The handler uses `get_or_create`, so a `User` whose profile was deleted (which the admin allows) is repaired on its next save rather than raising, and it returns early on `raw=True` so `loaddata` is not disrupted. Both were issue #105.
 
-Error pages are wired project-wide via `handler404`/`handler500` in `craftr/urls.py`, pointing at `craftr/views.py`. Each app's `urls.py` re-declares the same two handlers; those per-app copies have no effect (Django only reads them from the root URLconf) and are harmless duplication.
+Error pages are wired project-wide via `handler404`/`handler500` in `craftr/urls.py`, pointing at `craftr/views.py`. Django only reads those names from the root URLconf; the eight per-app copies that used to shadow them were inert and were removed in issue #109.
 
 ### Reverse-accessor naming
 
@@ -58,7 +68,7 @@ Everything comes from the environment. `settings.py` calls `load_dotenv()` only 
 | Variable | Notes |
 | --- | --- |
 | `SECRET_KEY` | No default. |
-| `DATABASE_URL` | Parsed by `dj_database_url` with `ssl_require=True`, so a plain local Postgres without TLS will be rejected. |
+| `DATABASE_URL` | Parsed by `dj_database_url`. `ssl_require` is on for every scheme except `sqlite`, so a plain local Postgres without TLS is still rejected, while `sqlite://` works for the test suite. |
 | `DEBUG` | String comparison against `'True'`; anything else is false. |
 | `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS` | Comma-separated. Defaults preserve the old hardcoded Railway/Vercel values so unset behaves as before. |
 | `AWS_STORAGE_BUCKET_NAME`, `AWS_S3_REGION_NAME`, `AWS_S3_CUSTOM_DOMAIN` | All default to the production values, so unset works. No AWS credentials are read: boto3 uses the EC2 instance role. |
