@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.functions import Lower
 from django.core.exceptions import ValidationError
 
 
@@ -12,27 +13,40 @@ class EventDay(models.Model):
     Attributes:
         id (AutoField): The primary key for the EventDay instance.
         day_date (DateField): The date of the event day.
-        day_title (CharField): The title of the event day, must be unique.
+        day_title (CharField): The title of the event day. Unique when
+            compared without regard to case; see the Meta constraint.
         day_description (TextField): A description of the event day.
     """
     id = models.AutoField(primary_key=True)
     day_date = models.DateField()
-    day_title = models.CharField(max_length=100, unique=True)
+    # No unique=True here. The constraint below compares lowercased titles,
+    # which is strictly stronger: anything it allows is already unique
+    # exactly. Keeping both would mean two indexes enforcing overlapping
+    # rules, which is how the previous version came to be misleading.
+    day_title = models.CharField(max_length=100)
     day_description = models.TextField()
 
-    # Enforce unique event titles regardless of case
     class Meta:
         """
         Meta options for the EventDay model.
 
-        Enforces a unique constraint on the day_title field, ensuring
-        uniqueness regardless of case sensitivity.
+        Enforces unique day titles, compared without regard to case, so
+        "Opening Day" and "OPENING DAY" cannot both exist.
         """
         constraints = [
+            # Issue #127. This previously passed fields=['day_title'] with
+            # condition=Q(day_title__iexact=F('day_title')), which folded no
+            # case at all: a condition decides which rows an index covers,
+            # not how their values are compared, and comparing a column to
+            # itself is true for every row. The result was a plain unique
+            # index wearing a name that promised otherwise.
+            #
+            # Passing Lower() as a positional expression is what actually
+            # compares case-insensitively. Expressions and fields cannot be
+            # mixed in one UniqueConstraint, hence no fields= argument.
             models.UniqueConstraint(
-                fields=['day_title'],
+                Lower('day_title'),
                 name='unique_event_title_case_insensitive',
-                condition=models.Q(day_title__iexact=models.F('day_title'))
             )
         ]
 

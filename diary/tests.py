@@ -82,24 +82,40 @@ class EventDayModelTests(TestCase):
                     day_description="Second",
                 )
 
-    def test_the_constraint_is_not_actually_case_insensitive(self):
+    def test_a_title_differing_only_by_case_is_rejected(self):
         """
-        A title differing only in case IS accepted, despite the name.
+        Uniqueness folds case, which is what the constraint name promises.
 
-        The constraint is called unique_event_title_case_insensitive and its
-        docstring claims uniqueness "regardless of case sensitivity", but it
-        is a plain unique index on day_title carrying the always-true
-        condition Q(day_title__iexact=F('day_title')). That condition makes
-        it a partial index over every row; it does not fold case.
-
-        This test records what the code does rather than what it says. If
-        case-insensitive uniqueness is wanted, the constraint needs
-        Lower('day_title') as an expression, and this test should then be
-        inverted.
+        Until issue #127 this passed the wrong way round: the constraint
+        carried the always-true condition Q(day_title__iexact=F(day_title)),
+        which decides which rows an index covers rather than how their
+        values are compared, so it folded no case whatsoever.
         """
+        with self.assertRaises(IntegrityError):
+            with transaction.atomic():
+                EventDay.objects.create(
+                    day_date=datetime.date(2026, 9, 2),
+                    day_title="OPENING DAY",
+                    day_description="Second",
+                )
+
+    def test_mixed_case_variants_are_all_rejected(self):
+        """Any casing of an existing title collides, not just upper case."""
+        for variant in ("opening day", "OpEnInG dAy", "Opening DAY"):
+            with self.subTest(variant=variant):
+                with self.assertRaises(IntegrityError):
+                    with transaction.atomic():
+                        EventDay.objects.create(
+                            day_date=datetime.date(2026, 9, 3),
+                            day_title=variant,
+                            day_description="Another",
+                        )
+
+    def test_a_genuinely_different_title_is_accepted(self):
+        """The constraint must not reject titles that merely look similar."""
         EventDay.objects.create(
             day_date=datetime.date(2026, 9, 2),
-            day_title="OPENING DAY",
+            day_title="Closing Day",
             day_description="Second",
         )
         self.assertEqual(EventDay.objects.count(), 2)

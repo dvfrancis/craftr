@@ -77,9 +77,15 @@ class EventClass(models.Model):
         time to ensure no duplicate classes are scheduled at the same time.
         """
         constraints = [
+            # Renamed in issue #127. This behaves correctly and always has;
+            # only the name was wrong. It was called
+            # unique_class_title_case_insensitive, which describes neither
+            # the fields it covers nor anything to do with case, and matched
+            # the genuinely broken constraint on EventDay closely enough to
+            # look deliberate.
             models.UniqueConstraint(
                 fields=['event_day', 'start_time'],
-                name='unique_class_title_case_insensitive'
+                name='unique_class_start_time_per_day'
             )
         ]
 
