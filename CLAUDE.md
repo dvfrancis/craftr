@@ -44,7 +44,7 @@ Python is held to PEP 8 at a 79-character limit — every module in the repo alr
 
 Only four apps own models; the rest are view-and-template only:
 
-- **diary** — `EventDay` (date, unique title, description).
+- **diary** — `EventDay` (date, title, description). The title is unique compared without regard to case, via a `UniqueConstraint` on `Lower('day_title')`. Before issue #127 that constraint carried an always-true `condition` and folded no case at all, so the name it has always had only became true then.
 - **details** — `EventClass` (FK to `EventDay`, start/end times, difficulty, instructor, two `ImageField`s under `classes/` and `instructors/`) and `Enrolment` (unique user × class).
 - **register** — `UserProfile`, one-to-one with `auth.User`, carrying location, experience level and an `ImageField` photograph under `profiles/`.
 - **contact** — `Contact`, a stored copy of every contact-form submission.
