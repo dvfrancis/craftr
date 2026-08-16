@@ -170,15 +170,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'craftr', 'static')]
 
 # Django 5.1 replaced DEFAULT_FILE_STORAGE and STATICFILES_STORAGE with this
-# dict. The old names were ignored in silence, which is why STATIC_ROOT holds
-# no compressed assets and no staticfiles.json manifest.
+# dict. The old names were ignored in silence, which is why STATIC_ROOT held
+# no compressed assets and no staticfiles.json manifest until issue #112.
 #
-# staticfiles deliberately uses the non-manifest backend. Manifest storage
-# resolves every {% static %} tag through staticfiles.json and raises
-# ValueError when the entry is missing, so a deploy that does not run
-# collectstatic takes the whole site down rather than one page. Nothing in
-# this repo shows whether the box's deploy script runs it. Confirm that
-# before switching to CompressedManifestStaticFilesStorage.
+# staticfiles uses the manifest backend, which stamps a content hash into
+# every filename and records the mapping in staticfiles.json. A changed
+# stylesheet therefore reaches browsers immediately instead of waiting for a
+# cache to expire, and unchanged files can be cached indefinitely.
+#
+# The cost is that every {% static %} tag is resolved through that manifest
+# and raises ValueError on a miss, so a deploy that skipped collectstatic
+# would take the whole site down rather than one page. Two things make that
+# safe here, and both were checked rather than assumed (issue #111):
+# apps-box-config's deploy-app runs collectstatic on every Django deploy, and
+# every static reference in the project has a live source, since the
+# unreproducible leftovers in STATIC_ROOT went in #110.
 STORAGES = {
     # Uploaded images moved to S3 in issue #112. Every row was rewritten from
     # a Cloudinary public ID to a key like classes/<name>.webp by
@@ -190,7 +196,7 @@ STORAGES = {
         'BACKEND': 'storages.backends.s3.S3Storage',
     },
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     },
 }
 
