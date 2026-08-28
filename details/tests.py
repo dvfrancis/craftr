@@ -2,10 +2,14 @@
 
 import datetime
 
+from urllib.parse import urlparse
+
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import IntegrityError, transaction
-from django.test import TestCase
+from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
+from storages.backends.s3 import S3Storage
 
 from details.models import Enrolment, EventClass
 from diary.models import EventDay
@@ -205,3 +209,58 @@ class EnrolmentModelTests(TestCase):
         )
         Enrolment.objects.create(user=other, enrolled_class=self.event_class)
         self.assertEqual(Enrolment.objects.count(), 2)
+
+
+class MediaStorageFolderTests(SimpleTestCase):
+    """
+    Pin the folder AWS_LOCATION puts in front of every uploaded key.
+
+    The bucket is shared with hi-lo, older-and-wider and The Cult Film Club.
+    craftr/ is the folder this application owns, and two mistakes around it
+    are easy to make. Neither shows up on the deploy that causes it.
+
+    Adding a CloudFront OriginPath as well as this setting asks S3 for
+    craftr/craftr/classes/..., which breaks the next upload rather than the
+    next page load. Dropping the setting puts every new upload at the root of
+    a bucket three other sites read from.
+    """
+
+    def test_the_url_carries_the_folder(self):
+        """A stored key resolves to the folder, not the bucket root."""
+        url = S3Storage().url("classes/example.webp")
+        self.assertEqual(
+            url,
+            f"https://{settings.AWS_S3_CUSTOM_DOMAIN}"
+            f"/{settings.AWS_LOCATION}/classes/example.webp",
+        )
+
+    def test_the_folder_appears_once(self):
+        """
+        Guard against the double prefix.
+
+        An origin path on the distribution and AWS_LOCATION here both add the
+        folder, and together they add it twice. Comparing the whole path
+        rather than checking a prefix is what catches that.
+        """
+        path = urlparse(S3Storage().url("classes/example.webp")).path
+        self.assertEqual(
+            path, f"/{settings.AWS_LOCATION}/classes/example.webp"
+        )
+
+    def test_upload_to_does_not_repeat_the_folder(self):
+        """
+        The folder belongs to storage, not to the model fields.
+
+        S3Storage adds AWS_LOCATION when it builds a key and strips it when it
+        hands the name back, so the database stores classes/example.webp and
+        the move needed no data migration. Putting the folder into upload_to
+        as well would double it and break that.
+        """
+        for name in ("class_image", "instructor_image"):
+            with self.subTest(field=name):
+                upload_to = EventClass._meta.get_field(name).upload_to
+                self.assertFalse(
+                    upload_to.startswith(settings.AWS_LOCATION),
+                    f"{name}.upload_to must not repeat AWS_LOCATION; "
+                    "S3Storage adds the folder itself.",
+                )
