@@ -958,7 +958,8 @@ The following images are only used when no class, instructor, or user image has 
     python3 manage.py test --settings=craftr.test_settings
     ```
 
-- There are 49 tests across all eight apps. They need no environment variables, no `.env` file, and no PostgreSQL server: `craftr/test_settings.py` supplies a throwaway key and an in-memory SQLite database.
+- That command needs the virtual environment from [Local deployment](#local-deployment) created and activated first. Without it you get `ModuleNotFoundError: No module named 'django'`, which is the first thing a fresh clone does.
+- The suite spans all eight apps. It needs no environment variables, no `.env` file, and no PostgreSQL server: `craftr/test_settings.py` supplies a throwaway key and an in-memory SQLite database. The runner reports the count, so no figure is repeated here to go stale.
 - The `--settings` flag is required rather than optional. Production serves static files through a hashed manifest, which tests cannot use because they never run `collectstatic`, so the test settings swap that backend out. Running the suite without the flag fails on the first template it renders.
 - The suite covers behaviour, not appearance. Layout, responsiveness, and browser compatibility are still checked by hand and written up in TESTING.md.
 
@@ -1061,11 +1062,13 @@ Copy the GitHub repository locally in one of two ways:
 - Create and activate a virtual environment, so the project's packages are kept out of your system Python:
 
     ```bash
-    python3 -m venv .venv
+    python3.12 -m venv .venv
     source .venv/bin/activate
     ```
 
     On Windows the activation command is `.venv\Scripts\activate` instead.
+
+    The version matters. `psycopg2-binary` publishes no wheel for Python 3.14 and cannot build from source without the PostgreSQL headers, so on a machine whose `python3` is 3.14 the next step fails with `Failed building wheel for psycopg2-binary`. The production box runs 3.12.
 
 - Install all requirements using the command:
     - `pip3 install -r requirements.txt`

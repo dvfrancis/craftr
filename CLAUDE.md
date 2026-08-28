@@ -16,7 +16,7 @@ python3 manage.py runserver          # admin at /admin
 python3 manage.py makemigrations     # after any models.py change
 ```
 
-There is **no virtualenv, no `.env`, and no local database** checked in. Both `manage.py` and `runserver` need `DATABASE_URL` and `SECRET_KEY` set before they will start (see Configuration).
+There is **no virtualenv, no `.env`, and no local database** checked in. Build the virtualenv with `python3.12`: `psycopg2-binary==2.9.10` has no wheel for 3.14 and will not build without the PostgreSQL headers, so `pip install -r requirements.txt` fails on a machine whose `python3` is 3.14. Both `manage.py` and `runserver` need `DATABASE_URL` and `SECRET_KEY` set before they will start (see Configuration).
 
 ### Tests
 
@@ -24,7 +24,7 @@ There is **no virtualenv, no `.env`, and no local database** checked in. Both `m
 python3 manage.py test --settings=craftr.test_settings
 ```
 
-49 tests across all eight apps. **The `--settings` flag is not optional.** `craftr/test_settings.py` does three things the suite cannot run without: it defaults `SECRET_KEY` and `DATABASE_URL` so no environment is needed, it swaps the staticfiles backend, and it points default file storage at memory.
+Tests span all eight apps; the runner reports the count. **The `--settings` flag is not optional.** `craftr/test_settings.py` does three things the suite cannot run without: it defaults `SECRET_KEY` and `DATABASE_URL` so no environment is needed, it swaps the staticfiles backend, and it points default file storage at memory.
 
 That middle one matters. Production uses `CompressedManifestStaticFilesStorage`, which resolves every `{% static %}` tag through `staticfiles.json`. Tests never run `collectstatic`, so without the override every test that renders a template dies with `Missing staticfiles manifest entry`.
 
@@ -89,13 +89,11 @@ The workflow then runs `aws ssm send-command --document-name DeployCraftr --inst
 
 ## Traps
 
-**`staticfiles/` holds 12 files that `collectstatic` cannot regenerate.** The per-app `styles.css` files and three images under `images/` have no source anywhere in the repo; their directories were deleted long ago. Nine of the CSS files are zero bytes. No template references any of them, so they are dead weight rather than a hazard, but `collectstatic --clear` would delete them for good.
+`STATIC_ROOT` is reproducible. `STATICFILES_DIRS` now points at `craftr/static`, and the deploy runs `collectstatic`, so **editing `craftr/static/craftr/base.css` or `base.js` is enough**; the copy under `staticfiles/` is regenerated on deploy and does not need editing by hand. (Before August 2026 it did, because `STATICFILES_DIRS` pointed at a `BASE_DIR/'static'` that has never existed and the project package `craftr` is not in `INSTALLED_APPS`, so `AppDirectoriesFinder` never reached it either.)
 
-The rest of `STATIC_ROOT` is reproducible. `STATICFILES_DIRS` now points at `craftr/static`, and the deploy runs `collectstatic`, so **editing `craftr/static/craftr/base.css` or `base.js` is enough**; the copy under `staticfiles/` is regenerated on deploy and does not need editing by hand. (Before August 2026 it did, because `STATICFILES_DIRS` pointed at a `BASE_DIR/'static'` that has never existed and the project package `craftr` is not in `INSTALLED_APPS`, so `AppDirectoriesFinder` never reached it either.)
+**Static storage uses WhiteNoise's manifest backend.** `STORAGES` in `settings.py` sets `CompressedManifestStaticFilesStorage`, which resolves every `{% static %}` tag through `staticfiles.json` and raises `ValueError` on a miss. A deploy that skipped `collectstatic` would therefore take the whole site down rather than one page. The deploy script does run it, and the 11 `{% static %}` references across `base.html` and `home/index.html` all have live sources under `craftr/static/craftr/`, which is why the trade was judged acceptable in issue #111. There were three when that judgement was made; the decorative images arriving from Cloudinary in #112 account for the rest. It is still the reason `craftr/test_settings.py` has to swap the backend out: tests never run `collectstatic`, so every template render would otherwise fail.
 
-**Static storage deliberately uses WhiteNoise's non-manifest backend.** `STORAGES` in `settings.py` sets `CompressedStaticFilesStorage`, not `CompressedManifestStaticFilesStorage`. Manifest storage resolves every `{% static %}` tag through `staticfiles.json` and raises `ValueError` on a miss, so a deploy that skipped `collectstatic` would take the whole site down rather than one page. That risk has since been ruled out (production serves per-file gzip, which only `collectstatic` produces, and the codebase contains just three `{% static %}` references, all with live sources), so switching is now viable if the compression and cache-busting are wanted.
-
-**`requirements.txt` is much wider than the code.** `django-allauth`, `django-ckeditor`, `crispy-forms`, `django-star-ratings`, `stripe` and `django-countries` are pinned but appear in no `INSTALLED_APPS` entry, import, or template. Bootstrap 5.3.5 is loaded from a CDN in `base.html`, not from any Python package.
+**`requirements.txt` holds 16 pins and no more.** It carried 43 until issue #107, including `django-allauth`, `django-ckeditor`, `crispy-forms`, `django-star-ratings`, `stripe` and `django-countries`, none of which the code ever used. Bootstrap 5.3.5 is still loaded from a CDN in `base.html` rather than from any Python package, so it appears in no pin and never will.
 
 ## Conventions
 
