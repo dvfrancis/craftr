@@ -210,10 +210,29 @@ STORAGES = {
 # block. No credentials appear here: boto3 picks up the EC2 instance role,
 # which infra/media-permissions.yaml grants PutObject and GetObject on the
 # three upload prefixes and nothing else.
+#
+# The bucket is shared. It holds one folder per dominicfrancis.co.uk site,
+# and AWS_LOCATION below is the folder Craftr owns.
 AWS_STORAGE_BUCKET_NAME = os.environ.get(
-    'AWS_STORAGE_BUCKET_NAME', 'craftr-dominicfrancis'
+    'AWS_STORAGE_BUCKET_NAME', 'portfolio-dominicfrancis'
 )
 AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME', 'eu-west-2')
+
+# Every key this application writes or reads gets this prefix. The two static
+# sites in the same bucket reach their folder through a CloudFront origin
+# path instead, which is enough for them because nothing writes to them.
+# Django writes through boto3, straight to S3, so CloudFront never sees an
+# upload and an origin path would leave every new file at the bucket root.
+#
+# Do not set both. An origin path of /craftr on the distribution and this
+# setting together produce keys of craftr/craftr/classes/..., and the
+# duplication only shows up on the first upload after the change.
+#
+# S3Storage applies this when it builds a key and strips it again when it
+# hands the name back, so the database still stores classes/example.webp.
+# Moving the folder is therefore a settings change and a copy in S3, with no
+# data migration.
+AWS_LOCATION = os.environ.get('AWS_LOCATION', 'craftr')
 
 # Serve through CloudFront rather than the bucket's own endpoint. The bucket
 # blocks all public access, so this is the only route a browser has to it.
