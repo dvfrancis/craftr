@@ -236,11 +236,17 @@ class MediaStorageFolderTests(SimpleTestCase):
 
     def test_the_folder_appears_once(self):
         """
-        Guard against the double prefix.
+        Compare the whole path, because the broken forms are near misses.
 
-        An origin path on the distribution and AWS_LOCATION here both add the
-        folder, and together they add it twice. Comparing the whole path
-        rather than checking a prefix is what catches that.
+        A prefix check passes on both faults this is meant to catch. The
+        bucket root form is a prefix of the correct address, and a folder
+        written twice into AWS_LOCATION has the correct address as its own
+        prefix.
+
+        This reaches only the half of the double prefix that Django can see.
+        A CloudFront OriginPath adds the folder outside the application, so
+        no test here can observe it, and the guard against that is the
+        comment in infra/media-cdn.yaml.
         """
         path = urlparse(S3Storage().url("classes/example.webp")).path
         self.assertEqual(
@@ -256,11 +262,17 @@ class MediaStorageFolderTests(SimpleTestCase):
         the move needed no data migration. Putting the folder into upload_to
         as well would double it and break that.
         """
+        folder = settings.AWS_LOCATION
+        self.assertTrue(
+            folder,
+            "AWS_LOCATION must name the folder. Empty puts every upload at "
+            "the root of a bucket three other sites read from.",
+        )
         for name in ("class_image", "instructor_image"):
             with self.subTest(field=name):
                 upload_to = EventClass._meta.get_field(name).upload_to
                 self.assertFalse(
-                    upload_to.startswith(settings.AWS_LOCATION),
+                    upload_to.startswith(f"{folder}/"),
                     f"{name}.upload_to must not repeat AWS_LOCATION; "
                     "S3Storage adds the folder itself.",
                 )
