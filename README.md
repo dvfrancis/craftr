@@ -898,7 +898,7 @@ All fonts were sourced from Google Fonts, and were used as follows:
 
 #### Media
 
-- Uploaded images are stored in a private Amazon S3 bucket and served through CloudFront at `media.craftr.dominicfrancis.co.uk`. Decorative images, the page backgrounds and the logo, live in the repository and are served by WhiteNoise alongside the CSS.
+- Uploaded images are stored in the `craftr/` folder of a private Amazon S3 bucket shared with the other dominicfrancis.co.uk sites, and served through CloudFront at `media.craftr.dominicfrancis.co.uk`. Decorative images, the page backgrounds and the logo, live in the repository and are served by WhiteNoise alongside the CSS.
 
 - Images used in the README.md and TESTING.md are stored in the [GitHub repository](https://github.com/dvfrancis/craftr) for this project.
 

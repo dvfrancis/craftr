@@ -105,14 +105,38 @@ Work happens on branches named `feat/`, `fix/`, `chore/`, `ci/` or `docs/` and l
 
 ## Media
 
-Uploaded images are `ImageField`s stored in the private `craftr-dominicfrancis`
-S3 bucket and served through CloudFront at `media.craftr.dominicfrancis.co.uk`.
+Uploaded images are `ImageField`s stored in the `craftr/` folder of the private
+`portfolio-dominicfrancis` S3 bucket, served through CloudFront at
+`media.craftr.dominicfrancis.co.uk`. The bucket is shared: `hi-lo/` and
+`older-and-wider/` are static sites in the same bucket, each with its own
+distribution, and `the-cult-film-club/` is another Django application.
+
+That `craftr/` segment is `AWS_LOCATION` in `settings.py`, not part of any
+`upload_to`. `S3Storage` adds it when it builds a key and strips it when it
+hands the name back, so the database still stores `classes/example.webp`. The
+two static tenants reach their folder through a CloudFront `OriginPath`
+instead. **Never set both.** An origin path here would ask S3 for
+`craftr/craftr/...`, and the fault only appears on the next upload.
+
 The three `upload_to` prefixes (`classes/`, `instructors/`, `profiles/`) are
 also named in `infra/media-permissions.yaml`, which scopes the instance role's
-write access to exactly those paths — change one without the other and every
-upload is denied with an error that names no permission.
+write access to exactly `craftr/` plus those paths — change one without the
+other and every upload is denied with an error that names no permission. The
+grant stops at the folder, so the apps box cannot write to a neighbouring
+tenant.
 
-The bucket holds only genuinely uploaded content. Decorative images (page
+`classes/` and `instructors/` replicate to a backup account. `profiles/` does
+not, on purpose: the replica is held under an Object Lock in compliance mode,
+which nobody can shorten, so a replicated photograph would outlive an erasure
+request. Those rules live on the bucket, in
+`dominic-francis/infra/portfolio-bucket.yaml`, because replication is
+configured on the source bucket and this repository does not own it.
+
+The bucket policy is in that same file for the same reason. S3 allows one
+policy document per bucket, so `infra/media-cdn.yaml` here declares none;
+adding a distribution means editing the other repository.
+
+The folder holds only genuinely uploaded content. Decorative images (page
 backgrounds, the six landing-page photographs, the logo, and the three
 placeholder images) live in `craftr/static/craftr/images/` and are served by
 WhiteNoise. Fallbacks for records with no image come from the

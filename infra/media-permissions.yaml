@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
 Description: >-
-  Lets the apps box read and write uploaded images in the
-  craftr-dominicfrancis bucket, so uploads through the Django admin and the
-  profile form work.
+  Lets the apps box read and write uploaded images in the craftr/ folder of
+  the shared portfolio-dominicfrancis bucket, so uploads through the Django
+  admin and the profile form work.
 
 # The last infrastructure piece of issue #112, after infra/media-bucket.yaml
 # and infra/media-cdn.yaml. Nothing else is needed in AWS after this; what
@@ -63,24 +63,31 @@ Resources:
             # These must match the upload_to values on the model fields
             # exactly or every upload is denied, so they change together.
             #
+            # The craftr/ segment in front of them is AWS_LOCATION in Django
+            # settings, not part of any upload_to. The bucket is shared with
+            # hi-lo and older-and-wider, and this grant stops at the folder
+            # Craftr owns: neither of those two folders appears here, so the
+            # apps box cannot write to either even though both live in the
+            # same bucket.
+            #
             # Unlike the-cult-film-club there is no decorative prefix to
             # exclude here: Craftr's 14 background, workshop and logo images
             # were moved into the repository and are served by WhiteNoise, so
-            # this bucket holds only genuinely uploaded content.
+            # this folder holds only genuinely uploaded content.
             Resource:
-              - arn:aws:s3:::craftr-dominicfrancis/classes/*
-              - arn:aws:s3:::craftr-dominicfrancis/instructors/*
-              - arn:aws:s3:::craftr-dominicfrancis/profiles/*
+              - arn:aws:s3:::portfolio-dominicfrancis/craftr/classes/*
+              - arn:aws:s3:::portfolio-dominicfrancis/craftr/instructors/*
+              - arn:aws:s3:::portfolio-dominicfrancis/craftr/profiles/*
 
           - Sid: ListUploadedPrefixes
             Effect: Allow
             Action: s3:ListBucket
             # Bucket ARN, not an object ARN: ListBucket is a bucket-level
             # action, and pointing it at objects silently grants nothing.
-            Resource: arn:aws:s3:::craftr-dominicfrancis
+            Resource: arn:aws:s3:::portfolio-dominicfrancis
             Condition:
               StringLike:
                 s3:prefix:
-                  - classes/*
-                  - instructors/*
-                  - profiles/*
+                  - craftr/classes/*
+                  - craftr/instructors/*
+                  - craftr/profiles/*

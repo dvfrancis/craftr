@@ -2,11 +2,17 @@ AWSTemplateFormatVersion: "2010-09-09"
 
 Description: >-
   Serves the Craftr uploaded images from media.craftr.dominicfrancis.co.uk.
-  CloudFront distribution, the bucket policy that lets it read, and DNS.
+  CloudFront distribution and DNS. The bucket it reads is shared, so the
+  policy that lets this distribution read it lives with the bucket.
 
-# Part of issue #112, and the step that makes infra/media-bucket.yaml usable.
-# The bucket blocks all public access, so until this stack exists nothing can
-# read an image from the internet.
+# Part of issue #112. The bucket blocks all public access, so until this
+# stack exists nothing can read an image from the internet.
+#
+# The origin is now the craftr/ folder of the shared portfolio-dominicfrancis
+# bucket. There is deliberately no OriginPath here, and adding one would
+# break uploads rather than fix anything: Django already prefixes every key
+# with craftr/ through AWS_LOCATION, so an origin path would ask S3 for
+# craftr/craftr/classes/... See the settings comment for the full reasoning.
 #
 # Deploy infra/media-certificate.yaml first, to us-east-1, and pass its output
 # here:
@@ -35,6 +41,15 @@ Parameters:
       certificates from no other region.
     Description: Output of the craftr-media-certificate stack in us-east-1.
 
+  MediaBucketDomainName:
+    Type: String
+    Default: portfolio-dominicfrancis.s3.eu-west-2.amazonaws.com
+    Description: >-
+      Regional domain of the shared bucket. A parameter rather than an
+      ImportValue because dominic-francis-portfolio-bucket exports nothing,
+      and because that stack belongs to another repository: an import would
+      make it undeletable from here, which is not this stack's business.
+
 Resources:
   # Origin Access Control replaces the old Origin Access Identity. The bucket
   # stays private and CloudFront signs each origin request with SigV4; the
@@ -44,7 +59,7 @@ Resources:
     Properties:
       OriginAccessControlConfig:
         Name: craftr-media-oac
-        Description: Signs CloudFront reads of the craftr-dominicfrancis bucket
+        Description: Signs CloudFront reads of portfolio-dominicfrancis
         OriginAccessControlOriginType: s3
         SigningBehavior: always
         SigningProtocol: sigv4
@@ -71,7 +86,7 @@ Resources:
 
         Origins:
           - Id: MediaBucket
-            DomainName: !ImportValue craftr-media-bucket-domain
+            DomainName: !Ref MediaBucketDomainName
             OriginAccessControlId: !GetAtt OriginAccessControl.Id
             # Required by CloudFormation even for an S3 origin using OAC, and
             # must be present and empty. A non-empty OriginAccessIdentity here
@@ -97,31 +112,17 @@ Resources:
         - Key: ManagedBy
           Value: cloudformation
 
-  # Lives here rather than in media-bucket.yaml because it has to name the
-  # distribution, which that stack knows nothing about. CloudFormation is
-  # content for a bucket policy to sit in a different stack from its bucket.
-  BucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !ImportValue craftr-media-bucket-name
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Sid: AllowCloudFrontRead
-            Effect: Allow
-            Principal:
-              Service: cloudfront.amazonaws.com
-            Action: s3:GetObject
-            Resource: !Sub
-              - "arn:aws:s3:::${Bucket}/*"
-              - Bucket: !ImportValue craftr-media-bucket-name
-            # Without this condition the grant would be to the CloudFront
-            # service rather than to this distribution, and any distribution
-            # in any AWS account could be pointed at the bucket and read it.
-            Condition:
-              StringEquals:
-                AWS:SourceArn: !Sub
-                  "arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+  # The bucket policy used to live here, naming this distribution as the only
+  # reader of a bucket Craftr owned outright. It has moved to
+  # dominic-francis/infra/portfolio-bucket.yaml, because S3 allows exactly one
+  # policy document per bucket and that bucket now has three readers. Two
+  # stacks declaring an AWS::S3::BucketPolicy for the same bucket do not merge:
+  # whichever deploys last overwrites the other, and the sites named only in
+  # the loser start answering 403.
+  #
+  # Adding this distribution to that list is therefore a change in another
+  # repository, and it has to be deployed before this stack is pointed at the
+  # shared bucket. Out of order, every image 403s until it catches up.
 
   # Both records, because the distribution answers on IPv6 and a visitor on an
   # IPv6-only network gets no address at all from the A record alone.
