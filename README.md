@@ -441,12 +441,12 @@ The website is designed to appeal to all demographics, but the following persona
 
 - This is a list of features that would have been nice to include in this project, but were not due to time constraints.
 
-|Issue|Item|Description|
+|Item|Description|
 | ------------- | ------------- | ------------- |
-| [#85](https://github.com/dvfrancis/craftr/issues/85) | Instructor portal | Add the ability for instructors to create and edit classes |
-| [#86](https://github.com/dvfrancis/craftr/issues/86) | Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
-| [#66](https://github.com/dvfrancis/craftr/issues/66) | Customise the Django administration portal| Update the admin portal to match the style of the site |
-| [#19](https://github.com/dvfrancis/craftr/issues/19) | JavaScript logic flowcharts| If the site were to expand with further features then it would probably require more JavaScript and, therefore, process breakdowns |
+| Instructor portal | Add the ability for instructors to create and edit classes |
+| Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
+| Customise the Django administration portal| Update the admin portal to match the style of the site |
+| JavaScript logic flowcharts| If the site were to expand with further features then it would probably require more JavaScript and, therefore, process breakdowns |
 
 ### Structure
 
