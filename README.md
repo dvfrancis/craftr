@@ -442,7 +442,7 @@ The website is designed to appeal to all demographics, but the following persona
 - This is a list of features that would have been nice to include in this project, but were not due to time constraints.
 
 |Item|Description|
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- |
 | Instructor portal | Add the ability for instructors to create and edit classes |
 | Premium classes | Add the ability to create premium paid classes that people could opt in to through a monetary purchase (which would require the ability to take payments) |
 | Customise the Django administration portal| Update the admin portal to match the style of the site |
